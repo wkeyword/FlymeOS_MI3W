@@ -60,8 +60,6 @@
 
 .field static final TRANSACTION_getSmsCapacityOnIccForSubscriber:I = 0x26
 
-.field static final TRANSACTION_getSmscAddressFromIccForSubscriber:I = 0x27
-
 .field static final TRANSACTION_injectSmsPdu:I = 0xe
 
 .field static final TRANSACTION_injectSmsPduForSubscriber:I = 0xf
@@ -97,8 +95,6 @@
 .field static final TRANSACTION_setPremiumSmsPermission:I = 0x1e
 
 .field static final TRANSACTION_setPremiumSmsPermissionForSubscriber:I = 0x1f
-
-.field static final TRANSACTION_setSmscAddressToIccForSubscriber:I = 0x28
 
 .field static final TRANSACTION_updateMessageOnIccEf:I = 0x3
 
@@ -196,7 +192,7 @@
     .line 51
     sparse-switch p1, :sswitch_data_0
 
-    .line 762
+    .line 740
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
@@ -2994,100 +2990,7 @@
 
     goto/16 :goto_0
 
-    .line 741
-    .end local v2    # "_result":I
-    .end local v4    # "_arg0":J
-    :sswitch_27
-    const-string v3, "com.android.internal.telephony.ISms"
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v0, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 743
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v4
-
-    .line 744
-    .restart local v4    # "_arg0":J
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v4, v5}, Lcom/android/internal/telephony/ISms$Stub;->getSmscAddressFromIccForSubscriber(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 745
-    .local v2, "_result":Ljava/lang/String;
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 746
-    move-object/from16 v0, p3
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 747
-    const/4 v3, 0x1
-
-    goto/16 :goto_0
-
-    .line 751
-    .end local v2    # "_result":Ljava/lang/String;
-    .end local v4    # "_arg0":J
-    :sswitch_28
-    const-string v3, "com.android.internal.telephony.ISms"
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v0, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 753
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v4
-
-    .line 755
-    .restart local v4    # "_arg0":J
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 756
-    .restart local v6    # "_arg1":Ljava/lang/String;
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v4, v5, v6}, Lcom/android/internal/telephony/ISms$Stub;->setSmscAddressToIccForSubscriber(JLjava/lang/String;)Z
-
-    move-result v2
-
-    .line 757
-    .local v2, "_result":Z
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 758
-    if-eqz v2, :cond_25
-
-    const/4 v3, 0x1
-
-    :goto_26
-    move-object/from16 v0, p3
-
-    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 759
-    const/4 v3, 0x1
-
-    goto/16 :goto_0
-
-    .line 758
-    :cond_25
-    const/4 v3, 0x0
-
-    goto :goto_26
-
     .line 51
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -3128,8 +3031,6 @@
         0x24 -> :sswitch_24
         0x25 -> :sswitch_25
         0x26 -> :sswitch_26
-        0x27 -> :sswitch_27
-        0x28 -> :sswitch_28
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

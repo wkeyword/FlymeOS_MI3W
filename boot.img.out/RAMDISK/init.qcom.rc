@@ -106,10 +106,9 @@ on boot
     chmod 2770 /data/misc/perfd
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
-    mkdir /persist/drm 0770 system system
 
     chown root radio /proc/cmdline
-    chmod 0444 /proc/cmdline
+    chmod 0644 /proc/cmdline
 
     setprop wifi.interface wlan0
 
@@ -155,10 +154,6 @@ on boot
     setprop net.tcp.usercfg.wifi       1
     setprop net.tcp.usercfg.lte        1
 
-# MDP idle notifier
-    chown system graphics /sys/class/graphics/fb0/idle_time
-    chmod 0664 /sys/class/graphics/fb0/idle_time
-
 #   Assign TCP buffer thresholds to be ceiling value of technology maximums
 #   Increased technology maximums should be reflected here.
     write /proc/sys/net/core/rmem_max  2097152
@@ -197,13 +192,9 @@ on boot
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
-    restorecon_recursive /data/nfc
 
     # For power module access
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
     # Avoid releasing data call when Null bearer is reported to AP accidentally.
     setprop persist.radio.snapshot_enabled 1
@@ -220,7 +211,26 @@ on boot
 # Enable manual network selection function and distinguish 2G/3G/4G
     setprop persist.radio.rat_on combine
 
-    #charger
+on charger
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system wait ro barrier=1
+    write /sys/class/input/input0/enabled 0
+    write /sys/class/input/input1/enabled 0
+    write /sys/class/input/input2/enabled 0
+    write /sys/class/input/input3/enabled 0
+    write /sys/class/input/input4/enabled 0
+    write /sys/class/input/input5/enabled 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed 300000
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_setspeed 300000
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/msm_thermal/parameters/enabled "N"
+    chown root system /sys/power/wake_lock
+    chown root system /sys/power/wake_unlock
+    chmod 0664 /sys/power/wake_lock
+    chmod 0664 /sys/power/wake_lock
     chown root system /sys/module/qpnp_charger/parameters/charger_monitor
     chown root system /sys/module/qpnp_charger/parameters/ext_ovp_present
     chown root system /sys/class/power_supply/battery/input_current_max
@@ -232,6 +242,9 @@ on boot
     chmod 0664 /sys/class/power_supply/battery/input_current_settled
     chmod 0664 /sys/class/power_supply/battery/voltage_min
     chmod 0664 /sys/module/qpnp_charger/parameters/charger_monitor
+    start hvdcp
+    start charger_monitor
+    class_start charger
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -257,10 +270,6 @@ on post-fs-data
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
-    restorecon_recursive /data/connectivity
-
-    mkdir /data/connectivity/nsrm 0771 system system
-    chown system system /data/connectivity/nsrm
 
     # Create the directories used by DPM subsystem
     mkdir /data/dpm 0771 system system
@@ -271,13 +280,9 @@ on post-fs-data
 
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
-    restorecon_recursive /data/misc/audio
 
     # Create directory used by the DASH client
     mkdir /data/misc/dash 0770 media audio
-
-    # Create directory used by display clients
-    mkdir /data/misc/display 0770 root system
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
@@ -319,46 +324,10 @@ on post-fs-data
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
-    restorecon_recursive /data/time
 
     mkdir /data/audio/ 0770 media audio
 
     setprop vold.post_fs_data_done 1
-
-on charger
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system wait ro barrier=1
-    write /sys/class/input/input0/enabled 0
-    write /sys/class/input/input1/enabled 0
-    write /sys/class/input/input2/enabled 0
-    write /sys/class/input/input3/enabled 0
-    write /sys/class/input/input4/enabled 0
-    write /sys/class/input/input5/enabled 0
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed 300000
-    write /sys/devices/system/cpu/cpu1/online 1
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "userspace"
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_setspeed 300000
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/msm_thermal/parameters/enabled "N"
-    chown root system /sys/power/wake_lock
-    chown root system /sys/power/wake_unlock
-    chmod 0664 /sys/power/wake_lock
-    chmod 0664 /sys/power/wake_lock
-    chown root system /sys/module/qpnp_charger/parameters/charger_monitor
-    chown root system /sys/module/qpnp_charger/parameters/ext_ovp_present
-    chown root system /sys/class/power_supply/battery/input_current_max
-    chown root system /sys/class/power_supply/battery/input_current_trim
-    chown root system /sys/class/power_supply/battery/input_current_settled
-    chown root system /sys/class/power_supply/battery/voltage_min
-    chmod 0664 /sys/class/power_supply/battery/input_current_max
-    chmod 0664 /sys/class/power_supply/battery/input_current_trim
-    chmod 0664 /sys/class/power_supply/battery/input_current_settled
-    chmod 0664 /sys/class/power_supply/battery/voltage_min
-    chmod 0664 /sys/module/qpnp_charger/parameters/charger_monitor
-    start hvdcp
-    start charger_monitor
-    class_start charger
 
     #Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
@@ -441,9 +410,6 @@ on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
     start config_bluetooth
 
-on property:vold.decrypt=trigger_restart_min_framework
-    start qcom-c_main-sh
-
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
@@ -455,7 +421,7 @@ service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/bin/logwrapper /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
@@ -765,7 +731,7 @@ service ril-daemon1 /system/bin/rild -c 1
     socket rild-debug1 stream 660 radio system
     user root
     disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log net_raw
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
 service ril-daemon2 /system/bin/rild -c 2
     class main
@@ -773,7 +739,7 @@ service ril-daemon2 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
     disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log net_raw
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
 service usb_uicc_daemon /system/bin/usb_uicc_client
     class main
@@ -864,14 +830,14 @@ on property:sys.qbcharger.enable=false
 
 service diag_mdlog_start /system/bin/diag_mdlog -c -n 20
     class late_start
-    user shell
+    user sdcard_rw
     group system qcom_diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
 service diag_mdlog_stop /system/bin/diag_mdlog -k
     class late_start
-    user shell
+    user sdcard_rw
     group system qcom_diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot

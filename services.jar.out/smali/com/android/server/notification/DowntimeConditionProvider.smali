@@ -1060,7 +1060,7 @@
     .local v8, "formatted":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/notification/DowntimeConditionProvider;->mContext:Landroid/content/Context;
 
-    const v3, 0x1040699
+    const v3, 0x1040702
 
     const/4 v4, 0x1
 

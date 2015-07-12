@@ -1954,7 +1954,7 @@
     iput-object v1, v0, Lcom/android/server/notification/ManagedServices$Config;->settingsAction:Ljava/lang/String;
 
     .line 75
-    const v1, 0x104054d
+    const v1, 0x10405bb
 
     iput v1, v0, Lcom/android/server/notification/ManagedServices$Config;->clientLabel:I
 

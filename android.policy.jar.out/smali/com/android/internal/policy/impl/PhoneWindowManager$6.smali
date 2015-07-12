@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 997
+    .line 1109
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,60 +37,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 1
 
     .prologue
-    .line 999
-    new-instance v1, Landroid/content/Intent;
+    .line 1112
+    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    const-string v2, "android.system.agent"
+    # invokes: Lcom/android/internal/policy/impl/PhoneWindowManager;->takeScreenshot()V
+    invoke-static {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$1100(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 1000
-    .local v1, "intent":Landroid/content/Intent;
-    new-instance v2, Landroid/content/ComponentName;
-
-    const-string v3, "com.qualcomm.agent"
-
-    const-string v4, "com.qualcomm.agent.SystemAgent"
-
-    invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    .line 1002
-    const-string v2, "para"
-
-    const-string v3, "takeLogs"
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1004
-    :try_start_0
-    iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
-
-    iget-object v2, v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 1008
-    :goto_0
+    .line 1113
     return-void
-
-    .line 1005
-    :catch_0
-    move-exception v0
-
-    .line 1006
-    .local v0, "e":Ljava/lang/Exception;
-    const-string v2, "WindowManager"
-
-    const-string v3, "Exception when start SystemAgent service"
-
-    invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
 .end method

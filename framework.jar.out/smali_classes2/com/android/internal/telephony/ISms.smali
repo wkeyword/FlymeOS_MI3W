@@ -175,14 +175,6 @@
     .end annotation
 .end method
 
-.method public abstract getSmscAddressFromIccForSubscriber(J)Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract injectSmsPdu([BLjava/lang/String;Landroid/app/PendingIntent;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -400,14 +392,6 @@
 .end method
 
 .method public abstract setPremiumSmsPermissionForSubscriber(JLjava/lang/String;I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract setSmscAddressToIccForSubscriber(JLjava/lang/String;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

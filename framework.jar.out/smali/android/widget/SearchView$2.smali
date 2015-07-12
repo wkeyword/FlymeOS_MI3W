@@ -43,7 +43,6 @@
     .line 162
     iget-object v0, p0, Landroid/widget/SearchView$2;->this$0:Landroid/widget/SearchView;
 
-    # invokes: Landroid/widget/SearchView;->updateFocusedState()V
     invoke-static {v0}, Landroid/widget/SearchView;->access$000(Landroid/widget/SearchView;)V
 
     .line 163

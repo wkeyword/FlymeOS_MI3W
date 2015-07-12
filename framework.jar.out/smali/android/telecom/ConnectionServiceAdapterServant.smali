@@ -24,6 +24,8 @@
 
 .field private static final MSG_SET_CALL_CAPABILITIES:I = 0x8
 
+.field private static final MSG_SET_CALL_PROPERTIES:I = 0x16
+
 .field private static final MSG_SET_CALL_SUBSTATE:I = 0x17
 
 .field private static final MSG_SET_CONFERENCEABLE_CONNECTIONS:I = 0x14
@@ -31,8 +33,6 @@
 .field private static final MSG_SET_DIALING:I = 0x4
 
 .field private static final MSG_SET_DISCONNECTED:I = 0x5
-
-.field private static final MSG_SET_DISCONNECTED_WITH_SUPP_NOTIFICATION:I = 0x15
 
 .field private static final MSG_SET_EXTRAS:I = 0x18
 
@@ -42,7 +42,7 @@
 
 .field private static final MSG_SET_ON_HOLD:I = 0x6
 
-.field private static final MSG_SET_PHONE_ACCOUNT:I = 0x16
+.field private static final MSG_SET_PHONE_ACCOUNT:I = 0x15
 
 .field private static final MSG_SET_RINGBACK_REQUESTED:I = 0x7
 
@@ -69,7 +69,7 @@
     .param p1, "delegate"    # Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
     .prologue
-    .line 446
+    .line 430
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 69
@@ -79,17 +79,17 @@
 
     iput-object v0, p0, Landroid/telecom/ConnectionServiceAdapterServant;->mHandler:Landroid/os/Handler;
 
-    .line 257
+    .line 249
     new-instance v0, Landroid/telecom/ConnectionServiceAdapterServant$2;
 
     invoke-direct {v0, p0}, Landroid/telecom/ConnectionServiceAdapterServant$2;-><init>(Landroid/telecom/ConnectionServiceAdapterServant;)V
 
     iput-object v0, p0, Landroid/telecom/ConnectionServiceAdapterServant;->mStub:Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 447
+    .line 431
     iput-object p1, p0, Landroid/telecom/ConnectionServiceAdapterServant;->mDelegate:Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
-    .line 448
+    .line 432
     return-void
 .end method
 
@@ -121,7 +121,7 @@
     .locals 1
 
     .prologue
-    .line 451
+    .line 435
     iget-object v0, p0, Landroid/telecom/ConnectionServiceAdapterServant;->mStub:Lcom/android/internal/telecom/IConnectionServiceAdapter;
 
     return-object v0

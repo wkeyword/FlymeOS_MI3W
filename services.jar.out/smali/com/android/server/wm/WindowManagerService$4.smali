@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 833
+    .line 837
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 836
+    .line 840
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 837
+    .line 841
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -56,26 +56,26 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 838
+    .line 842
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-boolean p1, v0, Lcom/android/server/wm/WindowManagerService;->mAnimationsDisabled:Z
 
-    .line 839
+    .line 843
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/android/server/wm/WindowManagerService;->dispatchNewAnimatorScaleLocked(Lcom/android/server/wm/Session;)V
 
-    .line 841
+    .line 845
     :cond_0
     monitor-exit v1
 
-    .line 842
+    .line 846
     return-void
 
-    .line 841
+    .line 845
     :catchall_0
     move-exception v0
 

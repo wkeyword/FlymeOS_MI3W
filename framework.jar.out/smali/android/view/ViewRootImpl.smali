@@ -1000,7 +1000,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120071
+    const v1, 0x1120076
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -11508,7 +11508,7 @@
     .line 5302
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mPendingInputEventCount="
+    const-string/jumbo v1, "mPendingInputEventCount="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -11520,7 +11520,7 @@
     .line 5304
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v1, "mProcessInputEventsScheduled="
+    const-string/jumbo v1, "mProcessInputEventsScheduled="
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 

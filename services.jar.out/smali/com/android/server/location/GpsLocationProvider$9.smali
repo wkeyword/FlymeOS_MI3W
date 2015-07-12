@@ -1,14 +1,11 @@
 .class Lcom/android/server/location/GpsLocationProvider$9;
-.super Ljava/lang/Object;
+.super Landroid/location/IGpsGeofenceHardware$Stub;
 .source "GpsLocationProvider.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/location/GpsLocationProvider;->handleInjectNtpTime()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/location/GpsLocationProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,264 +23,89 @@
     .locals 0
 
     .prologue
-    .line 944
+    .line 1214
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/location/IGpsGeofenceHardware$Stub;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 14
+.method public addCircularHardwareGeofence(IDDDIIII)Z
+    .locals 2
+    .param p1, "geofenceId"    # I
+    .param p2, "latitude"    # D
+    .param p4, "longitude"    # D
+    .param p6, "radius"    # D
+    .param p8, "lastTransition"    # I
+    .param p9, "monitorTransitions"    # I
+    .param p10, "notificationResponsiveness"    # I
+    .param p11, "unknownTimer"    # I
 
     .prologue
-    const-wide/32 v6, 0x5265c00
-
-    .line 950
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->getCacheAge()J
-
-    move-result-wide v0
-
-    cmp-long v0, v0, v6
-
-    if-ltz v0, :cond_0
-
-    .line 951
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->forceRefresh()Z
-
-    .line 955
-    :cond_0
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->getCacheAge()J
-
-    move-result-wide v0
-
-    cmp-long v0, v0, v6
-
-    if-gez v0, :cond_2
-
-    .line 956
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->getCachedNtpTime()J
-
-    move-result-wide v2
-
-    .line 957
-    .local v2, "time":J
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->getCachedNtpTimeReference()J
-
-    move-result-wide v4
-
-    .line 958
-    .local v4, "timeReference":J
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mNtpTime:Landroid/util/NtpTrustedTime;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2300(Lcom/android/server/location/GpsLocationProvider;)Landroid/util/NtpTrustedTime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/NtpTrustedTime;->getCacheCertainty()J
-
-    move-result-wide v8
-
-    .line 959
-    .local v8, "certainty":J
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v12
-
-    .line 961
-    .local v12, "now":J
-    const-string v0, "GpsLocationProvider"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "NTP server returned: "
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v6, " ("
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    new-instance v6, Ljava/util/Date;
-
-    invoke-direct {v6, v2, v3}, Ljava/util/Date;-><init>(J)V
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v6, ") reference: "
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v6, " certainty: "
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v6, " system time offset: "
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sub-long v6, v2, v12
-
-    invoke-virtual {v1, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 967
-    iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    long-to-int v6, v8
-
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_inject_time(JJI)V
-    invoke-static/range {v1 .. v6}, Lcom/android/server/location/GpsLocationProvider;->access$2400(Lcom/android/server/location/GpsLocationProvider;JJI)V
-
-    .line 968
-    const-wide/32 v10, 0x5265c00
-
-    .line 974
-    .end local v2    # "time":J
-    .end local v4    # "timeReference":J
-    .end local v8    # "certainty":J
-    .end local v12    # "now":J
-    .local v10, "delay":J
-    :goto_0
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    const/16 v1, 0xa
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->sendMessage(IILjava/lang/Object;)V
-    invoke-static {v0, v1, v6, v7}, Lcom/android/server/location/GpsLocationProvider;->access$2500(Lcom/android/server/location/GpsLocationProvider;IILjava/lang/Object;)V
-
-    .line 976
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mPeriodicTimeInjection:Z
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2600(Lcom/android/server/location/GpsLocationProvider;)Z
+    .line 1222
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_add_geofence(IDDDIIII)Z
+    invoke-static/range {p1 .. p11}, Lcom/android/server/location/GpsLocationProvider;->access$2800(IDDDIIII)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    .line 979
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
+.method public isHardwareGeofenceSupported()Z
+    .locals 1
 
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2200(Lcom/android/server/location/GpsLocationProvider;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    const/4 v1, 0x5
-
-    invoke-virtual {v0, v1, v10, v11}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 983
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$9;->this$0:Lcom/android/server/location/GpsLocationProvider;
-
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->mWakeLock:Landroid/os/PowerManager$WakeLock;
-    invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$2700(Lcom/android/server/location/GpsLocationProvider;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    .line 984
-    return-void
-
-    .line 970
-    .end local v10    # "delay":J
-    :cond_2
-    # getter for: Lcom/android/server/location/GpsLocationProvider;->DEBUG:Z
-    invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$700()Z
+    .prologue
+    .line 1216
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_is_geofence_supported()Z
+    invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$2700()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    return v0
+.end method
 
-    const-string v0, "GpsLocationProvider"
+.method public pauseHardwareGeofence(I)Z
+    .locals 1
+    .param p1, "geofenceId"    # I
 
-    const-string v1, "requestTime failed"
+    .prologue
+    .line 1231
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_pause_geofence(I)Z
+    invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$3000(I)Z
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v0
 
-    .line 971
-    :cond_3
-    const-wide/32 v10, 0x493e0
+    return v0
+.end method
 
-    .restart local v10    # "delay":J
-    goto :goto_0
+.method public removeHardwareGeofence(I)Z
+    .locals 1
+    .param p1, "geofenceId"    # I
+
+    .prologue
+    .line 1227
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_remove_geofence(I)Z
+    invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$2900(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public resumeHardwareGeofence(II)Z
+    .locals 1
+    .param p1, "geofenceId"    # I
+    .param p2, "monitorTransition"    # I
+
+    .prologue
+    .line 1235
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_resume_geofence(II)Z
+    invoke-static {p1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$3100(II)Z
+
+    move-result v0
+
+    return v0
 .end method

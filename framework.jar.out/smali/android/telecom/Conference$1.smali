@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 62
     iput-object p1, p0, Landroid/telecom/Conference$1;->this$0:Landroid/telecom/Conference;
 
     invoke-direct {p0}, Landroid/telecom/Connection$Listener;-><init>()V
@@ -38,7 +38,7 @@
     .param p1, "c"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 69
+    .line 65
     iget-object v0, p0, Landroid/telecom/Conference$1;->this$0:Landroid/telecom/Conference;
 
     # getter for: Landroid/telecom/Conference;->mConferenceableConnections:Ljava/util/List;
@@ -52,13 +52,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
+    .line 66
     iget-object v0, p0, Landroid/telecom/Conference$1;->this$0:Landroid/telecom/Conference;
 
     # invokes: Landroid/telecom/Conference;->fireOnConferenceableConnectionsChanged()V
     invoke-static {v0}, Landroid/telecom/Conference;->access$100(Landroid/telecom/Conference;)V
 
-    .line 72
+    .line 68
     :cond_0
     return-void
 .end method

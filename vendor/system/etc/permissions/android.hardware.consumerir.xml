@@ -16,6 +16,6 @@
 
 <!-- This is the standard feature indicating that the device can communicate
      using Near-Field Communications (NFC). -->
-<permissions ro.hwversion="4.*">
+<permissions>
     <feature name="android.hardware.consumerir" />
 </permissions>

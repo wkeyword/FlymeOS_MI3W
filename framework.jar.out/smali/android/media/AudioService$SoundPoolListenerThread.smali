@@ -23,15 +23,15 @@
     .locals 1
 
     .prologue
-    .line 2338
+    .line 2302
     iput-object p1, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
-    .line 2339
+    .line 2303
     const-string v0, "SoundPoolListenerThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 2340
+    .line 2304
     return-void
 .end method
 
@@ -41,10 +41,10 @@
     .locals 5
 
     .prologue
-    .line 2345
+    .line 2309
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 2346
+    .line 2310
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -54,7 +54,7 @@
     # setter for: Landroid/media/AudioService;->mSoundPoolLooper:Landroid/os/Looper;
     invoke-static {v0, v1}, Landroid/media/AudioService;->access$1702(Landroid/media/AudioService;Landroid/os/Looper;)Landroid/os/Looper;
 
-    .line 2348
+    .line 2312
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mSoundEffectsLock:Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     monitor-enter v1
 
-    .line 2349
+    .line 2313
     :try_start_0
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
@@ -75,7 +75,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2350
+    .line 2314
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
     new-instance v2, Landroid/media/AudioService$SoundPoolCallback;
@@ -89,7 +89,7 @@
     # setter for: Landroid/media/AudioService;->mSoundPoolCallBack:Landroid/media/AudioService$SoundPoolCallback;
     invoke-static {v0, v2}, Landroid/media/AudioService;->access$2002(Landroid/media/AudioService;Landroid/media/AudioService$SoundPoolCallback;)Landroid/media/AudioService$SoundPoolCallback;
 
-    .line 2351
+    .line 2315
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mSoundPool:Landroid/media/SoundPool;
@@ -106,7 +106,7 @@
 
     invoke-virtual {v0, v2}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 2353
+    .line 2317
     :cond_0
     iget-object v0, p0, Landroid/media/AudioService$SoundPoolListenerThread;->this$0:Landroid/media/AudioService;
 
@@ -117,18 +117,18 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 2354
+    .line 2318
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2355
+    .line 2319
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 2356
+    .line 2320
     return-void
 
-    .line 2354
+    .line 2318
     :catchall_0
     move-exception v0
 

@@ -2329,7 +2329,6 @@
     <attr name="pointerIconSpotHover" format="reference" />
     <attr name="pointerIconSpotTouch" format="reference" />
     <attr name="pointerIconSpotAnchor" format="reference" />
-    <attr name="pointerIconStylusHover" format="reference" />
     <attr name="bitmap" format="reference" />
     <attr name="hotSpotX" format="dimension" />
     <attr name="hotSpotY" format="dimension" />
@@ -2339,7 +2338,6 @@
     <attr name="removable" format="boolean" />
     <attr name="emulated" format="boolean" />
     <attr name="mtpReserve" format="integer" />
-    <attr name="allowMtp" format="boolean" />
     <attr name="allowMassStorage" format="boolean" />
     <attr name="maxFileSize" format="integer" />
     <attr name="headerLayout" format="reference" />

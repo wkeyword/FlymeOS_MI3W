@@ -46,7 +46,6 @@
 
     iget-object v3, v3, Landroid/widget/Editor$SpanController;->this$0:Landroid/widget/Editor;
 
-    # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {v3}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3
@@ -88,7 +87,6 @@
 
     iget-object v3, v3, Landroid/widget/Editor$SpanController;->this$0:Landroid/widget/Editor;
 
-    # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {v3}, Landroid/widget/Editor;->access$700(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3

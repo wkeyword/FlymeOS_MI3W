@@ -18,10 +18,6 @@
 
 .field public static final DIAL_MODIFIED_TO_USSD:I = 0xf4
 
-.field public static final EMERGENCY_PERM_FAILURE:I = 0x146
-
-.field public static final EMERGENCY_TEMP_FAILURE:I = 0x145
-
 .field public static final ERROR_UNSPECIFIED:I = 0xffff
 
 .field public static final FDN_BLOCKED:I = 0xf1

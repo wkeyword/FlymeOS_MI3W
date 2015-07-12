@@ -60,35 +60,35 @@
 
     const/4 v2, 0x0
 
-    const v10, 0x1040479
+    const v10, 0x10404e9
 
-    const v9, 0x1040478
+    const v9, 0x10404e8
 
-    .line 113
+    .line 114
     new-instance v0, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v1, "VIEW"
 
     const-string v3, "android.intent.action.VIEW"
 
-    const v4, 0x1040474
+    const v4, 0x10404e4
 
-    const v5, 0x1040475
+    const v5, 0x10404e5
 
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/app/ResolverActivity$ActionTitle;->VIEW:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 116
+    .line 117
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "EDIT"
 
     const-string v6, "android.intent.action.EDIT"
 
-    const v7, 0x1040476
+    const v7, 0x10404e6
 
-    const v8, 0x1040477
+    const v8, 0x10404e7
 
     move v5, v11
 
@@ -96,7 +96,7 @@
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->EDIT:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 119
+    .line 120
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "SEND"
@@ -113,7 +113,7 @@
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->SEND:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 122
+    .line 123
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "SENDTO"
@@ -130,7 +130,7 @@
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->SENDTO:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 125
+    .line 126
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "SEND_MULTIPLE"
@@ -147,7 +147,7 @@
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->SEND_MULTIPLE:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 128
+    .line 129
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "DEFAULT"
@@ -156,15 +156,15 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x1040472
+    const v7, 0x10404e2
 
-    const v8, 0x1040473
+    const v8, 0x10404e3
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->DEFAULT:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 131
+    .line 132
     new-instance v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     const-string v4, "HOME"
@@ -173,15 +173,15 @@
 
     const-string v6, "android.intent.action.MAIN"
 
-    const v7, 0x104047a
+    const v7, 0x10404ea
 
-    const v8, 0x104047b
+    const v8, 0x10404eb
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/app/ResolverActivity$ActionTitle;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
     sput-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->HOME:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
-    .line 112
+    .line 113
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/app/ResolverActivity$ActionTitle;
@@ -241,19 +241,19 @@
     .end annotation
 
     .prologue
-    .line 139
+    .line 140
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 140
+    .line 141
     iput-object p3, p0, Lcom/android/internal/app/ResolverActivity$ActionTitle;->action:Ljava/lang/String;
 
-    .line 141
+    .line 142
     iput p4, p0, Lcom/android/internal/app/ResolverActivity$ActionTitle;->titleRes:I
 
-    .line 142
+    .line 143
     iput p5, p0, Lcom/android/internal/app/ResolverActivity$ActionTitle;->namedTitleRes:I
 
-    .line 143
+    .line 144
     return-void
 .end method
 
@@ -262,7 +262,7 @@
     .param p0, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 146
+    .line 147
     invoke-static {}, Lcom/android/internal/app/ResolverActivity$ActionTitle;->values()[Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     move-result-object v0
@@ -279,7 +279,7 @@
 
     aget-object v3, v0, v1
 
-    .line 147
+    .line 148
     .local v3, "title":Lcom/android/internal/app/ResolverActivity$ActionTitle;
     sget-object v4, Lcom/android/internal/app/ResolverActivity$ActionTitle;->HOME:Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
@@ -295,19 +295,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 151
+    .line 152
     .end local v3    # "title":Lcom/android/internal/app/ResolverActivity$ActionTitle;
     :goto_1
     return-object v3
 
-    .line 146
+    .line 147
     .restart local v3    # "title":Lcom/android/internal/app/ResolverActivity$ActionTitle;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 151
+    .line 152
     .end local v3    # "title":Lcom/android/internal/app/ResolverActivity$ActionTitle;
     :cond_1
     sget-object v3, Lcom/android/internal/app/ResolverActivity$ActionTitle;->DEFAULT:Lcom/android/internal/app/ResolverActivity$ActionTitle;
@@ -320,7 +320,7 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 112
+    .line 113
     const-class v0, Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -336,7 +336,7 @@
     .locals 1
 
     .prologue
-    .line 112
+    .line 113
     sget-object v0, Lcom/android/internal/app/ResolverActivity$ActionTitle;->$VALUES:[Lcom/android/internal/app/ResolverActivity$ActionTitle;
 
     invoke-virtual {v0}, [Lcom/android/internal/app/ResolverActivity$ActionTitle;->clone()Ljava/lang/Object;

@@ -313,7 +313,7 @@
     if-nez v6, :cond_0
 
     .line 143
-    const v6, 0x1040569
+    const v6, 0x104007d
 
     invoke-virtual {p0, v6}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
     :try_end_0
@@ -719,7 +719,7 @@
     if-nez v7, :cond_1
 
     .line 185
-    const v7, 0x1040569
+    const v7, 0x104007d
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
 
@@ -782,7 +782,7 @@
 
     .line 202
     :cond_2
-    const v7, 0x1040568
+    const v7, 0x10405d3
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
 
@@ -823,7 +823,7 @@
     if-nez v7, :cond_4
 
     .line 211
-    const v7, 0x1040569
+    const v7, 0x104007d
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
     :try_end_1
@@ -996,7 +996,7 @@
 
     .line 233
     :cond_7
-    const v7, 0x104056a
+    const v7, 0x10405d4
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
 
@@ -1040,7 +1040,7 @@
     if-eqz v7, :cond_a
 
     .line 309
-    const v7, 0x104056c
+    const v7, 0x10405d6
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 
@@ -1057,7 +1057,7 @@
     if-eqz v7, :cond_b
 
     .line 311
-    const v7, 0x104056d
+    const v7, 0x10405d7
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 
@@ -1074,7 +1074,7 @@
     if-eqz v7, :cond_c
 
     .line 313
-    const v7, 0x104056e
+    const v7, 0x10405d8
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 
@@ -1091,7 +1091,7 @@
     if-eqz v7, :cond_d
 
     .line 315
-    const v7, 0x104056f
+    const v7, 0x10405d9
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 
@@ -1099,7 +1099,7 @@
 
     .line 317
     :cond_d
-    const v7, 0x1040570
+    const v7, 0x10405da
 
     invoke-virtual {p0, v7}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->fail(I)V
 

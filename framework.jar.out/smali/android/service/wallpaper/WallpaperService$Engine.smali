@@ -1229,7 +1229,7 @@
     .line 559
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mLayout="
+    const-string/jumbo v0, "mLayout="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1246,7 +1246,7 @@
     :try_start_0
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingXOffset="
+    const-string/jumbo v0, "mPendingXOffset="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1266,7 +1266,7 @@
     .line 563
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingXOffsetStep="
+    const-string/jumbo v0, "mPendingXOffsetStep="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1287,7 +1287,7 @@
     .line 566
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mOffsetMessageEnqueued="
+    const-string/jumbo v0, "mOffsetMessageEnqueued="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1313,7 +1313,7 @@
     .line 570
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string v0, "mPendingMove="
+    const-string/jumbo v0, "mPendingMove="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -2194,7 +2194,7 @@
 
     move-result-object v2
 
-    const v3, 0x1120071
+    const v3, 0x1120076
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 

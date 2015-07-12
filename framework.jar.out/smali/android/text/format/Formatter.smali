@@ -69,7 +69,7 @@
 
     .line 53
     .local v0, "result":F
-    const v1, 0x1040078
+    const v1, 0x10400ed
 
     .line 54
     .local v1, "suffix":I
@@ -78,7 +78,7 @@
     if-lez v3, :cond_1
 
     .line 55
-    const v1, 0x1040079
+    const v1, 0x10400ee
 
     .line 56
     div-float/2addr v0, v5
@@ -90,7 +90,7 @@
     if-lez v3, :cond_2
 
     .line 59
-    const v1, 0x104007a
+    const v1, 0x10400ef
 
     .line 60
     div-float/2addr v0, v5
@@ -102,7 +102,7 @@
     if-lez v3, :cond_3
 
     .line 63
-    const v1, 0x104007b
+    const v1, 0x10400f0
 
     .line 64
     div-float/2addr v0, v5
@@ -114,7 +114,7 @@
     if-lez v3, :cond_4
 
     .line 67
-    const v1, 0x104007c
+    const v1, 0x10400f1
 
     .line 68
     div-float/2addr v0, v5
@@ -126,7 +126,7 @@
     if-lez v3, :cond_5
 
     .line 71
-    const v1, 0x104007d
+    const v1, 0x10400f2
 
     .line 72
     div-float/2addr v0, v5
@@ -161,7 +161,7 @@
 
     move-result-object v3
 
-    const v4, 0x104007e
+    const v4, 0x10400f3
 
     const/4 v5, 0x2
 
@@ -428,7 +428,7 @@
     add-int/2addr v0, v6
 
     .line 142
-    const v6, 0x104007f
+    const v6, 0x10400f4
 
     const/4 v7, 0x1
 
@@ -460,7 +460,7 @@
     if-ne v1, v6, :cond_4
 
     .line 145
-    const v6, 0x1040081
+    const v6, 0x10400f6
 
     const/4 v7, 0x2
 
@@ -490,7 +490,7 @@
 
     .line 147
     :cond_4
-    const v6, 0x1040080
+    const v6, 0x10400f5
 
     const/4 v7, 0x2
 
@@ -532,7 +532,7 @@
     add-int/2addr v1, v6
 
     .line 150
-    const v6, 0x1040082
+    const v6, 0x10400f7
 
     const/4 v7, 0x1
 
@@ -562,7 +562,7 @@
     if-ne v2, v6, :cond_7
 
     .line 153
-    const v6, 0x1040084
+    const v6, 0x10400f9
 
     const/4 v7, 0x2
 
@@ -592,7 +592,7 @@
 
     .line 156
     :cond_7
-    const v6, 0x1040083
+    const v6, 0x10400f8
 
     const/4 v7, 0x2
 
@@ -634,7 +634,7 @@
     add-int/2addr v2, v6
 
     .line 160
-    const v6, 0x1040085
+    const v6, 0x10400fa
 
     const/4 v7, 0x1
 
@@ -664,7 +664,7 @@
     if-ne v3, v6, :cond_a
 
     .line 163
-    const v6, 0x1040087
+    const v6, 0x10400fc
 
     const/4 v7, 0x2
 
@@ -694,7 +694,7 @@
 
     .line 166
     :cond_a
-    const v6, 0x1040086
+    const v6, 0x10400fb
 
     const/4 v7, 0x2
 
@@ -729,7 +729,7 @@
     if-ne v3, v6, :cond_c
 
     .line 169
-    const v6, 0x1040089
+    const v6, 0x10400fe
 
     const/4 v7, 0x1
 
@@ -751,7 +751,7 @@
 
     .line 171
     :cond_c
-    const v6, 0x1040088
+    const v6, 0x10400fd
 
     const/4 v7, 0x1
 

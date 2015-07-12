@@ -30,18 +30,18 @@
     .param p3, "asyncChannel"    # Lcom/android/internal/util/AsyncChannel;
 
     .prologue
-    .line 3380
+    .line 3385
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3381
+    .line 3386
     iput-object p1, p0, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->name:Ljava/lang/String;
 
-    .line 3382
+    .line 3387
     iput-object p2, p0, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->messenger:Landroid/os/Messenger;
 
-    .line 3383
+    .line 3388
     iput-object p3, p0, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 3384
+    .line 3389
     return-void
 .end method

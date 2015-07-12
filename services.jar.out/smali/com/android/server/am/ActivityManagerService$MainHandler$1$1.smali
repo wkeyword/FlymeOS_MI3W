@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 1645
+    .line 1648
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$MainHandler$1$1;->this$2:Lcom/android/server/am/ActivityManagerService$MainHandler$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,31 +56,31 @@
 
     const/4 v0, -0x1
 
-    .line 1647
+    .line 1650
     iget v2, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
     iget v3, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
     if-eq v2, v3, :cond_1
 
-    .line 1648
+    .line 1651
     iget v2, p1, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
     iget v3, p2, Lcom/android/server/am/ProcessMemInfo;->oomAdj:I
 
     if-ge v2, v3, :cond_0
 
-    .line 1653
+    .line 1656
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 1648
+    .line 1651
     goto :goto_0
 
-    .line 1650
+    .line 1653
     :cond_1
     iget-wide v2, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
 
@@ -90,7 +90,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 1651
+    .line 1654
     iget-wide v2, p1, Lcom/android/server/am/ProcessMemInfo;->pss:J
 
     iget-wide v4, p2, Lcom/android/server/am/ProcessMemInfo;->pss:J
@@ -109,7 +109,7 @@
 
     goto :goto_1
 
-    .line 1653
+    .line 1656
     :cond_3
     const/4 v0, 0x0
 
@@ -122,7 +122,7 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1645
+    .line 1648
     check-cast p1, Lcom/android/server/am/ProcessMemInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

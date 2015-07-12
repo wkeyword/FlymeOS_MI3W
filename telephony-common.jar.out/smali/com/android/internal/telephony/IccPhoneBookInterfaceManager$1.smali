@@ -318,9 +318,9 @@
     .line 99
     iget-object v1, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager$1;->this$0:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
-    const/4 v3, 0x0
+    iget-object v1, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecords:Ljava/util/List;
 
-    iput-object v3, v1, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecords:Ljava/util/List;
+    invoke-interface {v1}, Ljava/util/List;->clear()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 

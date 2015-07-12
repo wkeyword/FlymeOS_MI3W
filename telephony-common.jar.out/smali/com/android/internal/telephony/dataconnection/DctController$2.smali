@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 150
+    .line 146
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$2;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
     .param p7, "unavailable"    # Z
 
     .prologue
-    .line 153
+    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,12 +108,12 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DctController;->logd(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DctController;->access$100(Ljava/lang/String;)V
 
-    .line 155
+    .line 151
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->getPhoneId(J)I
 
     move-result v1
 
-    .line 156
+    .line 152
     .local v1, "phoneId":I
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$2;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
@@ -136,6 +136,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/internal/telephony/dataconnection/DcSwitchState;->notifyDataConnection(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 158
+    .line 154
     return-void
 .end method

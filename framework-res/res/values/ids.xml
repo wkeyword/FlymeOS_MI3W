@@ -254,6 +254,7 @@
     <item type="id" name="resolver_list">false</item>
     <item type="id" name="button_once">false</item>
     <item type="id" name="button_always">false</item>
+    <item type="id" name="filtered_item_container">false</item>
     <item type="id" name="pin_text">false</item>
     <item type="id" name="pin_error_message">false</item>
     <item type="id" name="pin_cancel_button">false</item>

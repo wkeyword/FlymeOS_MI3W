@@ -509,7 +509,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120046
+    const v1, 0x112004a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1707,7 +1707,7 @@
 
     move-result-object v1
 
-    const v2, 0x1120093
+    const v2, 0x1120097
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2031,7 +2031,7 @@
 
     move-result-object v4
 
-    const v5, 0x107003c
+    const v5, 0x1070043
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -2645,128 +2645,6 @@
     goto :goto_0
 .end method
 
-.method protected resetServiceStateInIwlanMode()V
-    .locals 4
-
-    .prologue
-    const/16 v3, 0x12
-
-    .line 920
-    iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mCi:Lcom/android/internal/telephony/CommandsInterface;
-
-    invoke-interface {v1}, Lcom/android/internal/telephony/CommandsInterface;->getRadioState()Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/android/internal/telephony/CommandsInterface$RadioState;->RADIO_OFF:Lcom/android/internal/telephony/CommandsInterface$RadioState;
-
-    if-ne v1, v2, :cond_1
-
-    .line 921
-    const/4 v0, 0x0
-
-    .line 922
-    .local v0, "resetIwlanRatVal":Z
-    const-string v1, "set service state as POWER_OFF"
-
-    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
-
-    .line 923
-    invoke-virtual {p0}, Lcom/android/internal/telephony/ServiceStateTracker;->isIwlanFeatureAvailable()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v1}, Landroid/telephony/ServiceState;->getRilDataRadioTechnology()I
-
-    move-result v1
-
-    if-ne v3, v1, :cond_0
-
-    .line 926
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "pollStateDone: mNewSS = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
-
-    .line 927
-    const-string v1, "pollStateDone: reset iwlan RAT value"
-
-    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
-
-    .line 928
-    const/4 v0, 0x1
-
-    .line 930
-    :cond_0
-    iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v1}, Landroid/telephony/ServiceState;->setStateOff()V
-
-    .line 931
-    if-eqz v0, :cond_1
-
-    .line 932
-    iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v1, v3}, Landroid/telephony/ServiceState;->setRilDataRadioTechnology(I)V
-
-    .line 933
-    iget-object v1, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/telephony/ServiceState;->setDataRegState(I)V
-
-    .line 934
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "pollStateDone: mNewSS = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker;->mNewSS:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
-
-    .line 938
-    .end local v0    # "resetIwlanRatVal":Z
-    :cond_1
-    return-void
-.end method
-
 .method public abstract setImsRegistrationState(Z)V
 .end method
 
@@ -3237,7 +3115,7 @@
 
     move-result-object v0
 
-    const v1, 0x112007f
+    const v1, 0x1120085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

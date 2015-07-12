@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 4461
+    .line 4462
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState$1;-><init>()V
@@ -59,7 +59,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4429
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +70,7 @@
     .param p1, "x0"    # Lcom/android/internal/policy/impl/PhoneWindow$1;
 
     .prologue
-    .line 4428
+    .line 4429
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;-><init>()V
 
     return-void
@@ -81,7 +81,7 @@
     .param p0, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 4428
+    .line 4429
     invoke-static {p0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->readFromParcel(Landroid/os/Parcel;)Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
 
     move-result-object v0
@@ -98,12 +98,12 @@
 
     const/4 v2, 0x1
 
-    .line 4449
+    .line 4450
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;-><init>()V
 
-    .line 4450
+    .line 4451
     .local v0, "savedState":Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
@@ -111,7 +111,7 @@
 
     iput v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->featureId:I
 
-    .line 4451
+    .line 4452
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -123,7 +123,7 @@
     :goto_0
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
-    .line 4452
+    .line 4453
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -133,32 +133,32 @@
     :goto_1
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isInExpandedMode:Z
 
-    .line 4454
+    .line 4455
     iget-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v1, :cond_0
 
-    .line 4455
+    .line 4456
     invoke-virtual {p0}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->menuState:Landroid/os/Bundle;
 
-    .line 4458
+    .line 4459
     :cond_0
     return-object v0
 
     :cond_1
     move v1, v3
 
-    .line 4451
+    .line 4452
     goto :goto_0
 
     :cond_2
     move v2, v3
 
-    .line 4452
+    .line 4453
     goto :goto_1
 .end method
 
@@ -168,7 +168,7 @@
     .locals 1
 
     .prologue
-    .line 4435
+    .line 4436
     const/4 v0, 0x0
 
     return v0
@@ -184,12 +184,12 @@
 
     const/4 v2, 0x0
 
-    .line 4439
+    .line 4440
     iget v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->featureId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4440
+    .line 4441
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v0, :cond_1
@@ -199,7 +199,7 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4441
+    .line 4442
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isInExpandedMode:Z
 
     if-eqz v0, :cond_2
@@ -207,29 +207,29 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4443
+    .line 4444
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->isOpen:Z
 
     if-eqz v0, :cond_0
 
-    .line 4444
+    .line 4445
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState$SavedState;->menuState:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 4446
+    .line 4447
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 4440
+    .line 4441
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 4441
+    .line 4442
     goto :goto_1
 .end method

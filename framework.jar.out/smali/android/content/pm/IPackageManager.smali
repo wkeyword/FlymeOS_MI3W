@@ -1040,6 +1040,14 @@
     .end annotation
 .end method
 
+.method public abstract setComponentProtectedSetting(Landroid/content/ComponentName;ZI)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract setInstallLocation(I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

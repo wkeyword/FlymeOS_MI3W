@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 2037
+    .line 2042
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$StopTetheringErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;-><init>(Lcom/android/server/connectivity/Tethering$TetherMasterSM;)V
@@ -37,19 +37,19 @@
     .locals 2
 
     .prologue
-    .line 2040
+    .line 2045
     const-string v0, "Tethering"
 
     const-string v1, "Error in stopTethering"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2041
+    .line 2046
     const/16 v0, 0xa
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$StopTetheringErrorState;->notify(I)V
 
-    .line 2043
+    .line 2048
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$StopTetheringErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -66,11 +66,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2045
+    .line 2050
     :goto_0
     return-void
 
-    .line 2044
+    .line 2049
     :catch_0
     move-exception v0
 

@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 1614
+    .line 1615
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -48,7 +48,7 @@
     .param p2, "x1"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;
 
     .prologue
-    .line 1614
+    .line 1615
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;-><init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)V
 
     return-void
@@ -59,7 +59,7 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 1630
+    .line 1631
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -74,21 +74,21 @@
 
     if-nez v2, :cond_0
 
-    .line 1698
+    .line 1699
     :goto_0
     return-void
 
-    .line 1634
+    .line 1635
     :cond_0
     const/4 v10, 0x0
 
-    .line 1635
+    .line 1636
     .local v10, "hasCert":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 1637
+    .line 1638
     .local v12, "id":J
     :try_start_0
     move-object/from16 v0, p0
@@ -107,7 +107,7 @@
 
     move-result-object v11
 
-    .line 1639
+    .line 1640
     .local v11, "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :try_start_1
     invoke-virtual {v11}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
@@ -131,10 +131,10 @@
 
     if-nez v2, :cond_1
 
-    .line 1640
+    .line 1641
     const/4 v10, 0x1
 
-    .line 1645
+    .line 1646
     :cond_1
     :try_start_2
     invoke-virtual {v11}, Landroid/security/KeyChain$KeyChainConnection;->close()V
@@ -143,16 +143,16 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1652
+    .line 1653
     :goto_1
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1654
+    .line 1655
     .end local v11    # "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :goto_2
     if-nez v10, :cond_2
 
-    .line 1655
+    .line 1656
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -164,7 +164,7 @@
 
     const/4 v3, 0x0
 
-    const v5, 0x10400ed
+    const v5, 0x1040162
 
     move-object/from16 v0, p1
 
@@ -172,12 +172,12 @@
 
     goto :goto_0
 
-    .line 1642
+    .line 1643
     .restart local v11    # "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :catch_0
     move-exception v9
 
-    .line 1643
+    .line 1644
     .local v9, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v2, "DevicePolicyManagerService"
@@ -188,7 +188,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1645
+    .line 1646
     :try_start_4
     invoke-virtual {v11}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_4
@@ -198,13 +198,13 @@
 
     goto :goto_1
 
-    .line 1647
+    .line 1648
     .end local v9    # "e":Landroid/os/RemoteException;
     .end local v11    # "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :catch_1
     move-exception v9
 
-    .line 1648
+    .line 1649
     .local v9, "e":Ljava/lang/InterruptedException;
     :try_start_5
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -215,12 +215,12 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1652
+    .line 1653
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 1645
+    .line 1646
     .end local v9    # "e":Ljava/lang/InterruptedException;
     .restart local v11    # "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :catchall_0
@@ -235,12 +235,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 1649
+    .line 1650
     .end local v11    # "kcs":Landroid/security/KeyChain$KeyChainConnection;
     :catch_2
     move-exception v9
 
-    .line 1650
+    .line 1651
     .local v9, "e":Ljava/lang/RuntimeException;
     :try_start_7
     const-string v2, "DevicePolicyManagerService"
@@ -251,7 +251,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 1652
+    .line 1653
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -264,7 +264,7 @@
 
     throw v2
 
-    .line 1662
+    .line 1663
     :cond_2
     move-object/from16 v0, p0
 
@@ -274,18 +274,18 @@
 
     move-result-object v16
 
-    .line 1663
+    .line 1664
     .local v16, "ownerName":Ljava/lang/String;
     if-eqz v16, :cond_3
 
-    .line 1664
+    .line 1665
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10400ef
+    const v3, 0x1040164
 
     const/4 v5, 0x1
 
@@ -299,11 +299,11 @@
 
     move-result-object v8
 
-    .line 1665
+    .line 1666
     .local v8, "contentText":Ljava/lang/String;
-    const v17, 0x1080679
+    const v17, 0x108067b
 
-    .line 1671
+    .line 1672
     .local v17, "smallIconId":I
     :goto_3
     new-instance v4, Landroid/content/Intent;
@@ -312,18 +312,18 @@
 
     invoke-direct {v4, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1672
+    .line 1673
     .local v4, "dialogIntent":Landroid/content/Intent;
     const v2, 0x10008000
 
     invoke-virtual {v4, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1674
+    .line 1675
     const-string v2, "com.android.settings"
 
     invoke-virtual {v4, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1675
+    .line 1676
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -342,7 +342,7 @@
 
     move-result-object v15
 
-    .line 1680
+    .line 1681
     .local v15, "notifyIntent":Landroid/app/PendingIntent;
     :try_start_8
     move-object/from16 v0, p0
@@ -363,7 +363,7 @@
 
     move-result-object v18
 
-    .line 1685
+    .line 1686
     .local v18, "userContext":Landroid/content/Context;
     new-instance v2, Landroid/app/Notification$Builder;
 
@@ -383,7 +383,7 @@
 
     iget-object v3, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    const v5, 0x10400ed
+    const v5, 0x1040162
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -437,7 +437,7 @@
 
     move-result-object v14
 
-    .line 1696
+    .line 1697
     .local v14, "noti":Landroid/app/Notification;
     move-object/from16 v0, p0
 
@@ -450,7 +450,7 @@
 
     const/4 v3, 0x0
 
-    const v5, 0x10400ed
+    const v5, 0x1040162
 
     move-object/from16 v0, p1
 
@@ -458,7 +458,7 @@
 
     goto/16 :goto_0
 
-    .line 1667
+    .line 1668
     .end local v4    # "dialogIntent":Landroid/content/Intent;
     .end local v8    # "contentText":Ljava/lang/String;
     .end local v14    # "noti":Landroid/app/Notification;
@@ -472,26 +472,26 @@
 
     iget-object v2, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x10400ee
+    const v3, 0x1040163
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1668
+    .line 1669
     .restart local v8    # "contentText":Ljava/lang/String;
     const v17, 0x108008a
 
     .restart local v17    # "smallIconId":I
     goto/16 :goto_3
 
-    .line 1681
+    .line 1682
     .restart local v4    # "dialogIntent":Landroid/content/Intent;
     .restart local v15    # "notifyIntent":Landroid/app/PendingIntent;
     :catch_3
     move-exception v9
 
-    .line 1682
+    .line 1683
     .local v9, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "DevicePolicyManagerService"
 
@@ -533,7 +533,7 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1614
+    .line 1615
     check-cast p1, [Landroid/content/Intent;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -551,7 +551,7 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 1617
+    .line 1618
     const/4 v3, 0x0
 
     aget-object v3, p1, v3
@@ -562,11 +562,11 @@
 
     move-result v1
 
-    .line 1619
+    .line 1620
     .local v1, "userHandle":I
     if-ne v1, v5, :cond_0
 
-    .line 1620
+    .line 1621
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v3, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -593,7 +593,7 @@
 
     check-cast v2, Landroid/content/pm/UserInfo;
 
-    .line 1621
+    .line 1622
     .local v2, "userInfo":Landroid/content/pm/UserInfo;
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
@@ -603,7 +603,7 @@
 
     goto :goto_0
 
-    .line 1624
+    .line 1625
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v2    # "userInfo":Landroid/content/pm/UserInfo;
     :cond_0
@@ -613,7 +613,7 @@
 
     invoke-direct {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$MonitoringCertNotificationTask;->manageNotification(Landroid/os/UserHandle;)V
 
-    .line 1626
+    .line 1627
     :cond_1
     const/4 v3, 0x0
 

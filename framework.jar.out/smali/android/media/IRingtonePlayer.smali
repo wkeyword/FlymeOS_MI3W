@@ -39,6 +39,14 @@
     .end annotation
 .end method
 
+.method public abstract setVolume(Landroid/os/IBinder;F)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract stop(Landroid/os/IBinder;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

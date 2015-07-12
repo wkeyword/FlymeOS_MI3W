@@ -24,17 +24,17 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 222
+    .line 223
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 223
+    .line 224
     new-instance v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-direct {v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Lifecycle;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 224
+    .line 225
     return-void
 .end method
 
@@ -45,17 +45,17 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 233
+    .line 234
     const/16 v0, 0x1e0
 
     if-ne p1, v0, :cond_0
 
-    .line 234
+    .line 235
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Lifecycle;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->systemReady()V
 
-    .line 236
+    .line 237
     :cond_0
     return-void
 .end method
@@ -64,13 +64,13 @@
     .locals 2
 
     .prologue
-    .line 228
+    .line 229
     const-string v0, "device_policy"
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Lifecycle;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 229
+    .line 230
     return-void
 .end method

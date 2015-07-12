@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 641
+    .line 649
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$2;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 644
+    .line 652
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$2;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/InputMethodManagerService;->handleMessage(Landroid/os/Message;)Z
 
-    .line 645
+    .line 653
     return-void
 .end method

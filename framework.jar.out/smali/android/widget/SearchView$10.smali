@@ -56,7 +56,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Landroid/widget/SearchView$10;->this$0:Landroid/widget/SearchView;
 
-    # invokes: Landroid/widget/SearchView;->onItemSelected(I)Z
     invoke-static {v0, p3}, Landroid/widget/SearchView;->access$1900(Landroid/widget/SearchView;I)Z
 
     .line 1382

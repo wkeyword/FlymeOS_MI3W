@@ -46,7 +46,7 @@
     .locals 0
 
     .prologue
-    .line 1634
+    .line 1628
     iput-object p1, p0, Landroid/content/ContentProvider$1;->this$0:Landroid/content/ContentProvider;
 
     iput-object p2, p0, Landroid/content/ContentProvider$1;->val$func:Landroid/content/ContentProvider$PipeDataWriter;
@@ -75,7 +75,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1637
+    .line 1631
     iget-object v0, p0, Landroid/content/ContentProvider$1;->val$func:Landroid/content/ContentProvider$PipeDataWriter;
 
     iget-object v1, p0, Landroid/content/ContentProvider$1;->val$fds:[Landroid/os/ParcelFileDescriptor;
@@ -92,7 +92,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/ContentProvider$PipeDataWriter;->writeDataToPipe(Landroid/os/ParcelFileDescriptor;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;)V
 
-    .line 1639
+    .line 1633
     :try_start_0
     iget-object v0, p0, Landroid/content/ContentProvider$1;->val$fds:[Landroid/os/ParcelFileDescriptor;
 
@@ -104,17 +104,17 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1643
+    .line 1637
     :goto_0
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 1640
+    .line 1634
     :catch_0
     move-exception v6
 
-    .line 1641
+    .line 1635
     .local v6, "e":Ljava/io/IOException;
     const-string v0, "ContentProvider"
 

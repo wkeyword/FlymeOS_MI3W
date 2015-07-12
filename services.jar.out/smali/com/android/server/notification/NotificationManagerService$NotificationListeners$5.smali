@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 2909
+    .line 3149
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$5;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$5;->val$serviceInfo:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -48,7 +48,7 @@
     .locals 3
 
     .prologue
-    .line 2912
+    .line 3152
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$5;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$5;->val$serviceInfo:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -56,8 +56,8 @@
     iget v2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$5;->val$hints:I
 
     # invokes: Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->notifyListenerHintsChanged(Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;I)V
-    invoke-static {v0, v1, v2}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->access$4900(Lcom/android/server/notification/NotificationManagerService$NotificationListeners;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;I)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->access$5800(Lcom/android/server/notification/NotificationManagerService$NotificationListeners;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;I)V
 
-    .line 2913
+    .line 3153
     return-void
 .end method

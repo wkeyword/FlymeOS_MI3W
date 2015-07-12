@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 19754
+    .line 19746
     iput-object p1, p0, Landroid/view/View$PerformClick;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .param p2, "x1"    # Landroid/view/View$1;
 
     .prologue
-    .line 19754
+    .line 19746
     invoke-direct {p0, p1}, Landroid/view/View$PerformClick;-><init>(Landroid/view/View;)V
 
     return-void
@@ -52,11 +52,11 @@
     .locals 1
 
     .prologue
-    .line 19757
+    .line 19749
     iget-object v0, p0, Landroid/view/View$PerformClick;->this$0:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 
-    .line 19758
+    .line 19750
     return-void
 .end method

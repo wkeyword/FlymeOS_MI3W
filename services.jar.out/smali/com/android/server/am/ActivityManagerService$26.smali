@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 18598
+    .line 18675
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput p2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$N:I
@@ -46,7 +46,7 @@
 
     invoke-direct {p0}, Landroid/os/IRemoteCallback$Stub;-><init>()V
 
-    .line 18599
+    .line 18676
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
@@ -66,12 +66,12 @@
     .end annotation
 
     .prologue
-    .line 18602
+    .line 18679
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 18603
+    .line 18680
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -79,21 +79,21 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 18604
+    .line 18681
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
-    .line 18605
+    .line 18682
     iget v0, p0, Lcom/android/server/am/ActivityManagerService$26;->mCount:I
 
     iget v2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$N:I
 
     if-ne v0, v2, :cond_0
 
-    .line 18606
+    .line 18683
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$26;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$26;->val$uss:Lcom/android/server/am/UserStartedState;
@@ -104,14 +104,14 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/server/am/ActivityManagerService;->sendContinueUserSwitchLocked(Lcom/android/server/am/UserStartedState;II)V
 
-    .line 18609
+    .line 18686
     :cond_0
     monitor-exit v1
 
-    .line 18610
+    .line 18687
     return-void
 
-    .line 18609
+    .line 18686
     :catchall_0
     move-exception v0
 

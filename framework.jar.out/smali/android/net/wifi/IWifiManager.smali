@@ -261,14 +261,6 @@
     .end annotation
 .end method
 
-.method public abstract getSimInfo()Landroid/net/wifi/WifiEapSimInfo;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract getSupportedFeatures()I
     .annotation system Ldalvik/annotation/Throws;
         value = {

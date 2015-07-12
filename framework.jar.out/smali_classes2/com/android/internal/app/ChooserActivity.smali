@@ -200,7 +200,7 @@
     if-nez v3, :cond_2
 
     .line 45
-    const v4, 0x104047f
+    const v4, 0x10404ef
 
     .line 47
     :cond_2

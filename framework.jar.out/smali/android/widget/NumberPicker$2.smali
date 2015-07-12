@@ -48,13 +48,11 @@
     .line 679
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->hideSoftInput()V
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$000(Landroid/widget/NumberPicker;)V
 
     .line 680
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v0
@@ -73,7 +71,6 @@
     .line 682
     iget-object v0, p0, Landroid/widget/NumberPicker$2;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->postChangeCurrentByOneFromLongPress(ZJ)V
     invoke-static {v0, v2, v4, v5}, Landroid/widget/NumberPicker;->access$300(Landroid/widget/NumberPicker;ZJ)V
 
     .line 686
@@ -86,7 +83,6 @@
 
     const/4 v1, 0x0
 
-    # invokes: Landroid/widget/NumberPicker;->postChangeCurrentByOneFromLongPress(ZJ)V
     invoke-static {v0, v1, v4, v5}, Landroid/widget/NumberPicker;->access$300(Landroid/widget/NumberPicker;ZJ)V
 
     goto :goto_0

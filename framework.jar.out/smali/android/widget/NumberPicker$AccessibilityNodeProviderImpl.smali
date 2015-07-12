@@ -96,7 +96,6 @@
     .line 2600
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$6400(Landroid/widget/NumberPicker;)Landroid/content/Context;
 
     move-result-object v5
@@ -204,7 +203,6 @@
     .line 2623
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->isVisibleToUser()Z
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$6500(Landroid/widget/NumberPicker;)Z
 
     move-result v5
@@ -364,7 +362,6 @@
     .line 2566
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$6200(Landroid/widget/NumberPicker;)Landroid/content/Context;
 
     move-result-object v4
@@ -413,7 +410,6 @@
     .line 2575
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->isVisibleToUser(Landroid/graphics/Rect;)Z
     invoke-static {v4, v0}, Landroid/widget/NumberPicker;->access$6300(Landroid/widget/NumberPicker;Landroid/graphics/Rect;)Z
 
     move-result v4
@@ -502,7 +498,6 @@
     .line 2542
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v4
@@ -549,7 +544,6 @@
     .line 2552
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->isVisibleToUser(Landroid/graphics/Rect;)Z
     invoke-static {v4, v0}, Landroid/widget/NumberPicker;->access$6100(Landroid/widget/NumberPicker;Landroid/graphics/Rect;)Z
 
     move-result v4
@@ -662,7 +656,6 @@
     :pswitch_1
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -706,7 +699,6 @@
     :cond_1
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -803,7 +795,6 @@
     .line 2659
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mValue:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6600(Landroid/widget/NumberPicker;)I
 
     move-result v1
@@ -814,7 +805,6 @@
     .local v0, "value":I
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mWrapSelectorWheel:Z
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6700(Landroid/widget/NumberPicker;)Z
 
     move-result v1
@@ -824,7 +814,6 @@
     .line 2661
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->getWrappedSelectorIndex(I)I
     invoke-static {v1, v0}, Landroid/widget/NumberPicker;->access$6800(Landroid/widget/NumberPicker;I)I
 
     move-result v0
@@ -833,7 +822,6 @@
     :cond_0
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMinValue:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6900(Landroid/widget/NumberPicker;)I
 
     move-result v1
@@ -843,7 +831,6 @@
     .line 2664
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v1
@@ -852,7 +839,6 @@
 
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->formatNumber(I)Ljava/lang/String;
     invoke-static {v1, v0}, Landroid/widget/NumberPicker;->access$7000(Landroid/widget/NumberPicker;I)Ljava/lang/String;
 
     move-result-object v1
@@ -865,14 +851,12 @@
     :cond_1
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMinValue:I
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$6900(Landroid/widget/NumberPicker;)I
 
     move-result v2
@@ -897,7 +881,6 @@
     .line 2671
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mValue:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6600(Landroid/widget/NumberPicker;)I
 
     move-result v1
@@ -908,7 +891,6 @@
     .local v0, "value":I
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mWrapSelectorWheel:Z
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6700(Landroid/widget/NumberPicker;)Z
 
     move-result v1
@@ -918,7 +900,6 @@
     .line 2673
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->getWrappedSelectorIndex(I)I
     invoke-static {v1, v0}, Landroid/widget/NumberPicker;->access$6800(Landroid/widget/NumberPicker;I)I
 
     move-result v0
@@ -927,7 +908,6 @@
     :cond_0
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMaxValue:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$1100(Landroid/widget/NumberPicker;)I
 
     move-result v1
@@ -937,7 +917,6 @@
     .line 2676
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v1
@@ -946,7 +925,6 @@
 
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->formatNumber(I)Ljava/lang/String;
     invoke-static {v1, v0}, Landroid/widget/NumberPicker;->access$7000(Landroid/widget/NumberPicker;I)Ljava/lang/String;
 
     move-result-object v1
@@ -959,14 +937,12 @@
     :cond_1
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMinValue:I
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$6900(Landroid/widget/NumberPicker;)I
 
     move-result v2
@@ -1072,7 +1048,6 @@
     .line 2495
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$5900(Landroid/widget/NumberPicker;)Landroid/content/Context;
 
     move-result-object v1
@@ -1105,7 +1080,6 @@
     .line 2498
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$6000(Landroid/widget/NumberPicker;)Landroid/content/Context;
 
     move-result-object v1
@@ -1158,7 +1132,6 @@
     .line 2484
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mContext:Landroid/content/Context;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$5800(Landroid/widget/NumberPicker;)Landroid/content/Context;
 
     move-result-object v1
@@ -1182,7 +1155,6 @@
     .local v0, "event":Landroid/view/accessibility/AccessibilityEvent;
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -1192,7 +1164,6 @@
     .line 2487
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -1242,35 +1213,30 @@
     :pswitch_1
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$2700(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollY:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$2800(Landroid/widget/NumberPicker;)I
 
     move-result v1
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$2900(Landroid/widget/NumberPicker;)I
 
     move-result v2
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$3000(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mLeft:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$3100(Landroid/widget/NumberPicker;)I
 
     move-result v4
@@ -1281,21 +1247,18 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollY:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$3200(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottom:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$3300(Landroid/widget/NumberPicker;)I
 
     move-result v4
 
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTop:I
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$3400(Landroid/widget/NumberPicker;)I
 
     move-result v5
@@ -1320,35 +1283,30 @@
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$3500(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollY:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$3600(Landroid/widget/NumberPicker;)I
 
     move-result v4
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$3700(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$3800(Landroid/widget/NumberPicker;)I
 
     move-result v5
 
     iget-object v6, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mLeft:I
     invoke-static {v6}, Landroid/widget/NumberPicker;->access$3900(Landroid/widget/NumberPicker;)I
 
     move-result v6
@@ -1359,14 +1317,12 @@
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTopSelectionDividerTop:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$1900(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v6, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mSelectionDividerHeight:I
     invoke-static {v6}, Landroid/widget/NumberPicker;->access$4000(Landroid/widget/NumberPicker;)I
 
     move-result v6
@@ -1385,21 +1341,18 @@
     :pswitch_3
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$4100(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTopSelectionDividerTop:I
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$1900(Landroid/widget/NumberPicker;)I
 
     move-result v1
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mSelectionDividerHeight:I
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$4000(Landroid/widget/NumberPicker;)I
 
     move-result v2
@@ -1408,21 +1361,18 @@
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$4200(Landroid/widget/NumberPicker;)I
 
     move-result v2
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$4300(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mLeft:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$4400(Landroid/widget/NumberPicker;)I
 
     move-result v4
@@ -1433,14 +1383,12 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottomSelectionDividerBottom:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$1400(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mSelectionDividerHeight:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$4000(Landroid/widget/NumberPicker;)I
 
     move-result v4
@@ -1463,21 +1411,18 @@
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$4500(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottomSelectionDividerBottom:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$1400(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mSelectionDividerHeight:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$4000(Landroid/widget/NumberPicker;)I
 
     move-result v4
@@ -1486,21 +1431,18 @@
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollX:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$4600(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$4700(Landroid/widget/NumberPicker;)I
 
     move-result v5
 
     iget-object v6, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mLeft:I
     invoke-static {v6}, Landroid/widget/NumberPicker;->access$4800(Landroid/widget/NumberPicker;)I
 
     move-result v6
@@ -1511,21 +1453,18 @@
 
     iget-object v0, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mScrollY:I
     invoke-static {v0}, Landroid/widget/NumberPicker;->access$4900(Landroid/widget/NumberPicker;)I
 
     move-result v0
 
     iget-object v6, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottom:I
     invoke-static {v6}, Landroid/widget/NumberPicker;->access$5000(Landroid/widget/NumberPicker;)I
 
     move-result v6
 
     iget-object v7, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTop:I
     invoke-static {v7}, Landroid/widget/NumberPicker;->access$5100(Landroid/widget/NumberPicker;)I
 
     move-result v7
@@ -1760,7 +1699,6 @@
     :cond_1
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v2, v1}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
     move v0, v1
@@ -1804,7 +1742,6 @@
     :cond_2
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v2, v0}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
     move v0, v1
@@ -1819,7 +1756,6 @@
     .line 2394
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -1842,7 +1778,6 @@
 
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -1856,7 +1791,6 @@
     .line 2351
     iget-object v1, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v1}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
@@ -1879,7 +1813,6 @@
 
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1893,7 +1826,6 @@
     .line 2356
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1960,7 +1892,6 @@
     .line 2380
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1987,7 +1918,6 @@
     .line 2389
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mInputText:Landroid/widget/EditText;
     invoke-static {v2}, Landroid/widget/NumberPicker;->access$100(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -2018,7 +1948,6 @@
     .line 2402
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v2, v1}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
     .line 2403
@@ -2046,21 +1975,18 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottomSelectionDividerBottom:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$1400(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$5200(Landroid/widget/NumberPicker;)I
 
     move-result v4
 
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottom:I
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$5300(Landroid/widget/NumberPicker;)I
 
     move-result v5
@@ -2089,21 +2015,18 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottomSelectionDividerBottom:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$1400(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$5400(Landroid/widget/NumberPicker;)I
 
     move-result v4
 
     iget-object v5, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mBottom:I
     invoke-static {v5}, Landroid/widget/NumberPicker;->access$5500(Landroid/widget/NumberPicker;)I
 
     move-result v5
@@ -2141,7 +2064,6 @@
     :cond_3
     iget-object v2, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->changeValueByOne(Z)V
     invoke-static {v2, v0}, Landroid/widget/NumberPicker;->access$200(Landroid/widget/NumberPicker;Z)V
 
     .line 2434
@@ -2170,14 +2092,12 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$5600(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTopSelectionDividerTop:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$1900(Landroid/widget/NumberPicker;)I
 
     move-result v4
@@ -2206,14 +2126,12 @@
 
     iget-object v3, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mRight:I
     invoke-static {v3}, Landroid/widget/NumberPicker;->access$5700(Landroid/widget/NumberPicker;)I
 
     move-result v3
 
     iget-object v4, p0, Landroid/widget/NumberPicker$AccessibilityNodeProviderImpl;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mTopSelectionDividerTop:I
     invoke-static {v4}, Landroid/widget/NumberPicker;->access$1900(Landroid/widget/NumberPicker;)I
 
     move-result v4

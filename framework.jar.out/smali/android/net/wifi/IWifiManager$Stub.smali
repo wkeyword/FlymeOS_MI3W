@@ -74,8 +74,6 @@
 
 .field static final TRANSACTION_getScanResults:I = 0xc
 
-.field static final TRANSACTION_getSimInfo:I = 0x3a
-
 .field static final TRANSACTION_getSupportedFeatures:I = 0x1
 
 .field static final TRANSACTION_getVerboseLoggingLevel:I = 0x34
@@ -232,7 +230,7 @@
     .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 662
+    .line 648
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v9
@@ -2278,49 +2276,6 @@
 
     goto :goto_24
 
-    .line 649
-    .end local v4    # "_result":Landroid/net/wifi/WifiConnectionStatistics;
-    :sswitch_3a
-    const-string v9, "android.net.wifi.IWifiManager"
-
-    invoke-virtual {p2, v9}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 650
-    invoke-virtual {p0}, Landroid/net/wifi/IWifiManager$Stub;->getSimInfo()Landroid/net/wifi/WifiEapSimInfo;
-
-    move-result-object v4
-
-    .line 651
-    .local v4, "_result":Landroid/net/wifi/WifiEapSimInfo;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 652
-    if-eqz v4, :cond_24
-
-    .line 653
-    const/4 v9, 0x1
-
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 654
-    const/4 v9, 0x1
-
-    invoke-virtual {v4, p3, v9}, Landroid/net/wifi/WifiEapSimInfo;->writeToParcel(Landroid/os/Parcel;I)V
-
-    .line 659
-    :goto_25
-    const/4 v9, 0x1
-
-    goto/16 :goto_0
-
-    .line 657
-    :cond_24
-    const/4 v9, 0x0
-
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto :goto_25
-
     .line 43
     :sswitch_data_0
     .sparse-switch
@@ -2381,7 +2336,6 @@
         0x37 -> :sswitch_37
         0x38 -> :sswitch_38
         0x39 -> :sswitch_39
-        0x3a -> :sswitch_3a
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

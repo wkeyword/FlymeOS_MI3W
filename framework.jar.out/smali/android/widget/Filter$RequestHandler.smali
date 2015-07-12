@@ -77,7 +77,6 @@
     .line 239
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mResultHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$200(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -97,7 +96,6 @@
     :goto_1
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mLock:Ljava/lang/Object;
     invoke-static {v5}, Landroid/widget/Filter;->access$300(Landroid/widget/Filter;)Ljava/lang/Object;
 
     move-result-object v6
@@ -108,7 +106,6 @@
     :try_start_1
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$400(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -118,7 +115,6 @@
     .line 246
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$400(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -133,7 +129,6 @@
     .local v2, "finishMessage":Landroid/os/Message;
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$400(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -184,7 +179,6 @@
     .line 239
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mResultHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$200(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -210,7 +204,6 @@
 
     iget-object v6, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mResultHandler:Landroid/os/Handler;
     invoke-static {v6}, Landroid/widget/Filter;->access$200(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v6
@@ -234,7 +227,6 @@
     :sswitch_1
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mLock:Ljava/lang/Object;
     invoke-static {v5}, Landroid/widget/Filter;->access$300(Landroid/widget/Filter;)Ljava/lang/Object;
 
     move-result-object v6
@@ -245,7 +237,6 @@
     :try_start_3
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$400(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -255,7 +246,6 @@
     .line 254
     iget-object v5, p0, Landroid/widget/Filter$RequestHandler;->this$0:Landroid/widget/Filter;
 
-    # getter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5}, Landroid/widget/Filter;->access$400(Landroid/widget/Filter;)Landroid/os/Handler;
 
     move-result-object v5
@@ -271,7 +261,6 @@
 
     const/4 v7, 0x0
 
-    # setter for: Landroid/widget/Filter;->mThreadHandler:Landroid/os/Handler;
     invoke-static {v5, v7}, Landroid/widget/Filter;->access$402(Landroid/widget/Filter;Landroid/os/Handler;)Landroid/os/Handler;
 
     .line 257

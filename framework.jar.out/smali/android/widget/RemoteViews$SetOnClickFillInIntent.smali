@@ -111,7 +111,6 @@
     :cond_1
     iget-object v2, p0, Landroid/widget/RemoteViews$SetOnClickFillInIntent;->this$0:Landroid/widget/RemoteViews;
 
-    # getter for: Landroid/widget/RemoteViews;->mIsWidgetCollectionChild:Z
     invoke-static {v2}, Landroid/widget/RemoteViews;->access$100(Landroid/widget/RemoteViews;)Z
 
     move-result v2

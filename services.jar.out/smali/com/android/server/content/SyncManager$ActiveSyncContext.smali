@@ -199,7 +199,7 @@
     .line 1237
     const-string v0, "android.intent.extra.client_label"
 
-    const v2, 0x1040548
+    const v2, 0x10405b6
 
     invoke-virtual {v7, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 

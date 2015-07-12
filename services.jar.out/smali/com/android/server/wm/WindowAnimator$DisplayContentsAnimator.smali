@@ -25,12 +25,12 @@
     .locals 1
 
     .prologue
-    .line 796
+    .line 797
     iput-object p1, p0, Lcom/android/server/wm/WindowAnimator$DisplayContentsAnimator;->this$0:Lcom/android/server/wm/WindowAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 797
+    .line 798
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/WindowAnimator$DisplayContentsAnimator;->mScreenRotationAnimation:Lcom/android/server/wm/ScreenRotationAnimation;
@@ -44,7 +44,7 @@
     .param p2, "x1"    # Lcom/android/server/wm/WindowAnimator$1;
 
     .prologue
-    .line 796
+    .line 797
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowAnimator$DisplayContentsAnimator;-><init>(Lcom/android/server/wm/WindowAnimator;)V
 
     return-void

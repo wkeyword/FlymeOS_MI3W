@@ -4093,7 +4093,7 @@
 
     .line 462
     .local v25, "providerPackageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    const v3, 0x1070026
+    const v3, 0x107002c
 
     move-object/from16 v0, v27
 
@@ -4162,11 +4162,11 @@
 
     const-string v4, "com.android.location.service.v3.NetworkLocationProvider"
 
-    const v5, 0x112003c
+    const v5, 0x1120040
 
-    const v6, 0x1040020
+    const v6, 0x1040098
 
-    const v7, 0x1070026
+    const v7, 0x107002c
 
     move-object/from16 v0, p0
 
@@ -4217,11 +4217,11 @@
 
     const-string v4, "com.android.location.service.FusedLocationProvider"
 
-    const v5, 0x112003d
+    const v5, 0x1120041
 
-    const v6, 0x1040021
+    const v6, 0x1040099
 
-    const v7, 0x1070026
+    const v7, 0x107002c
 
     move-object/from16 v0, p0
 
@@ -4273,11 +4273,11 @@
 
     iget-object v3, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v4, 0x112003f
+    const v4, 0x1120043
 
-    const v5, 0x1040023
+    const v5, 0x104009b
 
-    const v6, 0x1070026
+    const v6, 0x107002c
 
     move-object/from16 v0, p0
 
@@ -4307,7 +4307,7 @@
 
     .line 516
     :cond_3
-    const v3, 0x1040026
+    const v3, 0x104009e
 
     move-object/from16 v0, v27
 
@@ -4372,7 +4372,7 @@
 
     .line 527
     :goto_2
-    const v3, 0x1040027
+    const v3, 0x104009f
 
     move-object/from16 v0, v27
 
@@ -4476,11 +4476,11 @@
 
     move-result-object v4
 
-    const v5, 0x112003e
+    const v5, 0x1120042
 
-    const v6, 0x1040022
+    const v6, 0x104009a
 
-    const v7, 0x1070026
+    const v7, 0x107002c
 
     invoke-static/range {v2 .. v7}, Lcom/android/server/location/FusedProxy;->createAndBind(Landroid/content/Context;Landroid/os/Handler;Landroid/hardware/location/IFusedLocationHardware;III)Lcom/android/server/location/FusedProxy;
 
@@ -4505,11 +4505,11 @@
 
     iget-object v2, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x1120040
+    const v3, 0x1120044
 
-    const v4, 0x1040024
+    const v4, 0x104009c
 
-    const v5, 0x1070026
+    const v5, 0x107002c
 
     move-object/from16 v0, p0
 
@@ -4566,11 +4566,11 @@
 
     move-result-object v4
 
-    const v5, 0x1120041
+    const v5, 0x1120045
 
-    const v6, 0x1040025
+    const v6, 0x104009d
 
-    const v7, 0x1070026
+    const v7, 0x107002c
 
     invoke-static/range {v2 .. v7}, Lcom/android/server/location/ActivityRecognitionProxy;->createAndBind(Landroid/content/Context;Landroid/os/Handler;Landroid/hardware/location/ActivityRecognitionHardware;III)Lcom/android/server/location/ActivityRecognitionProxy;
 
@@ -4591,7 +4591,7 @@
     .end local v26    # "proxy":Lcom/android/server/location/ActivityRecognitionProxy;
     :cond_7
     :goto_5
-    const v3, 0x1070027
+    const v3, 0x107002d
 
     move-object/from16 v0, v27
 

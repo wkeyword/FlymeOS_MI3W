@@ -185,7 +185,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x10405db
+    const v0, 0x1040644
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/internal/app/MediaRouteChooserDialog;->setTitle(I)V
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    const v1, 0x10803bc
+    const v1, 0x10803be
 
     invoke-virtual {v0, v2, v1}, Landroid/view/Window;->setFeatureDrawableResource(II)V
 
@@ -265,7 +265,7 @@
 
     .line 127
     :cond_0
-    const v0, 0x10405da
+    const v0, 0x1040643
 
     goto :goto_0
 .end method

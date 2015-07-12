@@ -1,11 +1,14 @@
 .class Lcom/android/internal/policy/impl/GlobalActions$6;
-.super Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
+.super Ljava/lang/Object;
 .source "GlobalActions.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/internal/policy/impl/GlobalActions;->addUsersToMenu(Ljava/util/ArrayList;)V
+    value = Lcom/android/internal/policy/impl/GlobalActions;->createProfileDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,98 +20,49 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-.field final synthetic val$user:Landroid/content/pm/UserInfo;
+.field final synthetic val$profiles:[Landroid/app/Profile;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;ILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/pm/UserInfo;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;[Landroid/app/Profile;)V
     .locals 0
-    .param p2, "x0"    # I
-    .param p3, "x1"    # Landroid/graphics/drawable/Drawable;
-    .param p4, "x2"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 533
+    .line 389
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    iput-object p5, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->val$user:Landroid/content/pm/UserInfo;
+    iput-object p2, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->val$profiles:[Landroid/app/Profile;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onPress()V
-    .locals 4
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
-    .line 536
-    :try_start_0
-    invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
+    .line 391
+    if-gez p2, :cond_0
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->val$user:Landroid/content/pm/UserInfo;
-
-    iget v2, v2, Landroid/content/pm/UserInfo;->id:I
-
-    invoke-interface {v1, v2}, Landroid/app/IActivityManager;->switchUser(I)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 540
+    .line 394
     :goto_0
     return-void
 
-    .line 537
-    :catch_0
-    move-exception v0
+    .line 393
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    .line 538
-    .local v0, "re":Landroid/os/RemoteException;
-    const-string v1, "GlobalActions"
+    iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$6;->val$profiles:[Landroid/app/Profile;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    aget-object v1, v1, p2
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Couldn\'t switch user "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    # setter for: Lcom/android/internal/policy/impl/GlobalActions;->mChosenProfile:Landroid/app/Profile;
+    invoke-static {v0, v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$1002(Lcom/android/internal/policy/impl/GlobalActions;Landroid/app/Profile;)Landroid/app/Profile;
 
     goto :goto_0
-.end method
-
-.method public showBeforeProvisioning()Z
-    .locals 1
-
-    .prologue
-    .line 547
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public showDuringKeyguard()Z
-    .locals 1
-
-    .prologue
-    .line 543
-    const/4 v0, 0x1
-
-    return v0
 .end method

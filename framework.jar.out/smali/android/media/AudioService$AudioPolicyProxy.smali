@@ -36,18 +36,18 @@
     .param p3, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 5792
+    .line 5756
     iput-object p1, p0, Landroid/media/AudioService$AudioPolicyProxy;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5793
+    .line 5757
     iput-object p2, p0, Landroid/media/AudioService$AudioPolicyProxy;->mConfig:Landroid/media/audiopolicy/AudioPolicyConfig;
 
-    .line 5794
+    .line 5758
     iput-object p3, p0, Landroid/media/AudioService$AudioPolicyProxy;->mToken:Landroid/os/IBinder;
 
-    .line 5795
+    .line 5759
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 4
 
     .prologue
-    .line 5798
+    .line 5762
     iget-object v0, p0, Landroid/media/AudioService$AudioPolicyProxy;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mAudioPolicies:Ljava/util/HashMap;
@@ -67,7 +67,7 @@
 
     monitor-enter v1
 
-    .line 5799
+    .line 5763
     :try_start_0
     const-string v0, "AudioPolicyProxy"
 
@@ -99,7 +99,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5800
+    .line 5764
     iget-object v0, p0, Landroid/media/AudioService$AudioPolicyProxy;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mAudioPolicies:Ljava/util/HashMap;
@@ -111,13 +111,13 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5801
+    .line 5765
     monitor-exit v1
 
-    .line 5802
+    .line 5766
     return-void
 
-    .line 5801
+    .line 5765
     :catchall_0
     move-exception v0
 

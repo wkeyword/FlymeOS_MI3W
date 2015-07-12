@@ -95,7 +95,7 @@
     .line 249
     iget-object v8, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
-    const v9, 0x1040569
+    const v9, 0x104007d
 
     invoke-virtual {v8, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
 
@@ -225,7 +225,7 @@
     .line 265
     iget-object v8, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
-    const v9, 0x104056b
+    const v9, 0x10405d5
 
     invoke-static {v8, v9, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -298,7 +298,7 @@
     .line 289
     iget-object v8, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$2;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
 
-    const v9, 0x1040569
+    const v9, 0x104007d
 
     invoke-virtual {v8, v9}, Lcom/android/internal/os/storage/ExternalStorageFormatter;->updateProgressDialog(I)V
     :try_end_2

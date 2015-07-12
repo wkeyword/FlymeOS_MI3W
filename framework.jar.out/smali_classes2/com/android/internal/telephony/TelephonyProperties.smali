@@ -40,8 +40,6 @@
 
 .field public static final PROPERTY_IGNORE_NITZ:Ljava/lang/String; = "telephony.test.ignore.nitz"
 
-.field public static final PROPERTY_IMS_AUDIO_OUTPUT:Ljava/lang/String; = "persist.radio.ims.audio.output"
-
 .field public static final PROPERTY_INECM_MODE:Ljava/lang/String; = "ril.cdma.inecmmode"
 
 .field public static final PROPERTY_LTE_ON_CDMA_DEVICE:Ljava/lang/String; = "telephony.lteOnCdmaDevice"

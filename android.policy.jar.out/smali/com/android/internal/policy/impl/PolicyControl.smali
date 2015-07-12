@@ -58,7 +58,7 @@
     .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
+    .line 187
     return-void
 .end method
 
@@ -150,7 +150,7 @@
     .param p3, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 135
+    .line 139
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "PolicyControl."
@@ -163,19 +163,19 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 136
+    .line 140
     if-nez p1, :cond_0
 
-    .line 137
+    .line 141
     const-string v0, "null"
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 141
+    .line 145
     :goto_0
     return-void
 
-    .line 139
+    .line 143
     :cond_0
     invoke-virtual {p1, p3}, Lcom/android/internal/policy/impl/PolicyControl$Filter;->dump(Ljava/io/PrintWriter;)V
 
@@ -190,28 +190,28 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 129
+    .line 133
     const-string v0, "sImmersiveStatusFilter"
 
     sget-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveStatusFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/internal/policy/impl/PolicyControl;->dump(Ljava/lang/String;Lcom/android/internal/policy/impl/PolicyControl$Filter;Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 130
+    .line 134
     const-string v0, "sImmersiveNavigationFilter"
 
     sget-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveNavigationFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/internal/policy/impl/PolicyControl;->dump(Ljava/lang/String;Lcom/android/internal/policy/impl/PolicyControl$Filter;Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 131
+    .line 135
     const-string v0, "sImmersivePreconfirmationsFilter"
 
     sget-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     invoke-static {v0, v1, p0, p1}, Lcom/android/internal/policy/impl/PolicyControl;->dump(Ljava/lang/String;Lcom/android/internal/policy/impl/PolicyControl$Filter;Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 132
+    .line 136
     return-void
 .end method
 
@@ -365,6 +365,31 @@
     goto :goto_0
 .end method
 
+.method public static isImmersiveFiltersActive()Z
+    .locals 1
+
+    .prologue
+    .line 129
+    sget-object v0, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveStatusFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveNavigationFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static reloadFromSetting(Landroid/content/Context;)V
     .locals 5
     .param p0, "context"    # Landroid/content/Context;
@@ -466,7 +491,7 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 144
+    .line 148
     sget-boolean v9, Lcom/android/internal/policy/impl/PolicyControl;->DEBUG:Z
 
     if-eqz v9, :cond_0
@@ -493,27 +518,27 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
+    .line 149
     :cond_0
     sput-object v12, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveStatusFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
-    .line 146
+    .line 150
     sput-object v12, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveNavigationFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
-    .line 147
+    .line 151
     sput-object v12, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
-    .line 148
+    .line 152
     if-eqz p0, :cond_6
 
-    .line 149
+    .line 153
     const-string v9, ":"
 
     invoke-virtual {p0, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 150
+    .line 154
     .local v7, "nvps":[Ljava/lang/String;
     move-object v0, v7
 
@@ -529,7 +554,7 @@
 
     aget-object v6, v0, v3
 
-    .line 151
+    .line 155
     .local v6, "nvp":Ljava/lang/String;
     const/16 v9, 0x3d
 
@@ -537,20 +562,20 @@
 
     move-result v2
 
-    .line 152
+    .line 156
     .local v2, "i":I
     const/4 v9, -0x1
 
     if-ne v2, v9, :cond_2
 
-    .line 150
+    .line 154
     :cond_1
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 153
+    .line 157
     :cond_2
     const/4 v9, 0x0
 
@@ -558,7 +583,7 @@
 
     move-result-object v5
 
-    .line 154
+    .line 158
     .local v5, "n":Ljava/lang/String;
     add-int/lit8 v9, v2, 0x1
 
@@ -566,7 +591,7 @@
 
     move-result-object v8
 
-    .line 155
+    .line 159
     .local v8, "v":Ljava/lang/String;
     const-string v9, "immersive.full"
 
@@ -576,28 +601,28 @@
 
     if-eqz v9, :cond_3
 
-    .line 156
+    .line 160
     invoke-static {v8}, Lcom/android/internal/policy/impl/PolicyControl$Filter;->parse(Ljava/lang/String;)Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     move-result-object v1
 
-    .line 157
+    .line 161
     .local v1, "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveNavigationFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveStatusFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
-    .line 158
+    .line 162
     sget-object v9, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     if-nez v9, :cond_1
 
-    .line 159
+    .line 163
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     goto :goto_1
 
-    .line 161
+    .line 165
     .end local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     :cond_3
     const-string v9, "immersive.status"
@@ -608,18 +633,18 @@
 
     if-eqz v9, :cond_4
 
-    .line 162
+    .line 166
     invoke-static {v8}, Lcom/android/internal/policy/impl/PolicyControl$Filter;->parse(Ljava/lang/String;)Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     move-result-object v1
 
-    .line 163
+    .line 167
     .restart local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveStatusFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     goto :goto_1
 
-    .line 164
+    .line 168
     .end local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     :cond_4
     const-string v9, "immersive.navigation"
@@ -630,26 +655,26 @@
 
     if-eqz v9, :cond_5
 
-    .line 165
+    .line 169
     invoke-static {v8}, Lcom/android/internal/policy/impl/PolicyControl$Filter;->parse(Ljava/lang/String;)Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     move-result-object v1
 
-    .line 166
+    .line 170
     .restart local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersiveNavigationFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
-    .line 167
+    .line 171
     sget-object v9, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     if-nez v9, :cond_1
 
-    .line 168
+    .line 172
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     goto :goto_1
 
-    .line 170
+    .line 174
     .end local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     :cond_5
     const-string v9, "immersive.preconfirms"
@@ -660,18 +685,18 @@
 
     if-eqz v9, :cond_1
 
-    .line 171
+    .line 175
     invoke-static {v8}, Lcom/android/internal/policy/impl/PolicyControl$Filter;->parse(Ljava/lang/String;)Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     move-result-object v1
 
-    .line 172
+    .line 176
     .restart local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     sput-object v1, Lcom/android/internal/policy/impl/PolicyControl;->sImmersivePreconfirmationsFilter:Lcom/android/internal/policy/impl/PolicyControl$Filter;
 
     goto :goto_1
 
-    .line 176
+    .line 180
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "f":Lcom/android/internal/policy/impl/PolicyControl$Filter;
     .end local v2    # "i":I
@@ -686,7 +711,7 @@
 
     if-eqz v9, :cond_7
 
-    .line 177
+    .line 181
     sget-object v9, Lcom/android/internal/policy/impl/PolicyControl;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -711,7 +736,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
+    .line 182
     sget-object v9, Lcom/android/internal/policy/impl/PolicyControl;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -736,7 +761,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
+    .line 183
     sget-object v9, Lcom/android/internal/policy/impl/PolicyControl;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -761,7 +786,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
+    .line 185
     :cond_7
     return-void
 .end method

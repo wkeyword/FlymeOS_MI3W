@@ -68,7 +68,6 @@
     .line 1669
     iget-object v0, p0, Landroid/widget/SearchView$11;->this$0:Landroid/widget/SearchView;
 
-    # invokes: Landroid/widget/SearchView;->onTextChanged(Ljava/lang/CharSequence;)V
     invoke-static {v0, p1}, Landroid/widget/SearchView;->access$2000(Landroid/widget/SearchView;Ljava/lang/CharSequence;)V
 
     .line 1670

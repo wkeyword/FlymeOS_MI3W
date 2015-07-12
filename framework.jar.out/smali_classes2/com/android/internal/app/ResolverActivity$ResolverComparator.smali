@@ -39,12 +39,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1055
+    .line 1071
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1056
+    .line 1072
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -61,7 +61,7 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->mCollator:Ljava/text/Collator;
 
-    .line 1057
+    .line 1073
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1085
+    .line 1101
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mStats:Ljava/util/Map;
@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1086
+    .line 1102
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mStats:Ljava/util/Map;
@@ -94,16 +94,16 @@
 
     check-cast v0, Landroid/app/usage/UsageStats;
 
-    .line 1087
+    .line 1103
     .local v0, "stats":Landroid/app/usage/UsageStats;
     if-eqz v0, :cond_0
 
-    .line 1088
+    .line 1104
     invoke-virtual {v0}, Landroid/app/usage/UsageStats;->getTotalTimeInForeground()J
 
     move-result-wide v2
 
-    .line 1092
+    .line 1108
     .end local v0    # "stats":Landroid/app/usage/UsageStats;
     :goto_0
     return-wide v2
@@ -126,19 +126,19 @@
 
     const/4 v4, 0x1
 
-    .line 1062
+    .line 1078
     iget v5, p1, Landroid/content/pm/ResolveInfo;->targetUserId:I
 
     const/4 v6, -0x2
 
     if-eq v5, v6, :cond_1
 
-    .line 1081
+    .line 1097
     :cond_0
     :goto_0
     return v4
 
-    .line 1066
+    .line 1082
     :cond_1
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -149,7 +149,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 1067
+    .line 1083
     iget-object v5, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -168,13 +168,13 @@
 
     sub-long v2, v6, v8
 
-    .line 1071
+    .line 1087
     .local v2, "timeDiff":J
     cmp-long v5, v2, v10
 
     if-eqz v5, :cond_2
 
-    .line 1072
+    .line 1088
     cmp-long v5, v2, v10
 
     if-gtz v5, :cond_0
@@ -183,7 +183,7 @@
 
     goto :goto_0
 
-    .line 1076
+    .line 1092
     .end local v2    # "timeDiff":J
     :cond_2
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
@@ -197,7 +197,7 @@
 
     move-result-object v0
 
-    .line 1077
+    .line 1093
     .local v0, "sa":Ljava/lang/CharSequence;
     if-nez v0, :cond_3
 
@@ -205,7 +205,7 @@
 
     iget-object v0, v4, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 1078
+    .line 1094
     :cond_3
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -218,7 +218,7 @@
 
     move-result-object v1
 
-    .line 1079
+    .line 1095
     .local v1, "sb":Ljava/lang/CharSequence;
     if-nez v1, :cond_4
 
@@ -226,7 +226,7 @@
 
     iget-object v1, v4, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 1081
+    .line 1097
     :cond_4
     iget-object v4, p0, Lcom/android/internal/app/ResolverActivity$ResolverComparator;->mCollator:Ljava/text/Collator;
 
@@ -251,7 +251,7 @@
     .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
-    .line 1052
+    .line 1068
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

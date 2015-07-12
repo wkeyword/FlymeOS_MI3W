@@ -24,13 +24,13 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2244
+    .line 2358
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$RankingWorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 2245
+    .line 2359
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2246
+    .line 2360
     return-void
 .end method
 
@@ -41,34 +41,34 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2250
+    .line 2364
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2258
+    .line 2372
     :goto_0
     return-void
 
-    .line 2252
+    .line 2366
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RankingWorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->handleRankingReconsideration(Landroid/os/Message;)V
-    invoke-static {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->access$4000(Lcom/android/server/notification/NotificationManagerService;Landroid/os/Message;)V
+    invoke-static {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->access$4700(Lcom/android/server/notification/NotificationManagerService;Landroid/os/Message;)V
 
     goto :goto_0
 
-    .line 2255
+    .line 2369
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$RankingWorkerHandler;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->handleRankingConfigChange()V
-    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$4100(Lcom/android/server/notification/NotificationManagerService;)V
+    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$4800(Lcom/android/server/notification/NotificationManagerService;)V
 
     goto :goto_0
 
-    .line 2250
+    .line 2364
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0

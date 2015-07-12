@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 378
+    .line 367
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$1;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Lcom/android/server/location/GpsStatusListenerHelper;-><init>()V
@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 370
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->isSupported()Z
 
     move-result v0
@@ -49,7 +49,7 @@
     .locals 1
 
     .prologue
-    .line 386
+    .line 375
     const/4 v0, 0x1
 
     return v0
@@ -59,6 +59,6 @@
     .locals 0
 
     .prologue
-    .line 390
+    .line 379
     return-void
 .end method

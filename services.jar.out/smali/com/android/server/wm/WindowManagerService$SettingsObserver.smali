@@ -23,24 +23,24 @@
     .locals 3
 
     .prologue
-    .line 561
+    .line 563
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$SettingsObserver;->this$0:Lcom/android/server/wm/WindowManagerService;
 
-    .line 562
+    .line 564
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 563
+    .line 565
     iget-object v1, p1, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 564
+    .line 566
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "show_ime_with_hard_keyboard"
 
@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 566
+    .line 568
     return-void
 .end method
 
@@ -63,11 +63,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 570
+    .line 572
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$SettingsObserver;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowManagerService;->updateShowImeWithHardKeyboard()V
 
-    .line 571
+    .line 573
     return-void
 .end method

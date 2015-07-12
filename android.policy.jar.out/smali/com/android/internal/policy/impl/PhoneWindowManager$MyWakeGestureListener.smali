@@ -25,13 +25,13 @@
     .param p3, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 725
+    .line 788
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 726
+    .line 789
     invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/WakeGestureListener;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 727
+    .line 790
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 5
 
     .prologue
-    .line 731
+    .line 794
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     # getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mLock:Ljava/lang/Object;
@@ -51,7 +51,7 @@
 
     monitor-enter v1
 
-    .line 732
+    .line 795
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 733
+    .line 796
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v2, 0x0
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 734
+    .line 797
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$MyWakeGestureListener;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
@@ -84,14 +84,14 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/PowerManager;->wakeUp(J)V
 
-    .line 736
+    .line 799
     :cond_0
     monitor-exit v1
 
-    .line 737
+    .line 800
     return-void
 
-    .line 736
+    .line 799
     :catchall_0
     move-exception v0
 

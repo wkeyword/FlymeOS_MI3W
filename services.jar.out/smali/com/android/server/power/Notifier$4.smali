@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 488
+    .line 475
     iput-object p1, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,37 +39,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    const/4 v1, 0x4
-
     const/4 v6, 0x1
 
     const/4 v3, 0x0
 
-    .line 491
-    iget-object v0, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
-
-    # getter for: Lcom/android/server/power/Notifier;->mHandler:Lcom/android/server/power/Notifier$NotifierHandler;
-    invoke-static {v0}, Lcom/android/server/power/Notifier;->access$300(Lcom/android/server/power/Notifier;)Lcom/android/server/power/Notifier$NotifierHandler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/android/server/power/Notifier$NotifierHandler;->hasMessages(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 492
-    iget-object v0, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
-
-    # getter for: Lcom/android/server/power/Notifier;->mHandler:Lcom/android/server/power/Notifier$NotifierHandler;
-    invoke-static {v0}, Lcom/android/server/power/Notifier;->access$300(Lcom/android/server/power/Notifier;)Lcom/android/server/power/Notifier$NotifierHandler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/android/server/power/Notifier$NotifierHandler;->removeMessages(I)V
-
-    .line 493
+    .line 478
     const/16 v0, 0xaa6
 
     const/4 v1, 0x3
@@ -89,7 +63,7 @@
     iget-object v4, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mBroadcastStartTime:J
-    invoke-static {v4}, Lcom/android/server/power/Notifier;->access$400(Lcom/android/server/power/Notifier;)J
+    invoke-static {v4}, Lcom/android/server/power/Notifier;->access$300(Lcom/android/server/power/Notifier;)J
 
     move-result-wide v4
 
@@ -111,13 +85,12 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 495
+    .line 480
     iget-object v0, p0, Lcom/android/server/power/Notifier$4;->this$0:Lcom/android/server/power/Notifier;
 
     # invokes: Lcom/android/server/power/Notifier;->sendNextBroadcast()V
-    invoke-static {v0}, Lcom/android/server/power/Notifier;->access$500(Lcom/android/server/power/Notifier;)V
+    invoke-static {v0}, Lcom/android/server/power/Notifier;->access$400(Lcom/android/server/power/Notifier;)V
 
-    .line 497
-    :cond_0
+    .line 481
     return-void
 .end method

@@ -37,15 +37,15 @@
     .param p2, "target"    # Landroid/widget/ImageView;
 
     .prologue
-    .line 1033
+    .line 1049
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconIntoViewTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 1034
+    .line 1050
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$LoadIconIntoViewTask;->mTargetView:Landroid/widget/ImageView;
 
-    .line 1035
+    .line 1051
     return-void
 .end method
 
@@ -56,18 +56,18 @@
     .param p1, "params"    # [Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1039
+    .line 1055
     const/4 v1, 0x0
 
     aget-object v0, p1, v1
 
-    .line 1040
+    .line 1056
     .local v0, "info":Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
     iget-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_0
 
-    .line 1041
+    .line 1057
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$LoadIconIntoViewTask;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v2, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->ri:Landroid/content/pm/ResolveInfo;
@@ -78,7 +78,7 @@
 
     iput-object v1, v0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 1043
+    .line 1059
     :cond_0
     return-object v0
 .end method
@@ -88,7 +88,7 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1030
+    .line 1046
     check-cast p1, [Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -104,14 +104,14 @@
     .param p1, "info"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1048
+    .line 1064
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$LoadIconIntoViewTask;->mTargetView:Landroid/widget/ImageView;
 
     iget-object v1, p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1049
+    .line 1065
     return-void
 .end method
 
@@ -120,7 +120,7 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 1030
+    .line 1046
     check-cast p1, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;

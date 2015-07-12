@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1148
+    .line 1153
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 1162
+    .line 1167
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1151
+    .line 1156
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # getter for: Lcom/android/server/display/DisplayPowerController;->mProximitySensorEnabled:Z
@@ -63,18 +63,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 1152
+    .line 1157
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 1153
+    .line 1158
     .local v2, "time":J
     iget-object v4, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v4, v1
 
-    .line 1154
+    .line 1159
     .local v0, "distance":F
     const/4 v4, 0x0
 
@@ -95,7 +95,7 @@
 
     const/4 v1, 0x1
 
-    .line 1155
+    .line 1160
     .local v1, "positive":Z
     :cond_0
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
@@ -103,7 +103,7 @@
     # invokes: Lcom/android/server/display/DisplayPowerController;->handleProximitySensorEvent(JZ)V
     invoke-static {v4, v2, v3, v1}, Lcom/android/server/display/DisplayPowerController;->access$1000(Lcom/android/server/display/DisplayPowerController;JZ)V
 
-    .line 1157
+    .line 1162
     .end local v0    # "distance":F
     .end local v1    # "positive":Z
     .end local v2    # "time":J

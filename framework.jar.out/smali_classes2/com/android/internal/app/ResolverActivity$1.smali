@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 107
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 109
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$1;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mAdapter:Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -47,6 +47,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->handlePackagesChanged()V
 
-    .line 109
+    .line 110
     return-void
 .end method

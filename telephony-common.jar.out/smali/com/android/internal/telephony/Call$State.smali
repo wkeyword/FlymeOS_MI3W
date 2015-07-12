@@ -60,7 +60,7 @@
 
     const/4 v3, 0x0
 
-    .line 36
+    .line 34
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
     const-string v1, "IDLE"
@@ -141,7 +141,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
-    .line 35
+    .line 33
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/android/internal/telephony/Call$State;
@@ -204,7 +204,7 @@
     .end annotation
 
     .prologue
-    .line 35
+    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -215,7 +215,7 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 35
+    .line 33
     const-class v0, Lcom/android/internal/telephony/Call$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -231,7 +231,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 33
     sget-object v0, Lcom/android/internal/telephony/Call$State;->$VALUES:[Lcom/android/internal/telephony/Call$State;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/Call$State;->clone()Ljava/lang/Object;
@@ -249,7 +249,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 37
     sget-object v0, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v0, :cond_0
@@ -277,7 +277,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 45
     sget-object v0, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v0, :cond_0
@@ -302,7 +302,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 41
     sget-object v0, Lcom/android/internal/telephony/Call$State;->INCOMING:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v0, :cond_0

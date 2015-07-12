@@ -47,7 +47,6 @@
     .line 114
     iget-object v0, p0, Landroid/widget/DigitalClock$FormatChangeObserver;->this$0:Landroid/widget/DigitalClock;
 
-    # invokes: Landroid/widget/DigitalClock;->setFormat()V
     invoke-static {v0}, Landroid/widget/DigitalClock;->access$300(Landroid/widget/DigitalClock;)V
 
     .line 115

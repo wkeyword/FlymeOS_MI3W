@@ -230,93 +230,93 @@
 
     const/4 v1, 0x0
 
-    .line 420
+    .line 421
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 353
+    .line 354
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
-    .line 356
+    .line 357
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
-    .line 359
+    .line 360
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
-    .line 362
+    .line 363
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
-    .line 365
+    .line 366
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
-    .line 368
+    .line 369
     iput v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
-    .line 371
+    .line 372
     iput v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
-    .line 374
+    .line 375
     iput v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
-    .line 377
+    .line 378
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
-    .line 380
+    .line 381
     iput-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
-    .line 383
+    .line 384
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
-    .line 386
+    .line 387
     iput-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
-    .line 389
+    .line 390
     iput-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 392
+    .line 393
     iput v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
-    .line 394
+    .line 395
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->encryptionRequested:Z
 
-    .line 395
+    .line 396
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
-    .line 396
+    .line 397
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
-    .line 397
+    .line 398
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
-    .line 398
+    .line 399
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireAutoTime:Z
 
-    .line 400
+    .line 401
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->accountTypesWithManagementDisabled:Ljava/util/Set;
 
-    .line 413
+    .line 414
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
-    .line 414
+    .line 415
     iput-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
-    .line 415
+    .line 416
     iput-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
-    .line 416
+    .line 417
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->trustAgentFeatures:Ljava/util/HashMap;
 
-    .line 421
+    .line 422
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
-    .line 422
+    .line 423
     return-void
 .end method
 
@@ -350,18 +350,18 @@
     .prologue
     const/4 v8, 0x3
 
-    .line 743
+    .line 744
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 745
+    .line 746
     .local v1, "outerDepthDAM":I
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 747
+    .line 748
     .local v2, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     :cond_0
     :goto_0
@@ -382,7 +382,7 @@
 
     if-le v5, v1, :cond_3
 
-    .line 748
+    .line 749
     :cond_1
     if-eq v4, v8, :cond_0
 
@@ -390,12 +390,12 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 751
+    .line 752
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 752
+    .line 753
     .local v3, "tagDAM":Ljava/lang/String;
     const-string v5, "component"
 
@@ -405,7 +405,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 753
+    .line 754
     const/4 v5, 0x0
 
     const-string v6, "value"
@@ -414,7 +414,7 @@
 
     move-result-object v0
 
-    .line 754
+    .line 755
     .local v0, "component":Ljava/lang/String;
     invoke-direct {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getTrustAgentFeatures(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/List;
 
@@ -424,7 +424,7 @@
 
     goto :goto_0
 
-    .line 756
+    .line 757
     .end local v0    # "component":Ljava/lang/String;
     :cond_2
     const-string v5, "DevicePolicyManagerService"
@@ -461,7 +461,7 @@
 
     goto :goto_0
 
-    .line 759
+    .line 760
     .end local v3    # "tagDAM":Ljava/lang/String;
     :cond_3
     return-object v2
@@ -494,16 +494,16 @@
     .prologue
     const/4 v8, 0x3
 
-    .line 785
+    .line 786
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 787
+    .line 788
     .local v0, "outerDepthDAM":I
     const/4 v2, 0x0
 
-    .line 789
+    .line 790
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -524,7 +524,7 @@
 
     if-le v5, v0, :cond_4
 
-    .line 790
+    .line 791
     :cond_1
     if-eq v4, v8, :cond_0
 
@@ -532,12 +532,12 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 793
+    .line 794
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 794
+    .line 795
     .local v3, "tagDAM":Ljava/lang/String;
     const-string v5, "provider"
 
@@ -547,7 +547,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 795
+    .line 796
     const/4 v5, 0x0
 
     const-string v6, "value"
@@ -556,24 +556,24 @@
 
     move-result-object v1
 
-    .line 796
+    .line 797
     .local v1, "provider":Ljava/lang/String;
     if-nez v2, :cond_2
 
-    .line 797
+    .line 798
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 799
+    .line 800
     .restart local v2    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_2
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 801
+    .line 802
     .end local v1    # "provider":Ljava/lang/String;
     :cond_3
     const-string v5, "DevicePolicyManagerService"
@@ -610,7 +610,7 @@
 
     goto :goto_0
 
-    .line 804
+    .line 805
     .end local v3    # "tagDAM":Ljava/lang/String;
     :cond_4
     return-object v2
@@ -643,18 +643,18 @@
     .prologue
     const/4 v8, 0x3
 
-    .line 764
+    .line 765
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 766
+    .line 767
     .local v1, "outerDepthDAM":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 768
+    .line 769
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -675,7 +675,7 @@
 
     if-le v5, v1, :cond_3
 
-    .line 769
+    .line 770
     :cond_1
     if-eq v4, v8, :cond_0
 
@@ -683,12 +683,12 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 772
+    .line 773
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 773
+    .line 774
     .local v3, "tagDAM":Ljava/lang/String;
     const-string v5, "feature"
 
@@ -698,7 +698,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 774
+    .line 775
     const/4 v5, 0x0
 
     const-string v6, "value"
@@ -707,13 +707,13 @@
 
     move-result-object v0
 
-    .line 775
+    .line 776
     .local v0, "feature":Ljava/lang/String;
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 777
+    .line 778
     .end local v0    # "feature":Ljava/lang/String;
     :cond_2
     const-string v5, "DevicePolicyManagerService"
@@ -750,7 +750,7 @@
 
     goto :goto_0
 
-    .line 780
+    .line 781
     .end local v3    # "tagDAM":Ljava/lang/String;
     :cond_3
     return-object v2
@@ -783,18 +783,18 @@
     .prologue
     const/4 v7, 0x3
 
-    .line 723
+    .line 724
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 725
+    .line 726
     .local v0, "outerDepthDAM":I
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 727
+    .line 728
     .local v1, "result":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -815,7 +815,7 @@
 
     if-le v4, v0, :cond_3
 
-    .line 728
+    .line 729
     :cond_1
     if-eq v3, v7, :cond_0
 
@@ -823,12 +823,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 731
+    .line 732
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 732
+    .line 733
     .local v2, "tagDAM":Ljava/lang/String;
     const-string v4, "account-type"
 
@@ -838,7 +838,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 733
+    .line 734
     const/4 v4, 0x0
 
     const-string v5, "value"
@@ -851,7 +851,7 @@
 
     goto :goto_0
 
-    .line 735
+    .line 736
     :cond_2
     const-string v4, "DevicePolicyManagerService"
 
@@ -887,7 +887,7 @@
 
     goto :goto_0
 
-    .line 738
+    .line 739
     .end local v2    # "tagDAM":Ljava/lang/String;
     :cond_3
     return-object v1
@@ -920,18 +920,18 @@
     .prologue
     const/4 v8, 0x3
 
-    .line 698
+    .line 699
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 699
+    .line 700
     .local v4, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 702
+    .line 703
     .local v0, "outerDepth":I
     :cond_0
     :goto_0
@@ -952,7 +952,7 @@
 
     if-le v5, v0, :cond_4
 
-    .line 703
+    .line 704
     :cond_1
     if-eq v2, v8, :cond_0
 
@@ -960,12 +960,12 @@
 
     if-eq v2, v5, :cond_0
 
-    .line 706
+    .line 707
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 707
+    .line 708
     .local v1, "outerTag":Ljava/lang/String;
     const-string v5, "item"
 
@@ -975,7 +975,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 708
+    .line 709
     const/4 v5, 0x0
 
     const-string v6, "value"
@@ -984,16 +984,16 @@
 
     move-result-object v3
 
-    .line 709
+    .line 710
     .local v3, "packageName":Ljava/lang/String;
     if-eqz v3, :cond_2
 
-    .line 710
+    .line 711
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 712
+    .line 713
     :cond_2
     const-string v5, "DevicePolicyManagerService"
 
@@ -1019,7 +1019,7 @@
 
     goto :goto_0
 
-    .line 715
+    .line 716
     .end local v3    # "packageName":Ljava/lang/String;
     :cond_3
     const-string v5, "DevicePolicyManagerService"
@@ -1056,7 +1056,7 @@
 
     goto :goto_0
 
-    .line 718
+    .line 719
     .end local v1    # "outerTag":Ljava/lang/String;
     :cond_4
     return-object v4
@@ -1070,7 +1070,7 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 808
+    .line 809
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "uid="
@@ -1083,25 +1083,25 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 809
+    .line 810
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "policies:"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 810
+    .line 811
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v2}, Landroid/app/admin/DeviceAdminInfo;->getUsedPolicies()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 811
+    .line 812
     .local v1, "pols":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/admin/DeviceAdminInfo$PolicyInfo;>;"
     if-eqz v1, :cond_0
 
-    .line 812
+    .line 813
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1112,7 +1112,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 813
+    .line 814
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "  "
@@ -1129,12 +1129,12 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 812
+    .line 813
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 816
+    .line 817
     .end local v0    # "i":I
     :cond_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -1143,7 +1143,7 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 817
+    .line 818
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -1152,198 +1152,198 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 818
+    .line 819
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordLength="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 819
+    .line 820
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 820
+    .line 821
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "passwordHistoryLength="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 821
+    .line 822
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 822
+    .line 823
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordUpperCase="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 823
+    .line 824
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 824
+    .line 825
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordLowerCase="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 825
+    .line 826
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 826
+    .line 827
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordLetters="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 827
+    .line 828
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 828
+    .line 829
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordNumeric="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 829
+    .line 830
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 830
+    .line 831
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordSymbols="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 831
+    .line 832
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 832
+    .line 833
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "minimumPasswordNonLetter="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 833
+    .line 834
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 834
+    .line 835
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "maximumTimeToUnlock="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 835
+    .line 836
     iget-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
     invoke-virtual {p2, v2, v3}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 836
+    .line 837
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "maximumFailedPasswordsForWipe="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 837
+    .line 838
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 838
+    .line 839
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "specifiesGlobalProxy="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 839
+    .line 840
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 840
+    .line 841
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "passwordExpirationTimeout="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 841
+    .line 842
     iget-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
     invoke-virtual {p2, v2, v3}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 842
+    .line 843
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "passwordExpirationDate="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 843
+    .line 844
     iget-wide v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
     invoke-virtual {p2, v2, v3}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 844
+    .line 845
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 845
+    .line 846
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "globalProxySpec="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 846
+    .line 847
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 848
+    .line 849
     :cond_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
-    .line 849
+    .line 850
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "globalProxyEclusionList="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 850
+    .line 851
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 852
+    .line 853
     :cond_2
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1351,96 +1351,96 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 853
+    .line 854
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->encryptionRequested:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 854
+    .line 855
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "disableCamera="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 855
+    .line 856
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 856
+    .line 857
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "disableCallerId="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 857
+    .line 858
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 858
+    .line 859
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "disableScreenCapture="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 859
+    .line 860
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 860
+    .line 861
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "requireAutoTime="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 861
+    .line 862
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireAutoTime:Z
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 862
+    .line 863
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "disabledKeyguardFeatures="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 863
+    .line 864
     iget v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 864
+    .line 865
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "crossProfileWidgetProviders="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 865
+    .line 866
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 866
+    .line 867
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedAccessiblityServices:Ljava/util/List;
 
     if-eqz v2, :cond_3
 
-    .line 867
+    .line 868
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "permittedAccessibilityServices="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 868
+    .line 869
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedAccessiblityServices:Ljava/util/List;
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1449,20 +1449,20 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 870
+    .line 871
     :cond_3
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
     if-eqz v2, :cond_4
 
-    .line 871
+    .line 872
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "permittedInputMethods="
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 872
+    .line 873
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1471,7 +1471,7 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 874
+    .line 875
     :cond_4
     return-void
 .end method
@@ -1480,7 +1480,7 @@
     .locals 1
 
     .prologue
-    .line 424
+    .line 425
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v0}, Landroid/app/admin/DeviceAdminInfo;->getActivityInfo()Landroid/content/pm/ActivityInfo;
@@ -1498,7 +1498,7 @@
     .locals 2
 
     .prologue
-    .line 427
+    .line 428
     new-instance v0, Landroid/os/UserHandle;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
@@ -1535,12 +1535,12 @@
 
     const/4 v6, 0x0
 
-    .line 603
+    .line 604
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 606
+    .line 607
     .local v0, "outerDepth":I
     :cond_0
     :goto_0
@@ -1561,7 +1561,7 @@
 
     if-le v3, v0, :cond_1e
 
-    .line 607
+    .line 608
     :cond_1
     if-eq v2, v7, :cond_0
 
@@ -1569,12 +1569,12 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 610
+    .line 611
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 611
+    .line 612
     .local v1, "tag":Ljava/lang/String;
     const-string v3, "policies"
 
@@ -1584,18 +1584,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 612
+    .line 613
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v3, p1}, Landroid/app/admin/DeviceAdminInfo;->readPoliciesFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 692
+    .line 693
     :goto_1
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 613
+    .line 614
     :cond_2
     const-string v3, "password-quality"
 
@@ -1605,7 +1605,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 614
+    .line 615
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1620,7 +1620,7 @@
 
     goto :goto_1
 
-    .line 616
+    .line 617
     :cond_3
     const-string v3, "min-password-length"
 
@@ -1630,7 +1630,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 617
+    .line 618
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1645,7 +1645,7 @@
 
     goto :goto_1
 
-    .line 619
+    .line 620
     :cond_4
     const-string v3, "password-history-length"
 
@@ -1655,7 +1655,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 620
+    .line 621
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1670,7 +1670,7 @@
 
     goto :goto_1
 
-    .line 622
+    .line 623
     :cond_5
     const-string v3, "min-password-uppercase"
 
@@ -1680,7 +1680,7 @@
 
     if-eqz v3, :cond_6
 
-    .line 623
+    .line 624
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1695,7 +1695,7 @@
 
     goto :goto_1
 
-    .line 625
+    .line 626
     :cond_6
     const-string v3, "min-password-lowercase"
 
@@ -1705,7 +1705,7 @@
 
     if-eqz v3, :cond_7
 
-    .line 626
+    .line 627
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1720,7 +1720,7 @@
 
     goto :goto_1
 
-    .line 628
+    .line 629
     :cond_7
     const-string v3, "min-password-letters"
 
@@ -1730,7 +1730,7 @@
 
     if-eqz v3, :cond_8
 
-    .line 629
+    .line 630
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1745,7 +1745,7 @@
 
     goto/16 :goto_1
 
-    .line 631
+    .line 632
     :cond_8
     const-string v3, "min-password-numeric"
 
@@ -1755,7 +1755,7 @@
 
     if-eqz v3, :cond_9
 
-    .line 632
+    .line 633
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1770,7 +1770,7 @@
 
     goto/16 :goto_1
 
-    .line 634
+    .line 635
     :cond_9
     const-string v3, "min-password-symbols"
 
@@ -1780,7 +1780,7 @@
 
     if-eqz v3, :cond_a
 
-    .line 635
+    .line 636
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1795,7 +1795,7 @@
 
     goto/16 :goto_1
 
-    .line 637
+    .line 638
     :cond_a
     const-string v3, "min-password-nonletter"
 
@@ -1805,7 +1805,7 @@
 
     if-eqz v3, :cond_b
 
-    .line 638
+    .line 639
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1820,7 +1820,7 @@
 
     goto/16 :goto_1
 
-    .line 640
+    .line 641
     :cond_b
     const-string v3, "max-time-to-unlock"
 
@@ -1830,7 +1830,7 @@
 
     if-eqz v3, :cond_c
 
-    .line 641
+    .line 642
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1845,7 +1845,7 @@
 
     goto/16 :goto_1
 
-    .line 643
+    .line 644
     :cond_c
     const-string v3, "max-failed-password-wipe"
 
@@ -1855,7 +1855,7 @@
 
     if-eqz v3, :cond_d
 
-    .line 644
+    .line 645
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1870,7 +1870,7 @@
 
     goto/16 :goto_1
 
-    .line 646
+    .line 647
     :cond_d
     const-string v3, "specifies-global-proxy"
 
@@ -1880,7 +1880,7 @@
 
     if-eqz v3, :cond_e
 
-    .line 647
+    .line 648
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1895,7 +1895,7 @@
 
     goto/16 :goto_1
 
-    .line 649
+    .line 650
     :cond_e
     const-string v3, "global-proxy-spec"
 
@@ -1905,7 +1905,7 @@
 
     if-eqz v3, :cond_f
 
-    .line 650
+    .line 651
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1916,7 +1916,7 @@
 
     goto/16 :goto_1
 
-    .line 652
+    .line 653
     :cond_f
     const-string v3, "global-proxy-exclusion-list"
 
@@ -1926,7 +1926,7 @@
 
     if-eqz v3, :cond_10
 
-    .line 653
+    .line 654
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1937,7 +1937,7 @@
 
     goto/16 :goto_1
 
-    .line 655
+    .line 656
     :cond_10
     const-string v3, "password-expiration-timeout"
 
@@ -1947,7 +1947,7 @@
 
     if-eqz v3, :cond_11
 
-    .line 656
+    .line 657
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1962,7 +1962,7 @@
 
     goto/16 :goto_1
 
-    .line 658
+    .line 659
     :cond_11
     const-string v3, "password-expiration-date"
 
@@ -1972,7 +1972,7 @@
 
     if-eqz v3, :cond_12
 
-    .line 659
+    .line 660
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -1987,7 +1987,7 @@
 
     goto/16 :goto_1
 
-    .line 661
+    .line 662
     :cond_12
     const-string v3, "encryption-requested"
 
@@ -1997,7 +1997,7 @@
 
     if-eqz v3, :cond_13
 
-    .line 662
+    .line 663
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2012,7 +2012,7 @@
 
     goto/16 :goto_1
 
-    .line 664
+    .line 665
     :cond_13
     const-string v3, "disable-camera"
 
@@ -2022,7 +2022,7 @@
 
     if-eqz v3, :cond_14
 
-    .line 665
+    .line 666
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2037,7 +2037,7 @@
 
     goto/16 :goto_1
 
-    .line 667
+    .line 668
     :cond_14
     const-string v3, "disable-caller-id"
 
@@ -2047,7 +2047,7 @@
 
     if-eqz v3, :cond_15
 
-    .line 668
+    .line 669
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2062,7 +2062,7 @@
 
     goto/16 :goto_1
 
-    .line 670
+    .line 671
     :cond_15
     const-string v3, "disable-screen-capture"
 
@@ -2072,7 +2072,7 @@
 
     if-eqz v3, :cond_16
 
-    .line 671
+    .line 672
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2087,7 +2087,7 @@
 
     goto/16 :goto_1
 
-    .line 673
+    .line 674
     :cond_16
     const-string v3, "require_auto_time"
 
@@ -2097,7 +2097,7 @@
 
     if-eqz v3, :cond_17
 
-    .line 674
+    .line 675
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2112,7 +2112,7 @@
 
     goto/16 :goto_1
 
-    .line 676
+    .line 677
     :cond_17
     const-string v3, "disable-keyguard-features"
 
@@ -2122,7 +2122,7 @@
 
     if-eqz v3, :cond_18
 
-    .line 677
+    .line 678
     const-string v3, "value"
 
     invoke-interface {p1, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2137,7 +2137,7 @@
 
     goto/16 :goto_1
 
-    .line 679
+    .line 680
     :cond_18
     const-string v3, "disable-account-management"
 
@@ -2147,7 +2147,7 @@
 
     if-eqz v3, :cond_19
 
-    .line 680
+    .line 681
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->readDisableAccountInfo(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v3
@@ -2156,7 +2156,7 @@
 
     goto/16 :goto_1
 
-    .line 681
+    .line 682
     :cond_19
     const-string v3, "manage-trust-agent-features"
 
@@ -2166,7 +2166,7 @@
 
     if-eqz v3, :cond_1a
 
-    .line 682
+    .line 683
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getAllTrustAgentFeatures(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v3
@@ -2175,7 +2175,7 @@
 
     goto/16 :goto_1
 
-    .line 683
+    .line 684
     :cond_1a
     const-string v3, "cross-profile-widget-providers"
 
@@ -2185,7 +2185,7 @@
 
     if-eqz v3, :cond_1b
 
-    .line 684
+    .line 685
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getCrossProfileWidgetProviders(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
@@ -2194,7 +2194,7 @@
 
     goto/16 :goto_1
 
-    .line 685
+    .line 686
     :cond_1b
     const-string v3, "permitted-accessiblity-services"
 
@@ -2204,7 +2204,7 @@
 
     if-eqz v3, :cond_1c
 
-    .line 686
+    .line 687
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->readPackageList(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
@@ -2213,7 +2213,7 @@
 
     goto/16 :goto_1
 
-    .line 687
+    .line 688
     :cond_1c
     const-string v3, "permitted-imes"
 
@@ -2223,7 +2223,7 @@
 
     if-eqz v3, :cond_1d
 
-    .line 688
+    .line 689
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->readPackageList(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
@@ -2232,7 +2232,7 @@
 
     goto/16 :goto_1
 
-    .line 690
+    .line 691
     :cond_1d
     const-string v3, "DevicePolicyManagerService"
 
@@ -2258,7 +2258,7 @@
 
     goto/16 :goto_1
 
-    .line 694
+    .line 695
     .end local v1    # "tag":Ljava/lang/String;
     :cond_1e
     return-void
@@ -2292,18 +2292,18 @@
     .local p3, "packageList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 588
+    .line 589
     if-nez p3, :cond_0
 
-    .line 599
+    .line 600
     :goto_0
     return-void
 
-    .line 592
+    .line 593
     :cond_0
     invoke-interface {p1, v3, p2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 593
+    .line 594
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2322,25 +2322,25 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 594
+    .line 595
     .local v1, "packageName":Ljava/lang/String;
     const-string v2, "item"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 595
+    .line 596
     const-string v2, "value"
 
     invoke-interface {p1, v3, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 596
+    .line 597
     const-string v2, "item"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_1
 
-    .line 598
+    .line 599
     .end local v1    # "packageName":Ljava/lang/String;
     :cond_1
     invoke-interface {p1, v3, p2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
@@ -2360,38 +2360,38 @@
     .end annotation
 
     .prologue
-    .line 432
+    .line 433
     const/4 v9, 0x0
 
     const-string v10, "policies"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 433
+    .line 434
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v9, p1}, Landroid/app/admin/DeviceAdminInfo;->writePoliciesToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 434
+    .line 435
     const/4 v9, 0x0
 
     const-string v10, "policies"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 435
+    .line 436
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     if-eqz v9, :cond_7
 
-    .line 436
+    .line 437
     const/4 v9, 0x0
 
     const-string v10, "password-quality"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 437
+    .line 438
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2404,26 +2404,26 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 438
+    .line 439
     const/4 v9, 0x0
 
     const-string v10, "password-quality"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 439
+    .line 440
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
     if-eqz v9, :cond_0
 
-    .line 440
+    .line 441
     const/4 v9, 0x0
 
     const-string v10, "min-password-length"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 441
+    .line 442
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2436,27 +2436,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 442
+    .line 443
     const/4 v9, 0x0
 
     const-string v10, "min-password-length"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 444
+    .line 445
     :cond_0
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
     if-eqz v9, :cond_1
 
-    .line 445
+    .line 446
     const/4 v9, 0x0
 
     const-string v10, "password-history-length"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 446
+    .line 447
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2469,27 +2469,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 447
+    .line 448
     const/4 v9, 0x0
 
     const-string v10, "password-history-length"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 449
+    .line 450
     :cond_1
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
     if-eqz v9, :cond_2
 
-    .line 450
+    .line 451
     const/4 v9, 0x0
 
     const-string v10, "min-password-uppercase"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 451
+    .line 452
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2502,27 +2502,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 452
+    .line 453
     const/4 v9, 0x0
 
     const-string v10, "min-password-uppercase"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 454
+    .line 455
     :cond_2
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
     if-eqz v9, :cond_3
 
-    .line 455
+    .line 456
     const/4 v9, 0x0
 
     const-string v10, "min-password-lowercase"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 456
+    .line 457
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2535,14 +2535,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 457
+    .line 458
     const/4 v9, 0x0
 
     const-string v10, "min-password-lowercase"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 459
+    .line 460
     :cond_3
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
@@ -2550,14 +2550,14 @@
 
     if-eq v9, v10, :cond_4
 
-    .line 460
+    .line 461
     const/4 v9, 0x0
 
     const-string v10, "min-password-letters"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 461
+    .line 462
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2570,14 +2570,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 462
+    .line 463
     const/4 v9, 0x0
 
     const-string v10, "min-password-letters"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 464
+    .line 465
     :cond_4
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
@@ -2585,14 +2585,14 @@
 
     if-eq v9, v10, :cond_5
 
-    .line 465
+    .line 466
     const/4 v9, 0x0
 
     const-string v10, "min-password-numeric"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 466
+    .line 467
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2605,14 +2605,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 467
+    .line 468
     const/4 v9, 0x0
 
     const-string v10, "min-password-numeric"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 469
+    .line 470
     :cond_5
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
@@ -2620,14 +2620,14 @@
 
     if-eq v9, v10, :cond_6
 
-    .line 470
+    .line 471
     const/4 v9, 0x0
 
     const-string v10, "min-password-symbols"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 471
+    .line 472
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2640,27 +2640,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 472
+    .line 473
     const/4 v9, 0x0
 
     const-string v10, "min-password-symbols"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 474
+    .line 475
     :cond_6
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     if-lez v9, :cond_7
 
-    .line 475
+    .line 476
     const/4 v9, 0x0
 
     const-string v10, "min-password-nonletter"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 476
+    .line 477
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2673,14 +2673,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 477
+    .line 478
     const/4 v9, 0x0
 
     const-string v10, "min-password-nonletter"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 480
+    .line 481
     :cond_7
     iget-wide v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
@@ -2690,14 +2690,14 @@
 
     if-eqz v9, :cond_8
 
-    .line 481
+    .line 482
     const/4 v9, 0x0
 
     const-string v10, "max-time-to-unlock"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 482
+    .line 483
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2710,27 +2710,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 483
+    .line 484
     const/4 v9, 0x0
 
     const-string v10, "max-time-to-unlock"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 485
+    .line 486
     :cond_8
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
     if-eqz v9, :cond_9
 
-    .line 486
+    .line 487
     const/4 v9, 0x0
 
     const-string v10, "max-failed-password-wipe"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 487
+    .line 488
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2743,27 +2743,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 488
+    .line 489
     const/4 v9, 0x0
 
     const-string v10, "max-failed-password-wipe"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 490
+    .line 491
     :cond_9
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
     if-eqz v9, :cond_b
 
-    .line 491
+    .line 492
     const/4 v9, 0x0
 
     const-string v10, "specifies-global-proxy"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 492
+    .line 493
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2776,26 +2776,26 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 493
+    .line 494
     const/4 v9, 0x0
 
     const-string v10, "specifies-global-proxy"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 494
+    .line 495
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
     if-eqz v9, :cond_a
 
-    .line 495
+    .line 496
     const/4 v9, 0x0
 
     const-string v10, "global-proxy-spec"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 496
+    .line 497
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2804,27 +2804,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 497
+    .line 498
     const/4 v9, 0x0
 
     const-string v10, "global-proxy-spec"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 499
+    .line 500
     :cond_a
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
     if-eqz v9, :cond_b
 
-    .line 500
+    .line 501
     const/4 v9, 0x0
 
     const-string v10, "global-proxy-exclusion-list"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 501
+    .line 502
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2833,14 +2833,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 502
+    .line 503
     const/4 v9, 0x0
 
     const-string v10, "global-proxy-exclusion-list"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 505
+    .line 506
     :cond_b
     iget-wide v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
@@ -2850,14 +2850,14 @@
 
     if-eqz v9, :cond_c
 
-    .line 506
+    .line 507
     const/4 v9, 0x0
 
     const-string v10, "password-expiration-timeout"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 507
+    .line 508
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2870,14 +2870,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 508
+    .line 509
     const/4 v9, 0x0
 
     const-string v10, "password-expiration-timeout"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 510
+    .line 511
     :cond_c
     iget-wide v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
@@ -2887,14 +2887,14 @@
 
     if-eqz v9, :cond_d
 
-    .line 511
+    .line 512
     const/4 v9, 0x0
 
     const-string v10, "password-expiration-date"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 512
+    .line 513
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2907,27 +2907,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 513
+    .line 514
     const/4 v9, 0x0
 
     const-string v10, "password-expiration-date"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 515
+    .line 516
     :cond_d
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->encryptionRequested:Z
 
     if-eqz v9, :cond_e
 
-    .line 516
+    .line 517
     const/4 v9, 0x0
 
     const-string v10, "encryption-requested"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 517
+    .line 518
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2940,27 +2940,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 518
+    .line 519
     const/4 v9, 0x0
 
     const-string v10, "encryption-requested"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 520
+    .line 521
     :cond_e
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
     if-eqz v9, :cond_f
 
-    .line 521
+    .line 522
     const/4 v9, 0x0
 
     const-string v10, "disable-camera"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 522
+    .line 523
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -2973,27 +2973,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 523
+    .line 524
     const/4 v9, 0x0
 
     const-string v10, "disable-camera"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 525
+    .line 526
     :cond_f
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
     if-eqz v9, :cond_10
 
-    .line 526
+    .line 527
     const/4 v9, 0x0
 
     const-string v10, "disable-caller-id"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 527
+    .line 528
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -3006,27 +3006,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 528
+    .line 529
     const/4 v9, 0x0
 
     const-string v10, "disable-caller-id"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 530
+    .line 531
     :cond_10
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
     if-eqz v9, :cond_11
 
-    .line 531
+    .line 532
     const/4 v9, 0x0
 
     const-string v10, "disable-screen-capture"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 532
+    .line 533
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -3039,27 +3039,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 533
+    .line 534
     const/4 v9, 0x0
 
     const-string v10, "disable-screen-capture"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 535
+    .line 536
     :cond_11
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireAutoTime:Z
 
     if-eqz v9, :cond_12
 
-    .line 536
+    .line 537
     const/4 v9, 0x0
 
     const-string v10, "require_auto_time"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 537
+    .line 538
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -3072,27 +3072,27 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 538
+    .line 539
     const/4 v9, 0x0
 
     const-string v10, "require_auto_time"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 540
+    .line 541
     :cond_12
     iget v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     if-eqz v9, :cond_13
 
-    .line 541
+    .line 542
     const/4 v9, 0x0
 
     const-string v10, "disable-keyguard-features"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 542
+    .line 543
     const/4 v9, 0x0
 
     const-string v10, "value"
@@ -3105,14 +3105,14 @@
 
     invoke-interface {p1, v9, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 543
+    .line 544
     const/4 v9, 0x0
 
     const-string v10, "disable-keyguard-features"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 545
+    .line 546
     :cond_13
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->accountTypesWithManagementDisabled:Ljava/util/Set;
 
@@ -3122,14 +3122,14 @@
 
     if-nez v9, :cond_15
 
-    .line 546
+    .line 547
     const/4 v9, 0x0
 
     const-string v10, "disable-account-management"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 547
+    .line 548
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->accountTypesWithManagementDisabled:Ljava/util/Set;
 
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -3150,7 +3150,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 548
+    .line 549
     .local v0, "ac":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -3158,14 +3158,14 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 549
+    .line 550
     const/4 v9, 0x0
 
     const-string v10, "value"
 
     invoke-interface {p1, v9, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 550
+    .line 551
     const/4 v9, 0x0
 
     const-string v10, "account-type"
@@ -3174,7 +3174,7 @@
 
     goto :goto_0
 
-    .line 552
+    .line 553
     .end local v0    # "ac":Ljava/lang/String;
     :cond_14
     const/4 v9, 0x0
@@ -3183,7 +3183,7 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 554
+    .line 555
     .end local v4    # "i$":Ljava/util/Iterator;
     :cond_15
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->trustAgentFeatures:Ljava/util/HashMap;
@@ -3194,14 +3194,14 @@
 
     if-nez v9, :cond_18
 
-    .line 555
+    .line 556
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->trustAgentFeatures:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v8
 
-    .line 556
+    .line 557
     .local v8, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;>;"
     const/4 v9, 0x0
 
@@ -3209,7 +3209,7 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 557
+    .line 558
     invoke-interface {v8}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -3227,7 +3227,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 558
+    .line 559
     .local v1, "component":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     const/4 v9, 0x0
 
@@ -3235,7 +3235,7 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 559
+    .line 560
     const/4 v10, 0x0
 
     const-string v11, "value"
@@ -3248,7 +3248,7 @@
 
     invoke-interface {p1, v10, v11, v9}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 560
+    .line 561
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -3273,7 +3273,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 561
+    .line 562
     .local v2, "feature":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -3281,14 +3281,14 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 562
+    .line 563
     const/4 v9, 0x0
 
     const-string v10, "value"
 
     invoke-interface {p1, v9, v10, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 563
+    .line 564
     const/4 v9, 0x0
 
     const-string v10, "feature"
@@ -3297,7 +3297,7 @@
 
     goto :goto_2
 
-    .line 565
+    .line 566
     .end local v2    # "feature":Ljava/lang/String;
     :cond_16
     const/4 v9, 0x0
@@ -3308,7 +3308,7 @@
 
     goto :goto_1
 
-    .line 567
+    .line 568
     .end local v1    # "component":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     .end local v5    # "i$":Ljava/util/Iterator;
     :cond_17
@@ -3318,7 +3318,7 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 569
+    .line 570
     .end local v8    # "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;>;"
     :cond_18
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
@@ -3333,21 +3333,21 @@
 
     if-nez v9, :cond_1a
 
-    .line 570
+    .line 571
     const/4 v9, 0x0
 
     const-string v10, "cross-profile-widget-providers"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 571
+    .line 572
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v7
 
-    .line 572
+    .line 573
     .local v7, "providerCount":I
     const/4 v3, 0x0
 
@@ -3355,7 +3355,7 @@
     :goto_3
     if-ge v3, v7, :cond_19
 
-    .line 573
+    .line 574
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
     invoke-interface {v9, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3364,7 +3364,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 574
+    .line 575
     .local v6, "provider":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -3372,26 +3372,26 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 575
+    .line 576
     const/4 v9, 0x0
 
     const-string v10, "value"
 
     invoke-interface {p1, v9, v10, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 576
+    .line 577
     const/4 v9, 0x0
 
     const-string v10, "provider"
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 572
+    .line 573
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 578
+    .line 579
     .end local v6    # "provider":Ljava/lang/String;
     :cond_19
     const/4 v9, 0x0
@@ -3400,7 +3400,7 @@
 
     invoke-interface {p1, v9, v10}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 580
+    .line 581
     .end local v3    # "i":I
     .end local v7    # "providerCount":I
     :cond_1a
@@ -3410,13 +3410,13 @@
 
     invoke-virtual {p0, p1, v9, v10}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->writePackageListToXml(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 582
+    .line 583
     const-string v9, "permitted-imes"
 
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
     invoke-virtual {p0, p1, v9, v10}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->writePackageListToXml(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 583
+    .line 584
     return-void
 .end method

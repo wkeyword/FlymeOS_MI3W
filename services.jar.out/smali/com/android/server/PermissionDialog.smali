@@ -37,7 +37,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/AppOpsService;IILjava/lang/String;)V
-    .locals 8
+    .locals 10
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "service"    # Lcom/android/server/AppOpsService;
     .param p3, "code"    # I
@@ -45,10 +45,14 @@
     .param p5, "packageName"    # Ljava/lang/String;
 
     .prologue
+    const/4 v9, 0x2
+
+    const/4 v8, 0x0
+
     .line 59
     invoke-direct {p0, p1}, Lcom/android/server/BasePermissionDialog;-><init>(Landroid/content/Context;)V
 
-    .line 120
+    .line 121
     new-instance v4, Lcom/android/server/PermissionDialog$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/PermissionDialog$1;-><init>(Lcom/android/server/PermissionDialog;)V
@@ -77,7 +81,7 @@
     iput p4, p0, Lcom/android/server/PermissionDialog;->mUid:I
 
     .line 68
-    const v4, 0x107003f
+    const v4, 0x107000d
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -86,14 +90,12 @@
     iput-object v4, p0, Lcom/android/server/PermissionDialog;->mOpLabels:[Ljava/lang/CharSequence;
 
     .line 71
-    const/4 v4, 0x0
-
-    invoke-virtual {p0, v4}, Lcom/android/server/PermissionDialog;->setCancelable(Z)V
+    invoke-virtual {p0, v8}, Lcom/android/server/PermissionDialog;->setCancelable(Z)V
 
     .line 73
     const/4 v4, -0x1
 
-    const v5, 0x1040541
+    const v5, 0x10405af
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -101,9 +103,7 @@
 
     iget-object v6, p0, Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
 
-    const/4 v7, 0x2
-
-    invoke-virtual {v6, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v6, v9}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v6
 
@@ -112,7 +112,7 @@
     .line 76
     const/4 v4, -0x2
 
-    const v5, 0x1040542
+    const v5, 0x10405b0
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -129,7 +129,7 @@
     invoke-virtual {p0, v4, v5, v6}, Lcom/android/server/PermissionDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
     .line 79
-    const v4, 0x10406a5
+    const v4, 0x1040035
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -244,42 +244,36 @@
 
     .line 96
     :cond_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/android/server/PermissionDialog;->mContext:Landroid/content/Context;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    const v5, 0x1040036
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v6, v9, [Ljava/lang/Object;
 
-    move-result-object v4
+    aput-object v1, v6, v8
 
-    const-string v5, ": "
+    const/4 v7, 0x1
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/android/server/PermissionDialog;->mOpLabels:[Ljava/lang/CharSequence;
 
-    move-result-object v4
+    iget v9, p0, Lcom/android/server/PermissionDialog;->mCode:I
 
-    iget-object v5, p0, Lcom/android/server/PermissionDialog;->mOpLabels:[Ljava/lang/CharSequence;
+    aget-object v8, v8, v9
 
-    iget v6, p0, Lcom/android/server/PermissionDialog;->mCode:I
+    aput-object v8, v6, v7
 
-    aget-object v5, v5, v6
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 97
+    .line 98
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mView:Landroid/view/View;
 
     invoke-virtual {p0, v4}, Lcom/android/server/PermissionDialog;->setView(Landroid/view/View;)V
 
-    .line 100
+    .line 101
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/server/PermissionDialog;->mHandler:Landroid/os/Handler;
@@ -294,7 +288,7 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 102
+    .line 103
     return-void
 .end method
 
@@ -360,10 +354,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 105
+    .line 106
     const/4 v0, 0x0
 
-    .line 106
+    .line 107
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v4, p0, Lcom/android/server/PermissionDialog;->mContext:Landroid/content/Context;
 
@@ -371,7 +365,7 @@
 
     move-result-object v2
 
-    .line 108
+    .line 109
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/16 v4, 0x2200
 
@@ -382,26 +376,26 @@
 
     move-result-object v0
 
-    .line 114
+    .line 115
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 116
     invoke-virtual {v2, v0}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 117
+    .line 118
     :cond_0
     :goto_0
     return-object v3
 
-    .line 111
+    .line 112
     :catch_0
     move-exception v1
 
-    .line 112
+    .line 113
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     goto :goto_0
 .end method

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 302
+    .line 296
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +39,21 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 305
+    .line 299
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/input/InputManagerService;->updatePointerSpeedFromSettings()V
 
-    .line 306
+    .line 300
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/input/InputManagerService;->updateShowTouchesFromSettings()V
 
-    .line 307
+    .line 301
+    iget-object v0, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
+
+    invoke-virtual {v0}, Lcom/android/server/input/InputManagerService;->updateVolumeKeysRotationFromSettings()V
+
+    .line 302
     return-void
 .end method

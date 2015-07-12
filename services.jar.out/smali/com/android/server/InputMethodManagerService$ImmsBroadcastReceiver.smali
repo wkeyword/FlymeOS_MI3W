@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 438
+    .line 446
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,7 +35,7 @@
     .locals 6
 
     .prologue
-    .line 441
+    .line 449
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mCurClient:Lcom/android/server/InputMethodManagerService$ClientState;
@@ -50,7 +50,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 442
+    .line 450
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -84,11 +84,11 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/InputMethodManagerService;->executeOrSendMessage(Landroid/os/IInterface;Landroid/os/Message;)V
 
-    .line 445
+    .line 453
     :cond_0
     return-void
 
-    .line 442
+    .line 450
     :cond_1
     const/4 v0, 0x0
 
@@ -103,12 +103,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 449
+    .line 457
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 450
+    .line 458
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -118,27 +118,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 451
+    .line 459
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 452
+    .line 460
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->refreshImeWindowVisibilityLocked()V
     invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$000(Lcom/android/server/InputMethodManagerService;)V
 
-    .line 453
+    .line 461
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->updateActive()V
 
-    .line 471
+    .line 479
     :goto_0
     return-void
 
-    .line 455
+    .line 463
     :cond_0
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -148,25 +148,25 @@
 
     if-eqz v1, :cond_1
 
-    .line 456
+    .line 464
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v2, 0x0
 
     iput-boolean v2, v1, Lcom/android/server/InputMethodManagerService;->mScreenOn:Z
 
-    .line 457
+    .line 465
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->setImeWindowVisibilityStatusHiddenLocked()V
     invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$100(Lcom/android/server/InputMethodManagerService;)V
 
-    .line 458
+    .line 466
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->updateActive()V
 
     goto :goto_0
 
-    .line 460
+    .line 468
     :cond_1
     const-string v1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -176,14 +176,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 461
+    .line 469
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
     goto :goto_0
 
-    .line 464
+    .line 472
     :cond_2
     const-string v1, "android.intent.action.USER_ADDED"
 
@@ -201,7 +201,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 466
+    .line 474
     :cond_3
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$ImmsBroadcastReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -209,7 +209,7 @@
 
     goto :goto_0
 
-    .line 469
+    .line 477
     :cond_4
     const-string v1, "InputMethodManagerService"
 

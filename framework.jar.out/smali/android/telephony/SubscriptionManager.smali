@@ -2357,19 +2357,19 @@
     .line 727
     :array_0
     .array-data 4
-        0x1080609
-        0x108060b
         0x108060a
         0x108060c
+        0x108060b
+        0x108060d
     .end array-data
 
     .line 735
     :array_1
     .array-data 4
-        0x108060d
-        0x108060f
         0x108060e
         0x1080610
+        0x108060f
+        0x1080611
     .end array-data
 .end method
 

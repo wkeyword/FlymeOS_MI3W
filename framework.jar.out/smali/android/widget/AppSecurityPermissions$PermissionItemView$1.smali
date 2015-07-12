@@ -57,7 +57,6 @@
     .local v0, "pm":Landroid/content/pm/PackageManager;
     iget-object v1, p0, Landroid/widget/AppSecurityPermissions$PermissionItemView$1;->this$0:Landroid/widget/AppSecurityPermissions$PermissionItemView;
 
-    # getter for: Landroid/widget/AppSecurityPermissions$PermissionItemView;->mPackageName:Ljava/lang/String;
     invoke-static {v1}, Landroid/widget/AppSecurityPermissions$PermissionItemView;->access$000(Landroid/widget/AppSecurityPermissions$PermissionItemView;)Ljava/lang/String;
 
     move-result-object v1

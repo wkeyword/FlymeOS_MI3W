@@ -142,7 +142,7 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mPreHandoverState:Lcom/android/internal/telephony/Call$State;
 
-    .line 355
+    .line 339
     return-void
 .end method
 
@@ -153,12 +153,12 @@
     .param p1, "listener"    # Lcom/android/internal/telephony/Connection$Listener;
 
     .prologue
-    .line 474
+    .line 456
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 475
+    .line 457
     return-void
 .end method
 
@@ -167,7 +167,7 @@
     .param p1, "listener"    # Lcom/android/internal/telephony/Connection$PostDialListener;
 
     .prologue
-    .line 376
+    .line 360
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mPostDialListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -176,12 +176,12 @@
 
     if-nez v0, :cond_0
 
-    .line 377
+    .line 361
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mPostDialListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 379
+    .line 363
     :cond_0
     return-void
 .end method
@@ -193,12 +193,12 @@
     .locals 1
 
     .prologue
-    .line 382
+    .line 366
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mPostDialListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 383
+    .line 367
     return-void
 .end method
 
@@ -206,12 +206,12 @@
     .locals 1
 
     .prologue
-    .line 372
+    .line 356
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mUserData:Ljava/lang/Object;
 
-    .line 373
+    .line 357
     return-void
 .end method
 
@@ -229,7 +229,7 @@
     .locals 1
 
     .prologue
-    .line 528
+    .line 510
     iget v0, p0, Lcom/android/internal/telephony/Connection;->mAudioQuality:I
 
     return v0
@@ -242,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 538
+    .line 520
     iget v0, p0, Lcom/android/internal/telephony/Connection;->mCallSubstate:I
 
     return v0
@@ -266,43 +266,6 @@
     iget v0, p0, Lcom/android/internal/telephony/Connection;->mCnapNamePresentation:I
 
     return v0
-.end method
-
-.method public getConferenceParticipants()Ljava/util/List;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Landroid/telecom/ConferenceParticipant;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 299
-    invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getCall()Lcom/android/internal/telephony/Call;
-
-    move-result-object v0
-
-    .line 301
-    .local v0, "c":Lcom/android/internal/telephony/Call;
-    if-nez v0, :cond_0
-
-    .line 302
-    const/4 v1, 0x0
-
-    .line 304
-    :goto_0
-    return-object v1
-
-    :cond_0
-    invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getConferenceParticipants()Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_0
 .end method
 
 .method public getConnectTime()J
@@ -432,7 +395,7 @@
     .locals 1
 
     .prologue
-    .line 447
+    .line 424
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mOrigConnection:Lcom/android/internal/telephony/Connection;
 
     return-object v0
@@ -502,7 +465,7 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 316
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mUserData:Ljava/lang/Object;
 
     return-object v0
@@ -512,7 +475,7 @@
     .locals 1
 
     .prologue
-    .line 519
+    .line 501
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mVideoProvider:Landroid/telecom/Connection$VideoProvider;
 
     return-object v0
@@ -522,7 +485,7 @@
     .locals 1
 
     .prologue
-    .line 492
+    .line 474
     iget v0, p0, Lcom/android/internal/telephony/Connection;->mVideoState:I
 
     return v0
@@ -540,7 +503,7 @@
     .locals 1
 
     .prologue
-    .line 316
+    .line 300
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -566,18 +529,8 @@
     .locals 1
 
     .prologue
-    .line 501
+    .line 483
     iget-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
-
-    return v0
-.end method
-
-.method public isMergeAllowed()Z
-    .locals 1
-
-    .prologue
-    .line 433
-    const/4 v0, 0x1
 
     return v0
 .end method
@@ -589,7 +542,7 @@
     .locals 1
 
     .prologue
-    .line 510
+    .line 492
     iget-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
 
     return v0
@@ -599,7 +552,7 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 308
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v0
@@ -616,55 +569,90 @@
     .param p1, "c"    # Lcom/android/internal/telephony/Connection;
 
     .prologue
-    .line 458
+    .line 435
     if-nez p1, :cond_0
 
-    .line 466
+    .line 448
     :goto_0
     return-void
 
-    .line 459
+    .line 436
     :cond_0
     iget-object v0, p1, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
-    .line 460
+    .line 437
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getAddress()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mAddress:Ljava/lang/String;
+
+    .line 438
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getNumberPresentation()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/internal/telephony/Connection;->mNumberPresentation:I
+
+    .line 439
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getOrigDialString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mDialString:Ljava/lang/String;
 
-    .line 461
+    .line 440
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getCnapName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mCnapName:Ljava/lang/String;
+
+    .line 441
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getCnapNamePresentation()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/internal/telephony/Connection;->mCnapNamePresentation:I
+
+    .line 442
+    invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mIsIncoming:Z
+
+    .line 443
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getCreateTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/Connection;->mCreateTime:J
 
-    .line 462
+    .line 444
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getConnectTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/Connection;->mConnectTime:J
 
-    .line 463
+    .line 445
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getConnectTimeReal()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/Connection;->mConnectTimeReal:J
 
-    .line 464
+    .line 446
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getHoldingStartTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/Connection;->mHoldingStartTime:J
 
-    .line 465
+    .line 447
     invoke-virtual {p1}, Lcom/android/internal/telephony/Connection;->getOrigConnection()Lcom/android/internal/telephony/Connection;
 
     move-result-object v0
@@ -678,7 +666,7 @@
     .locals 4
 
     .prologue
-    .line 386
+    .line 370
     invoke-virtual {p0}, Lcom/android/internal/telephony/Connection;->getPostDialState()Lcom/android/internal/telephony/Connection$PostDialState;
 
     move-result-object v2
@@ -687,7 +675,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 387
+    .line 371
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/internal/telephony/Connection;->mPostDialListeners:Ljava/util/List;
@@ -712,13 +700,13 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$PostDialListener;
 
-    .line 388
+    .line 372
     .local v1, "listener":Lcom/android/internal/telephony/Connection$PostDialListener;
     invoke-interface {v1}, Lcom/android/internal/telephony/Connection$PostDialListener;->onPostDialWait()V
 
     goto :goto_0
 
-    .line 391
+    .line 375
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "listener":Lcom/android/internal/telephony/Connection$PostDialListener;
     :cond_0
@@ -730,7 +718,7 @@
     .param p1, "endpoint"    # Landroid/net/Uri;
 
     .prologue
-    .line 641
+    .line 623
     return-void
 .end method
 
@@ -745,12 +733,12 @@
     .param p1, "listener"    # Lcom/android/internal/telephony/Connection$Listener;
 
     .prologue
-    .line 483
+    .line 465
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 484
+    .line 466
     return-void
 .end method
 
@@ -767,10 +755,10 @@
     .param p1, "audioQuality"    # I
 
     .prologue
-    .line 585
+    .line 567
     iput p1, p0, Lcom/android/internal/telephony/Connection;->mAudioQuality:I
 
-    .line 586
+    .line 568
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -791,7 +779,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 587
+    .line 569
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget v2, p0, Lcom/android/internal/telephony/Connection;->mAudioQuality:I
 
@@ -799,7 +787,7 @@
 
     goto :goto_0
 
-    .line 589
+    .line 571
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -810,10 +798,10 @@
     .param p1, "callSubstate"    # I
 
     .prologue
-    .line 598
+    .line 580
     iput p1, p0, Lcom/android/internal/telephony/Connection;->mCallSubstate:I
 
-    .line 599
+    .line 581
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -834,7 +822,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 600
+    .line 582
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget v2, p0, Lcom/android/internal/telephony/Connection;->mCallSubstate:I
 
@@ -842,7 +830,7 @@
 
     goto :goto_0
 
-    .line 602
+    .line 584
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -853,23 +841,23 @@
     .param p1, "oriNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 617
+    .line 599
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/Connection;->mNumberConverted:Z
 
-    .line 618
+    .line 600
     iget-object v0, p0, Lcom/android/internal/telephony/Connection;->mAddress:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/telephony/Connection;->mConvertedNumber:Ljava/lang/String;
 
-    .line 619
+    .line 601
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->mAddress:Ljava/lang/String;
 
-    .line 620
+    .line 602
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->mDialString:Ljava/lang/String;
 
-    .line 621
+    .line 603
     return-void
 .end method
 
@@ -878,10 +866,10 @@
     .param p1, "capable"    # Z
 
     .prologue
-    .line 561
+    .line 543
     iput-boolean p1, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
 
-    .line 562
+    .line 544
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -902,7 +890,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 563
+    .line 545
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget-boolean v2, p0, Lcom/android/internal/telephony/Connection;->mLocalVideoCapable:Z
 
@@ -910,7 +898,7 @@
 
     goto :goto_0
 
-    .line 565
+    .line 547
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -921,10 +909,10 @@
     .param p1, "capable"    # Z
 
     .prologue
-    .line 573
+    .line 555
     iput-boolean p1, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
 
-    .line 574
+    .line 556
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -945,7 +933,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 575
+    .line 557
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget-boolean v2, p0, Lcom/android/internal/telephony/Connection;->mRemoteVideoCapable:Z
 
@@ -953,7 +941,7 @@
 
     goto :goto_0
 
-    .line 577
+    .line 559
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -964,10 +952,10 @@
     .param p1, "userdata"    # Ljava/lang/Object;
 
     .prologue
-    .line 340
+    .line 324
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->mUserData:Ljava/lang/Object;
 
-    .line 341
+    .line 325
     return-void
 .end method
 
@@ -976,10 +964,10 @@
     .param p1, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 610
+    .line 592
     iput-object p1, p0, Lcom/android/internal/telephony/Connection;->mVideoProvider:Landroid/telecom/Connection$VideoProvider;
 
-    .line 611
+    .line 593
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1000,7 +988,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 612
+    .line 594
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mVideoProvider:Landroid/telecom/Connection$VideoProvider;
 
@@ -1008,7 +996,7 @@
 
     goto :goto_0
 
-    .line 614
+    .line 596
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -1019,10 +1007,10 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 549
+    .line 531
     iput p1, p0, Lcom/android/internal/telephony/Connection;->mVideoState:I
 
-    .line 550
+    .line 532
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1043,7 +1031,7 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 551
+    .line 533
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     iget v2, p0, Lcom/android/internal/telephony/Connection;->mVideoState:I
 
@@ -1051,7 +1039,7 @@
 
     goto :goto_0
 
-    .line 553
+    .line 535
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void
@@ -1061,14 +1049,14 @@
     .locals 4
 
     .prologue
-    .line 649
+    .line 631
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 651
+    .line 633
     .local v0, "str":Ljava/lang/StringBuilder;
     sget-object v1, Lcom/android/internal/telephony/Connection;->LOG_TAG:Ljava/lang/String;
 
@@ -1080,7 +1068,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 652
+    .line 634
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1241,7 +1229,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 659
+    .line 641
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1319,7 +1307,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 662
+    .line 644
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1340,7 +1328,7 @@
     .end annotation
 
     .prologue
-    .line 629
+    .line 611
     .local p1, "conferenceParticipants":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/ConferenceParticipant;>;"
     iget-object v2, p0, Lcom/android/internal/telephony/Connection;->mListeners:Ljava/util/Set;
 
@@ -1362,13 +1350,13 @@
 
     check-cast v1, Lcom/android/internal/telephony/Connection$Listener;
 
-    .line 630
+    .line 612
     .local v1, "l":Lcom/android/internal/telephony/Connection$Listener;
     invoke-interface {v1, p1}, Lcom/android/internal/telephony/Connection$Listener;->onConferenceParticipantsChanged(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 632
+    .line 614
     .end local v1    # "l":Lcom/android/internal/telephony/Connection$Listener;
     :cond_0
     return-void

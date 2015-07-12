@@ -39,7 +39,7 @@
 
     .prologue
     .line 185
-    const/16 v0, 0x8
+    const/16 v0, 0xa
 
     if-ge p1, v0, :cond_0
 

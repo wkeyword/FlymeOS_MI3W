@@ -162,6 +162,9 @@
     <dimen name="light_radius">800.0dip</dimen>
     <item type="dimen" name="ambient_shadow_alpha">0.075</item>
     <item type="dimen" name="spot_shadow_alpha">0.15</item>
+    <dimen name="edge_gesture_trigger_distance">12.0dip</dimen>
+    <dimen name="edge_gesture_perpendicular_distance">15.0dip</dimen>
+    <dimen name="edge_gesture_trigger_thickness">12.0dip</dimen>
     <item type="dimen" name="disabled_alpha_leanback_formwizard">0.2</item>
     <item type="dimen" name="leanback_setup_alpha_animiation_max_opacity">1.0</item>
     <item type="dimen" name="leanback_setup_alpha_animiation_min_opacity">0.0</item>

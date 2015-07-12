@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 13333
+    .line 13409
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$14;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$14;->val$packageName:Ljava/lang/String;
@@ -48,7 +48,7 @@
     .locals 4
 
     .prologue
-    .line 13335
+    .line 13411
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$14;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$14;->val$packageName:Ljava/lang/String;
@@ -58,8 +58,8 @@
     const/4 v3, 0x0
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->deletePackageX(Ljava/lang/String;II)I
-    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$3900(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->access$4000(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)I
 
-    .line 13336
+    .line 13412
     return-void
 .end method

@@ -61,7 +61,6 @@
 
     iget-object v1, p0, Landroid/widget/DateTimeView$1;->this$0:Landroid/widget/DateTimeView;
 
-    # getter for: Landroid/widget/DateTimeView;->mUpdateTimeMillis:J
     invoke-static {v1}, Landroid/widget/DateTimeView;->access$000(Landroid/widget/DateTimeView;)J
 
     move-result-wide v4

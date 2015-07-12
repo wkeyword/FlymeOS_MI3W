@@ -830,64 +830,6 @@
     goto :goto_0
 .end method
 
-.method public getSmscAddressFromIccForSubscriber(J)Ljava/lang/String;
-    .locals 5
-    .param p1, "subId"    # J
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 415
-    invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/UiccSmsController;->getIccSmsInterfaceManager(J)Lcom/android/internal/telephony/IccSmsInterfaceManager;
-
-    move-result-object v0
-
-    .line 417
-    .local v0, "iccSmsIntMgr":Lcom/android/internal/telephony/IccSmsInterfaceManager;
-    if-eqz v0, :cond_0
-
-    .line 418
-    invoke-virtual {v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->getSmscAddressFromIcc()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 421
-    :goto_0
-    return-object v1
-
-    .line 420
-    :cond_0
-    const-string v1, "RIL_UiccSmsController"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "iccSmsIntMgr is null for  subId: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 421
-    const/4 v1, 0x0
-
-    goto :goto_0
-.end method
-
 .method public injectSmsPdu([BLjava/lang/String;Landroid/app/PendingIntent;)V
     .locals 7
     .param p1, "pdu"    # [B
@@ -1830,65 +1772,6 @@
     const-string v2, "setPremiumSmsPermission iccSmsIntMgr is null"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-.end method
-
-.method public setSmscAddressToIccForSubscriber(JLjava/lang/String;)Z
-    .locals 5
-    .param p1, "subId"    # J
-    .param p3, "scAdress"    # Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 427
-    invoke-direct {p0, p1, p2}, Lcom/android/internal/telephony/UiccSmsController;->getIccSmsInterfaceManager(J)Lcom/android/internal/telephony/IccSmsInterfaceManager;
-
-    move-result-object v0
-
-    .line 429
-    .local v0, "iccSmsIntMgr":Lcom/android/internal/telephony/IccSmsInterfaceManager;
-    if-eqz v0, :cond_0
-
-    .line 430
-    invoke-virtual {v0, p3}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->setSmscAddressToIcc(Ljava/lang/String;)Z
-
-    move-result v1
-
-    .line 433
-    :goto_0
-    return v1
-
-    .line 432
-    :cond_0
-    const-string v1, "RIL_UiccSmsController"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "iccSmsIntMgr is null for  subId: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 433
-    const/4 v1, 0x0
 
     goto :goto_0
 .end method

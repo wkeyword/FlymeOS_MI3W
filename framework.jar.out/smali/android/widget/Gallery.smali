@@ -2825,10 +2825,6 @@
 
     .line 1213
     :sswitch_0
-    iget-boolean v1, p0, Landroid/widget/Gallery;->mIsRtl:Z
-
-    if-nez v1, :cond_1
-
     invoke-virtual {p0}, Landroid/widget/Gallery;->movePrevious()Z
 
     move-result v1
@@ -2836,27 +2832,12 @@
     if-eqz v1, :cond_0
 
     .line 1214
-    :goto_2
     invoke-virtual {p0, v0}, Landroid/widget/Gallery;->playSoundEffect(I)V
 
     goto :goto_1
 
-    .line 1213
-    :cond_1
-    invoke-virtual {p0}, Landroid/widget/Gallery;->moveNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_2
-
     .line 1219
     :sswitch_1
-    iget-boolean v1, p0, Landroid/widget/Gallery;->mIsRtl:Z
-
-    if-nez v1, :cond_2
-
     invoke-virtual {p0}, Landroid/widget/Gallery;->moveNext()Z
 
     move-result v1
@@ -2864,22 +2845,11 @@
     if-eqz v1, :cond_0
 
     .line 1220
-    :goto_3
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1}, Landroid/widget/Gallery;->playSoundEffect(I)V
 
     goto :goto_1
-
-    .line 1219
-    :cond_2
-    invoke-virtual {p0}, Landroid/widget/Gallery;->movePrevious()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_3
 
     .line 1226
     :sswitch_2
@@ -3242,7 +3212,6 @@
     .line 1079
     iget-object v0, p0, Landroid/widget/Gallery;->mFlingRunnable:Landroid/widget/Gallery$FlingRunnable;
 
-    # getter for: Landroid/widget/Gallery$FlingRunnable;->mScroller:Landroid/widget/Scroller;
     invoke-static {v0}, Landroid/widget/Gallery$FlingRunnable;->access$200(Landroid/widget/Gallery$FlingRunnable;)Landroid/widget/Scroller;
 
     move-result-object v0
@@ -3613,7 +3582,6 @@
     .line 387
     iget-object v7, p0, Landroid/widget/Gallery;->mFlingRunnable:Landroid/widget/Gallery$FlingRunnable;
 
-    # invokes: Landroid/widget/Gallery$FlingRunnable;->endFling(Z)V
     invoke-static {v7, v6}, Landroid/widget/Gallery$FlingRunnable;->access$100(Landroid/widget/Gallery$FlingRunnable;Z)V
 
     .line 388

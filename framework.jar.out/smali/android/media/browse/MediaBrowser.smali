@@ -752,7 +752,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "mServiceBinder should be null. Instead it is "
+    const-string/jumbo v6, "mServiceBinder should be null. Instead it is "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -785,7 +785,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "mServiceCallbacks should be null. Instead it is "
+    const-string/jumbo v6, "mServiceCallbacks should be null. Instead it is "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

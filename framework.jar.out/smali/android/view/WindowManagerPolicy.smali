@@ -114,7 +114,7 @@
 .method public abstract createForceHideEnterAnimation(ZZ)Landroid/view/animation/Animation;
 .end method
 
-.method public abstract createForceHideWallpaperExitAnimation(Z)Landroid/view/animation/Animation;
+.method public abstract createForceHideWallpaperExitAnimation(ZZ)Landroid/view/animation/Animation;
 .end method
 
 .method public abstract dismissKeyguardLw()V
@@ -186,6 +186,9 @@
 .method public abstract hasNavigationBar()Z
 .end method
 
+.method public abstract hasPermanentMenuKey()Z
+.end method
+
 .method public abstract hideBootMessages()V
 .end method
 
@@ -238,6 +241,9 @@
 .end method
 
 .method public abstract lockNow(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract needsNavigationBar()Z
 .end method
 
 .method public abstract notifyActivityDrawnForKeyguardLw()V

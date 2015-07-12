@@ -23,7 +23,7 @@
     .end annotation
 .end method
 
-.method public abstract registrationDisconnected(Lcom/android/ims/ImsReasonInfo;)V
+.method public abstract registrationDisconnected()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -32,14 +32,6 @@
 .end method
 
 .method public abstract registrationFeatureCapabilityChanged(I[I[I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract registrationProgressing()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

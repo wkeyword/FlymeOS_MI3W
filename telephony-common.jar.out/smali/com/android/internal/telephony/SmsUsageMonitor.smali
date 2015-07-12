@@ -40,7 +40,7 @@
 
 .field private static final DBG:Z = false
 
-.field private static final DEFAULT_SMS_CHECK_PERIOD:I = 0xea60
+.field private static final DEFAULT_SMS_CHECK_PERIOD:I = 0xdbba0
 
 .field private static final DEFAULT_SMS_MAX_COUNT:I = 0x1e
 
@@ -188,7 +188,7 @@
     .line 264
     const-string v1, "sms_outgoing_check_interval_ms"
 
-    const v2, 0xea60
+    const v2, 0xdbba0
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -676,7 +676,7 @@
 
     .prologue
     .line 302
-    const v0, 0x1110011
+    const v0, 0x1110012
 
     .line 303
     .local v0, "id":I

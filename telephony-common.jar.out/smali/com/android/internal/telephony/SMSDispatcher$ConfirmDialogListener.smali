@@ -128,14 +128,14 @@
     .line 1427
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mPositiveButton:Landroid/widget/Button;
 
-    const v1, 0x10404d7
+    const v1, 0x1040547
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
     .line 1428
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mNegativeButton:Landroid/widget/Button;
 
-    const v1, 0x10404d8
+    const v1, 0x1040548
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -147,7 +147,7 @@
     .line 1430
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mRememberUndoInstruction:Landroid/widget/TextView;
 
-    const v1, 0x10404d6
+    const v1, 0x1040546
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -167,14 +167,14 @@
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mPositiveButton:Landroid/widget/Button;
 
-    const v1, 0x10404d3
+    const v1, 0x1040543
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
     .line 1436
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;->mNegativeButton:Landroid/widget/Button;
 
-    const v1, 0x10404d4
+    const v1, 0x1040544
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 

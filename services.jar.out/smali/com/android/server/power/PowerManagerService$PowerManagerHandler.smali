@@ -24,17 +24,17 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2703
+    .line 2724
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 2704
+    .line 2725
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 2705
+    .line 2726
     return-void
 .end method
 
@@ -45,37 +45,59 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2709
+    .line 2730
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2717
+    .line 2742
     :goto_0
+    :pswitch_0
     return-void
 
-    .line 2711
-    :pswitch_0
-    iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
-
-    # invokes: Lcom/android/server/power/PowerManagerService;->handleUserActivityTimeout()V
-    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2600(Lcom/android/server/power/PowerManagerService;)V
-
-    goto :goto_0
-
-    .line 2714
+    .line 2732
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    # invokes: Lcom/android/server/power/PowerManagerService;->handleSandman()V
-    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2700(Lcom/android/server/power/PowerManagerService;)V
+    # invokes: Lcom/android/server/power/PowerManagerService;->handleUserActivityTimeout()V
+    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2300(Lcom/android/server/power/PowerManagerService;)V
 
     goto :goto_0
 
-    .line 2709
+    .line 2735
+    :pswitch_2
+    iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
+
+    # invokes: Lcom/android/server/power/PowerManagerService;->handleSandman()V
+    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2400(Lcom/android/server/power/PowerManagerService;)V
+
+    goto :goto_0
+
+    .line 2738
+    :pswitch_3
+    iget-object v0, p0, Lcom/android/server/power/PowerManagerService$PowerManagerHandler;->this$0:Lcom/android/server/power/PowerManagerService;
+
+    # invokes: Lcom/android/server/power/PowerManagerService;->cleanupProximity()V
+    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$2500(Lcom/android/server/power/PowerManagerService;)V
+
+    .line 2739
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    .line 2730
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_0
         :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
     .end packed-switch
 .end method

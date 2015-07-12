@@ -23,7 +23,7 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    const v0, 0x10400db
+    const v0, 0x1040150
 
     .line 45
     packed-switch p0, :pswitch_data_0
@@ -58,55 +58,55 @@
 
     .line 47
     :pswitch_1
-    const v0, 0x10400da
+    const v0, 0x104014f
 
     goto :goto_0
 
     .line 53
     :pswitch_2
-    const v0, 0x10400dc
+    const v0, 0x1040151
 
     goto :goto_0
 
     .line 56
     :pswitch_3
-    const v0, 0x10400dd
+    const v0, 0x1040152
 
     goto :goto_0
 
     .line 59
     :pswitch_4
-    const v0, 0x10400de
+    const v0, 0x1040153
 
     goto :goto_0
 
     .line 62
     :pswitch_5
-    const v0, 0x10400df
+    const v0, 0x1040154
 
     goto :goto_0
 
     .line 65
     :pswitch_6
-    const v0, 0x10400e0
+    const v0, 0x1040155
 
     goto :goto_0
 
     .line 68
     :pswitch_7
-    const v0, 0x10400e1
+    const v0, 0x1040156
 
     goto :goto_0
 
     .line 71
     :pswitch_8
-    const v0, 0x10400e2
+    const v0, 0x1040157
 
     goto :goto_0
 
     .line 74
     :pswitch_9
-    const v0, 0x10400e3
+    const v0, 0x1040158
 
     goto :goto_0
 
@@ -118,7 +118,7 @@
 
     .line 80
     :pswitch_b
-    const v0, 0x10400e4
+    const v0, 0x1040159
 
     goto :goto_0
 
@@ -130,19 +130,19 @@
 
     .line 86
     :pswitch_d
-    const v0, 0x10400e5
+    const v0, 0x104015a
 
     goto :goto_0
 
     .line 89
     :pswitch_e
-    const v0, 0x10400e6
+    const v0, 0x104015b
 
     goto :goto_0
 
     .line 92
     :pswitch_f
-    const v0, 0x10400e7
+    const v0, 0x104015c
 
     goto :goto_0
 

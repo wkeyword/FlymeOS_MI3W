@@ -34,7 +34,7 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 127
+    .line 132
     return-void
 .end method
 
@@ -44,7 +44,17 @@
     .param p2, "callCapabilities"    # I
 
     .prologue
-    .line 87
+    .line 83
+    return-void
+.end method
+
+.method public onCallPropertiesChanged(Landroid/telecom/RemoteConnection;I)V
+    .locals 0
+    .param p1, "connection"    # Landroid/telecom/RemoteConnection;
+    .param p2, "callProperties"    # I
+
+    .prologue
+    .line 92
     return-void
 .end method
 
@@ -54,7 +64,7 @@
     .param p2, "callSubstate"    # I
 
     .prologue
-    .line 159
+    .line 164
     return-void
 .end method
 
@@ -65,7 +75,7 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 139
+    .line 144
     return-void
 .end method
 
@@ -75,7 +85,7 @@
     .param p2, "conference"    # Landroid/telecom/RemoteConference;
 
     .prologue
-    .line 203
+    .line 208
     return-void
 .end method
 
@@ -94,7 +104,7 @@
     .end annotation
 
     .prologue
-    .line 179
+    .line 184
     .local p2, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/RemoteConnection;>;"
     return-void
 .end method
@@ -104,7 +114,7 @@
     .param p1, "connection"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 167
+    .line 172
     return-void
 .end method
 
@@ -124,7 +134,7 @@
     .param p2, "remainingPostDialSequence"    # Ljava/lang/String;
 
     .prologue
-    .line 98
+    .line 103
     return-void
 .end method
 
@@ -134,7 +144,7 @@
     .param p2, "ringback"    # Z
 
     .prologue
-    .line 78
+    .line 74
     return-void
 .end method
 
@@ -154,7 +164,7 @@
     .param p2, "statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 116
+    .line 121
     return-void
 .end method
 
@@ -164,7 +174,7 @@
     .param p2, "videoProvider"    # Landroid/telecom/RemoteConnection$VideoProvider;
 
     .prologue
-    .line 191
+    .line 196
     return-void
 .end method
 
@@ -174,7 +184,7 @@
     .param p2, "videoState"    # I
 
     .prologue
-    .line 149
+    .line 154
     return-void
 .end method
 
@@ -184,20 +194,7 @@
     .param p2, "isVoip"    # Z
 
     .prologue
-    .line 107
-    return-void
-.end method
-
-.method public setDisconnectedWithSsNotification(Landroid/telecom/RemoteConnection;ILjava/lang/String;II)V
-    .locals 0
-    .param p1, "connection"    # Landroid/telecom/RemoteConnection;
-    .param p2, "disconnectCause"    # I
-    .param p3, "disconnectMessage"    # Ljava/lang/String;
-    .param p4, "type"    # I
-    .param p5, "code"    # I
-
-    .prologue
-    .line 69
+    .line 112
     return-void
 .end method
 
@@ -207,6 +204,6 @@
     .param p2, "pHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 208
+    .line 213
     return-void
 .end method

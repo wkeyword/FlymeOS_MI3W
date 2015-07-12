@@ -45,7 +45,6 @@
     .line 311
     iget-object v0, p0, Landroid/widget/SearchView$4;->this$0:Landroid/widget/SearchView;
 
-    # getter for: Landroid/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
     invoke-static {v0}, Landroid/widget/SearchView;->access$200(Landroid/widget/SearchView;)Landroid/view/View$OnFocusChangeListener;
 
     move-result-object v0
@@ -55,7 +54,6 @@
     .line 312
     iget-object v0, p0, Landroid/widget/SearchView$4;->this$0:Landroid/widget/SearchView;
 
-    # getter for: Landroid/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
     invoke-static {v0}, Landroid/widget/SearchView;->access$200(Landroid/widget/SearchView;)Landroid/view/View$OnFocusChangeListener;
 
     move-result-object v0

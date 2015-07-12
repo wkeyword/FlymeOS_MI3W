@@ -59,6 +59,8 @@
 
 .field public static final SMS_PROTO:I = 0x0
 
+.field public static final TRANSPORT_TYPE_COUNT_COLUMN:Ljava/lang/String; = "transport_type_count"
+
 .field public static final TYPE_DISCRIMINATOR_COLUMN:Ljava/lang/String; = "transport_type"
 
 
@@ -67,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 2431
+    .line 2459
     const-string v0, "content://mms-sms/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -76,7 +78,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2436
+    .line 2464
     const-string v0, "content://mms-sms/conversations"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -85,7 +87,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_CONVERSATIONS_URI:Landroid/net/Uri;
 
-    .line 2442
+    .line 2470
     const-string v0, "content://mms-sms/messages/byphone"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -94,7 +96,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_FILTER_BYPHONE_URI:Landroid/net/Uri;
 
-    .line 2448
+    .line 2476
     const-string v0, "content://mms-sms/undelivered"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -103,7 +105,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_UNDELIVERED_URI:Landroid/net/Uri;
 
-    .line 2454
+    .line 2482
     const-string v0, "content://mms-sms/draft"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -112,7 +114,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_DRAFT_URI:Landroid/net/Uri;
 
-    .line 2460
+    .line 2488
     const-string v0, "content://mms-sms/locked"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -121,7 +123,7 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_LOCKED_URI:Landroid/net/Uri;
 
-    .line 2467
+    .line 2495
     const-string v0, "content://mms-sms/search"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -137,9 +139,9 @@
     .locals 0
 
     .prologue
-    .line 2419
+    .line 2440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2420
+    .line 2441
     return-void
 .end method

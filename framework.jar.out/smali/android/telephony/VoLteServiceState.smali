@@ -177,7 +177,7 @@
 
     .prologue
     .line 208
-    const-string v0, "mSrvccState"
+    const-string/jumbo v0, "mSrvccState"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -271,7 +271,7 @@
 
     .prologue
     .line 218
-    const-string v0, "mSrvccState"
+    const-string/jumbo v0, "mSrvccState"
 
     iget v1, p0, Landroid/telephony/VoLteServiceState;->mSrvccState:I
 

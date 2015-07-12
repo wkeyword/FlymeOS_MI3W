@@ -2647,6 +2647,12 @@
 
     if-eqz v4, :cond_1
 
+    iget-object v4, p1, Lcom/android/server/am/BroadcastRecord;->curApp:Lcom/android/server/am/ProcessRecord;
+
+    iget-object v4, v4, Lcom/android/server/am/ProcessRecord;->curReceiver:Lcom/android/server/am/BroadcastRecord;
+
+    if-ne v4, p1, :cond_1
+
     .line 358
     iget-object v4, p1, Lcom/android/server/am/BroadcastRecord;->curApp:Lcom/android/server/am/ProcessRecord;
 
@@ -6049,6 +6055,10 @@
     .line 301
     .local v1, "r":Lcom/android/server/am/BroadcastRecord;
     if-eqz v1, :cond_0
+
+    iget-object v0, v1, Lcom/android/server/am/BroadcastRecord;->queue:Lcom/android/server/am/BroadcastQueue;
+
+    if-ne v0, p0, :cond_0
 
     .line 305
     invoke-virtual {p0, v1}, Lcom/android/server/am/BroadcastQueue;->logBroadcastReceiverDiscardLocked(Lcom/android/server/am/BroadcastRecord;)V

@@ -48,7 +48,6 @@
     .line 288
     iget-object v0, p0, Landroid/widget/AdapterViewFlipper$2;->this$0:Landroid/widget/AdapterViewFlipper;
 
-    # getter for: Landroid/widget/AdapterViewFlipper;->mRunning:Z
     invoke-static {v0}, Landroid/widget/AdapterViewFlipper;->access$300(Landroid/widget/AdapterViewFlipper;)Z
 
     move-result v0

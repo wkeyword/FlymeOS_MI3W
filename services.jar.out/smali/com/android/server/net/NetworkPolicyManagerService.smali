@@ -1115,7 +1115,7 @@
 
     .line 801
     :pswitch_0
-    const v2, 0x10405ac
+    const v2, 0x1040615
 
     move-object/from16 v0, v16
 
@@ -1125,7 +1125,7 @@
 
     .line 802
     .local v18, "title":Ljava/lang/CharSequence;
-    const v2, 0x10405ad
+    const v2, 0x1040616
 
     move-object/from16 v0, v16
 
@@ -1214,7 +1214,7 @@
     .end local v18    # "title":Ljava/lang/CharSequence;
     .end local v19    # "viewIntent":Landroid/content/Intent;
     :pswitch_1
-    const v2, 0x10405b2
+    const v2, 0x104061b
 
     move-object/from16 v0, v16
 
@@ -1224,7 +1224,7 @@
 
     .line 823
     .restart local v10    # "body":Ljava/lang/CharSequence;
-    const v12, 0x1080652
+    const v12, 0x1080653
 
     .line 824
     .local v12, "icon":I
@@ -1295,7 +1295,7 @@
     .end local v13    # "intent":Landroid/content/Intent;
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_2
-    const v2, 0x10405ae
+    const v2, 0x1040617
 
     move-object/from16 v0, v16
 
@@ -1310,7 +1310,7 @@
     .line 829
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_3
-    const v2, 0x10405af
+    const v2, 0x1040618
 
     move-object/from16 v0, v16
 
@@ -1325,7 +1325,7 @@
     .line 832
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_4
-    const v2, 0x10405b0
+    const v2, 0x1040619
 
     move-object/from16 v0, v16
 
@@ -1340,7 +1340,7 @@
     .line 835
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_5
-    const v2, 0x10405b1
+    const v2, 0x104061a
 
     move-object/from16 v0, v16
 
@@ -1368,7 +1368,7 @@
 
     .line 856
     .local v14, "overBytes":J
-    const v2, 0x10405b7
+    const v2, 0x1040620
 
     const/4 v4, 0x1
 
@@ -1463,7 +1463,7 @@
     .end local v13    # "intent":Landroid/content/Intent;
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_7
-    const v2, 0x10405b3
+    const v2, 0x104061c
 
     move-object/from16 v0, v16
 
@@ -1478,7 +1478,7 @@
     .line 865
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_8
-    const v2, 0x10405b4
+    const v2, 0x104061d
 
     move-object/from16 v0, v16
 
@@ -1493,7 +1493,7 @@
     .line 868
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_9
-    const v2, 0x10405b5
+    const v2, 0x104061e
 
     move-object/from16 v0, v16
 
@@ -1508,7 +1508,7 @@
     .line 871
     .end local v18    # "title":Ljava/lang/CharSequence;
     :pswitch_a
-    const v2, 0x10405b6
+    const v2, 0x104061f
 
     move-object/from16 v0, v16
 
@@ -1582,7 +1582,7 @@
 
     .line 913
     .local v9, "builder":Landroid/app/Notification$Builder;
-    const v0, 0x10405b8
+    const v0, 0x1040621
 
     invoke-virtual {v11, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1590,7 +1590,7 @@
 
     .line 914
     .local v12, "title":Ljava/lang/CharSequence;
-    const v0, 0x10405b9
+    const v0, 0x1040622
 
     invoke-virtual {v11, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1824,7 +1824,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e0069
+    const v4, 0x10e006c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 

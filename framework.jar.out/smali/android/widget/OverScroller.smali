@@ -203,7 +203,6 @@
     .local v4, "time":J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStartTime:J
     invoke-static {v6}, Landroid/widget/OverScroller$SplineOverScroller;->access$600(Landroid/widget/OverScroller$SplineOverScroller;)J
 
     move-result-wide v6
@@ -214,7 +213,6 @@
     .local v2, "elapsedTime":J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mDuration:I
     invoke-static {v6}, Landroid/widget/OverScroller$SplineOverScroller;->access$500(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -267,7 +265,6 @@
     :pswitch_1
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v6}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v6
@@ -301,7 +298,6 @@
     :cond_3
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v6}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v6
@@ -433,7 +429,6 @@
     .line 439
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v6
@@ -442,7 +437,6 @@
     .local v6, "oldVelocityX":F
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v7
@@ -543,12 +537,10 @@
 
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # setter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v1, p1}, Landroid/widget/OverScroller$SplineOverScroller;->access$002(Landroid/widget/OverScroller$SplineOverScroller;Z)Z
 
     move-result v1
 
-    # setter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0, v1}, Landroid/widget/OverScroller$SplineOverScroller;->access$002(Landroid/widget/OverScroller$SplineOverScroller;Z)Z
 
     .line 159
@@ -562,14 +554,12 @@
     .line 185
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v1}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v1
 
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v2}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v2
@@ -580,14 +570,12 @@
     .local v0, "squaredNorm":F
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v1}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v1
 
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
     invoke-static {v2}, Landroid/widget/OverScroller$SplineOverScroller;->access$200(Landroid/widget/OverScroller$SplineOverScroller;)F
 
     move-result v2
@@ -611,7 +599,6 @@
     .line 167
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrentPosition:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$100(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -626,7 +613,6 @@
     .line 176
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrentPosition:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$100(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -643,14 +629,12 @@
     .line 237
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mDuration:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$500(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
 
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mDuration:I
     invoke-static {v1}, Landroid/widget/OverScroller$SplineOverScroller;->access$500(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v1
@@ -669,7 +653,6 @@
     .line 214
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$400(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -684,7 +667,6 @@
     .line 223
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$400(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -699,7 +681,6 @@
     .line 196
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$300(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -714,7 +695,6 @@
     .line 205
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$300(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -729,7 +709,6 @@
     .line 146
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v0
@@ -738,7 +717,6 @@
 
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v0
@@ -763,7 +741,6 @@
     .line 501
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v0
@@ -772,7 +749,6 @@
 
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mState:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$700(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -782,7 +758,6 @@
     :cond_0
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$000(Landroid/widget/OverScroller$SplineOverScroller;)Z
 
     move-result v0
@@ -791,7 +766,6 @@
 
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mState:I
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->access$700(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v0
@@ -819,14 +793,12 @@
     .line 536
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
     invoke-static {v2}, Landroid/widget/OverScroller$SplineOverScroller;->access$400(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v2
 
     iget-object v3, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
     invoke-static {v3}, Landroid/widget/OverScroller$SplineOverScroller;->access$300(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v3
@@ -837,14 +809,12 @@
     .local v0, "dx":I
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
     invoke-static {v2}, Landroid/widget/OverScroller$SplineOverScroller;->access$400(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v2
 
     iget-object v3, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
     invoke-static {v3}, Landroid/widget/OverScroller$SplineOverScroller;->access$300(Landroid/widget/OverScroller$SplineOverScroller;)I
 
     move-result v3
@@ -1121,14 +1091,12 @@
     .local v2, "time":J
     iget-object v4, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStartTime:J
     invoke-static {v4}, Landroid/widget/OverScroller$SplineOverScroller;->access$600(Landroid/widget/OverScroller$SplineOverScroller;)J
 
     move-result-wide v4
 
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    # getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStartTime:J
     invoke-static {v6}, Landroid/widget/OverScroller$SplineOverScroller;->access$600(Landroid/widget/OverScroller$SplineOverScroller;)J
 
     move-result-wide v6

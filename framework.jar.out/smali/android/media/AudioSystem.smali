@@ -234,9 +234,7 @@
 
 .field public static final FORCE_DIGITAL_DOCK:I = 0x9
 
-.field public static final FORCE_EARPIECE:I = 0xc
-
-.field public static final FORCE_HDMI_SYSTEM_AUDIO_ENFORCED:I = 0xd
+.field public static final FORCE_HDMI_SYSTEM_AUDIO_ENFORCED:I = 0xc
 
 .field public static final FORCE_HEADPHONES:I = 0x2
 
@@ -254,9 +252,7 @@
 
 .field public static final FOR_DOCK:I = 0x3
 
-.field public static final FOR_HDMI_SYSTEM_AUDIO:I = 0x6
-
-.field public static final FOR_LB_TEST:I = 0x5
+.field public static final FOR_HDMI_SYSTEM_AUDIO:I = 0x5
 
 .field public static final FOR_MEDIA:I = 0x1
 
@@ -282,9 +278,9 @@
 
 .field private static final NUM_DEVICE_STATES:I = 0x1
 
-.field private static final NUM_FORCE_CONFIG:I = 0xe
+.field private static final NUM_FORCE_CONFIG:I = 0xd
 
-.field private static final NUM_FORCE_USE:I = 0x7
+.field private static final NUM_FORCE_USE:I = 0x6
 
 .field public static final NUM_MODES:I = 0x4
 

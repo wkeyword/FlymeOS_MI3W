@@ -987,7 +987,7 @@
 
     iget-object v1, p0, Lcom/android/internal/view/menu/MenuBuilder;->mResources:Landroid/content/res/Resources;
 
-    const v2, 0x112004c
+    const v2, 0x1120050
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 

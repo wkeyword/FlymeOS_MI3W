@@ -238,6 +238,8 @@
 
 .field static final TRANSACTION_setComponentEnabledSetting:I = 0x47
 
+.field static final TRANSACTION_setComponentProtectedSetting:I = 0x73
+
 .field static final TRANSACTION_setInstallLocation:I = 0x5f
 
 .field static final TRANSACTION_setInstallerPackageName:I = 0x34
@@ -344,7 +346,7 @@
     .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 1732
+    .line 1750
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -7056,7 +7058,86 @@
 
     goto :goto_57
 
+    .line 1733
+    .end local v5    # "_arg0":Ljava/lang/String;
+    .end local v6    # "_arg1":Landroid/content/pm/KeySet;
+    .end local v19    # "_result":Z
+    :sswitch_73
+    const-string v4, "android.content.pm.IPackageManager"
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 1735
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    if-eqz v4, :cond_57
+
+    .line 1736
+    sget-object v4, Landroid/content/ComponentName;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    move-object/from16 v0, p2
+
+    invoke-interface {v4, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/ComponentName;
+
+    .line 1742
+    .local v5, "_arg0":Landroid/content/ComponentName;
+    :goto_58
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v4
+
+    if-eqz v4, :cond_58
+
+    const/4 v6, 0x1
+
+    .line 1744
+    .local v6, "_arg1":Z
+    :goto_59
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v7
+
+    .line 1745
+    .restart local v7    # "_arg2":I
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v5, v6, v7}, Landroid/content/pm/IPackageManager$Stub;->setComponentProtectedSetting(Landroid/content/ComponentName;ZI)V
+
+    .line 1746
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 1747
+    const/4 v4, 0x1
+
+    goto/16 :goto_0
+
+    .line 1739
+    .end local v5    # "_arg0":Landroid/content/ComponentName;
+    .end local v6    # "_arg1":Z
+    .end local v7    # "_arg2":I
+    :cond_57
+    const/4 v5, 0x0
+
+    .restart local v5    # "_arg0":Landroid/content/ComponentName;
+    goto :goto_58
+
+    .line 1742
+    :cond_58
+    const/4 v6, 0x0
+
+    goto :goto_59
+
     .line 44
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -7173,6 +7254,7 @@
         0x70 -> :sswitch_70
         0x71 -> :sswitch_71
         0x72 -> :sswitch_72
+        0x73 -> :sswitch_73
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

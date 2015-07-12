@@ -35,7 +35,7 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    const/16 v4, 0x8
+    const/16 v4, 0xa
 
     .line 167
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V

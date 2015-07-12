@@ -335,14 +335,6 @@
     .end annotation
 .end method
 
-.method public abstract removeMediaPlayerAndUpdateRemoteController(Ljava/lang/String;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract requestAudioFocus(IILandroid/os/IBinder;Landroid/media/IAudioFocusDispatcher;Ljava/lang/String;Ljava/lang/String;)I
     .annotation system Ldalvik/annotation/Throws;
         value = {

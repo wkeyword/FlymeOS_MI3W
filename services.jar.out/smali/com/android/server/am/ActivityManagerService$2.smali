@@ -24,7 +24,7 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1919
+    .line 1987
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,28 +39,28 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1922
+    .line 1990
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 2011
+    .line 2079
     :goto_0
     return-void
 
-    .line 1924
+    .line 1992
     :pswitch_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v24
 
-    .line 1925
+    .line 1993
     .local v24, "start":J
     const/16 v16, 0x0
 
-    .line 1926
+    .line 1994
     .local v16, "memInfo":Lcom/android/internal/util/MemInfoReader;
     move-object/from16 v0, p0
 
@@ -68,7 +68,7 @@
 
     monitor-enter v6
 
-    .line 1927
+    .line 1995
     :try_start_0
     move-object/from16 v0, p0
 
@@ -78,7 +78,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1928
+    .line 1996
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -87,7 +87,7 @@
 
     iput-boolean v7, v3, Lcom/android/server/am/ActivityManagerService;->mFullPssPending:Z
 
-    .line 1929
+    .line 1997
     new-instance v17, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct/range {v17 .. v17}, Lcom/android/internal/util/MemInfoReader;-><init>()V
@@ -96,7 +96,7 @@
     .local v17, "memInfo":Lcom/android/internal/util/MemInfoReader;
     move-object/from16 v16, v17
 
-    .line 1931
+    .line 1999
     .end local v17    # "memInfo":Lcom/android/internal/util/MemInfoReader;
     .restart local v16    # "memInfo":Lcom/android/internal/util/MemInfoReader;
     :cond_0
@@ -104,20 +104,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1932
+    .line 2000
     if-eqz v16, :cond_5
 
-    .line 1933
+    .line 2001
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v3}, Lcom/android/server/am/ActivityManagerService;->updateCpuStatsNow()V
 
-    .line 1934
+    .line 2002
     const-wide/16 v12, 0x0
 
-    .line 1935
+    .line 2003
     .local v12, "nativeTotalPss":J
     move-object/from16 v0, p0
 
@@ -127,7 +127,7 @@
 
     monitor-enter v6
 
-    .line 1936
+    .line 2004
     :try_start_1
     move-object/from16 v0, p0
 
@@ -139,7 +139,7 @@
 
     move-result v2
 
-    .line 1937
+    .line 2005
     .local v2, "N":I
     const/4 v15, 0x0
 
@@ -147,7 +147,7 @@
     :goto_1
     if-ge v15, v2, :cond_4
 
-    .line 1938
+    .line 2006
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -158,7 +158,7 @@
 
     move-result-object v22
 
-    .line 1939
+    .line 2007
     .local v22, "st":Lcom/android/internal/os/ProcessCpuTracker$Stats;
     move-object/from16 v0, v22
 
@@ -180,14 +180,14 @@
 
     if-lt v3, v7, :cond_2
 
-    .line 1937
+    .line 2005
     :cond_1
     :goto_2
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_1
 
-    .line 1931
+    .line 1999
     .end local v2    # "N":I
     .end local v12    # "nativeTotalPss":J
     .end local v15    # "j":I
@@ -202,7 +202,7 @@
 
     throw v3
 
-    .line 1943
+    .line 2011
     .restart local v2    # "N":I
     .restart local v12    # "nativeTotalPss":J
     .restart local v15    # "j":I
@@ -219,7 +219,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 1944
+    .line 2012
     :try_start_4
     move-object/from16 v0, p0
 
@@ -237,12 +237,12 @@
 
     if-ltz v3, :cond_3
 
-    .line 1946
+    .line 2014
     monitor-exit v7
 
     goto :goto_2
 
-    .line 1948
+    .line 2016
     :catchall_1
     move-exception v3
 
@@ -253,7 +253,7 @@
     :try_start_5
     throw v3
 
-    .line 1951
+    .line 2019
     .end local v2    # "N":I
     .end local v15    # "j":I
     .end local v22    # "st":Lcom/android/internal/os/ProcessCpuTracker$Stats;
@@ -266,7 +266,7 @@
 
     throw v3
 
-    .line 1948
+    .line 2016
     .restart local v2    # "N":I
     .restart local v15    # "j":I
     .restart local v22    # "st":Lcom/android/internal/os/ProcessCpuTracker$Stats;
@@ -276,7 +276,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 1949
+    .line 2017
     :try_start_7
     move-object/from16 v0, v22
 
@@ -292,17 +292,17 @@
 
     goto :goto_2
 
-    .line 1951
+    .line 2019
     .end local v22    # "st":Lcom/android/internal/os/ProcessCpuTracker$Stats;
     :cond_4
     monitor-exit v6
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 1952
+    .line 2020
     invoke-virtual/range {v16 .. v16}, Lcom/android/internal/util/MemInfoReader;->readMemInfo()V
 
-    .line 1953
+    .line 2021
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -311,7 +311,7 @@
 
     monitor-enter v26
 
-    .line 1956
+    .line 2024
     :try_start_8
     move-object/from16 v0, p0
 
@@ -349,12 +349,12 @@
 
     invoke-virtual/range {v3 .. v13}, Lcom/android/server/am/ProcessStatsService;->addSysMemUsageLocked(JJJJJ)V
 
-    .line 1961
+    .line 2029
     monitor-exit v26
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
 
-    .line 1964
+    .line 2032
     .end local v2    # "N":I
     .end local v12    # "nativeTotalPss":J
     .end local v15    # "j":I
@@ -364,7 +364,7 @@
     .local v14, "i":I
     const/16 v18, 0x0
 
-    .line 1965
+    .line 2033
     .local v18, "num":I
     const/4 v3, 0x1
 
@@ -372,7 +372,7 @@
 
     move-object/from16 v23, v0
 
-    .line 1970
+    .line 2038
     .local v23, "tmp":[J
     :cond_6
     :goto_3
@@ -382,7 +382,7 @@
 
     monitor-enter v6
 
-    .line 1971
+    .line 2039
     :try_start_9
     move-object/from16 v0, p0
 
@@ -396,7 +396,7 @@
 
     if-lt v14, v3, :cond_7
 
-    .line 1974
+    .line 2042
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -405,12 +405,12 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 1975
+    .line 2043
     monitor-exit v6
 
     goto/16 :goto_0
 
-    .line 1986
+    .line 2054
     :catchall_3
     move-exception v3
 
@@ -420,7 +420,7 @@
 
     throw v3
 
-    .line 1961
+    .line 2029
     .end local v14    # "i":I
     .end local v18    # "num":I
     .end local v23    # "tmp":[J
@@ -437,7 +437,7 @@
 
     throw v3
 
-    .line 1977
+    .line 2045
     .end local v2    # "N":I
     .end local v12    # "nativeTotalPss":J
     .end local v15    # "j":I
@@ -458,7 +458,7 @@
 
     check-cast v20, Lcom/android/server/am/ProcessRecord;
 
-    .line 1978
+    .line 2046
     .local v20, "proc":Lcom/android/server/am/ProcessRecord;
     move-object/from16 v0, v20
 
@@ -466,7 +466,7 @@
 
     move/from16 v21, v0
 
-    .line 1979
+    .line 2047
     .local v21, "procState":I
     move-object/from16 v0, v20
 
@@ -482,27 +482,27 @@
 
     if-ne v0, v3, :cond_a
 
-    .line 1980
+    .line 2048
     move-object/from16 v0, v20
 
     iget v0, v0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     move/from16 v19, v0
 
-    .line 1985
+    .line 2053
     .local v19, "pid":I
     :goto_4
     add-int/lit8 v14, v14, 0x1
 
-    .line 1986
+    .line 2054
     monitor-exit v6
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_3
 
-    .line 1987
+    .line 2055
     if-eqz v20, :cond_6
 
-    .line 1988
+    .line 2056
     move/from16 v0, v19
 
     move-object/from16 v1, v23
@@ -511,7 +511,7 @@
 
     move-result-wide v4
 
-    .line 1989
+    .line 2057
     .local v4, "pss":J
     move-object/from16 v0, p0
 
@@ -519,7 +519,7 @@
 
     monitor-enter v10
 
-    .line 1990
+    .line 2058
     :try_start_c
     move-object/from16 v0, v20
 
@@ -543,10 +543,10 @@
 
     if-ne v3, v0, :cond_9
 
-    .line 1992
+    .line 2060
     add-int/lit8 v18, v18, 0x1
 
-    .line 1993
+    .line 2061
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
@@ -555,7 +555,7 @@
 
     iput-wide v6, v0, Lcom/android/server/am/ProcessRecord;->lastPssTime:J
 
-    .line 1994
+    .line 2062
     move-object/from16 v0, v20
 
     iget-object v3, v0, Lcom/android/server/am/ProcessRecord;->baseProcessTracker:Lcom/android/internal/app/ProcessStats$ProcessState;
@@ -572,7 +572,7 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/android/internal/app/ProcessStats$ProcessState;->addPss(JJZLandroid/util/ArrayMap;)V
 
-    .line 1998
+    .line 2066
     move-object/from16 v0, v20
 
     iget-wide v6, v0, Lcom/android/server/am/ProcessRecord;->initialIdlePss:J
@@ -583,30 +583,30 @@
 
     if-nez v3, :cond_8
 
-    .line 1999
+    .line 2067
     move-object/from16 v0, v20
 
     iput-wide v4, v0, Lcom/android/server/am/ProcessRecord;->initialIdlePss:J
 
-    .line 2001
+    .line 2069
     :cond_8
     move-object/from16 v0, v20
 
     iput-wide v4, v0, Lcom/android/server/am/ProcessRecord;->lastPss:J
 
-    .line 2002
+    .line 2070
     const/16 v3, 0x9
 
     move/from16 v0, v21
 
     if-lt v0, v3, :cond_9
 
-    .line 2003
+    .line 2071
     move-object/from16 v0, v20
 
     iput-wide v4, v0, Lcom/android/server/am/ProcessRecord;->lastCachedPss:J
 
-    .line 2006
+    .line 2074
     :cond_9
     monitor-exit v10
 
@@ -621,19 +621,19 @@
 
     throw v3
 
-    .line 1982
+    .line 2050
     .end local v4    # "pss":J
     .end local v19    # "pid":I
     :cond_a
     const/16 v20, 0x0
 
-    .line 1983
+    .line 2051
     const/16 v19, 0x0
 
     .restart local v19    # "pid":I
     goto :goto_4
 
-    .line 1922
+    .line 1990
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

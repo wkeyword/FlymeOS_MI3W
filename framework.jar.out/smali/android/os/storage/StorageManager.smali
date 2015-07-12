@@ -210,6 +210,54 @@
     return v0
 .end method
 
+.method public static getNoEmulatedVolume([Landroid/os/storage/StorageVolume;)Landroid/os/storage/StorageVolume;
+    .locals 5
+    .param p0, "volumes"    # [Landroid/os/storage/StorageVolume;
+
+    .prologue
+    .line 620
+    move-object v0, p0
+
+    .local v0, "arr$":[Landroid/os/storage/StorageVolume;
+    array-length v2, v0
+
+    .local v2, "len$":I
+    const/4 v1, 0x0
+
+    .local v1, "i$":I
+    :goto_0
+    if-ge v1, v2, :cond_1
+
+    aget-object v3, v0, v1
+
+    .line 621
+    .local v3, "volume":Landroid/os/storage/StorageVolume;
+    invoke-virtual {v3}, Landroid/os/storage/StorageVolume;->isEmulated()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    .line 625
+    .end local v3    # "volume":Landroid/os/storage/StorageVolume;
+    :goto_1
+    return-object v3
+
+    .line 620
+    .restart local v3    # "volume":Landroid/os/storage/StorageVolume;
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 625
+    .end local v3    # "volume":Landroid/os/storage/StorageVolume;
+    :cond_1
+    const/4 v3, 0x0
+
+    goto :goto_1
+.end method
+
 .method public static getPhysicalExternalVolume([Landroid/os/storage/StorageVolume;)Ljava/util/ArrayList;
     .locals 4
     .param p0, "volumesphy"    # [Landroid/os/storage/StorageVolume;
@@ -226,16 +274,16 @@
     .end annotation
 
     .prologue
-    .line 666
+    .line 676
     array-length v0, p0
 
-    .line 667
+    .line 677
     .local v0, "count":I
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 668
+    .line 678
     .local v2, "volumes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/storage/StorageVolume;>;"
     const/4 v1, 0x0
 
@@ -243,7 +291,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 669
+    .line 679
     aget-object v3, p0, v1
 
     invoke-virtual {v3}, Landroid/os/storage/StorageVolume;->isEmulated()Z
@@ -252,18 +300,18 @@
 
     if-nez v3, :cond_0
 
-    .line 670
+    .line 680
     aget-object v3, p0, v1
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 668
+    .line 678
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 673
+    .line 683
     :cond_1
     return-object v2
 .end method
@@ -454,7 +502,7 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 629
+    .line 639
     invoke-virtual {p1}, Ljava/io/File;->getUsableSpace()J
 
     move-result-wide v0
@@ -473,7 +521,7 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 656
+    .line 666
     iget-object v0, p0, Landroid/os/storage/StorageManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "sys_storage_full_threshold_bytes"
@@ -492,7 +540,7 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 639
+    .line 649
     iget-object v6, p0, Landroid/os/storage/StorageManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v7, "sys_storage_threshold_percentage"
@@ -505,7 +553,7 @@
 
     int-to-long v2, v6
 
-    .line 641
+    .line 651
     .local v2, "lowPercent":J
     invoke-virtual {p1}, Ljava/io/File;->getTotalSpace()J
 
@@ -517,7 +565,7 @@
 
     div-long v0, v6, v8
 
-    .line 643
+    .line 653
     .local v0, "lowBytes":J
     iget-object v6, p0, Landroid/os/storage/StorageManager;->mResolver:Landroid/content/ContentResolver;
 
@@ -529,7 +577,7 @@
 
     move-result-wide v4
 
-    .line 646
+    .line 656
     .local v4, "maxLowBytes":J
     invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->min(JJ)J
 

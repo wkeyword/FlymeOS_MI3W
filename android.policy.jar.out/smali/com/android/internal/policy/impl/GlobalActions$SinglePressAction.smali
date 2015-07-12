@@ -36,22 +36,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 718
+    .line 826
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 719
+    .line 827
     iput p1, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 720
+    .line 828
     iput p2, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 721
+    .line 829
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 722
+    .line 830
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 723
+    .line 831
     return-void
 .end method
 
@@ -62,24 +62,24 @@
     .param p3, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 725
+    .line 833
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 726
+    .line 834
     iput p1, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 727
+    .line 835
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 728
+    .line 836
     iput-object p3, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 729
+    .line 837
     iput-object p2, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 730
+    .line 838
     return-void
 .end method
 
@@ -89,26 +89,26 @@
     .param p2, "message"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 732
+    .line 840
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 733
+    .line 841
     iput p1, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 734
+    .line 842
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 735
+    .line 843
     iput-object p2, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 736
+    .line 844
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 737
+    .line 845
     return-void
 .end method
 
@@ -122,7 +122,7 @@
     .param p4, "inflater"    # Landroid/view/LayoutInflater;
 
     .prologue
-    .line 759
+    .line 867
     const v5, 0x1090054
 
     const/4 v6, 0x0
@@ -131,7 +131,7 @@
 
     move-result-object v4
 
-    .line 761
+    .line 869
     .local v4, "v":Landroid/view/View;
     const v5, 0x1020006
 
@@ -141,7 +141,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 762
+    .line 870
     .local v0, "icon":Landroid/widget/ImageView;
     const v5, 0x102000b
 
@@ -151,7 +151,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 764
+    .line 872
     .local v1, "messageView":Landroid/widget/TextView;
     const v5, 0x10202f3
 
@@ -161,13 +161,13 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 765
+    .line 873
     .local v3, "statusView":Landroid/widget/TextView;
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->getStatus()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 766
+    .line 874
     .local v2, "status":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -175,42 +175,42 @@
 
     if-nez v5, :cond_1
 
-    .line 767
+    .line 875
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 771
+    .line 879
     :goto_0
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v5, :cond_2
 
-    .line 772
+    .line 880
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 773
+    .line 881
     sget-object v5, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 777
+    .line 885
     :cond_0
     :goto_1
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v5, :cond_3
 
-    .line 778
+    .line 886
     iget-object v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 783
+    .line 891
     :goto_2
     return-object v4
 
-    .line 769
+    .line 877
     :cond_1
     const/16 v5, 0x8
 
@@ -218,13 +218,13 @@
 
     goto :goto_0
 
-    .line 774
+    .line 882
     :cond_2
     iget v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIconResId:I
 
     if-eqz v5, :cond_0
 
-    .line 775
+    .line 883
     iget v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -235,7 +235,7 @@
 
     goto :goto_1
 
-    .line 780
+    .line 888
     :cond_3
     iget v5, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessageResId:I
 
@@ -249,15 +249,15 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 750
+    .line 858
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 751
+    .line 859
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;->mMessage:Ljava/lang/CharSequence;
 
-    .line 753
+    .line 861
     :goto_0
     return-object v0
 
@@ -275,7 +275,7 @@
     .locals 1
 
     .prologue
-    .line 744
+    .line 852
     const/4 v0, 0x0
 
     return-object v0
@@ -285,7 +285,7 @@
     .locals 1
 
     .prologue
-    .line 740
+    .line 848
     const/4 v0, 0x1
 
     return v0

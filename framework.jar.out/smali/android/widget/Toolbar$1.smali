@@ -44,7 +44,6 @@
     .line 149
     iget-object v0, p0, Landroid/widget/Toolbar$1;->this$0:Landroid/widget/Toolbar;
 
-    # getter for: Landroid/widget/Toolbar;->mOnMenuItemClickListener:Landroid/widget/Toolbar$OnMenuItemClickListener;
     invoke-static {v0}, Landroid/widget/Toolbar;->access$000(Landroid/widget/Toolbar;)Landroid/widget/Toolbar$OnMenuItemClickListener;
 
     move-result-object v0
@@ -54,7 +53,6 @@
     .line 150
     iget-object v0, p0, Landroid/widget/Toolbar$1;->this$0:Landroid/widget/Toolbar;
 
-    # getter for: Landroid/widget/Toolbar;->mOnMenuItemClickListener:Landroid/widget/Toolbar$OnMenuItemClickListener;
     invoke-static {v0}, Landroid/widget/Toolbar;->access$000(Landroid/widget/Toolbar;)Landroid/widget/Toolbar$OnMenuItemClickListener;
 
     move-result-object v0

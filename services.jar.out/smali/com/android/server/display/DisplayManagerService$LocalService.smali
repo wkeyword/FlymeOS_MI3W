@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1472
+    .line 1441
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Landroid/hardware/display/DisplayManagerInternal;-><init>()V
@@ -37,7 +37,7 @@
     .param p2, "x1"    # Lcom/android/server/display/DisplayManagerService$1;
 
     .prologue
-    .line 1472
+    .line 1441
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayManagerService$LocalService;-><init>(Lcom/android/server/display/DisplayManagerService;)V
 
     return-void
@@ -50,7 +50,7 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1511
+    .line 1480
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -72,7 +72,7 @@
     .param p3, "sensorManager"    # Landroid/hardware/SensorManager;
 
     .prologue
-    .line 1476
+    .line 1445
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mSyncRoot:Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -82,13 +82,13 @@
 
     monitor-enter v6
 
-    .line 1477
+    .line 1446
     :try_start_0
     new-instance v5, Lcom/android/server/display/DisplayManagerService$LocalService$1;
 
     invoke-direct {v5, p0, p1}, Lcom/android/server/display/DisplayManagerService$LocalService$1;-><init>(Lcom/android/server/display/DisplayManagerService$LocalService;Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;)V
 
-    .line 1492
+    .line 1461
     .local v5, "blanker":Lcom/android/server/display/DisplayBlanker;
     iget-object v7, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -112,13 +112,13 @@
     # setter for: Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
     invoke-static {v7, v0}, Lcom/android/server/display/DisplayManagerService;->access$3802(Lcom/android/server/display/DisplayManagerService;Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerController;
 
-    .line 1494
+    .line 1463
     monitor-exit v6
 
-    .line 1495
+    .line 1464
     return-void
 
-    .line 1494
+    .line 1463
     .end local v5    # "blanker":Lcom/android/server/display/DisplayBlanker;
     :catchall_0
     move-exception v0
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 1506
+    .line 1475
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
@@ -153,13 +153,13 @@
     .locals 1
 
     .prologue
-    .line 1539
+    .line 1508
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->performTraversalInTransactionFromWindowManagerInternal()V
     invoke-static {v0}, Lcom/android/server/display/DisplayManagerService;->access$4200(Lcom/android/server/display/DisplayManagerService;)V
 
-    .line 1540
+    .line 1509
     return-void
 .end method
 
@@ -168,10 +168,10 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 1516
+    .line 1485
     if-nez p1, :cond_0
 
-    .line 1517
+    .line 1486
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "listener must not be null"
@@ -180,14 +180,14 @@
 
     throw v0
 
-    .line 1520
+    .line 1489
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->registerDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
     invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$3900(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
-    .line 1521
+    .line 1490
     return-void
 .end method
 
@@ -197,7 +197,7 @@
     .param p2, "waitForNegativeProximity"    # Z
 
     .prologue
-    .line 1500
+    .line 1469
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mDisplayPowerController:Lcom/android/server/display/DisplayPowerController;
@@ -218,13 +218,13 @@
     .param p2, "info"    # Landroid/view/DisplayInfo;
 
     .prologue
-    .line 1534
+    .line 1503
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->setDisplayInfoOverrideFromWindowManagerInternal(ILandroid/view/DisplayInfo;)V
     invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$4100(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
 
-    .line 1535
+    .line 1504
     return-void
 .end method
 
@@ -236,13 +236,13 @@
     .param p4, "inTraversal"    # Z
 
     .prologue
-    .line 1545
+    .line 1514
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->setDisplayPropertiesInternal(IZFZ)V
     invoke-static {v0, p1, p2, p3, p4}, Lcom/android/server/display/DisplayManagerService;->access$4300(Lcom/android/server/display/DisplayManagerService;IZFZ)V
 
-    .line 1546
+    .line 1515
     return-void
 .end method
 
@@ -251,10 +251,10 @@
     .param p1, "listener"    # Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;
 
     .prologue
-    .line 1525
+    .line 1494
     if-nez p1, :cond_0
 
-    .line 1526
+    .line 1495
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "listener must not be null"
@@ -263,13 +263,13 @@
 
     throw v0
 
-    .line 1529
+    .line 1498
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # invokes: Lcom/android/server/display/DisplayManagerService;->unregisterDisplayTransactionListenerInternal(Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
     invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$4000(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
-    .line 1530
+    .line 1499
     return-void
 .end method

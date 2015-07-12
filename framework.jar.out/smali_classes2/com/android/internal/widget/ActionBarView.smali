@@ -134,7 +134,7 @@
     iput v0, p0, Lcom/android/internal/widget/ActionBarView;->mDisplayOptions:I
 
     .line 138
-    const v0, 0x10405a3
+    const v0, 0x104060d
 
     iput v0, p0, Lcom/android/internal/widget/ActionBarView;->mDefaultUpDescription:I
 
@@ -688,7 +688,7 @@
 
     move-result-object v4
 
-    const v5, 0x10405a6
+    const v5, 0x1040610
 
     const/4 v6, 0x3
 
@@ -744,7 +744,7 @@
 
     move-result-object v4
 
-    const v5, 0x10405a2
+    const v5, 0x104060c
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -761,7 +761,7 @@
 
     move-result-object v4
 
-    const v5, 0x10405a5
+    const v5, 0x104060f
 
     new-array v6, v9, [Ljava/lang/Object;
 
@@ -1489,7 +1489,7 @@
     .line 297
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mIndeterminateProgressView:Landroid/widget/ProgressBar;
 
-    const v1, 0x1020375
+    const v1, 0x1020376
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setId(I)V
 
@@ -1531,7 +1531,7 @@
     .line 288
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mProgressView:Landroid/widget/ProgressBar;
 
-    const v1, 0x1020376
+    const v1, 0x1020377
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setId(I)V
 
@@ -5440,7 +5440,7 @@
 
     move-result-object v5
 
-    const v6, 0x112000b
+    const v6, 0x112000a
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -5986,7 +5986,7 @@
 
     move-result-object v2
 
-    const v3, 0x112000b
+    const v3, 0x112000a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 

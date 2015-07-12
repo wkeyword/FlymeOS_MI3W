@@ -55,7 +55,6 @@
     .line 1238
     iget-object v0, p0, Landroid/widget/TimePickerSpinnerDelegate$4;->this$0:Landroid/widget/TimePickerSpinnerDelegate;
 
-    # invokes: Landroid/widget/TimePickerSpinnerDelegate;->processKeyUp(I)Z
     invoke-static {v0, p2}, Landroid/widget/TimePickerSpinnerDelegate;->access$600(Landroid/widget/TimePickerSpinnerDelegate;I)Z
 
     move-result v0

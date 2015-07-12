@@ -16,6 +16,8 @@
 
 .field public static final CALL_BARRED:I = 0x14
 
+.field public static final CALL_BLACKLISTED:I = 0x190
+
 .field public static final CALL_FAIL_DESTINATION_OUT_OF_ORDER:I = 0x35
 
 .field public static final CALL_FAIL_NO_ANSWER_FROM_USER:I = 0x34
@@ -67,10 +69,6 @@
 .field public static final DIAL_MODIFIED_TO_USSD:I = 0x2d
 
 .field public static final EMERGENCY_ONLY:I = 0x25
-
-.field public static final EMERGENCY_PERM_FAILURE:I = 0x5d
-
-.field public static final EMERGENCY_TEMP_FAILURE:I = 0x5c
 
 .field public static final ERROR_UNSPECIFIED:I = 0x24
 
@@ -217,10 +215,9 @@
 
     .prologue
     .line 256
-    packed-switch p0, :pswitch_data_0
+    sparse-switch p0, :sswitch_data_0
 
-    .line 354
-    :pswitch_0
+    .line 356
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -243,289 +240,295 @@
     return-object v0
 
     .line 258
-    :pswitch_1
+    :sswitch_0
     const-string v0, "NOT_DISCONNECTED"
 
     goto :goto_0
 
     .line 260
-    :pswitch_2
+    :sswitch_1
     const-string v0, "INCOMING_MISSED"
 
     goto :goto_0
 
     .line 262
-    :pswitch_3
+    :sswitch_2
     const-string v0, "NORMAL"
 
     goto :goto_0
 
     .line 264
-    :pswitch_4
+    :sswitch_3
     const-string v0, "LOCAL"
 
     goto :goto_0
 
     .line 266
-    :pswitch_5
+    :sswitch_4
     const-string v0, "BUSY"
 
     goto :goto_0
 
     .line 268
-    :pswitch_6
+    :sswitch_5
     const-string v0, "CONGESTION"
 
     goto :goto_0
 
     .line 270
-    :pswitch_7
+    :sswitch_6
     const-string v0, "INVALID_NUMBER"
 
     goto :goto_0
 
     .line 272
-    :pswitch_8
+    :sswitch_7
     const-string v0, "NUMBER_UNREACHABLE"
 
     goto :goto_0
 
     .line 274
-    :pswitch_9
+    :sswitch_8
     const-string v0, "SERVER_UNREACHABLE"
 
     goto :goto_0
 
     .line 276
-    :pswitch_a
+    :sswitch_9
     const-string v0, "INVALID_CREDENTIALS"
 
     goto :goto_0
 
     .line 278
-    :pswitch_b
+    :sswitch_a
     const-string v0, "OUT_OF_NETWORK"
 
     goto :goto_0
 
     .line 280
-    :pswitch_c
+    :sswitch_b
     const-string v0, "SERVER_ERROR"
 
     goto :goto_0
 
     .line 282
-    :pswitch_d
+    :sswitch_c
     const-string v0, "TIMED_OUT"
 
     goto :goto_0
 
     .line 284
-    :pswitch_e
+    :sswitch_d
     const-string v0, "LOST_SIGNAL"
 
     goto :goto_0
 
     .line 286
-    :pswitch_f
+    :sswitch_e
     const-string v0, "LIMIT_EXCEEDED"
 
     goto :goto_0
 
     .line 288
-    :pswitch_10
+    :sswitch_f
     const-string v0, "INCOMING_REJECTED"
 
     goto :goto_0
 
     .line 290
-    :pswitch_11
+    :sswitch_10
     const-string v0, "POWER_OFF"
 
     goto :goto_0
 
     .line 292
-    :pswitch_12
+    :sswitch_11
     const-string v0, "OUT_OF_SERVICE"
 
     goto :goto_0
 
     .line 294
-    :pswitch_13
+    :sswitch_12
     const-string v0, "ICC_ERROR"
 
     goto :goto_0
 
     .line 296
-    :pswitch_14
+    :sswitch_13
     const-string v0, "CALL_BARRED"
 
     goto :goto_0
 
     .line 298
-    :pswitch_15
+    :sswitch_14
     const-string v0, "FDN_BLOCKED"
 
     goto :goto_0
 
     .line 300
-    :pswitch_16
+    :sswitch_15
     const-string v0, "CS_RESTRICTED"
 
     goto :goto_0
 
     .line 302
-    :pswitch_17
+    :sswitch_16
     const-string v0, "CS_RESTRICTED_NORMAL"
 
     goto :goto_0
 
     .line 304
-    :pswitch_18
+    :sswitch_17
     const-string v0, "CS_RESTRICTED_EMERGENCY"
 
     goto :goto_0
 
     .line 306
-    :pswitch_19
+    :sswitch_18
     const-string v0, "UNOBTAINABLE_NUMBER"
 
     goto :goto_0
 
     .line 308
-    :pswitch_1a
+    :sswitch_19
     const-string v0, "CDMA_LOCKED_UNTIL_POWER_CYCLE"
 
     goto :goto_0
 
     .line 310
-    :pswitch_1b
+    :sswitch_1a
     const-string v0, "CDMA_DROP"
 
     goto :goto_0
 
     .line 312
-    :pswitch_1c
+    :sswitch_1b
     const-string v0, "CDMA_INTERCEPT"
 
     goto :goto_0
 
     .line 314
-    :pswitch_1d
+    :sswitch_1c
     const-string v0, "CDMA_REORDER"
 
     goto :goto_0
 
     .line 316
-    :pswitch_1e
+    :sswitch_1d
     const-string v0, "CDMA_SO_REJECT"
 
     goto :goto_0
 
     .line 318
-    :pswitch_1f
+    :sswitch_1e
     const-string v0, "CDMA_RETRY_ORDER"
 
     goto :goto_0
 
     .line 320
-    :pswitch_20
+    :sswitch_1f
     const-string v0, "CDMA_ACCESS_FAILURE"
 
     goto :goto_0
 
     .line 322
-    :pswitch_21
+    :sswitch_20
     const-string v0, "CDMA_PREEMPTED"
 
     goto :goto_0
 
     .line 324
-    :pswitch_22
+    :sswitch_21
     const-string v0, "CDMA_NOT_EMERGENCY"
 
     goto :goto_0
 
     .line 326
-    :pswitch_23
+    :sswitch_22
     const-string v0, "CDMA_ACCESS_BLOCKED"
 
     goto :goto_0
 
     .line 328
-    :pswitch_24
+    :sswitch_23
     const-string v0, "EMERGENCY_ONLY"
 
     goto :goto_0
 
     .line 330
-    :pswitch_25
+    :sswitch_24
     const-string v0, "NO_PHONE_NUMBER_SUPPLIED"
 
     goto :goto_0
 
     .line 332
-    :pswitch_26
+    :sswitch_25
     const-string v0, "DIALED_MMI"
 
     goto :goto_0
 
     .line 334
-    :pswitch_27
+    :sswitch_26
     const-string v0, "VOICEMAIL_NUMBER_MISSING"
 
     goto :goto_0
 
     .line 336
-    :pswitch_28
+    :sswitch_27
     const-string v0, "CDMA_CALL_LOST"
 
     goto :goto_0
 
     .line 338
-    :pswitch_29
+    :sswitch_28
     const-string v0, "EXITED_ECM"
 
     goto :goto_0
 
     .line 340
-    :pswitch_2a
+    :sswitch_29
     const-string v0, "DIAL_MODIFIED_TO_USSD"
 
     goto :goto_0
 
     .line 342
-    :pswitch_2b
+    :sswitch_2a
     const-string v0, "DIAL_MODIFIED_TO_SS"
 
     goto/16 :goto_0
 
     .line 344
-    :pswitch_2c
+    :sswitch_2b
     const-string v0, "DIAL_MODIFIED_TO_DIAL"
 
     goto/16 :goto_0
 
     .line 346
-    :pswitch_2d
+    :sswitch_2c
     const-string v0, "ERROR_UNSPECIFIED"
 
     goto/16 :goto_0
 
     .line 348
-    :pswitch_2e
+    :sswitch_2d
     const-string v0, "OUTGOING_FAILURE"
 
     goto/16 :goto_0
 
     .line 350
-    :pswitch_2f
+    :sswitch_2e
     const-string v0, "OUTGOING_CANCELED"
 
     goto/16 :goto_0
 
     .line 352
-    :pswitch_30
+    :sswitch_2f
+    const-string v0, "CALL_BLACKLISTED"
+
+    goto/16 :goto_0
+
+    .line 354
+    :sswitch_30
     const-string v0, "IMS_MERGED_SUCCESSFULLY"
 
     goto/16 :goto_0
@@ -533,99 +536,56 @@
     .line 256
     nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_0
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-        :pswitch_a
-        :pswitch_b
-        :pswitch_c
-        :pswitch_d
-        :pswitch_e
-        :pswitch_f
-        :pswitch_10
-        :pswitch_11
-        :pswitch_12
-        :pswitch_13
-        :pswitch_14
-        :pswitch_15
-        :pswitch_16
-        :pswitch_17
-        :pswitch_18
-        :pswitch_19
-        :pswitch_1a
-        :pswitch_1b
-        :pswitch_1c
-        :pswitch_1d
-        :pswitch_1e
-        :pswitch_1f
-        :pswitch_20
-        :pswitch_21
-        :pswitch_22
-        :pswitch_23
-        :pswitch_2d
-        :pswitch_24
-        :pswitch_25
-        :pswitch_26
-        :pswitch_27
-        :pswitch_28
-        :pswitch_29
-        :pswitch_2e
-        :pswitch_2f
-        :pswitch_2a
-        :pswitch_2b
-        :pswitch_2c
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_30
-    .end packed-switch
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0x1 -> :sswitch_1
+        0x2 -> :sswitch_2
+        0x3 -> :sswitch_3
+        0x4 -> :sswitch_4
+        0x5 -> :sswitch_5
+        0x7 -> :sswitch_6
+        0x8 -> :sswitch_7
+        0x9 -> :sswitch_8
+        0xa -> :sswitch_9
+        0xb -> :sswitch_a
+        0xc -> :sswitch_b
+        0xd -> :sswitch_c
+        0xe -> :sswitch_d
+        0xf -> :sswitch_e
+        0x10 -> :sswitch_f
+        0x11 -> :sswitch_10
+        0x12 -> :sswitch_11
+        0x13 -> :sswitch_12
+        0x14 -> :sswitch_13
+        0x15 -> :sswitch_14
+        0x16 -> :sswitch_15
+        0x17 -> :sswitch_16
+        0x18 -> :sswitch_17
+        0x19 -> :sswitch_18
+        0x1a -> :sswitch_19
+        0x1b -> :sswitch_1a
+        0x1c -> :sswitch_1b
+        0x1d -> :sswitch_1c
+        0x1e -> :sswitch_1d
+        0x1f -> :sswitch_1e
+        0x20 -> :sswitch_1f
+        0x21 -> :sswitch_20
+        0x22 -> :sswitch_21
+        0x23 -> :sswitch_22
+        0x24 -> :sswitch_2c
+        0x25 -> :sswitch_23
+        0x26 -> :sswitch_24
+        0x27 -> :sswitch_25
+        0x28 -> :sswitch_26
+        0x29 -> :sswitch_27
+        0x2a -> :sswitch_28
+        0x2b -> :sswitch_2d
+        0x2c -> :sswitch_2e
+        0x2d -> :sswitch_29
+        0x2e -> :sswitch_2a
+        0x2f -> :sswitch_2b
+        0x5b -> :sswitch_30
+        0x190 -> :sswitch_2f
+    .end sparse-switch
 .end method

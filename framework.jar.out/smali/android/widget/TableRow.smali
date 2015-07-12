@@ -532,7 +532,6 @@
 
     check-cast v0, Landroid/widget/TableRow$LayoutParams;
 
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v0}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v0
@@ -556,7 +555,6 @@
 
     check-cast v0, Landroid/widget/TableRow$LayoutParams;
 
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v0}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v0
@@ -776,7 +774,6 @@
 
     .line 227
     .local v3, "childWidth":I
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v14
@@ -837,14 +834,12 @@
     .restart local v12    # "measureMode":I
     .restart local v13    # "span":I
     :pswitch_1
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v14
 
     const/4 v15, 0x0
 
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v16
@@ -859,14 +854,12 @@
 
     .line 239
     :pswitch_2
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v14
 
     const/4 v15, 0x0
 
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v16
@@ -886,14 +879,12 @@
     .end local v3    # "childWidth":I
     .end local v10    # "layoutDirection":I
     :cond_2
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v14
 
     const/4 v15, 0x0
 
-    # getter for: Landroid/widget/TableRow$LayoutParams;->mOffset:[I
     invoke-static {v11}, Landroid/widget/TableRow$LayoutParams;->access$200(Landroid/widget/TableRow$LayoutParams;)[I
 
     move-result-object v16

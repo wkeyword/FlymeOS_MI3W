@@ -56,14 +56,12 @@
     .line 297
     iget-object v4, p0, Landroid/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener;->this$0:Landroid/widget/ShareActionProvider;
 
-    # getter for: Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
     invoke-static {v4}, Landroid/widget/ShareActionProvider;->access$100(Landroid/widget/ShareActionProvider;)Landroid/content/Context;
 
     move-result-object v4
 
     iget-object v5, p0, Landroid/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener;->this$0:Landroid/widget/ShareActionProvider;
 
-    # getter for: Landroid/widget/ShareActionProvider;->mShareHistoryFileName:Ljava/lang/String;
     invoke-static {v5}, Landroid/widget/ShareActionProvider;->access$200(Landroid/widget/ShareActionProvider;)Ljava/lang/String;
 
     move-result-object v5
@@ -121,7 +119,6 @@
     :cond_1
     iget-object v4, p0, Landroid/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener;->this$0:Landroid/widget/ShareActionProvider;
 
-    # getter for: Landroid/widget/ShareActionProvider;->mContext:Landroid/content/Context;
     invoke-static {v4}, Landroid/widget/ShareActionProvider;->access$100(Landroid/widget/ShareActionProvider;)Landroid/content/Context;
 
     move-result-object v4

@@ -429,7 +429,7 @@
     :cond_0
     const-string v1, "WipowerDynamicParam"
 
-    const-string v2, "mPruDynamicParam.getValue"
+    const-string/jumbo v2, "mPruDynamicParam.getValue"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -463,7 +463,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mOptValidity "
+    const-string/jumbo v2, "mOptValidity "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -479,7 +479,7 @@
 
     move-result-object v1
 
-    const-string v2, "mRectVoltage "
+    const-string/jumbo v2, "mRectVoltage "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -495,7 +495,7 @@
 
     move-result-object v1
 
-    const-string v2, "mRectCurrent "
+    const-string/jumbo v2, "mRectCurrent "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -511,7 +511,7 @@
 
     move-result-object v1
 
-    const-string v2, "mOutputVoltage "
+    const-string/jumbo v2, "mOutputVoltage "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -545,7 +545,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mOutputCurrent "
+    const-string/jumbo v2, "mOutputCurrent "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -577,7 +577,7 @@
 
     move-result-object v1
 
-    const-string v2, "mMinRectVoltageDyn "
+    const-string/jumbo v2, "mMinRectVoltageDyn "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -593,7 +593,7 @@
 
     move-result-object v1
 
-    const-string v2, "mMaxRectVoltageDyn "
+    const-string/jumbo v2, "mMaxRectVoltageDyn "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -627,7 +627,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "mSetRectVoltageDyn "
+    const-string/jumbo v2, "mSetRectVoltageDyn "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -659,7 +659,7 @@
 
     move-result-object v1
 
-    const-string v2, "mReserved1 "
+    const-string/jumbo v2, "mReserved1 "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -675,7 +675,7 @@
 
     move-result-object v1
 
-    const-string v2, "mReserved2 "
+    const-string/jumbo v2, "mReserved2 "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1037,7 +1037,7 @@
     .line 207
     const-string v0, "WipowerDynamicParam"
 
-    const-string v1, "mPruDynamicParam.setAppValue"
+    const-string/jumbo v1, "mPruDynamicParam.setAppValue"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

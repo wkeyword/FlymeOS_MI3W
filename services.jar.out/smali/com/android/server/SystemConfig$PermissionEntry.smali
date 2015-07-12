@@ -26,12 +26,12 @@
     .param p1, "_name"    # Ljava/lang/String;
 
     .prologue
-    .line 69
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
+    .line 69
     iput-object p1, p0, Lcom/android/server/SystemConfig$PermissionEntry;->name:Ljava/lang/String;
 
-    .line 71
+    .line 70
     return-void
 .end method

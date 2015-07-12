@@ -24,13 +24,13 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1032
+    .line 996
     iput-object p1, p0, Landroid/media/AudioService$AudioOrientationEventListener;->this$0:Landroid/media/AudioService;
 
-    .line 1033
+    .line 997
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    .line 1034
+    .line 998
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 1040
+    .line 1004
     iget-object v1, p0, Landroid/media/AudioService$AudioOrientationEventListener;->this$0:Landroid/media/AudioService;
 
     # getter for: Landroid/media/AudioService;->mContext:Landroid/content/Context;
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    .line 1042
+    .line 1006
     .local v0, "newRotation":I
     iget-object v1, p0, Landroid/media/AudioService$AudioOrientationEventListener;->this$0:Landroid/media/AudioService;
 
@@ -76,19 +76,19 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1043
+    .line 1007
     iget-object v1, p0, Landroid/media/AudioService$AudioOrientationEventListener;->this$0:Landroid/media/AudioService;
 
     # setter for: Landroid/media/AudioService;->mDeviceRotation:I
     invoke-static {v1, v0}, Landroid/media/AudioService;->access$702(Landroid/media/AudioService;I)I
 
-    .line 1044
+    .line 1008
     iget-object v1, p0, Landroid/media/AudioService$AudioOrientationEventListener;->this$0:Landroid/media/AudioService;
 
     # invokes: Landroid/media/AudioService;->setRotationForAudioSystem()V
     invoke-static {v1}, Landroid/media/AudioService;->access$800(Landroid/media/AudioService;)V
 
-    .line 1046
+    .line 1010
     :cond_0
     return-void
 .end method

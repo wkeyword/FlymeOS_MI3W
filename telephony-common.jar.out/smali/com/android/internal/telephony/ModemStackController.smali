@@ -135,10 +135,10 @@
 
     const/4 v5, 0x0
 
-    .line 245
+    .line 244
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 150
+    .line 149
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v2
@@ -149,119 +149,119 @@
 
     iput v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
-    .line 151
+    .line 150
     iput v5, p0, Lcom/android/internal/telephony/ModemStackController;->mActiveSubCount:I
 
-    .line 152
+    .line 151
     iput v5, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivedSubCount:I
 
-    .line 153
+    .line 152
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
 
-    .line 154
+    .line 153
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
 
-    .line 155
+    .line 154
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPrefNwMode:[I
 
-    .line 156
+    .line 155
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
-    .line 157
+    .line 156
     iput-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    .line 158
+    .line 157
     iput-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
-    .line 159
+    .line 158
     iput-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
 
-    .line 160
+    .line 159
     iput-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapabilitiesAvailable:Z
 
-    .line 161
+    .line 160
     iput-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivationInProgress:Z
 
-    .line 162
+    .line 161
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [Z
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
-    .line 163
+    .line 162
     new-instance v2, Landroid/os/RegistrantList;
 
     invoke-direct {v2}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
-    .line 164
+    .line 163
     new-instance v2, Landroid/os/RegistrantList;
 
     invoke-direct {v2}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
-    .line 165
+    .line 164
     new-instance v2, Landroid/os/RegistrantList;
 
     invoke-direct {v2}, Landroid/os/RegistrantList;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mModemDataCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
-    .line 167
+    .line 166
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mSubcriptionStatus:Ljava/util/HashMap;
 
-    .line 170
+    .line 169
     iput-object v7, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
-    .line 172
+    .line 171
     new-instance v2, Lcom/android/internal/telephony/ModemStackController$1;
 
     invoke-direct {v2, p0}, Lcom/android/internal/telephony/ModemStackController$1;-><init>(Lcom/android/internal/telephony/ModemStackController;)V
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 246
+    .line 245
     const-string v2, "Constructor - Enter"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 248
+    .line 247
     iput-object p3, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 249
+    .line 248
     iput-object p1, p0, Lcom/android/internal/telephony/ModemStackController;->mContext:Landroid/content/Context;
 
-    .line 250
+    .line 249
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     new-array v2, v2, [Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
     iput-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
-    .line 252
+    .line 251
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -272,7 +272,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 253
+    .line 252
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
     aget-object v2, v2, v1
@@ -285,7 +285,7 @@
 
     invoke-interface {v2, p0, v3, v4}, Lcom/android/internal/telephony/CommandsInterface;->registerForAvailable(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 254
+    .line 253
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
     aget-object v2, v2, v1
@@ -294,12 +294,12 @@
 
     invoke-interface {v2, p0, v3, v7}, Lcom/android/internal/telephony/CommandsInterface;->registerForModemCapEvent(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 252
+    .line 251
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 257
+    .line 256
     :cond_0
     const/4 v1, 0x0
 
@@ -308,32 +308,32 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 258
+    .line 257
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
 
     aput v1, v2, v1
 
-    .line 259
+    .line 258
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
 
     aput v1, v2, v1
 
-    .line 260
+    .line 259
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v6, v2, v1
 
-    .line 261
+    .line 260
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     aput-boolean v5, v2, v1
 
-    .line 257
+    .line 256
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 265
+    .line 264
     :cond_1
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
@@ -341,7 +341,7 @@
 
     iput-boolean v6, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    .line 267
+    .line 266
     :cond_2
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -349,30 +349,30 @@
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 269
+    .line 268
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.ACTION_SUBINFO_CONTENT_CHANGE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 270
+    .line 269
     const-string v2, "org.codeaurora.intent.action.ACTION_SUBSCRIPTION_SET_UICC_RESULT"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 271
+    .line 270
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/internal/telephony/ModemStackController;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 272
+    .line 271
     const-string v2, "Constructor - Exit"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 273
+    .line 272
     return-void
 .end method
 
@@ -382,7 +382,7 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 84
+    .line 83
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
     return-void
@@ -394,7 +394,7 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 84
+    .line 83
     iput-boolean p1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
 
     return p1
@@ -405,7 +405,7 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/ModemStackController;
 
     .prologue
-    .line 84
+    .line 83
     iget-boolean v0, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivationInProgress:Z
 
     return v0
@@ -416,7 +416,7 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/ModemStackController;
 
     .prologue
-    .line 84
+    .line 83
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubcriptionStatus:Ljava/util/HashMap;
 
     return-object v0
@@ -427,7 +427,7 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 550
+    .line 549
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     .local v0, "arr$":[I
@@ -442,7 +442,7 @@
 
     aget v3, v0, v1
 
-    .line 551
+    .line 550
     .local v3, "subState":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -474,24 +474,24 @@
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 552
+    .line 551
     if-eq v3, p1, :cond_0
 
     const/4 v4, 0x0
 
-    .line 554
+    .line 553
     .end local v3    # "subState":I
     :goto_1
     return v4
 
-    .line 550
+    .line 549
     .restart local v3    # "subState":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 554
+    .line 553
     .end local v3    # "subState":I
     :cond_1
     const/4 v4, 0x1
@@ -504,7 +504,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 444
+    .line 443
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -545,7 +545,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 445
+    .line 444
     const/4 v1, 0x6
 
     new-instance v2, Ljava/lang/Integer;
@@ -556,7 +556,7 @@
 
     move-result-object v0
 
-    .line 446
+    .line 445
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
@@ -570,7 +570,7 @@
 
     invoke-interface {v1, v2, v3, v0}, Lcom/android/internal/telephony/CommandsInterface;->updateStackBinding(IILandroid/os/Message;)V
 
-    .line 447
+    .line 446
     return-void
 .end method
 
@@ -582,22 +582,22 @@
 
     const/4 v8, 0x0
 
-    .line 729
+    .line 725
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v1
 
-    .line 730
+    .line 726
     .local v1, "subCtrlr":Lcom/android/internal/telephony/SubscriptionController;
     invoke-virtual {v1}, Lcom/android/internal/telephony/SubscriptionController;->getActiveSubInfoList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 731
+    .line 727
     .local v3, "subInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/SubInfoRecord;>;"
     iput v8, p0, Lcom/android/internal/telephony/ModemStackController;->mActiveSubCount:I
 
-    .line 732
+    .line 728
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -616,7 +616,7 @@
 
     check-cast v2, Landroid/telephony/SubInfoRecord;
 
-    .line 733
+    .line 729
     .local v2, "subInfo":Landroid/telephony/SubInfoRecord;
     iget-wide v6, v2, Landroid/telephony/SubInfoRecord;->subId:J
 
@@ -624,23 +624,23 @@
 
     move-result v4
 
-    .line 734
+    .line 730
     .local v4, "subStatus":I
     if-ne v4, v9, :cond_0
 
-    .line 735
+    .line 731
     iget v5, p0, Lcom/android/internal/telephony/ModemStackController;->mActiveSubCount:I
 
     add-int/lit8 v5, v5, 0x1
 
     iput v5, p0, Lcom/android/internal/telephony/ModemStackController;->mActiveSubCount:I
 
-    .line 736
+    .line 732
     iget-wide v6, v2, Landroid/telephony/SubInfoRecord;->subId:J
 
     invoke-virtual {v1, v6, v7}, Lcom/android/internal/telephony/SubscriptionController;->deactivateSubId(J)V
 
-    .line 738
+    .line 734
     :cond_0
     iget-object v5, p0, Lcom/android/internal/telephony/ModemStackController;->mSubcriptionStatus:Ljava/util/HashMap;
 
@@ -658,7 +658,7 @@
 
     goto :goto_0
 
-    .line 740
+    .line 736
     .end local v2    # "subInfo":Landroid/telephony/SubInfoRecord;
     .end local v4    # "subStatus":I
     :cond_1
@@ -666,21 +666,21 @@
 
     if-lez v5, :cond_2
 
-    .line 741
+    .line 737
     iput v8, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivedSubCount:I
 
-    .line 742
+    .line 738
     iput-boolean v9, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivationInProgress:Z
 
-    .line 747
+    .line 743
     :goto_1
     return-void
 
-    .line 744
+    .line 740
     :cond_2
     iput-boolean v8, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivationInProgress:Z
 
-    .line 745
+    .line 741
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerUnBindingOnAllSubs()V
 
     goto :goto_1
@@ -690,12 +690,12 @@
     .locals 2
 
     .prologue
-    .line 237
+    .line 236
     sget-object v0, Lcom/android/internal/telephony/ModemStackController;->sModemStackController:Lcom/android/internal/telephony/ModemStackController;
 
     if-nez v0, :cond_0
 
-    .line 238
+    .line 237
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "ModemStackController.getInstance called before make()"
@@ -704,7 +704,7 @@
 
     throw v0
 
-    .line 240
+    .line 239
     :cond_0
     sget-object v0, Lcom/android/internal/telephony/ModemStackController;->sModemStackController:Lcom/android/internal/telephony/ModemStackController;
 
@@ -715,10 +715,10 @@
     .locals 6
 
     .prologue
-    .line 629
+    .line 628
     const/4 v1, 0x0
 
-    .line 630
+    .line 629
     .local v1, "isCallInProgress":Z
     const/4 v0, 0x0
 
@@ -728,7 +728,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 631
+    .line 630
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v2
@@ -741,14 +741,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 633
+    .line 632
     const/4 v1, 0x1
 
-    .line 637
+    .line 636
     :cond_0
     return v1
 
-    .line 630
+    .line 629
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -759,10 +759,10 @@
     .locals 3
 
     .prologue
-    .line 565
+    .line 564
     const/4 v1, 0x0
 
-    .line 566
+    .line 565
     .local v1, "result":Z
     const/4 v0, 0x0
 
@@ -772,23 +772,23 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 567
+    .line 566
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     aget-boolean v2, v2, v0
 
     if-eqz v2, :cond_0
 
-    .line 568
+    .line 567
     const/4 v1, 0x1
 
-    .line 566
+    .line 565
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 571
+    .line 570
     :cond_1
     return v1
 .end method
@@ -798,12 +798,12 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 836
+    .line 832
     const-string v0, "ModemStackController"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 837
+    .line 833
     return-void
 .end method
 
@@ -812,12 +812,12 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 840
+    .line 836
     const-string v0, "ModemStackController"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 841
+    .line 837
     return-void
 .end method
 
@@ -828,31 +828,31 @@
     .param p2, "ci"    # [Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 227
+    .line 226
     const-string v0, "ModemStackController"
 
     const-string v1, "getInstance"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
+    .line 227
     sget-object v0, Lcom/android/internal/telephony/ModemStackController;->sModemStackController:Lcom/android/internal/telephony/ModemStackController;
 
     if-nez v0, :cond_0
 
-    .line 229
+    .line 228
     new-instance v0, Lcom/android/internal/telephony/ModemStackController;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/internal/telephony/ModemStackController;-><init>(Landroid/content/Context;Lcom/android/internal/telephony/uicc/UiccController;[Lcom/android/internal/telephony/CommandsInterface;)V
 
     sput-object v0, Lcom/android/internal/telephony/ModemStackController;->sModemStackController:Lcom/android/internal/telephony/ModemStackController;
 
-    .line 233
+    .line 232
     sget-object v0, Lcom/android/internal/telephony/ModemStackController;->sModemStackController:Lcom/android/internal/telephony/ModemStackController;
 
     return-object v0
 
-    .line 231
+    .line 230
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -867,17 +867,17 @@
     .locals 1
 
     .prologue
-    .line 782
+    .line 778
     const-string v0, "notifyGetDataCapabilitiesDone"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 783
+    .line 779
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mModemDataCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 784
+    .line 780
     return-void
 .end method
 
@@ -885,22 +885,22 @@
     .locals 1
 
     .prologue
-    .line 776
+    .line 772
     const-string v0, "notifyGetRatCapabilitiesDone: Got RAT capabilities for all Stacks!!!"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 777
+    .line 773
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapabilitiesAvailable:Z
 
-    .line 778
+    .line 774
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 779
+    .line 775
     return-void
 .end method
 
@@ -908,25 +908,25 @@
     .locals 3
 
     .prologue
-    .line 750
+    .line 746
     const-string v1, "notifyStackReady: Stack is READY!!!"
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 751
+    .line 747
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
-    .line 752
+    .line 748
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    .line 753
+    .line 749
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->resetSubStates()V
 
-    .line 755
+    .line 751
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -935,7 +935,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 757
+    .line 753
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
 
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
@@ -944,18 +944,18 @@
 
     aput v2, v1, v0
 
-    .line 755
+    .line 751
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 762
+    .line 758
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 763
+    .line 759
     return-void
 .end method
 
@@ -967,21 +967,21 @@
     .prologue
     const/4 v2, 0x5
 
-    .line 474
+    .line 473
     iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     instance-of v0, v0, Lcom/android/internal/telephony/CommandException;
 
     if-eqz v0, :cond_0
 
-    .line 475
+    .line 474
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     const/4 v1, 0x1
 
     aput-boolean v1, v0, p2
 
-    .line 476
+    .line 475
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1014,35 +1014,35 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 479
+    .line 478
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v2, v0, p2
 
-    .line 482
+    .line 481
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->areAllSubsinSameState(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 483
+    .line 482
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->isAnyCmdFailed()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 484
+    .line 483
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->recoverToPrevState()V
 
-    .line 489
+    .line 488
     :cond_1
     :goto_0
     return-void
 
-    .line 487
+    .line 486
     :cond_2
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->setPrefNwTypeOnAllSubs()V
 
@@ -1058,7 +1058,7 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 368
+    .line 367
     if-nez p2, :cond_1
 
     iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
@@ -1067,7 +1067,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 369
+    .line 368
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1090,22 +1090,22 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 372
+    .line 371
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    .line 373
+    .line 372
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v0}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 391
+    .line 390
     :cond_0
     :goto_0
     return-void
 
-    .line 377
+    .line 376
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1137,34 +1137,34 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 379
+    .line 378
     if-ltz p3, :cond_2
 
     iget v0, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     if-ge p3, v0, :cond_2
 
-    .line 381
+    .line 380
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v2, v0, p3
 
-    .line 382
+    .line 381
     invoke-direct {p0, p2, p3}, Lcom/android/internal/telephony/ModemStackController;->parseGetModemCapabilityResponse([BI)V
 
-    .line 385
+    .line 384
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->areAllSubsinSameState(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 386
+    .line 385
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->notifyModemRatCapabilitiesAvailable()V
 
     goto :goto_0
 
-    .line 389
+    .line 388
     :cond_2
     const-string v0, "Invalid Index!!!"
 
@@ -1181,21 +1181,21 @@
     .prologue
     const/4 v2, 0x7
 
-    .line 492
+    .line 491
     iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     instance-of v0, v0, Lcom/android/internal/telephony/CommandException;
 
     if-eqz v0, :cond_0
 
-    .line 493
+    .line 492
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     const/4 v1, 0x1
 
     aput-boolean v1, v0, p2
 
-    .line 494
+    .line 493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1228,57 +1228,57 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 497
+    .line 496
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v2, v0, p2
 
-    .line 500
+    .line 499
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->areAllSubsinSameState(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 501
+    .line 500
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->isAnyCmdFailed()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 502
+    .line 501
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->recoverToPrevState()V
 
-    .line 513
+    .line 512
     :cond_1
     :goto_0
     return-void
 
-    .line 506
+    .line 505
     :cond_2
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
     if-eqz v0, :cond_3
 
-    .line 507
+    .line 506
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/ModemStackController;->sendResponseToTarget(Landroid/os/Message;I)V
 
-    .line 508
+    .line 507
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
-    .line 510
+    .line 509
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->updateNetworkSelectionMode()V
 
-    .line 511
+    .line 510
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->notifyStackReady()V
 
     goto :goto_0
@@ -1296,12 +1296,12 @@
 
     const/4 v3, 0x0
 
-    .line 413
+    .line 412
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
 
-    .line 414
+    .line 413
     .local v0, "subStatus":Lcom/android/internal/telephony/Subscription$SubscriptionStatus;
     if-eqz v0, :cond_0
 
@@ -1311,7 +1311,7 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 416
+    .line 415
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1339,12 +1339,12 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 417
+    .line 416
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     aput-boolean v4, v1, p2
 
-    .line 420
+    .line 419
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1376,63 +1376,63 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 423
+    .line 422
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aget v1, v1, p2
 
     if-ne v1, v5, :cond_3
 
-    .line 441
+    .line 440
     :cond_2
     :goto_0
     return-void
 
-    .line 425
+    .line 424
     :cond_3
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v5, v1, p2
 
-    .line 426
+    .line 425
     iget v1, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivedSubCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivedSubCount:I
 
-    .line 429
+    .line 428
     iget v1, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivedSubCount:I
 
     iget v2, p0, Lcom/android/internal/telephony/ModemStackController;->mActiveSubCount:I
 
     if-ne v1, v2, :cond_2
 
-    .line 432
+    .line 431
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->isAnyCmdFailed()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 433
+    .line 432
     iput-boolean v3, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
-    .line 434
+    .line 433
     iput-boolean v4, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    .line 435
+    .line 434
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
     goto :goto_0
 
-    .line 437
+    .line 436
     :cond_4
     iput-boolean v3, p0, Lcom/android/internal/telephony/ModemStackController;->mDeactivationInProgress:Z
 
-    .line 438
+    .line 437
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerUnBindingOnAllSubs()V
 
     goto :goto_0
@@ -1446,21 +1446,21 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 456
+    .line 455
     iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     instance-of v0, v0, Lcom/android/internal/telephony/CommandException;
 
     if-eqz v0, :cond_0
 
-    .line 457
+    .line 456
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     const/4 v1, 0x1
 
     aput-boolean v1, v0, p2
 
-    .line 458
+    .line 457
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1493,35 +1493,35 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 461
+    .line 460
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     aput v2, v0, p2
 
-    .line 464
+    .line 463
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->areAllSubsinSameState(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 465
+    .line 464
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->isAnyCmdFailed()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 466
+    .line 465
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->recoverToPrevState()V
 
-    .line 471
+    .line 470
     :cond_1
     :goto_0
     return-void
 
-    .line 469
+    .line 468
     :cond_2
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerBindingOnAllSubs()V
 
@@ -1533,17 +1533,17 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 394
+    .line 393
     const-string v3, "onUnsolModemCapabilityChanged"
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 395
+    .line 394
     iget-object v2, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;
 
-    .line 397
+    .line 396
     .local v2, "unsolOemHookBuffer":Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;
     if-nez v2, :cond_0
 
@@ -1553,7 +1553,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 398
+    .line 397
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1576,11 +1576,11 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 410
+    .line 409
     :goto_0
     return-void
 
-    .line 402
+    .line 401
     :cond_0
     invoke-virtual {v2}, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->getUnsolOemHookBuffer()[B
 
@@ -1588,13 +1588,13 @@
 
     check-cast v0, [B
 
-    .line 403
+    .line 402
     .local v0, "data":[B
     invoke-virtual {v2}, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->getRilInstance()I
 
     move-result v1
 
-    .line 405
+    .line 404
     .local v1, "phoneId":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1616,10 +1616,10 @@
 
     invoke-direct {p0, v3}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 407
+    .line 406
     invoke-direct {p0, v0, v1}, Lcom/android/internal/telephony/ModemStackController;->parseGetModemCapabilityResponse([BI)V
 
-    .line 408
+    .line 407
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->notifyModemDataCapabilitiesAvailable()V
 
     goto :goto_0
@@ -1633,12 +1633,12 @@
     .prologue
     const/4 v7, 0x7
 
-    .line 593
+    .line 592
     array-length v0, p1
 
     if-eq v0, v7, :cond_0
 
-    .line 594
+    .line 593
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1677,11 +1677,11 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 614
+    .line 613
     :goto_0
     return-void
 
-    .line 598
+    .line 597
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1707,12 +1707,12 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 599
+    .line 598
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    .line 600
+    .line 599
     .local v6, "respBuffer":Ljava/nio/ByteBuffer;
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
@@ -1720,12 +1720,12 @@
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 602
+    .line 601
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v2
 
-    .line 604
+    .line 603
     .local v2, "stackId":I
     if-ltz v2, :cond_1
 
@@ -1733,7 +1733,7 @@
 
     if-lt v2, v0, :cond_2
 
-    .line 605
+    .line 604
     :cond_1
     const-string v0, "Invalid Index!!!"
 
@@ -1741,19 +1741,19 @@
 
     goto :goto_0
 
-    .line 608
+    .line 607
     :cond_2
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
 
-    .line 609
+    .line 608
     .local v3, "supportedRatBitMask":I
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v4
 
-    .line 610
+    .line 609
     .local v4, "voiceDataCap":I
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
@@ -1764,7 +1764,7 @@
 
     move v1, p2
 
-    .line 612
+    .line 611
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/telephony/ModemStackController;->updateModemCapInfo(IIIII)V
 
     goto :goto_0
@@ -1776,7 +1776,7 @@
     .param p2, "phoneId"    # I
 
     .prologue
-    .line 353
+    .line 352
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1797,14 +1797,14 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 355
+    .line 354
     if-ltz p2, :cond_0
 
     iget v1, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
     if-ge p2, v1, :cond_0
 
-    .line 356
+    .line 355
     const/4 v1, 0x2
 
     new-instance v2, Ljava/lang/Integer;
@@ -1815,7 +1815,7 @@
 
     move-result-object v0
 
-    .line 359
+    .line 358
     .local v0, "getModemCapsMsg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
@@ -1823,12 +1823,12 @@
 
     invoke-interface {v1, v0}, Lcom/android/internal/telephony/CommandsInterface;->getModemCapability(Landroid/os/Message;)V
 
-    .line 364
+    .line 363
     .end local v0    # "getModemCapsMsg":Landroid/os/Message;
     :goto_0
     return-void
 
-    .line 362
+    .line 361
     :cond_0
     const-string v1, "Invalid Index!!!"
 
@@ -1843,33 +1843,33 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 805
+    .line 801
     iget-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
     if-eqz v1, :cond_2
 
-    .line 808
+    .line 804
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
     if-eqz v1, :cond_0
 
-    .line 809
+    .line 805
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
     const/4 v2, 0x2
 
     invoke-direct {p0, v1, v2}, Lcom/android/internal/telephony/ModemStackController;->sendResponseToTarget(Landroid/os/Message;I)V
 
-    .line 810
+    .line 806
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
 
-    .line 812
+    .line 808
     :cond_0
     iput-boolean v3, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
-    .line 813
+    .line 809
     const/4 v1, 0x7
 
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
@@ -1878,21 +1878,21 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 816
+    .line 812
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->notifyStackReady()V
 
-    .line 827
+    .line 823
     :cond_1
     :goto_0
     return-void
 
-    .line 821
+    .line 817
     :cond_2
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsRecoveryInProgress:Z
 
-    .line 823
+    .line 819
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1901,7 +1901,7 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 824
+    .line 820
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
 
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
@@ -1910,12 +1910,12 @@
 
     aput v2, v1, v0
 
-    .line 823
+    .line 819
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 826
+    .line 822
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerUnBindingOnAllSubs()V
 
@@ -1926,7 +1926,7 @@
     .locals 3
 
     .prologue
-    .line 558
+    .line 557
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1935,26 +1935,26 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 559
+    .line 558
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mSubState:[I
 
     const/4 v2, 0x1
 
     aput v2, v1, v0
 
-    .line 560
+    .line 559
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCmdFailed:[Z
 
     const/4 v2, 0x0
 
     aput-boolean v2, v1, v0
 
-    .line 558
+    .line 557
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 562
+    .line 561
     :cond_0
     return-void
 .end method
@@ -1965,21 +1965,21 @@
     .param p2, "responseCode"    # I
 
     .prologue
-    .line 830
+    .line 826
     invoke-static {p2}, Lcom/android/internal/telephony/CommandException;->fromRilErrno(I)Lcom/android/internal/telephony/CommandException;
 
     move-result-object v0
 
-    .line 831
+    .line 827
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
     invoke-static {p1, v1, v0}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 832
+    .line 828
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 833
+    .line 829
     return-void
 .end method
 
@@ -1987,10 +1987,10 @@
     .locals 4
 
     .prologue
-    .line 542
+    .line 541
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->resetSubStates()V
 
-    .line 543
+    .line 542
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1999,7 +1999,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 544
+    .line 543
     const/4 v2, 0x7
 
     new-instance v3, Ljava/lang/Integer;
@@ -2010,7 +2010,7 @@
 
     move-result-object v1
 
-    .line 545
+    .line 544
     .local v1, "resp":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
@@ -2022,12 +2022,12 @@
 
     invoke-interface {v2, v3, v1}, Lcom/android/internal/telephony/CommandsInterface;->setPreferredNetworkType(ILandroid/os/Message;)V
 
-    .line 543
+    .line 542
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 547
+    .line 546
     .end local v1    # "resp":Landroid/os/Message;
     :cond_0
     return-void
@@ -2037,7 +2037,7 @@
     .locals 5
 
     .prologue
-    .line 617
+    .line 616
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2046,7 +2046,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 619
+    .line 618
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPrefNwMode:[I
 
@@ -2066,23 +2066,23 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 617
+    .line 616
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 621
+    .line 620
     :catch_0
     move-exception v1
 
-    .line 622
+    .line 621
     .local v1, "snfe":Landroid/provider/Settings$SettingNotFoundException;
     const-string v2, "getPreferredNetworkMode: Could not find PREFERRED_NETWORK_MODE!!!"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 623
+    .line 622
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mPrefNwMode:[I
 
     const/4 v3, 0x0
@@ -2091,7 +2091,7 @@
 
     goto :goto_1
 
-    .line 626
+    .line 625
     .end local v1    # "snfe":Landroid/provider/Settings$SettingNotFoundException;
     :cond_0
     return-void
@@ -2101,10 +2101,10 @@
     .locals 3
 
     .prologue
-    .line 529
+    .line 528
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->resetSubStates()V
 
-    .line 530
+    .line 529
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2113,7 +2113,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 531
+    .line 530
     const/4 v1, 0x5
 
     new-instance v2, Ljava/lang/Integer;
@@ -2126,12 +2126,12 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->sendMessage(Landroid/os/Message;)Z
 
-    .line 530
+    .line 529
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 533
+    .line 532
     :cond_0
     return-void
 .end method
@@ -2140,10 +2140,10 @@
     .locals 1
 
     .prologue
-    .line 536
+    .line 535
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->resetSubStates()V
 
-    .line 537
+    .line 536
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->obtainMessage(I)Landroid/os/Message;
@@ -2152,7 +2152,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->sendMessage(Landroid/os/Message;)Z
 
-    .line 538
+    .line 537
     return-void
 .end method
 
@@ -2160,10 +2160,10 @@
     .locals 3
 
     .prologue
-    .line 522
+    .line 521
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->resetSubStates()V
 
-    .line 523
+    .line 522
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2172,7 +2172,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 524
+    .line 523
     const/4 v1, 0x3
 
     new-instance v2, Ljava/lang/Integer;
@@ -2185,12 +2185,12 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->sendMessage(Landroid/os/Message;)Z
 
-    .line 523
+    .line 522
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 526
+    .line 525
     :cond_0
     return-void
 .end method
@@ -2200,7 +2200,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 450
+    .line 449
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2241,7 +2241,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 451
+    .line 450
     const/4 v1, 0x4
 
     new-instance v2, Ljava/lang/Integer;
@@ -2252,7 +2252,7 @@
 
     move-result-object v0
 
-    .line 452
+    .line 451
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
@@ -2266,7 +2266,7 @@
 
     invoke-interface {v1, v2, v3, v0}, Lcom/android/internal/telephony/CommandsInterface;->updateStackBinding(IILandroid/os/Message;)V
 
-    .line 453
+    .line 452
     return-void
 .end method
 
@@ -2279,12 +2279,12 @@
     .param p5, "maxDataCap"    # I
 
     .prologue
-    .line 577
+    .line 576
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
 
     aput p2, v0, p1
 
-    .line 579
+    .line 578
     iget-object v6, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
@@ -2309,7 +2309,7 @@
 
     aput-object v0, v6, v7
 
-    .line 581
+    .line 580
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2348,7 +2348,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 585
+    .line 584
     return-void
 .end method
 
@@ -2356,7 +2356,7 @@
     .locals 3
 
     .prologue
-    .line 516
+    .line 515
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2365,7 +2365,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 517
+    .line 516
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCi:[Lcom/android/internal/telephony/CommandsInterface;
 
     aget-object v1, v1, v0
@@ -2374,12 +2374,12 @@
 
     invoke-interface {v1, v2}, Lcom/android/internal/telephony/CommandsInterface;->setNetworkSelectionModeAutomatic(Landroid/os/Message;)V
 
-    .line 516
+    .line 515
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 519
+    .line 518
     :cond_0
     return-void
 .end method
@@ -2391,7 +2391,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 663
+    .line 662
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
 
     aget v0, v0, p1
@@ -2403,21 +2403,21 @@
     .locals 5
 
     .prologue
-    .line 645
+    .line 644
     const-string v4, "getMaxDataAllowed"
 
     invoke-direct {p0, v4}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 646
+    .line 645
     const/4 v2, 0x1
 
-    .line 647
+    .line 646
     .local v2, "ret":I
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 649
+    .line 648
     .local v3, "unsortedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v0, 0x0
 
@@ -2427,14 +2427,14 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 650
+    .line 649
     iget-object v4, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
     aget-object v4, v4, v0
 
     if-eqz v4, :cond_0
 
-    .line 651
+    .line 650
     iget-object v4, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
     aget-object v4, v4, v0
@@ -2449,26 +2449,26 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 649
+    .line 648
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 654
+    .line 653
     :cond_1
     invoke-static {v3}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 655
+    .line 654
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 656
+    .line 655
     .local v1, "listSize":I
     if-lez v1, :cond_2
 
-    .line 657
+    .line 656
     add-int/lit8 v4, v1, -0x1
 
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2481,7 +2481,7 @@
 
     move-result v2
 
-    .line 659
+    .line 658
     :cond_2
     return v2
 .end method
@@ -2491,7 +2491,7 @@
     .param p1, "phoneId"    # I
 
     .prologue
-    .line 676
+    .line 675
     iget-object v0, p0, Lcom/android/internal/telephony/ModemStackController;->mModemCapInfo:[Lcom/android/internal/telephony/ModemStackController$ModemCapabilityInfo;
 
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
@@ -2507,7 +2507,7 @@
     .locals 2
 
     .prologue
-    .line 667
+    .line 666
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2516,26 +2516,26 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 668
+    .line 667
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->getCurrentStackIdForPhoneId(I)I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 672
+    .line 671
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 667
+    .line 666
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 672
+    .line 671
     :cond_1
     const/4 v0, 0x0
 
@@ -2547,34 +2547,34 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 280
+    .line 279
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 350
+    .line 349
     :goto_0
     return-void
 
-    .line 282
+    .line 281
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 283
+    .line 282
     .local v0, "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 284
+    .line 283
     .local v1, "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_RADIO_AVAILABLE"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 285
+    .line 284
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2583,7 +2583,7 @@
 
     goto :goto_0
 
-    .line 289
+    .line 288
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_1
@@ -2591,19 +2591,19 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 290
+    .line 289
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 291
+    .line 290
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_GET_MODEM_CAPS_DONE"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 292
+    .line 291
     iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [B
@@ -2618,7 +2618,7 @@
 
     goto :goto_0
 
-    .line 296
+    .line 295
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_2
@@ -2626,7 +2626,7 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 297
+    .line 296
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2648,42 +2648,42 @@
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 298
+    .line 297
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/ModemStackController;->onUnsolModemCapabilityChanged(Landroid/os/AsyncResult;)V
 
     goto :goto_0
 
-    .line 302
+    .line 301
     .end local v0    # "ar":Landroid/os/AsyncResult;
     :pswitch_3
     const-string v2, "CMD_DEACTIVATE_ALL_SUBS"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 303
+    .line 302
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->deactivateAllSubscriptions()V
 
     goto :goto_0
 
-    .line 307
+    .line 306
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 308
+    .line 307
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 309
+    .line 308
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_SUB_DEACTIVATED"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 310
+    .line 309
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2692,7 +2692,7 @@
 
     goto :goto_0
 
-    .line 314
+    .line 313
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_5
@@ -2700,13 +2700,13 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 315
+    .line 314
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "CMD_TRIGGER_UNBIND"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 316
+    .line 315
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2715,26 +2715,26 @@
 
     goto :goto_0
 
-    .line 320
+    .line 319
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 321
+    .line 320
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 322
+    .line 321
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_UNBIND_DONE"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 323
+    .line 322
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2743,7 +2743,7 @@
 
     goto/16 :goto_0
 
-    .line 327
+    .line 326
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_7
@@ -2751,13 +2751,13 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 328
+    .line 327
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "CMD_TRIGGER_BIND"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 329
+    .line 328
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2766,26 +2766,26 @@
 
     goto/16 :goto_0
 
-    .line 333
+    .line 332
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_8
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 334
+    .line 333
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 335
+    .line 334
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_BIND_DONE"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 336
+    .line 335
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2794,7 +2794,7 @@
 
     goto/16 :goto_0
 
-    .line 340
+    .line 339
     .end local v0    # "ar":Landroid/os/AsyncResult;
     .end local v1    # "phoneId":Ljava/lang/Integer;
     :pswitch_9
@@ -2802,19 +2802,19 @@
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 341
+    .line 340
     .restart local v0    # "ar":Landroid/os/AsyncResult;
     iget-object v1, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 342
+    .line 341
     .restart local v1    # "phoneId":Ljava/lang/Integer;
     const-string v2, "EVENT_SET_PREF_MODE_DONE"
 
     invoke-direct {p0, v2}, Lcom/android/internal/telephony/ModemStackController;->logd(Ljava/lang/String;)V
 
-    .line 343
+    .line 342
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -2823,7 +2823,7 @@
 
     goto/16 :goto_0
 
-    .line 280
+    .line 279
     nop
 
     :pswitch_data_0
@@ -2845,7 +2845,7 @@
     .locals 1
 
     .prologue
-    .line 641
+    .line 640
     iget-boolean v0, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
     return v0
@@ -2858,30 +2858,30 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 797
+    .line 793
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 799
+    .line 795
     .local v0, "r":Landroid/os/Registrant;
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mModemDataCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     monitor-enter v2
 
-    .line 800
+    .line 796
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mModemDataCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 801
+    .line 797
     monitor-exit v2
 
-    .line 802
+    .line 798
     return-void
 
-    .line 801
+    .line 797
     :catchall_0
     move-exception v1
 
@@ -2899,39 +2899,39 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 787
+    .line 783
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 788
+    .line 784
     .local v0, "r":Landroid/os/Registrant;
     iget-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapabilitiesAvailable:Z
 
     if-eqz v1, :cond_0
 
-    .line 789
+    .line 785
     invoke-virtual {v0}, Landroid/os/Registrant;->notifyRegistrant()V
 
-    .line 791
+    .line 787
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     monitor-enter v2
 
-    .line 792
+    .line 788
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mModemRatCapsAvailableRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 793
+    .line 789
     monitor-exit v2
 
-    .line 794
+    .line 790
     return-void
 
-    .line 793
+    .line 789
     :catchall_0
     move-exception v1
 
@@ -2949,39 +2949,39 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 766
+    .line 762
     new-instance v0, Landroid/os/Registrant;
 
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Registrant;-><init>(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 767
+    .line 763
     .local v0, "r":Landroid/os/Registrant;
     iget-boolean v1, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
     if-eqz v1, :cond_0
 
-    .line 768
+    .line 764
     invoke-virtual {v0}, Landroid/os/Registrant;->notifyRegistrant()V
 
-    .line 770
+    .line 766
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
     monitor-enter v2
 
-    .line 771
+    .line 767
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/ModemStackController;->mStackReadyRegistrants:Landroid/os/RegistrantList;
 
     invoke-virtual {v1, v0}, Landroid/os/RegistrantList;->add(Landroid/os/Registrant;)V
 
-    .line 772
+    .line 768
     monitor-exit v2
 
-    .line 773
+    .line 769
     return-void
 
-    .line 772
+    .line 768
     :catchall_0
     move-exception v1
 
@@ -2993,240 +2993,196 @@
 .end method
 
 .method public updateStackBinding([IZLandroid/os/Message;)I
-    .locals 8
+    .locals 7
     .param p1, "prefStackIds"    # [I
     .param p2, "isBootUp"    # Z
     .param p3, "msg"    # Landroid/os/Message;
 
     .prologue
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
-
-    .line 680
     const/4 v3, 0x0
 
-    .line 681
-    .local v3, "isUpdateRequired":Z
+    .line 679
+    const/4 v2, 0x0
+
+    .line 680
+    .local v2, "isUpdateRequired":Z
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->isAnyCallsInProgress()Z
 
     move-result v0
 
-    .line 683
+    .line 682
     .local v0, "callInProgress":Z
-    iget v6, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
+    iget v5, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
-    if-ne v6, v5, :cond_1
+    if-ne v5, v4, :cond_1
 
-    .line 684
-    const-string v5, "No need to update Stack Binding in case of Single Sim."
+    .line 683
+    const-string v4, "No need to update Stack Binding in case of Single Sim."
 
-    invoke-direct {p0, v5}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
+    invoke-direct {p0, v4}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
-    .line 725
+    .line 721
     :cond_0
     :goto_0
-    return v4
+    return v3
 
     .line 687
     :cond_1
-    const-string v6, "persist.radio.disable_flexmap"
-
-    invoke-static {v6, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v6
-
-    if-ne v6, v5, :cond_3
-
-    move v2, v5
-
-    .line 690
-    .local v2, "isFlexmapDisabled":Z
-    :goto_1
     if-nez v0, :cond_2
 
-    iget-boolean v6, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
+    iget-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
 
-    if-nez v6, :cond_2
+    if-nez v5, :cond_2
 
-    iget-boolean v6, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
+    iget-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    if-nez v6, :cond_4
+    if-nez v5, :cond_3
 
-    if-nez p2, :cond_4
+    if-nez p2, :cond_3
 
-    .line 691
+    .line 688
     :cond_2
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "updateStackBinding: Calls is progress = "
+    const-string v5, "updateStackBinding: Calls is progress = "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    const-string v6, ", mIsPhoneInEcbmMode = "
+    const-string v5, ", mIsPhoneInEcbmMode = "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    iget-boolean v6, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
+    iget-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsPhoneInEcbmMode:Z
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    const-string v6, ", mIsStackReady = "
+    const-string v5, ", mIsStackReady = "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    iget-boolean v6, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
+    iget-boolean v5, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    const-string v6, ". So EXITING!!!"
+    const-string v5, ". So EXITING!!!"
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-direct {p0, v5}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
+    invoke-direct {p0, v4}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .end local v2    # "isFlexmapDisabled":Z
+    .line 693
     :cond_3
-    move v2, v4
-
-    .line 687
-    goto :goto_1
-
-    .line 696
-    .restart local v2    # "isFlexmapDisabled":Z
-    :cond_4
     const/4 v1, 0x0
 
     .local v1, "i":I
-    :goto_2
-    iget v6, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
+    :goto_1
+    iget v5, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
-    if-ge v1, v6, :cond_5
+    if-ge v1, v5, :cond_4
+
+    .line 694
+    iget-object v5, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
+
+    aget v6, p1, v1
+
+    aput v6, v5, v1
+
+    .line 693
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     .line 697
-    iget-object v6, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
+    :cond_4
+    const/4 v1, 0x0
 
-    aget v7, p1, v1
+    :goto_2
+    iget v5, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
 
-    aput v7, v6, v1
+    if-ge v1, v5, :cond_5
 
-    .line 696
+    .line 698
+    iget-object v5, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
+
+    aget v5, v5, v1
+
+    iget-object v6, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
+
+    aget v6, v6, v1
+
+    if-eq v5, v6, :cond_6
+
+    .line 700
+    const/4 v2, 0x1
+
+    .line 705
+    :cond_5
+    if-eqz v2, :cond_8
+
+    .line 706
+    iput-boolean v3, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
+
+    .line 708
+    iput-object p3, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
+
+    .line 710
+    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->syncPreferredNwModeFromDB()V
+
+    .line 711
+    if-eqz p2, :cond_7
+
+    .line 712
+    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerUnBindingOnAllSubs()V
+
+    :goto_3
+    move v3, v4
+
+    .line 721
+    goto :goto_0
+
+    .line 697
+    :cond_6
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 700
-    :cond_5
-    const/4 v1, 0x0
-
-    :goto_3
-    iget v6, p0, Lcom/android/internal/telephony/ModemStackController;->mNumPhones:I
-
-    if-ge v1, v6, :cond_6
-
-    .line 701
-    iget-object v6, p0, Lcom/android/internal/telephony/ModemStackController;->mPreferredStackId:[I
-
-    aget v6, v6, v1
-
-    iget-object v7, p0, Lcom/android/internal/telephony/ModemStackController;->mCurrentStackId:[I
-
-    aget v7, v7, v1
-
-    if-eq v6, v7, :cond_7
-
-    .line 703
-    const/4 v3, 0x1
-
-    .line 708
-    :cond_6
-    if-nez v2, :cond_9
-
-    if-eqz v3, :cond_9
-
-    .line 709
-    iput-boolean v4, p0, Lcom/android/internal/telephony/ModemStackController;->mIsStackReady:Z
-
-    .line 711
-    iput-object p3, p0, Lcom/android/internal/telephony/ModemStackController;->mUpdateStackMsg:Landroid/os/Message;
-
-    .line 713
-    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->syncPreferredNwModeFromDB()V
-
     .line 714
-    if-eqz p2, :cond_8
-
-    .line 715
-    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerUnBindingOnAllSubs()V
-
-    :goto_4
-    move v4, v5
-
-    .line 725
-    goto :goto_0
-
-    .line 700
     :cond_7
-    add-int/lit8 v1, v1, 0x1
+    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerDeactivationOnAllSubs()V
 
     goto :goto_3
 
-    .line 717
+    .line 718
     :cond_8
-    invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->triggerDeactivationOnAllSubs()V
-
-    goto :goto_4
-
-    .line 720
-    :cond_9
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "updateStackBinding: FlexMap Disabled : "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {p0, v5}, Lcom/android/internal/telephony/ModemStackController;->loge(Ljava/lang/String;)V
-
-    .line 722
     if-eqz p2, :cond_0
 
     invoke-direct {p0}, Lcom/android/internal/telephony/ModemStackController;->notifyStackReady()V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method

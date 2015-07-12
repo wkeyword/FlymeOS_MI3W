@@ -73,6 +73,12 @@
 
 .field public static final dropdownitem_text_padding_left:I = 0x1050047
 
+.field public static final edge_gesture_perpendicular_distance:I = 0x10500a3
+
+.field public static final edge_gesture_trigger_distance:I = 0x10500a2
+
+.field public static final edge_gesture_trigger_thickness:I = 0x10500a4
+
 .field public static final immersive_mode_cling_width:I = 0x1050096
 
 .field public static final lock_pattern_dot_line_width:I = 0x1050099
@@ -131,7 +137,7 @@
 
 .field public static final text_handle_min_size:I = 0x105009c
 
-.field public static final text_size_small_material:I = 0x10500e1
+.field public static final text_size_small_material:I = 0x10500e4
 
 .field public static final textview_error_popup_default_width:I = 0x105004a
 
@@ -147,7 +153,7 @@
     .locals 0
 
     .prologue
-    .line 14818
+    .line 14865
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

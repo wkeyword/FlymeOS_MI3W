@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 9302
+    .line 9299
     iput-object p1, p0, Landroid/widget/TextView$Marquee$1;->this$0:Landroid/widget/TextView$Marquee;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .param p1, "frameTimeNanos"    # J
 
     .prologue
-    .line 9305
+    .line 9302
     iget-object v0, p0, Landroid/widget/TextView$Marquee$1;->this$0:Landroid/widget/TextView$Marquee;
 
     invoke-virtual {v0}, Landroid/widget/TextView$Marquee;->tick()V
 
-    .line 9306
+    .line 9303
     return-void
 .end method

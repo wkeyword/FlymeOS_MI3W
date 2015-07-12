@@ -501,7 +501,7 @@
 
     .line 396
     .local v4, "r":Landroid/content/res/Resources;
-    const v9, 0x1120080
+    const v9, 0x1120086
 
     invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1121,7 +1121,7 @@
     if-eqz v2, :cond_1
 
     .line 920
-    const v4, 0x1070038
+    const v4, 0x107003f
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1683,7 +1683,7 @@
 .end method
 
 .method public getStatus()I
-    .locals 2
+    .locals 1
 
     .prologue
     .line 774
@@ -1692,10 +1692,6 @@
     invoke-virtual {v0}, Lcom/android/internal/telephony/SmsMessageBase;->getStatus()I
 
     move-result v0
-
-    const v1, 0xffff
-
-    and-int/2addr v0, v1
 
     return v0
 .end method

@@ -606,6 +606,17 @@
     return-void
 .end method
 
+.method public needsOldRilFeature(Ljava/lang/String;)Z
+    .locals 1
+    .param p1, "feature"    # Ljava/lang/String;
+
+    .prologue
+    .line 589
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public nvReadItem(ILandroid/os/Message;)V
     .locals 0
     .param p1, "itemID"    # I

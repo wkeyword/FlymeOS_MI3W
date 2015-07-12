@@ -666,7 +666,7 @@
 
 .field public static final exported:I = 0x1010010
 
-.field public static final externalRouteEnabledDrawable:I = 0x1010577
+.field public static final externalRouteEnabledDrawable:I = 0x1010575
 
 .field public static final extraTension:I = 0x101026b
 
@@ -2630,7 +2630,7 @@
     .locals 0
 
     .prologue
-    .line 839
+    .line 895
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

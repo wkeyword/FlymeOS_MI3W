@@ -725,7 +725,7 @@
 
     move-result-object v0
 
-    const v1, 0x112007e
+    const v1, 0x1120084
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -745,7 +745,7 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    .line 131
+    .line 129
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->sErrorCodeToFailCauseMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -758,14 +758,14 @@
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 132
+    .line 130
     .local v0, "fc":Lcom/android/internal/telephony/dataconnection/DcFailCause;
     if-nez v0, :cond_0
 
-    .line 133
+    .line 131
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 135
+    .line 133
     :cond_0
     return-object v0
 .end method
@@ -819,7 +819,7 @@
     .locals 1
 
     .prologue
-    .line 118
+    .line 116
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v0, :cond_0
@@ -901,7 +901,7 @@
 .end method
 
 .method public isPermanentFail()Z
-    .locals 2
+    .locals 3
 
     .prologue
     .line 97
@@ -909,67 +909,106 @@
 
     move-result-object v0
 
-    .line 107
+    .line 98
     .local v0, "context":Landroid/content/Context;
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    if-eq p0, v1, :cond_0
+    if-ne p0, v1, :cond_0
 
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->MISSING_UNKNOWN_APN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+    .line 99
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eq p0, v1, :cond_0
+    move-result-object v1
 
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN_PDP_ADDRESS_TYPE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+    const v2, 0x112008e
 
-    if-eq p0, v1, :cond_0
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->USER_AUTHENTICATION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+    move-result v1
 
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->NSAPI_IN_USE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV4_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV6_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_POWER_OFF:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->TETHERED_CALL_ACTIVE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_NOT_AVAILABLE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-eq p0, v1, :cond_0
-
-    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNACCEPTABLE_NETWORK_PARAMETER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
-
-    if-ne p0, v1, :cond_1
-
-    :cond_0
-    const/4 v1, 0x1
-
+    .line 105
     :goto_0
     return v1
 
+    .line 101
+    :cond_0
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->PROTOCOL_ERRORS:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-ne p0, v1, :cond_1
+
+    .line 102
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x112008f
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v1
+
+    goto :goto_0
+
+    .line 105
     :cond_1
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->MISSING_UNKNOWN_APN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN_PDP_ADDRESS_TYPE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->USER_AUTHENTICATION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->NSAPI_IN_USE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV4_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV6_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_POWER_OFF:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->TETHERED_CALL_ACTIVE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_NOT_AVAILABLE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-eq p0, v1, :cond_2
+
+    sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNACCEPTABLE_NETWORK_PARAMETER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
+
+    if-ne p0, v1, :cond_3
+
+    :cond_2
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
     const/4 v1, 0x0
 
     goto :goto_0

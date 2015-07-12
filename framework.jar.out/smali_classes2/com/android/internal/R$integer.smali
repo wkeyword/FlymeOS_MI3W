@@ -15,29 +15,33 @@
 
 
 # static fields
-.field public static final config_MaxConcurrentDownloadsAllowed:I = 0x10e0061
+.field public static final config_MaxConcurrentDownloadsAllowed:I = 0x10e0064
 
-.field public static final config_bluetooth_max_advertisers:I = 0x10e0057
+.field public static final config_backKillTimeout:I = 0x10e007c
 
-.field public static final config_bluetooth_max_scan_filters:I = 0x10e0056
+.field public static final config_bluetooth_max_advertisers:I = 0x10e005a
+
+.field public static final config_bluetooth_max_scan_filters:I = 0x10e0059
+
+.field public static final config_buttonBrightnessSettingDefault:I = 0x10e0055
 
 .field public static final config_carDockKeepsScreenOn:I = 0x10e0039
 
 .field public static final config_carDockRotation:I = 0x10e0038
 
-.field public static final config_cdma_3waycall_flash_delay:I = 0x10e0078
+.field public static final config_cdma_3waycall_flash_delay:I = 0x10e007a
 
 .field public static final config_criticalBatteryWarningLevel:I = 0x10e003e
 
-.field public static final config_cursorWindowSize:I = 0x10e0063
+.field public static final config_cursorWindowSize:I = 0x10e0066
 
-.field public static final config_datause_notification_type:I = 0x10e005b
+.field public static final config_datause_notification_type:I = 0x10e005e
 
-.field public static final config_datause_polling_period_sec:I = 0x10e0058
+.field public static final config_datause_polling_period_sec:I = 0x10e005b
 
-.field public static final config_datause_threshold_bytes:I = 0x10e0059
+.field public static final config_datause_threshold_bytes:I = 0x10e005c
 
-.field public static final config_datause_throttle_kbitsps:I = 0x10e005a
+.field public static final config_datause_throttle_kbitsps:I = 0x10e005d
 
 .field public static final config_defaultNotificationLedOff:I = 0x10e0043
 
@@ -51,25 +55,27 @@
 
 .field public static final config_deviceHardwareKeys:I = 0x10e004d
 
+.field public static final config_deviceHardwareWakeKeys:I = 0x10e004e
+
 .field public static final config_doubleTapOnHomeBehavior:I = 0x10e004b
 
-.field public static final config_downloadDataDirLowSpaceThreshold:I = 0x10e0062
+.field public static final config_downloadDataDirLowSpaceThreshold:I = 0x10e0065
 
-.field public static final config_downloadDataDirSize:I = 0x10e0060
+.field public static final config_downloadDataDirSize:I = 0x10e0063
 
-.field public static final config_dreamsBatteryLevelDrainCutoff:I = 0x10e006c
+.field public static final config_dreamsBatteryLevelDrainCutoff:I = 0x10e006f
 
-.field public static final config_dreamsBatteryLevelMinimumWhenNotPowered:I = 0x10e006b
+.field public static final config_dreamsBatteryLevelMinimumWhenNotPowered:I = 0x10e006e
 
-.field public static final config_dreamsBatteryLevelMinimumWhenPowered:I = 0x10e006a
+.field public static final config_dreamsBatteryLevelMinimumWhenPowered:I = 0x10e006d
 
 .field public static final config_extraFreeKbytesAbsolute:I = 0x10e000a
 
 .field public static final config_extraFreeKbytesAdjust:I = 0x10e000b
 
-.field public static final config_globalActionsKeyTimeout:I = 0x10e006f
+.field public static final config_globalActionsKeyTimeout:I = 0x10e0072
 
-.field public static final config_immersive_mode_confirmation_panic:I = 0x10e0075
+.field public static final config_keyboardBrightnessSettingDefault:I = 0x10e0056
 
 .field public static final config_lidKeyboardAccessibility:I = 0x10e0034
 
@@ -77,7 +83,7 @@
 
 .field public static final config_lidOpenRotation:I = 0x10e0033
 
-.field public static final config_lightSensorWarmupTime:I = 0x10e0054
+.field public static final config_lightSensorWarmupTime:I = 0x10e0057
 
 .field public static final config_lockSoundVolumeDb:I = 0x10e0005
 
@@ -97,21 +103,21 @@
 
 .field public static final config_lowMemoryKillerMinFreeKbytesAdjust:I = 0x10e0009
 
-.field public static final config_maxResolverActivityColumns:I = 0x10e0070
+.field public static final config_maxResolverActivityColumns:I = 0x10e0073
 
 .field public static final config_max_pan_devices:I = 0x10e000e
 
-.field public static final config_maximumScreenDimDuration:I = 0x10e006e
+.field public static final config_maximumScreenDimDuration:I = 0x10e0071
 
 .field public static final config_mediumAnimTime:I = 0x10e0001
 
-.field public static final config_minimumScreenOffTimeout:I = 0x10e006d
+.field public static final config_minimumScreenOffTimeout:I = 0x10e0070
 
-.field public static final config_mobile_mtu:I = 0x10e0073
+.field public static final config_mobile_mtu:I = 0x10e0076
 
-.field public static final config_multiuserMaximumUsers:I = 0x10e0071
+.field public static final config_multiuserMaximumUsers:I = 0x10e0074
 
-.field public static final config_networkPolicyDefaultWarning:I = 0x10e0069
+.field public static final config_networkPolicyDefaultWarning:I = 0x10e006c
 
 .field public static final config_networkTransitionTimeout:I = 0x10e000d
 
@@ -127,33 +133,35 @@
 
 .field public static final config_notificationsBatteryMediumARGB:I = 0x10e0045
 
-.field public static final config_ntpPollingInterval:I = 0x10e0064
+.field public static final config_ntpPollingInterval:I = 0x10e0067
 
-.field public static final config_ntpPollingIntervalShorter:I = 0x10e0065
+.field public static final config_ntpPollingIntervalShorter:I = 0x10e0068
 
-.field public static final config_ntpRetry:I = 0x10e0066
+.field public static final config_ntpRetry:I = 0x10e0069
 
-.field public static final config_ntpThreshold:I = 0x10e0067
+.field public static final config_ntpThreshold:I = 0x10e006a
 
-.field public static final config_ntpTimeout:I = 0x10e0068
+.field public static final config_ntpTimeout:I = 0x10e006b
 
-.field public static final config_overrideHasPermanentMenuKey:I = 0x10e0077
+.field public static final config_overrideHasPermanentMenuKey:I = 0x10e0079
+
+.field public static final config_proximityCheckTimeout:I = 0x10e007b
 
 .field public static final config_radioScanningTimeout:I = 0x10e000c
 
-.field public static final config_safe_media_volume_index:I = 0x10e0072
+.field public static final config_safe_media_volume_index:I = 0x10e0075
 
-.field public static final config_screenBrightnessDark:I = 0x10e0053
+.field public static final config_screenBrightnessDark:I = 0x10e0054
 
-.field public static final config_screenBrightnessDim:I = 0x10e0052
+.field public static final config_screenBrightnessDim:I = 0x10e0053
 
-.field public static final config_screenBrightnessDoze:I = 0x10e0051
+.field public static final config_screenBrightnessDoze:I = 0x10e0052
 
-.field public static final config_screenBrightnessSettingDefault:I = 0x10e0050
+.field public static final config_screenBrightnessSettingDefault:I = 0x10e0051
 
-.field public static final config_screenBrightnessSettingMaximum:I = 0x10e004f
+.field public static final config_screenBrightnessSettingMaximum:I = 0x10e0050
 
-.field public static final config_screenBrightnessSettingMinimum:I = 0x10e004e
+.field public static final config_screenBrightnessSettingMinimum:I = 0x10e004f
 
 .field public static final config_shortAnimTime:I = 0x10e0000
 
@@ -163,15 +171,15 @@
 
 .field public static final config_soundEffectVolumeDb:I = 0x10e0004
 
-.field public static final config_toastDefaultGravity:I = 0x10e0074
+.field public static final config_toastDefaultGravity:I = 0x10e0077
 
 .field public static final config_undockedHdmiRotation:I = 0x10e003a
 
-.field public static final config_valid_wappush_index:I = 0x10e0076
+.field public static final config_valid_wappush_index:I = 0x10e0078
 
-.field public static final config_virtualKeyQuietTimeMillis:I = 0x10e0055
+.field public static final config_virtualKeyQuietTimeMillis:I = 0x10e0058
 
-.field public static final config_volte_replacement_rat:I = 0x10e005c
+.field public static final config_volte_replacement_rat:I = 0x10e005f
 
 .field public static final config_wifi_driver_stop_delay:I = 0x10e0032
 
@@ -245,43 +253,13 @@
 
 .field public static final config_wifi_supplicant_scan_interval:I = 0x10e0025
 
-.field public static final db_connection_pool_size:I = 0x10e005d
+.field public static final db_connection_pool_size:I = 0x10e0060
 
-.field public static final db_journal_size_limit:I = 0x10e005e
+.field public static final db_journal_size_limit:I = 0x10e0061
 
-.field public static final db_wal_autocheckpoint:I = 0x10e005f
+.field public static final db_wal_autocheckpoint:I = 0x10e0062
 
-.field public static final flingboost_cpuboost_param:I = 0x10e007b
-
-.field public static final flingboost_ksmboost_param:I = 0x10e007d
-
-.field public static final flingboost_pcdisbl_param:I = 0x10e007c
-
-.field public static final flingboost_schedboost_param:I = 0x10e007a
-
-.field public static final flingboost_timeout_param:I = 0x10e0079
-
-.field public static final launchboost_cpuboost_param:I = 0x10e0085
-
-.field public static final launchboost_ksmboost_param:I = 0x10e0087
-
-.field public static final launchboost_pcdisbl_param:I = 0x10e0086
-
-.field public static final launchboost_schedboost_param:I = 0x10e0084
-
-.field public static final launchboost_timeout_param:I = 0x10e0083
-
-.field public static final max_action_buttons:I = 0x10e0088
-
-.field public static final scrollboost_cpuboost_param:I = 0x10e0080
-
-.field public static final scrollboost_ksmboost_param:I = 0x10e0082
-
-.field public static final scrollboost_pcdisbl_param:I = 0x10e0081
-
-.field public static final scrollboost_schedboost_param:I = 0x10e007f
-
-.field public static final scrollboost_timeout_param:I = 0x10e007e
+.field public static final max_action_buttons:I = 0x10e007d
 
 .field public static final status_bar_notification_info_maxnum:I = 0x10e0003
 
@@ -291,7 +269,7 @@
     .locals 0
 
     .prologue
-    .line 15803
+    .line 15864
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -233,7 +233,7 @@
 
     sput-object v0, Landroid/content/pm/PackageParser;->sSplitNameComparator:Ljava/util/Comparator;
 
-    .line 4982
+    .line 4991
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -930,21 +930,21 @@
     .param p0, "jarFile"    # Ljava/util/jar/StrictJarFile;
 
     .prologue
-    .line 5001
+    .line 5010
     if-eqz p0, :cond_0
 
-    .line 5003
+    .line 5012
     :try_start_0
     invoke-virtual {p0}, Ljava/util/jar/StrictJarFile;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5007
+    .line 5016
     :cond_0
     :goto_0
     return-void
 
-    .line 5004
+    .line 5013
     :catch_0
     move-exception v0
 
@@ -1543,7 +1543,7 @@
 .end method
 
 .method private static copyNeeded(ILandroid/content/pm/PackageParser$Package;Landroid/content/pm/PackageUserState;Landroid/os/Bundle;I)Z
-    .locals 4
+    .locals 5
     .param p0, "flags"    # I
     .param p1, "p"    # Landroid/content/pm/PackageParser$Package;
     .param p2, "state"    # Landroid/content/pm/PackageUserState;
@@ -1551,88 +1551,121 @@
     .param p4, "userId"    # I
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     .line 4582
     if-eqz p4, :cond_1
 
-    .line 4607
+    .line 4613
     :cond_0
     :goto_0
-    return v1
+    return v2
 
     .line 4587
     :cond_1
-    iget v3, p2, Landroid/content/pm/PackageUserState;->enabled:I
+    iget v4, p2, Landroid/content/pm/PackageUserState;->enabled:I
 
-    if-eqz v3, :cond_2
+    if-eqz v4, :cond_2
 
     .line 4588
-    iget v3, p2, Landroid/content/pm/PackageUserState;->enabled:I
+    iget v4, p2, Landroid/content/pm/PackageUserState;->enabled:I
 
-    if-ne v3, v1, :cond_5
+    if-ne v4, v2, :cond_6
 
-    move v0, v1
+    move v0, v2
 
     .line 4589
     .local v0, "enabled":Z
     :goto_1
-    iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v4, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-boolean v3, v3, Landroid/content/pm/ApplicationInfo;->enabled:Z
+    iget-boolean v4, v4, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
-    if-ne v3, v0, :cond_0
+    if-ne v4, v0, :cond_0
 
     .line 4593
     .end local v0    # "enabled":Z
     :cond_2
-    iget-boolean v3, p2, Landroid/content/pm/PackageUserState;->installed:Z
+    iget-boolean v4, p2, Landroid/content/pm/PackageUserState;->installed:Z
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
-    iget-boolean v3, p2, Landroid/content/pm/PackageUserState;->hidden:Z
+    iget-boolean v4, p2, Landroid/content/pm/PackageUserState;->hidden:Z
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     .line 4596
-    iget-boolean v3, p2, Landroid/content/pm/PackageUserState;->stopped:Z
+    iget-boolean v4, p2, Landroid/content/pm/PackageUserState;->stopped:Z
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     .line 4599
-    and-int/lit16 v3, p0, 0x80
+    and-int/lit16 v4, p0, 0x80
 
-    if-eqz v3, :cond_3
+    if-eqz v4, :cond_3
 
     if-nez p3, :cond_0
 
-    iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->mAppMetaData:Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/content/pm/PackageParser$Package;->mAppMetaData:Landroid/os/Bundle;
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     .line 4603
     :cond_3
-    and-int/lit16 v3, p0, 0x400
+    and-int/lit16 v4, p0, 0x400
 
-    if-eqz v3, :cond_4
+    if-eqz v4, :cond_4
 
-    iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->usesLibraryFiles:[Ljava/lang/String;
+    iget-object v4, p1, Landroid/content/pm/PackageParser$Package;->usesLibraryFiles:[Ljava/lang/String;
 
-    if-nez v3, :cond_0
-
-    :cond_4
-    move v1, v2
+    if-nez v4, :cond_0
 
     .line 4607
+    :cond_4
+    iget-object v4, p2, Landroid/content/pm/PackageUserState;->protectedComponents:Ljava/util/HashSet;
+
+    if-eqz v4, :cond_5
+
+    .line 4608
+    iget-object v4, p2, Landroid/content/pm/PackageUserState;->protectedComponents:Ljava/util/HashSet;
+
+    invoke-virtual {v4}, Ljava/util/HashSet;->size()I
+
+    move-result v4
+
+    if-lez v4, :cond_7
+
+    move v1, v2
+
+    .line 4609
+    .local v1, "protect":Z
+    :goto_2
+    iget-object v4, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-boolean v4, v4, Landroid/content/pm/ApplicationInfo;->protect:Z
+
+    if-ne v4, v1, :cond_0
+
+    .end local v1    # "protect":Z
+    :cond_5
+    move v2, v3
+
+    .line 4613
     goto :goto_0
 
-    :cond_5
-    move v0, v2
+    :cond_6
+    move v0, v3
 
     .line 4588
     goto :goto_1
+
+    :cond_7
+    move v1, v3
+
+    .line 4608
+    goto :goto_2
 .end method
 
 .method public static final generateActivityInfo(Landroid/content/pm/ActivityInfo;ILandroid/content/pm/PackageUserState;I)Landroid/content/pm/ActivityInfo;
@@ -1645,16 +1678,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4770
+    .line 4779
     if-nez p0, :cond_1
 
-    .line 4778
+    .line 4787
     .end local p0    # "ai":Landroid/content/pm/ActivityInfo;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4771
+    .line 4780
     .restart local p0    # "ai":Landroid/content/pm/ActivityInfo;
     :cond_1
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
@@ -1663,12 +1696,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 4776
+    .line 4785
     new-instance v0, Landroid/content/pm/ActivityInfo;
 
     invoke-direct {v0, p0}, Landroid/content/pm/ActivityInfo;-><init>(Landroid/content/pm/ActivityInfo;)V
 
-    .line 4777
+    .line 4786
     .end local p0    # "ai":Landroid/content/pm/ActivityInfo;
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     iget-object v1, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1692,15 +1725,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4754
+    .line 4763
     if-nez p0, :cond_1
 
-    .line 4765
+    .line 4774
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4755
+    .line 4764
     :cond_1
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
 
@@ -1708,7 +1741,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4758
+    .line 4767
     iget-object v1, p0, Landroid/content/pm/PackageParser$Activity;->owner:Landroid/content/pm/PackageParser$Package;
 
     iget-object v2, p0, Landroid/content/pm/PackageParser$Activity;->metaData:Landroid/os/Bundle;
@@ -1719,12 +1752,12 @@
 
     if-nez v1, :cond_2
 
-    .line 4759
+    .line 4768
     iget-object v0, p0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     goto :goto_0
 
-    .line 4762
+    .line 4771
     :cond_2
     new-instance v0, Landroid/content/pm/ActivityInfo;
 
@@ -1732,13 +1765,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ActivityInfo;-><init>(Landroid/content/pm/ActivityInfo;)V
 
-    .line 4763
+    .line 4772
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Activity;->metaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    .line 4764
+    .line 4773
     iget-object v1, p0, Landroid/content/pm/PackageParser$Activity;->owner:Landroid/content/pm/PackageParser$Package;
 
     invoke-static {v1, p1, p2, p3}, Landroid/content/pm/PackageParser;->generateApplicationInfo(Landroid/content/pm/PackageParser$Package;ILandroid/content/pm/PackageUserState;I)Landroid/content/pm/ApplicationInfo;
@@ -1760,16 +1793,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4685
+    .line 4694
     if-nez p0, :cond_1
 
-    .line 4702
+    .line 4711
     .end local p0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4686
+    .line 4695
     .restart local p0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_1
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
@@ -1778,17 +1811,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 4691
+    .line 4700
     new-instance v0, Landroid/content/pm/ApplicationInfo;
 
     invoke-direct {v0, p0}, Landroid/content/pm/ApplicationInfo;-><init>(Landroid/content/pm/ApplicationInfo;)V
 
-    .line 4692
+    .line 4701
     .end local p0    # "ai":Landroid/content/pm/ApplicationInfo;
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     if-eqz p3, :cond_2
 
-    .line 4693
+    .line 4702
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {p3, v1}, Landroid/os/UserHandle;->getUid(II)I
@@ -1797,7 +1830,7 @@
 
     iput v1, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 4694
+    .line 4703
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-static {p3, v1}, Landroid/content/pm/PackageManager;->getDataDirForUser(ILjava/lang/String;)Ljava/lang/String;
@@ -1806,13 +1839,13 @@
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
 
-    .line 4696
+    .line 4705
     :cond_2
     iget-boolean v1, p2, Landroid/content/pm/PackageUserState;->stopped:Z
 
     if-eqz v1, :cond_3
 
-    .line 4697
+    .line 4706
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v2, 0x200000
@@ -1821,13 +1854,13 @@
 
     iput v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 4701
+    .line 4710
     :goto_1
     invoke-static {v0, p1, p2}, Landroid/content/pm/PackageParser;->updateApplicationInfo(Landroid/content/pm/ApplicationInfo;ILandroid/content/pm/PackageUserState;)V
 
     goto :goto_0
 
-    .line 4699
+    .line 4708
     :cond_3
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -1847,7 +1880,7 @@
     .param p2, "state"    # Landroid/content/pm/PackageUserState;
 
     .prologue
-    .line 4612
+    .line 4618
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -1869,15 +1902,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4644
+    .line 4653
     if-nez p0, :cond_1
 
-    .line 4680
+    .line 4689
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4645
+    .line 4654
     :cond_1
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
 
@@ -1885,7 +1918,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4648
+    .line 4657
     invoke-static {p1, p0, p2, v0, p3}, Landroid/content/pm/PackageParser;->copyNeeded(ILandroid/content/pm/PackageParser$Package;Landroid/content/pm/PackageUserState;Landroid/os/Bundle;I)Z
 
     move-result v1
@@ -1904,18 +1937,18 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 4658
+    .line 4667
     :cond_2
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-static {v1, p1, p2}, Landroid/content/pm/PackageParser;->updateApplicationInfo(Landroid/content/pm/ApplicationInfo;ILandroid/content/pm/PackageUserState;)V
 
-    .line 4659
+    .line 4668
     iget-object v0, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     goto :goto_0
 
-    .line 4663
+    .line 4672
     :cond_3
     new-instance v0, Landroid/content/pm/ApplicationInfo;
 
@@ -1923,11 +1956,11 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ApplicationInfo;-><init>(Landroid/content/pm/ApplicationInfo;)V
 
-    .line 4664
+    .line 4673
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     if-eqz p3, :cond_4
 
-    .line 4665
+    .line 4674
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
     invoke-static {p3, v1}, Landroid/os/UserHandle;->getUid(II)I
@@ -1936,7 +1969,7 @@
 
     iput v1, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 4666
+    .line 4675
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-static {p3, v1}, Landroid/content/pm/PackageManager;->getDataDirForUser(ILjava/lang/String;)Ljava/lang/String;
@@ -1945,35 +1978,35 @@
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->dataDir:Ljava/lang/String;
 
-    .line 4668
+    .line 4677
     :cond_4
     and-int/lit16 v1, p1, 0x80
 
     if-eqz v1, :cond_5
 
-    .line 4669
+    .line 4678
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->mAppMetaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 4671
+    .line 4680
     :cond_5
     and-int/lit16 v1, p1, 0x400
 
     if-eqz v1, :cond_6
 
-    .line 4672
+    .line 4681
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->usesLibraryFiles:[Ljava/lang/String;
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->sharedLibraryFiles:[Ljava/lang/String;
 
-    .line 4674
+    .line 4683
     :cond_6
     iget-boolean v1, p2, Landroid/content/pm/PackageUserState;->stopped:Z
 
     if-eqz v1, :cond_7
 
-    .line 4675
+    .line 4684
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v2, 0x200000
@@ -1982,13 +2015,13 @@
 
     iput v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 4679
+    .line 4688
     :goto_1
     invoke-static {v0, p1, p2}, Landroid/content/pm/PackageParser;->updateApplicationInfo(Landroid/content/pm/ApplicationInfo;ILandroid/content/pm/PackageUserState;)V
 
     goto :goto_0
 
-    .line 4677
+    .line 4686
     :cond_7
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -2007,27 +2040,27 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 4902
+    .line 4911
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4908
+    .line 4917
     :goto_0
     return-object v0
 
-    .line 4903
+    .line 4912
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 4904
+    .line 4913
     iget-object v0, p0, Landroid/content/pm/PackageParser$Instrumentation;->info:Landroid/content/pm/InstrumentationInfo;
 
     goto :goto_0
 
-    .line 4906
+    .line 4915
     :cond_1
     new-instance v0, Landroid/content/pm/InstrumentationInfo;
 
@@ -2035,7 +2068,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/InstrumentationInfo;-><init>(Landroid/content/pm/InstrumentationInfo;)V
 
-    .line 4907
+    .line 4916
     .local v0, "ii":Landroid/content/pm/InstrumentationInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Instrumentation;->metaData:Landroid/os/Bundle;
 
@@ -3394,27 +3427,27 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 4718
+    .line 4727
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4724
+    .line 4733
     :goto_0
     return-object v0
 
-    .line 4719
+    .line 4728
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 4720
+    .line 4729
     iget-object v0, p0, Landroid/content/pm/PackageParser$PermissionGroup;->info:Landroid/content/pm/PermissionGroupInfo;
 
     goto :goto_0
 
-    .line 4722
+    .line 4731
     :cond_1
     new-instance v0, Landroid/content/pm/PermissionGroupInfo;
 
@@ -3422,7 +3455,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/PermissionGroupInfo;-><init>(Landroid/content/pm/PermissionGroupInfo;)V
 
-    .line 4723
+    .line 4732
     .local v0, "pgi":Landroid/content/pm/PermissionGroupInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$PermissionGroup;->metaData:Landroid/os/Bundle;
 
@@ -3437,27 +3470,27 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 4707
+    .line 4716
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4713
+    .line 4722
     :goto_0
     return-object v0
 
-    .line 4708
+    .line 4717
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 4709
+    .line 4718
     iget-object v0, p0, Landroid/content/pm/PackageParser$Permission;->info:Landroid/content/pm/PermissionInfo;
 
     goto :goto_0
 
-    .line 4711
+    .line 4720
     :cond_1
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
@@ -3465,7 +3498,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/PermissionInfo;-><init>(Landroid/content/pm/PermissionInfo;)V
 
-    .line 4712
+    .line 4721
     .local v0, "pi":Landroid/content/pm/PermissionInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Permission;->metaData:Landroid/os/Bundle;
 
@@ -3484,16 +3517,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4857
+    .line 4866
     if-nez p0, :cond_0
 
     move-object v0, v1
 
-    .line 4873
+    .line 4882
     :goto_0
     return-object v0
 
-    .line 4858
+    .line 4867
     :cond_0
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
 
@@ -3503,10 +3536,10 @@
 
     move-object v0, v1
 
-    .line 4859
+    .line 4868
     goto :goto_0
 
-    .line 4861
+    .line 4870
     :cond_1
     iget-object v2, p0, Landroid/content/pm/PackageParser$Provider;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -3528,13 +3561,13 @@
 
     if-nez v2, :cond_3
 
-    .line 4864
+    .line 4873
     :cond_2
     iget-object v0, p0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     goto :goto_0
 
-    .line 4867
+    .line 4876
     :cond_3
     new-instance v0, Landroid/content/pm/ProviderInfo;
 
@@ -3542,21 +3575,21 @@
 
     invoke-direct {v0, v2}, Landroid/content/pm/ProviderInfo;-><init>(Landroid/content/pm/ProviderInfo;)V
 
-    .line 4868
+    .line 4877
     .local v0, "pi":Landroid/content/pm/ProviderInfo;
     iget-object v2, p0, Landroid/content/pm/PackageParser$Provider;->metaData:Landroid/os/Bundle;
 
     iput-object v2, v0, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
 
-    .line 4869
+    .line 4878
     and-int/lit16 v2, p1, 0x800
 
     if-nez v2, :cond_4
 
-    .line 4870
+    .line 4879
     iput-object v1, v0, Landroid/content/pm/ProviderInfo;->uriPermissionPatterns:[Landroid/os/PatternMatcher;
 
-    .line 4872
+    .line 4881
     :cond_4
     iget-object v1, p0, Landroid/content/pm/PackageParser$Provider;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -3579,15 +3612,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4808
+    .line 4817
     if-nez p0, :cond_1
 
-    .line 4819
+    .line 4828
     :cond_0
     :goto_0
     return-object v0
 
-    .line 4809
+    .line 4818
     :cond_1
     invoke-static {p1, p2}, Landroid/content/pm/PackageParser;->checkUseInstalledOrHidden(ILandroid/content/pm/PackageUserState;)Z
 
@@ -3595,7 +3628,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 4812
+    .line 4821
     iget-object v1, p0, Landroid/content/pm/PackageParser$Service;->owner:Landroid/content/pm/PackageParser$Package;
 
     iget-object v2, p0, Landroid/content/pm/PackageParser$Service;->metaData:Landroid/os/Bundle;
@@ -3606,12 +3639,12 @@
 
     if-nez v1, :cond_2
 
-    .line 4813
+    .line 4822
     iget-object v0, p0, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     goto :goto_0
 
-    .line 4816
+    .line 4825
     :cond_2
     new-instance v0, Landroid/content/pm/ServiceInfo;
 
@@ -3619,13 +3652,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ServiceInfo;-><init>(Landroid/content/pm/ServiceInfo;)V
 
-    .line 4817
+    .line 4826
     .local v0, "si":Landroid/content/pm/ServiceInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Service;->metaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
 
-    .line 4818
+    .line 4827
     iget-object v1, p0, Landroid/content/pm/PackageParser$Service;->owner:Landroid/content/pm/PackageParser$Package;
 
     invoke-static {v1, p1, p2, p3}, Landroid/content/pm/PackageParser;->generateApplicationInfo(Landroid/content/pm/PackageParser$Package;ILandroid/content/pm/PackageUserState;I)Landroid/content/pm/ApplicationInfo;
@@ -20160,7 +20193,7 @@
     .end annotation
 
     .prologue
-    .line 4985
+    .line 4994
     sget-object v3, Landroid/content/pm/PackageParser;->sBuffer:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v4, 0x0
@@ -20171,24 +20204,24 @@
 
     check-cast v0, [B
 
-    .line 4986
+    .line 4995
     .local v0, "buffer":[B
     if-nez v0, :cond_0
 
-    .line 4987
+    .line 4996
     const/16 v3, 0x1000
 
     new-array v0, v3, [B
 
-    .line 4990
+    .line 4999
     :cond_0
     const/4 v2, 0x0
 
-    .line 4991
+    .line 5000
     .local v2, "n":I
     const/4 v1, 0x0
 
-    .line 4992
+    .line 5001
     .local v1, "count":I
     :goto_0
     const/4 v3, 0x0
@@ -20203,18 +20236,18 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 4993
+    .line 5002
     add-int/2addr v1, v2
 
     goto :goto_0
 
-    .line 4996
+    .line 5005
     :cond_1
     sget-object v3, Landroid/content/pm/PackageParser;->sBuffer:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v3, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 4997
+    .line 5006
     int-to-long v4, v1
 
     return-wide v4
@@ -20225,10 +20258,10 @@
     .param p0, "compatibilityModeEnabled"    # Z
 
     .prologue
-    .line 4979
+    .line 4988
     sput-boolean p0, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
 
-    .line 4980
+    .line 4989
     return-void
 .end method
 
@@ -20284,135 +20317,161 @@
     .param p2, "state"    # Landroid/content/pm/PackageUserState;
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    .line 4618
-    sget-boolean v2, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
+    .line 4624
+    sget-boolean v0, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
 
-    if-nez v2, :cond_0
+    if-nez v0, :cond_0
 
-    .line 4619
+    .line 4625
     invoke-virtual {p0}, Landroid/content/pm/ApplicationInfo;->disableCompatibilityMode()V
 
-    .line 4621
+    .line 4627
     :cond_0
-    iget-boolean v2, p2, Landroid/content/pm/PackageUserState;->installed:Z
+    iget-boolean v0, p2, Landroid/content/pm/PackageUserState;->installed:Z
 
-    if-eqz v2, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 4622
-    iget v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    .line 4628
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v3, 0x800000
 
-    or-int/2addr v2, v3
+    or-int/2addr v0, v3
 
-    iput v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    iput v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 4626
+    .line 4632
     :goto_0
-    iget-boolean v2, p2, Landroid/content/pm/PackageUserState;->hidden:Z
+    iget-boolean v0, p2, Landroid/content/pm/PackageUserState;->hidden:Z
 
-    if-eqz v2, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 4627
-    iget v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    .line 4633
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const/high16 v3, 0x8000000
 
-    or-int/2addr v2, v3
+    or-int/2addr v0, v3
 
-    iput v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    iput v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 4631
+    .line 4637
     :goto_1
-    iget v2, p2, Landroid/content/pm/PackageUserState;->enabled:I
+    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
 
-    if-ne v2, v0, :cond_4
+    if-ne v0, v1, :cond_5
 
-    .line 4632
-    iput-boolean v0, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
+    .line 4638
+    iput-boolean v1, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
-    .line 4639
+    .line 4645
     :cond_1
     :goto_2
     iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
 
     iput v0, p0, Landroid/content/pm/ApplicationInfo;->enabledSetting:I
 
-    .line 4640
+    .line 4646
+    iget-object v0, p2, Landroid/content/pm/PackageUserState;->protectedComponents:Ljava/util/HashSet;
+
+    if-eqz v0, :cond_2
+
+    .line 4647
+    iget-object v0, p2, Landroid/content/pm/PackageUserState;->protectedComponents:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_9
+
+    :goto_3
+    iput-boolean v1, p0, Landroid/content/pm/ApplicationInfo;->protect:Z
+
+    .line 4649
+    :cond_2
     return-void
 
-    .line 4624
-    :cond_2
-    iget v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    .line 4630
+    :cond_3
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const v3, -0x800001
 
-    and-int/2addr v2, v3
+    and-int/2addr v0, v3
 
-    iput v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    iput v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     goto :goto_0
 
-    .line 4629
-    :cond_3
-    iget v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    .line 4635
+    :cond_4
+    iget v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     const v3, -0x8000001
 
-    and-int/2addr v2, v3
+    and-int/2addr v0, v3
 
-    iput v2, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+    iput v0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     goto :goto_1
 
-    .line 4633
-    :cond_4
-    iget v2, p2, Landroid/content/pm/PackageUserState;->enabled:I
+    .line 4639
+    :cond_5
+    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
 
     const/4 v3, 0x4
 
-    if-ne v2, v3, :cond_6
+    if-ne v0, v3, :cond_7
 
-    .line 4634
-    const v2, 0x8000
+    .line 4640
+    const v0, 0x8000
 
-    and-int/2addr v2, p1
+    and-int/2addr v0, p1
 
-    if-eqz v2, :cond_5
+    if-eqz v0, :cond_6
 
-    :goto_3
+    move v0, v1
+
+    :goto_4
     iput-boolean v0, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
     goto :goto_2
 
-    :cond_5
-    move v0, v1
-
-    goto :goto_3
-
-    .line 4635
     :cond_6
-    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
+    move v0, v2
 
-    const/4 v2, 0x2
+    goto :goto_4
 
-    if-eq v0, v2, :cond_7
-
-    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
-
-    const/4 v2, 0x3
-
-    if-ne v0, v2, :cond_1
-
-    .line 4637
+    .line 4641
     :cond_7
-    iput-boolean v1, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
+    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_8
+
+    iget v0, p2, Landroid/content/pm/PackageUserState;->enabled:I
+
+    const/4 v3, 0x3
+
+    if-ne v0, v3, :cond_1
+
+    .line 4643
+    :cond_8
+    iput-boolean v2, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
     goto :goto_2
+
+    :cond_9
+    move v1, v2
+
+    .line 4647
+    goto :goto_3
 .end method
 
 .method private static validateName(Ljava/lang/String;Z)Ljava/lang/String;

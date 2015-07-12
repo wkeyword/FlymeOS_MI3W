@@ -84,12 +84,6 @@
 
 .field public static final FAILURE_REASON_KEY:Ljava/lang/String; = "reason"
 
-.field public static final IMS_AUDIO_OUTPUT_DEFAULT:I = 0x0
-
-.field public static final IMS_AUDIO_OUTPUT_DISABLE_SPEAKER:I = 0x1
-
-.field public static final IMS_AUDIO_OUTPUT_ENABLE_SPEAKER:I = 0x0
-
 .field public static final LTE_ON_CDMA_FALSE:I = 0x0
 
 .field public static final LTE_ON_CDMA_TRUE:I = 0x1

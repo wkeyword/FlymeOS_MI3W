@@ -130,7 +130,6 @@
     .line 761
     iget-object v2, p0, Landroid/widget/TabHost$IntentContentStrategy;->this$0:Landroid/widget/TabHost;
 
-    # getter for: Landroid/widget/TabHost;->mTabContent:Landroid/widget/FrameLayout;
     invoke-static {v2}, Landroid/widget/TabHost;->access$100(Landroid/widget/TabHost;)Landroid/widget/FrameLayout;
 
     move-result-object v2

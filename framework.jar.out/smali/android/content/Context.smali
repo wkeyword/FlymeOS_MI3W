@@ -140,6 +140,8 @@
 
 .field public static final PRINT_SERVICE:Ljava/lang/String; = "print"
 
+.field public static final PROFILE_SERVICE:Ljava/lang/String; = "profile"
+
 .field public static final RESTRICTIONS_SERVICE:Ljava/lang/String; = "restrictions"
 
 .field public static final SEARCH_SERVICE:Ljava/lang/String; = "search"
@@ -201,7 +203,7 @@
     .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3270
+    .line 3282
     return-void
 .end method
 
@@ -530,7 +532,7 @@
     .locals 1
 
     .prologue
-    .line 3423
+    .line 3435
     const/4 v0, 0x0
 
     return v0

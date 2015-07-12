@@ -737,7 +737,7 @@
 
     iget-object v6, p0, Landroid/widget/ActivityChooserView;->mContext:Landroid/content/Context;
 
-    const v7, 0x104059a
+    const v7, 0x1040604
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

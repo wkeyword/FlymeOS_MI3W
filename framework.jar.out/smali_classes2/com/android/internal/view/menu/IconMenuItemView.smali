@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    const v2, 0x104043e
+    const v2, 0x10404ae
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -193,7 +193,7 @@
 
     .line 288
     .local v5, "layoutDirection":I
-    const/16 v0, 0x13
+    const v0, 0x800013
 
     iget-object v1, p0, Lcom/android/internal/view/menu/IconMenuItemView;->mIcon:Landroid/graphics/drawable/Drawable;
 

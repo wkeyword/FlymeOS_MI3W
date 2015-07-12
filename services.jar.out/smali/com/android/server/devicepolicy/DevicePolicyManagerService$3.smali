@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 2958
+    .line 2959
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->val$userHandle:I
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 2961
+    .line 2962
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -54,7 +54,7 @@
 
     invoke-interface {v0, v1}, Landroid/app/IActivityManager;->switchUser(I)Z
 
-    .line 2962
+    .line 2963
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$3;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -67,7 +67,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2963
+    .line 2964
     const-string v0, "DevicePolicyManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -94,12 +94,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2968
+    .line 2969
     :cond_0
     :goto_0
     return-void
 
-    .line 2965
+    .line 2966
     :catch_0
     move-exception v0
 

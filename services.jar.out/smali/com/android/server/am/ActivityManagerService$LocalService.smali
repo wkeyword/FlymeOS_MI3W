@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 19084
+    .line 19161
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/app/ActivityManagerInternal;-><init>()V
@@ -37,7 +37,7 @@
     .param p2, "x1"    # Lcom/android/server/am/ActivityManagerService$1;
 
     .prologue
-    .line 19084
+    .line 19161
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerService$LocalService;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     return-void
@@ -49,12 +49,12 @@
     .locals 1
 
     .prologue
-    .line 19087
+    .line 19164
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->goingToSleep()V
 
-    .line 19088
+    .line 19165
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .param p6, "crashHandler"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 19098
+    .line 19175
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     move-object v1, p1
@@ -94,11 +94,11 @@
     .locals 1
 
     .prologue
-    .line 19092
+    .line 19169
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->wakingUp()V
 
-    .line 19093
+    .line 19170
     return-void
 .end method

@@ -27,16 +27,16 @@
     .param p2, "what"    # I
 
     .prologue
-    .line 2723
+    .line 2728
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 2724
+    .line 2729
     iput-object p1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mHandler:Landroid/os/Handler;
 
-    .line 2725
+    .line 2730
     iput p2, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mWhat:I
 
-    .line 2726
+    .line 2731
     return-void
 .end method
 
@@ -47,12 +47,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2729
+    .line 2734
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2730
+    .line 2735
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "http_proxy"
 
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 2732
+    .line 2737
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 2736
+    .line 2741
     iget-object v0, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mWhat:I
@@ -84,6 +84,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2737
+    .line 2742
     return-void
 .end method

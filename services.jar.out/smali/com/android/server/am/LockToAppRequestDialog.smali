@@ -128,13 +128,13 @@
     .line 61
     .restart local v0    # "quality":I
     :sswitch_0
-    const v1, 0x1040695
+    const v1, 0x10406fe
 
     goto :goto_0
 
     .line 65
     :sswitch_1
-    const v1, 0x1040697
+    const v1, 0x1040700
 
     goto :goto_0
 
@@ -157,7 +157,7 @@
     if-eqz v2, :cond_0
 
     .line 69
-    const v1, 0x1040696
+    const v1, 0x10406ff
 
     goto :goto_0
 
@@ -314,7 +314,7 @@
 
     if-eqz v6, :cond_1
 
-    const v6, 0x1040690
+    const v6, 0x10406f9
 
     :goto_0
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -329,7 +329,7 @@
 
     invoke-direct {v6, v7}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x104068e
+    const v7, 0x10406f7
 
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -343,7 +343,7 @@
 
     move-result-object v6
 
-    const v7, 0x1040692
+    const v7, 0x10406fb
 
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -353,7 +353,7 @@
 
     move-result-object v6
 
-    const v7, 0x1040691
+    const v7, 0x10406fa
 
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -479,7 +479,7 @@
     .end local v0    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v1    # "description":Ljava/lang/String;
     :cond_1
-    const v6, 0x104068f
+    const v6, 0x10406f8
 
     goto/16 :goto_0
 

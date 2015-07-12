@@ -837,6 +837,14 @@
     .local v7, "subInfo":Landroid/telephony/SubInfoRecord;
     if-eqz v7, :cond_5
 
+    iget v0, v7, Landroid/telephony/SubInfoRecord;->slotId:I
+
+    invoke-static {v0}, Landroid/telephony/SubscriptionManager;->isValidSlotId(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
     .line 376
     if-nez v9, :cond_4
 
@@ -1677,19 +1685,19 @@
     .line 1091
     :array_0
     .array-data 4
-        0x1080609
-        0x108060b
         0x108060a
         0x108060c
+        0x108060b
+        0x108060d
     .end array-data
 
     .line 1099
     :array_1
     .array-data 4
-        0x108060d
-        0x108060f
         0x108060e
         0x1080610
+        0x108060f
+        0x1080611
     .end array-data
 .end method
 

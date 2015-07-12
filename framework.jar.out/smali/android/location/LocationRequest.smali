@@ -60,7 +60,7 @@
     .locals 1
 
     .prologue
-    .line 588
+    .line 587
     new-instance v0, Landroid/location/LocationRequest$1;
 
     invoke-direct {v0}, Landroid/location/LocationRequest$1;-><init>()V
@@ -76,7 +76,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 232
+    .line 231
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 144
@@ -133,7 +133,7 @@
 
     iput-object v0, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
-    .line 232
+    .line 231
     return-void
 .end method
 
@@ -144,7 +144,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 235
+    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 144
@@ -201,57 +201,57 @@
 
     iput-object v0, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
-    .line 236
+    .line 235
     iget v0, p1, Landroid/location/LocationRequest;->mQuality:I
 
     iput v0, p0, Landroid/location/LocationRequest;->mQuality:I
 
-    .line 237
+    .line 236
     iget-wide v0, p1, Landroid/location/LocationRequest;->mInterval:J
 
     iput-wide v0, p0, Landroid/location/LocationRequest;->mInterval:J
 
-    .line 238
+    .line 237
     iget-wide v0, p1, Landroid/location/LocationRequest;->mFastestInterval:J
 
     iput-wide v0, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
-    .line 239
+    .line 238
     iget-boolean v0, p1, Landroid/location/LocationRequest;->mExplicitFastestInterval:Z
 
     iput-boolean v0, p0, Landroid/location/LocationRequest;->mExplicitFastestInterval:Z
 
-    .line 240
+    .line 239
     iget-wide v0, p1, Landroid/location/LocationRequest;->mExpireAt:J
 
     iput-wide v0, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
-    .line 241
+    .line 240
     iget v0, p1, Landroid/location/LocationRequest;->mNumUpdates:I
 
     iput v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
-    .line 242
+    .line 241
     iget v0, p1, Landroid/location/LocationRequest;->mSmallestDisplacement:F
 
     iput v0, p0, Landroid/location/LocationRequest;->mSmallestDisplacement:F
 
-    .line 243
+    .line 242
     iget-object v0, p1, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
-    .line 244
+    .line 243
     iget-object v0, p1, Landroid/location/LocationRequest;->mWorkSource:Landroid/os/WorkSource;
 
     iput-object v0, p0, Landroid/location/LocationRequest;->mWorkSource:Landroid/os/WorkSource;
 
-    .line 245
+    .line 244
     iget-boolean v0, p1, Landroid/location/LocationRequest;->mHideFromAppOps:Z
 
     iput-boolean v0, p0, Landroid/location/LocationRequest;->mHideFromAppOps:Z
 
-    .line 246
+    .line 245
     return-void
 .end method
 
@@ -260,14 +260,14 @@
     .param p0, "meters"    # F
 
     .prologue
-    .line 577
+    .line 576
     const/4 v0, 0x0
 
     cmpg-float v0, p0, v0
 
     if-gez v0, :cond_0
 
-    .line 578
+    .line 577
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -292,7 +292,7 @@
 
     throw v0
 
-    .line 580
+    .line 579
     :cond_0
     return-void
 .end method
@@ -302,14 +302,14 @@
     .param p0, "millis"    # J
 
     .prologue
-    .line 557
+    .line 556
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
 
     if-gez v0, :cond_0
 
-    .line 558
+    .line 557
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -334,7 +334,7 @@
 
     throw v0
 
-    .line 560
+    .line 559
     :cond_0
     return-void
 .end method
@@ -344,10 +344,10 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 583
+    .line 582
     if-nez p0, :cond_0
 
-    .line 584
+    .line 583
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -372,7 +372,7 @@
 
     throw v0
 
-    .line 586
+    .line 585
     :cond_0
     return-void
 .end method
@@ -382,10 +382,10 @@
     .param p0, "quality"    # I
 
     .prologue
-    .line 563
+    .line 562
     sparse-switch p0, :sswitch_data_0
 
-    .line 572
+    .line 571
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -410,11 +410,11 @@
 
     throw v0
 
-    .line 574
+    .line 573
     :sswitch_0
     return-void
 
-    .line 563
+    .line 562
     nop
 
     :sswitch_data_0
@@ -484,12 +484,13 @@
 
     packed-switch v2, :pswitch_data_1
 
-    .line 217
+    .line 216
+    :goto_0
     const/16 v0, 0xc9
 
-    .line 222
+    .line 221
     .local v0, "quality":I
-    :goto_0
+    :goto_1
     new-instance v2, Landroid/location/LocationRequest;
 
     invoke-direct {v2}, Landroid/location/LocationRequest;-><init>()V
@@ -510,7 +511,7 @@
 
     move-result-object v1
 
-    .line 227
+    .line 226
     .local v1, "request":Landroid/location/LocationRequest;
     if-eqz p4, :cond_2
 
@@ -518,7 +519,7 @@
 
     invoke-virtual {v1, v2}, Landroid/location/LocationRequest;->setNumUpdates(I)Landroid/location/LocationRequest;
 
-    .line 228
+    .line 227
     :cond_2
     return-object v1
 
@@ -530,7 +531,7 @@
 
     .line 207
     .restart local v0    # "quality":I
-    goto :goto_0
+    goto :goto_1
 
     .line 209
     .end local v0    # "quality":I
@@ -539,14 +540,13 @@
 
     .line 210
     .restart local v0    # "quality":I
-    goto :goto_0
+    goto :goto_1
 
     .line 214
     .end local v0    # "quality":I
     :pswitch_2
     const/16 v0, 0xcb
 
-    .line 215
     .restart local v0    # "quality":I
     goto :goto_0
 
@@ -677,52 +677,52 @@
     .param p0, "quality"    # I
 
     .prologue
-    .line 632
+    .line 631
     sparse-switch p0, :sswitch_data_0
 
-    .line 646
+    .line 645
     const-string v0, "???"
 
     :goto_0
     return-object v0
 
-    .line 634
+    .line 633
     :sswitch_0
     const-string v0, "ACCURACY_FINE"
 
     goto :goto_0
 
-    .line 636
+    .line 635
     :sswitch_1
     const-string v0, "ACCURACY_BLOCK"
 
     goto :goto_0
 
-    .line 638
+    .line 637
     :sswitch_2
     const-string v0, "ACCURACY_CITY"
 
     goto :goto_0
 
-    .line 640
+    .line 639
     :sswitch_3
     const-string v0, "POWER_NONE"
 
     goto :goto_0
 
-    .line 642
+    .line 641
     :sswitch_4
     const-string v0, "POWER_LOW"
 
     goto :goto_0
 
-    .line 644
+    .line 643
     :sswitch_5
     const-string v0, "POWER_HIGH"
 
     goto :goto_0
 
-    .line 632
+    .line 631
     :sswitch_data_0
     .sparse-switch
         0x64 -> :sswitch_0
@@ -740,32 +740,32 @@
     .locals 2
 
     .prologue
-    .line 473
+    .line 472
     iget v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
     const v1, 0x7fffffff
 
     if-eq v0, v1, :cond_0
 
-    .line 474
+    .line 473
     iget v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
-    .line 476
+    .line 475
     :cond_0
     iget v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
     if-gez v0, :cond_1
 
-    .line 477
+    .line 476
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
-    .line 479
+    .line 478
     :cond_1
     return-void
 .end method
@@ -774,7 +774,7 @@
     .locals 1
 
     .prologue
-    .line 614
+    .line 613
     const/4 v0, 0x0
 
     return v0
@@ -784,7 +784,7 @@
     .locals 2
 
     .prologue
-    .line 438
+    .line 437
     iget-wide v0, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
     return-wide v0
@@ -794,7 +794,7 @@
     .locals 2
 
     .prologue
-    .line 376
+    .line 375
     iget-wide v0, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
     return-wide v0
@@ -804,7 +804,7 @@
     .locals 1
 
     .prologue
-    .line 553
+    .line 552
     iget-boolean v0, p0, Landroid/location/LocationRequest;->mHideFromAppOps:Z
 
     return v0
@@ -814,7 +814,7 @@
     .locals 2
 
     .prologue
-    .line 327
+    .line 326
     iget-wide v0, p0, Landroid/location/LocationRequest;->mInterval:J
 
     return-wide v0
@@ -824,7 +824,7 @@
     .locals 1
 
     .prologue
-    .line 468
+    .line 467
     iget v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
     return v0
@@ -834,7 +834,7 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 492
     iget-object v0, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
     return-object v0
@@ -844,7 +844,7 @@
     .locals 1
 
     .prologue
-    .line 281
+    .line 280
     iget v0, p0, Landroid/location/LocationRequest;->mQuality:I
 
     return v0
@@ -854,7 +854,7 @@
     .locals 1
 
     .prologue
-    .line 507
+    .line 506
     iget v0, p0, Landroid/location/LocationRequest;->mSmallestDisplacement:F
 
     return v0
@@ -864,7 +864,7 @@
     .locals 1
 
     .prologue
-    .line 528
+    .line 527
     iget-object v0, p0, Landroid/location/LocationRequest;->mWorkSource:Landroid/os/WorkSource;
 
     return-object v0
@@ -877,10 +877,10 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 424
+    .line 423
     iput-wide p1, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
-    .line 425
+    .line 424
     iget-wide v0, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
     cmp-long v0, v0, v2
@@ -889,7 +889,7 @@
 
     iput-wide v2, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
-    .line 426
+    .line 425
     :cond_0
     return-object p0
 .end method
@@ -903,12 +903,12 @@
 
     const-wide/16 v4, 0x0
 
-    .line 396
+    .line 395
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 399
+    .line 398
     .local v0, "elapsedRealtime":J
     sub-long v2, v6, v0
 
@@ -916,10 +916,10 @@
 
     if-lez v2, :cond_1
 
-    .line 400
+    .line 399
     iput-wide v6, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
-    .line 405
+    .line 404
     :goto_0
     iget-wide v2, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
@@ -929,11 +929,11 @@
 
     iput-wide v4, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
-    .line 406
+    .line 405
     :cond_0
     return-object p0
 
-    .line 402
+    .line 401
     :cond_1
     add-long v2, p1, v0
 
@@ -947,18 +947,18 @@
     .param p1, "millis"    # J
 
     .prologue
-    .line 360
+    .line 359
     invoke-static {p1, p2}, Landroid/location/LocationRequest;->checkInterval(J)V
 
-    .line 361
+    .line 360
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/LocationRequest;->mExplicitFastestInterval:Z
 
-    .line 362
+    .line 361
     iput-wide p1, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
-    .line 363
+    .line 362
     return-object p0
 .end method
 
@@ -967,10 +967,10 @@
     .param p1, "hideFromAppOps"    # Z
 
     .prologue
-    .line 547
+    .line 546
     iput-boolean p1, p0, Landroid/location/LocationRequest;->mHideFromAppOps:Z
 
-    .line 548
+    .line 547
     return-void
 .end method
 
@@ -979,18 +979,18 @@
     .param p1, "millis"    # J
 
     .prologue
-    .line 313
+    .line 312
     invoke-static {p1, p2}, Landroid/location/LocationRequest;->checkInterval(J)V
 
-    .line 314
+    .line 313
     iput-wide p1, p0, Landroid/location/LocationRequest;->mInterval:J
 
-    .line 315
+    .line 314
     iget-boolean v0, p0, Landroid/location/LocationRequest;->mExplicitFastestInterval:Z
 
     if-nez v0, :cond_0
 
-    .line 316
+    .line 315
     iget-wide v0, p0, Landroid/location/LocationRequest;->mInterval:J
 
     long-to-double v0, v0
@@ -1003,7 +1003,7 @@
 
     iput-wide v0, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
-    .line 318
+    .line 317
     :cond_0
     return-object p0
 .end method
@@ -1013,7 +1013,7 @@
     .param p1, "numUpdates"    # I
 
     .prologue
-    .line 455
+    .line 454
     if-gtz p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -1040,11 +1040,11 @@
 
     throw v0
 
-    .line 456
+    .line 455
     :cond_0
     iput p1, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
-    .line 457
+    .line 456
     return-object p0
 .end method
 
@@ -1053,13 +1053,13 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 485
+    .line 484
     invoke-static {p1}, Landroid/location/LocationRequest;->checkProvider(Ljava/lang/String;)V
 
-    .line 486
+    .line 485
     iput-object p1, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
-    .line 487
+    .line 486
     return-object p0
 .end method
 
@@ -1068,13 +1068,13 @@
     .param p1, "quality"    # I
 
     .prologue
-    .line 270
+    .line 269
     invoke-static {p1}, Landroid/location/LocationRequest;->checkQuality(I)V
 
-    .line 271
+    .line 270
     iput p1, p0, Landroid/location/LocationRequest;->mQuality:I
 
-    .line 272
+    .line 271
     return-object p0
 .end method
 
@@ -1083,13 +1083,13 @@
     .param p1, "meters"    # F
 
     .prologue
-    .line 499
+    .line 498
     invoke-static {p1}, Landroid/location/LocationRequest;->checkDisplacement(F)V
 
-    .line 500
+    .line 499
     iput p1, p0, Landroid/location/LocationRequest;->mSmallestDisplacement:F
 
-    .line 501
+    .line 500
     return-object p0
 .end method
 
@@ -1098,10 +1098,10 @@
     .param p1, "workSource"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 522
+    .line 521
     iput-object p1, p0, Landroid/location/LocationRequest;->mWorkSource:Landroid/os/WorkSource;
 
-    .line 523
+    .line 522
     return-void
 .end method
 
@@ -1109,12 +1109,12 @@
     .locals 8
 
     .prologue
-    .line 652
+    .line 651
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 653
+    .line 652
     .local v2, "s":Ljava/lang/StringBuilder;
     const-string v3, "Request["
 
@@ -1130,7 +1130,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 654
+    .line 653
     iget-object v3, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
     if-eqz v3, :cond_0
@@ -1145,7 +1145,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 655
+    .line 654
     :cond_0
     iget v3, p0, Landroid/location/LocationRequest;->mQuality:I
 
@@ -1153,28 +1153,28 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 656
+    .line 655
     const-string v3, " requested="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 657
+    .line 656
     iget-wide v4, p0, Landroid/location/LocationRequest;->mInterval:J
 
     invoke-static {v4, v5, v2}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 659
+    .line 658
     :cond_1
     const-string v3, " fastest="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 660
+    .line 659
     iget-wide v4, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
     invoke-static {v4, v5, v2}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 661
+    .line 660
     iget-wide v4, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
     const-wide v6, 0x7fffffffffffffffL
@@ -1183,7 +1183,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 662
+    .line 661
     iget-wide v4, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1192,16 +1192,16 @@
 
     sub-long v0, v4, v6
 
-    .line 663
+    .line 662
     .local v0, "expireIn":J
     const-string v3, " expireIn="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 664
+    .line 663
     invoke-static {v0, v1, v2}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 666
+    .line 665
     .end local v0    # "expireIn":J
     :cond_2
     iget v3, p0, Landroid/location/LocationRequest;->mNumUpdates:I
@@ -1210,7 +1210,7 @@
 
     if-eq v3, v4, :cond_3
 
-    .line 667
+    .line 666
     const-string v3, " num="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1221,13 +1221,13 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 669
+    .line 668
     :cond_3
     const/16 v3, 0x5d
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 670
+    .line 669
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1243,37 +1243,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 619
+    .line 618
     iget v0, p0, Landroid/location/LocationRequest;->mQuality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 620
+    .line 619
     iget-wide v2, p0, Landroid/location/LocationRequest;->mFastestInterval:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 621
+    .line 620
     iget-wide v2, p0, Landroid/location/LocationRequest;->mInterval:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 622
+    .line 621
     iget-wide v2, p0, Landroid/location/LocationRequest;->mExpireAt:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 623
+    .line 622
     iget v0, p0, Landroid/location/LocationRequest;->mNumUpdates:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 624
+    .line 623
     iget v0, p0, Landroid/location/LocationRequest;->mSmallestDisplacement:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 625
+    .line 624
     iget-boolean v0, p0, Landroid/location/LocationRequest;->mHideFromAppOps:Z
 
     if-eqz v0, :cond_0
@@ -1283,22 +1283,22 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 626
+    .line 625
     iget-object v0, p0, Landroid/location/LocationRequest;->mProvider:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 627
+    .line 626
     iget-object v0, p0, Landroid/location/LocationRequest;->mWorkSource:Landroid/os/WorkSource;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 628
+    .line 627
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 625
+    .line 624
     goto :goto_0
 .end method

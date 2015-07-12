@@ -9580,7 +9580,7 @@
 
     const/16 v13, 0xc
 
-    invoke-virtual {v12, v13}, Lcom/android/server/backup/BackupManagerService$BackupHandler;->removeMessages(I)V
+    invoke-virtual {v12, v13}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 8098
     move-object/from16 v0, p0
@@ -9610,7 +9610,7 @@
 
     invoke-direct/range {v15 .. v18}, Lcom/android/server/backup/BackupManagerService$ClearRetryParams;-><init>(Lcom/android/server/backup/BackupManagerService;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v12, v14, v15}, Lcom/android/server/backup/BackupManagerService$BackupHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v12, v14, v15}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v7
 
@@ -9622,7 +9622,7 @@
 
     const-wide/32 v14, 0x36ee80
 
-    invoke-virtual {v12, v7, v14, v15}, Lcom/android/server/backup/BackupManagerService$BackupHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v12, v7, v14, v15}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 8105
     monitor-exit v13
@@ -9725,7 +9725,7 @@
     if-eqz v10, :cond_3
 
     .line 8088
-    invoke-virtual {v3, v10}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v3, v10}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
     .line 8085
     :cond_3
@@ -9765,7 +9765,7 @@
 
     invoke-direct {v15, v0, v11, v6}, Lcom/android/server/backup/BackupManagerService$ClearParams;-><init>(Lcom/android/server/backup/BackupManagerService;Lcom/android/internal/backup/IBackupTransport;Landroid/content/pm/PackageInfo;)V
 
-    invoke-virtual {v12, v14, v15}, Lcom/android/server/backup/BackupManagerService$BackupHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v12, v14, v15}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v7
 
@@ -9775,7 +9775,7 @@
 
     iget-object v12, v0, Lcom/android/server/backup/BackupManagerService;->mBackupHandler:Lcom/android/server/backup/BackupManagerService$BackupHandler;
 
-    invoke-virtual {v12, v7}, Lcom/android/server/backup/BackupManagerService$BackupHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v12, v7}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     .line 8112
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V

@@ -113,7 +113,7 @@
 
     move-result v3
 
-    const v4, 0x102037b
+    const v4, 0x102037c
 
     if-ne v3, v4, :cond_0
 
@@ -456,7 +456,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 83
-    const v0, 0x1020379
+    const v0, 0x102037a
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarContainer;->findViewById(I)Landroid/view/View;
 
@@ -465,7 +465,7 @@
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarContainer;->mActionBarView:Landroid/view/View;
 
     .line 84
-    const v0, 0x102037a
+    const v0, 0x102037b
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarContainer;->findViewById(I)Landroid/view/View;
 

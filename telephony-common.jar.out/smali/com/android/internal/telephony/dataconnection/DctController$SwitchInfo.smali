@@ -25,84 +25,72 @@
 
 .field private mRetryCount:I
 
-.field public mTag:J
-
 .field final synthetic this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/internal/telephony/dataconnection/DctController;ILandroid/net/NetworkRequest;ZZ)V
-    .locals 2
+    .locals 1
     .param p2, "phoneId"    # I
     .param p3, "n"    # Landroid/net/NetworkRequest;
     .param p4, "flag"    # Z
     .param p5, "isAttachReq"    # Z
 
     .prologue
-    .line 488
+    .line 483
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 480
+    .line 476
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
-    .line 486
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mTag:J
-
-    .line 489
+    .line 484
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mPhoneId:I
 
-    .line 490
+    .line 485
     iput-object p3, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mNetworkRequest:Landroid/net/NetworkRequest;
 
-    .line 491
+    .line 486
     iput-boolean p4, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mIsDefaultDataSwitchRequested:Z
 
-    .line 492
+    .line 487
     iput-boolean p5, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mIsOnDemandPsAttachRequested:Z
 
-    .line 493
+    .line 488
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/internal/telephony/dataconnection/DctController;IZ)V
-    .locals 2
+    .locals 1
     .param p2, "phoneId"    # I
     .param p3, "flag"    # Z
 
     .prologue
-    .line 495
+    .line 490
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->this$0:Lcom/android/internal/telephony/dataconnection/DctController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 480
+    .line 476
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
-    .line 486
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mTag:J
-
-    .line 496
+    .line 491
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mPhoneId:I
 
-    .line 497
+    .line 492
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mNetworkRequest:Landroid/net/NetworkRequest;
 
-    .line 498
+    .line 493
     iput-boolean p3, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mIsDefaultDataSwitchRequested:Z
 
-    .line 499
+    .line 494
     return-void
 .end method
 
@@ -112,14 +100,14 @@
     .locals 1
 
     .prologue
-    .line 502
+    .line 497
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
-    .line 504
+    .line 499
     return-void
 .end method
 
@@ -127,7 +115,7 @@
     .locals 2
 
     .prologue
-    .line 507
+    .line 502
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
     const/4 v1, 0x6
@@ -146,10 +134,10 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 511
+    .line 506
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,18 +199,6 @@
     iget v1, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mRetryCount:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ",mTag = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v2, p0, Lcom/android/internal/telephony/dataconnection/DctController$SwitchInfo;->mTag:J
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

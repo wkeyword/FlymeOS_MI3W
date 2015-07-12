@@ -168,7 +168,7 @@
     :cond_0
     const-string v0, "WipowerManager"
 
-    const-string v1, "mPruData is null"
+    const-string/jumbo v1, "mPruData is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

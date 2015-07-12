@@ -41,7 +41,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$ProxySettings;->STATIC:Landroid/net/IpConfiguration$ProxySettings;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$ProxySettings;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -57,7 +57,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$ProxySettings;->PAC:Landroid/net/IpConfiguration$ProxySettings;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$ProxySettings;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -73,7 +73,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$ProxySettings;->NONE:Landroid/net/IpConfiguration$ProxySettings;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$ProxySettings;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -89,7 +89,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$ProxySettings;->UNASSIGNED:Landroid/net/IpConfiguration$ProxySettings;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$ProxySettings;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -116,7 +116,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$IpAssignment;->STATIC:Landroid/net/IpConfiguration$IpAssignment;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$IpAssignment;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -132,7 +132,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$IpAssignment;->DHCP:Landroid/net/IpConfiguration$IpAssignment;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$IpAssignment;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -148,7 +148,7 @@
 
     sget-object v1, Landroid/net/IpConfiguration$IpAssignment;->UNASSIGNED:Landroid/net/IpConfiguration$IpAssignment;
 
-    invoke-virtual {v1}, Landroid/net/IpConfiguration$IpAssignment;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

@@ -37,23 +37,23 @@
     .param p5, "pOrigIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 674
+    .line 690
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 675
+    .line 691
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->ri:Landroid/content/pm/ResolveInfo;
 
-    .line 676
+    .line 692
     iput-object p3, p0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->displayLabel:Ljava/lang/CharSequence;
 
-    .line 677
+    .line 693
     iput-object p4, p0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->extendedInfo:Ljava/lang/CharSequence;
 
-    .line 678
+    .line 694
     iput-object p5, p0, Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;->origIntent:Landroid/content/Intent;
 
-    .line 679
+    .line 695
     return-void
 .end method

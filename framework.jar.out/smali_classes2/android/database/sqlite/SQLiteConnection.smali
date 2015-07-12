@@ -232,7 +232,7 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 877
+    .line 879
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -241,34 +241,34 @@
 
     check-cast v9, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 878
+    .line 880
     .local v9, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     const/4 v8, 0x0
 
-    .line 879
+    .line 881
     .local v8, "skipCache":Z
     if-eqz v9, :cond_1
 
-    .line 880
+    .line 882
     iget-boolean v0, v9, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     if-nez v0, :cond_0
 
     move-object v10, v9
 
-    .line 908
+    .line 910
     .end local v9    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     .local v10, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :goto_0
     return-object v10
 
-    .line 886
+    .line 888
     .end local v10    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     .restart local v9    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :cond_0
     const/4 v8, 0x1
 
-    .line 889
+    .line 891
     :cond_1
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -276,7 +276,7 @@
 
     move-result-wide v2
 
-    .line 891
+    .line 893
     .local v2, "statementPtr":J
     :try_start_0
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -285,13 +285,13 @@
 
     move-result v4
 
-    .line 892
+    .line 894
     .local v4, "numParameters":I
     invoke-static {p1}, Landroid/database/DatabaseUtils;->getSqlStatementType(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 893
+    .line 895
     .local v5, "type":I
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -304,12 +304,12 @@
 
     move-object v1, p1
 
-    .line 894
+    .line 896
     invoke-direct/range {v0 .. v6}, Landroid/database/sqlite/SQLiteConnection;->obtainPreparedStatement(Ljava/lang/String;JIIZ)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     move-result-object v9
 
-    .line 895
+    .line 897
     if-nez v8, :cond_2
 
     invoke-static {v5}, Landroid/database/sqlite/SQLiteConnection;->isCacheable(I)Z
@@ -318,30 +318,30 @@
 
     if-eqz v0, :cond_2
 
-    .line 896
+    .line 898
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0, p1, v9}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 897
+    .line 899
     const/4 v0, 0x1
 
     iput-boolean v0, v9, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 907
+    .line 909
     :cond_2
     iput-boolean v11, v9, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     move-object v10, v9
 
-    .line 908
+    .line 910
     .end local v9    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     .restart local v10    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     goto :goto_0
 
-    .line 899
+    .line 901
     .end local v4    # "numParameters":I
     .end local v5    # "type":I
     .end local v6    # "readOnly":Z
@@ -350,7 +350,7 @@
     :catch_0
     move-exception v7
 
-    .line 902
+    .line 904
     .local v7, "ex":Ljava/lang/RuntimeException;
     if-eqz v9, :cond_3
 
@@ -358,13 +358,13 @@
 
     if-nez v0, :cond_4
 
-    .line 903
+    .line 905
     :cond_3
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteConnection;->nativeFinalizeStatement(JJ)V
 
-    .line 905
+    .line 907
     :cond_4
     throw v7
 .end method
@@ -374,7 +374,7 @@
     .param p1, "statement"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 1039
+    .line 1041
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConfiguration:Landroid/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->isInMemoryDb()Z
@@ -383,24 +383,24 @@
 
     if-nez v0, :cond_0
 
-    .line 1040
+    .line 1042
     iget-boolean v0, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
     if-eqz v0, :cond_1
 
-    .line 1041
+    .line 1043
     invoke-static {}, Ldalvik/system/BlockGuard;->getThreadPolicy()Ldalvik/system/BlockGuard$Policy;
 
     move-result-object v0
 
     invoke-interface {v0}, Ldalvik/system/BlockGuard$Policy;->onReadFromDisk()V
 
-    .line 1046
+    .line 1048
     :cond_0
     :goto_0
     return-void
 
-    .line 1043
+    .line 1045
     :cond_1
     invoke-static {}, Ldalvik/system/BlockGuard;->getThreadPolicy()Ldalvik/system/BlockGuard$Policy;
 
@@ -418,33 +418,33 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 940
+    .line 942
     if-eqz p1, :cond_0
 
-    .line 941
+    .line 943
     invoke-virtual {p1}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 943
+    .line 945
     iget v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
-    .line 944
+    .line 946
     iget v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     if-ne v0, v2, :cond_0
 
-    .line 946
+    .line 948
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1, v2}, Landroid/database/sqlite/SQLiteConnection;->nativeResetCancel(JZ)V
 
-    .line 949
+    .line 951
     invoke-virtual {p1, p0}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 952
+    .line 954
     :cond_0
     return-void
 .end method
@@ -455,19 +455,19 @@
     .param p2, "bindArgs"    # [Ljava/lang/Object;
 
     .prologue
-    .line 980
+    .line 982
     if-eqz p2, :cond_0
 
     array-length v8, p2
 
-    .line 981
+    .line 983
     .local v8, "count":I
     :goto_0
     iget v0, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
     if-eq v8, v0, :cond_1
 
-    .line 982
+    .line 984
     new-instance v0, Landroid/database/sqlite/SQLiteBindOrColumnIndexOutOfRangeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -510,27 +510,27 @@
 
     throw v0
 
-    .line 980
+    .line 982
     .end local v8    # "count":I
     :cond_0
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 986
+    .line 988
     .restart local v8    # "count":I
     :cond_1
     if-nez v8, :cond_3
 
-    .line 1021
+    .line 1023
     :cond_2
     return-void
 
-    .line 990
+    .line 992
     :cond_3
     iget-wide v2, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
-    .line 991
+    .line 993
     .local v2, "statementPtr":J
     const/4 v9, 0x0
 
@@ -538,10 +538,10 @@
     :goto_1
     if-ge v9, v8, :cond_2
 
-    .line 992
+    .line 994
     aget-object v7, p2, v9
 
-    .line 993
+    .line 995
     .local v7, "arg":Ljava/lang/Object;
     invoke-static {v7}, Landroid/database/DatabaseUtils;->getTypeOfObject(Ljava/lang/Object;)I
 
@@ -549,13 +549,13 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1010
+    .line 1012
     :pswitch_0
     instance-of v0, v7, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_5
 
-    .line 1013
+    .line 1015
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     add-int/lit8 v4, v9, 0x1
@@ -574,13 +574,13 @@
     :goto_2
     invoke-static/range {v0 .. v6}, Landroid/database/sqlite/SQLiteConnection;->nativeBindLong(JJIJ)V
 
-    .line 991
+    .line 993
     :goto_3
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 995
+    .line 997
     .restart local v7    # "arg":Ljava/lang/Object;
     :pswitch_1
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -591,7 +591,7 @@
 
     goto :goto_3
 
-    .line 998
+    .line 1000
     :pswitch_2
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -608,7 +608,7 @@
 
     goto :goto_3
 
-    .line 1002
+    .line 1004
     .restart local v7    # "arg":Ljava/lang/Object;
     :pswitch_3
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -626,7 +626,7 @@
 
     goto :goto_3
 
-    .line 1006
+    .line 1008
     .restart local v7    # "arg":Ljava/lang/Object;
     :pswitch_4
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -644,13 +644,13 @@
 
     goto :goto_3
 
-    .line 1013
+    .line 1015
     :cond_4
     const-wide/16 v5, 0x0
 
     goto :goto_2
 
-    .line 1016
+    .line 1018
     .restart local v7    # "arg":Ljava/lang/Object;
     :cond_5
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -665,7 +665,7 @@
 
     goto :goto_3
 
-    .line 993
+    .line 995
     nop
 
     :pswitch_data_0
@@ -738,10 +738,10 @@
     .param p1, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 955
+    .line 957
     if-eqz p1, :cond_1
 
-    .line 956
+    .line 958
     sget-boolean v0, Landroid/database/sqlite/SQLiteConnection;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -756,7 +756,7 @@
 
     throw v0
 
-    .line 958
+    .line 960
     :cond_0
     iget v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
@@ -764,24 +764,24 @@
 
     iput v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
-    .line 959
+    .line 961
     iget v0, p0, Landroid/database/sqlite/SQLiteConnection;->mCancellationSignalAttachCount:I
 
     if-nez v0, :cond_1
 
-    .line 961
+    .line 963
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 964
+    .line 966
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     const/4 v2, 0x0
 
     invoke-static {v0, v1, v2}, Landroid/database/sqlite/SQLiteConnection;->nativeResetCancel(JZ)V
 
-    .line 967
+    .line 969
     :cond_1
     return-void
 .end method
@@ -877,17 +877,17 @@
     .param p1, "statement"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 935
+    .line 937
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     iget-wide v2, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
     invoke-static {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteConnection;->nativeFinalizeStatement(JJ)V
 
-    .line 936
+    .line 938
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->recyclePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 937
+    .line 939
     return-void
 .end method
 
@@ -898,18 +898,18 @@
     .param p4, "pageSize"    # J
 
     .prologue
-    .line 1166
+    .line 1168
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConfiguration:Landroid/database/sqlite/SQLiteDatabaseConfiguration;
 
     iget-object v1, v0, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->path:Ljava/lang/String;
 
-    .line 1167
+    .line 1169
     .local v1, "label":Ljava/lang/String;
     iget-boolean v0, p0, Landroid/database/sqlite/SQLiteConnection;->mIsPrimaryConnection:Z
 
     if-nez v0, :cond_0
 
-    .line 1168
+    .line 1170
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -940,7 +940,7 @@
 
     move-result-object v1
 
-    .line 1170
+    .line 1172
     :cond_0
     new-instance v0, Landroid/database/sqlite/SQLiteDebug$DbStats;
 
@@ -980,14 +980,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1031
+    .line 1033
     const/4 v1, 0x2
 
     if-eq p0, v1, :cond_0
 
     if-ne p0, v0, :cond_1
 
-    .line 1035
+    .line 1037
     :cond_0
     :goto_0
     return v0
@@ -1087,46 +1087,46 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1183
+    .line 1185
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1184
+    .line 1186
     .local v0, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     if-eqz v0, :cond_0
 
-    .line 1185
+    .line 1187
     iget-object v1, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     iput-object v1, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1186
+    .line 1188
     iput-object v2, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1187
+    .line 1189
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
-    .line 1191
+    .line 1193
     :goto_0
     iput-object p1, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mSql:Ljava/lang/String;
 
-    .line 1192
+    .line 1194
     iput-wide p2, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
 
-    .line 1193
+    .line 1195
     iput p4, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
-    .line 1194
+    .line 1196
     iput p5, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mType:I
 
-    .line 1195
+    .line 1197
     iput-boolean p6, v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
-    .line 1196
+    .line 1198
     return-object v0
 
-    .line 1189
+    .line 1191
     :cond_0
     new-instance v0, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
@@ -1269,20 +1269,20 @@
     .param p1, "statement"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 1200
+    .line 1202
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mSql:Ljava/lang/String;
 
-    .line 1201
+    .line 1203
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     iput-object v0, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mPoolNext:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1202
+    .line 1204
     iput-object p1, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementPool:Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
-    .line 1203
+    .line 1205
     return-void
 .end method
 
@@ -1291,17 +1291,17 @@
     .param p1, "statement"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 912
+    .line 914
     const/4 v1, 0x0
 
     iput-boolean v1, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInUse:Z
 
-    .line 913
+    .line 915
     iget-boolean v1, p1, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-eqz v1, :cond_0
 
-    .line 915
+    .line 917
     :try_start_0
     iget-wide v2, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -1311,15 +1311,15 @@
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 932
+    .line 934
     :goto_0
     return-void
 
-    .line 916
+    .line 918
     :catch_0
     move-exception v0
 
-    .line 927
+    .line 929
     .local v0, "ex":Landroid/database/sqlite/SQLiteException;
     iget-object v1, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
@@ -1329,7 +1329,7 @@
 
     goto :goto_0
 
-    .line 930
+    .line 932
     .end local v0    # "ex":Landroid/database/sqlite/SQLiteException;
     :cond_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->finalizePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
@@ -1700,7 +1700,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 396
+    .line 398
     :cond_0
     :goto_0
     return-void
@@ -1767,7 +1767,8 @@
 
     invoke-virtual {p0, v4, v5, v6}, Landroid/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroid/os/CancellationSignal;)V
     :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 382
     const/4 v3, 0x0
@@ -1825,7 +1826,8 @@
 
     invoke-virtual {p0, v4, v5, v6}, Landroid/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroid/os/CancellationSignal;)V
     :try_end_2
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
@@ -1836,6 +1838,45 @@
     move-exception v0
 
     .line 393
+    .local v0, "ex":Landroid/database/sqlite/SQLiteDatabaseCorruptException;
+    throw v0
+
+    .line 390
+    .end local v0    # "ex":Landroid/database/sqlite/SQLiteDatabaseCorruptException;
+    .restart local v2    # "oldLocale":Ljava/lang/String;
+    .restart local v3    # "success":Z
+    :cond_3
+    :try_start_3
+    const-string v4, "ROLLBACK"
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v4
+
+    if-eqz v3, :cond_4
+
+    const-string v5, "COMMIT"
+
+    :goto_2
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual {p0, v5, v6, v7}, Landroid/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroid/os/CancellationSignal;)V
+
+    throw v4
+    :try_end_3
+    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_1
+
+    .line 394
+    .end local v2    # "oldLocale":Ljava/lang/String;
+    .end local v3    # "success":Z
+    :catch_1
+    move-exception v0
+
+    .line 395
     .local v0, "ex":Ljava/lang/RuntimeException;
     new-instance v4, Landroid/database/sqlite/SQLiteException;
 
@@ -1885,32 +1926,12 @@
     .end local v0    # "ex":Ljava/lang/RuntimeException;
     .restart local v2    # "oldLocale":Ljava/lang/String;
     .restart local v3    # "success":Z
-    :cond_3
-    :try_start_3
-    const-string v4, "ROLLBACK"
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v4
-
-    if-eqz v3, :cond_4
-
-    const-string v5, "COMMIT"
-
-    :goto_2
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-virtual {p0, v5, v6, v7}, Landroid/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroid/os/CancellationSignal;)V
-
-    throw v4
-
     :cond_4
+    :try_start_4
     const-string v5, "ROLLBACK"
-    :try_end_3
-    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_0
+    :try_end_4
+    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_4 .. :try_end_4} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
 
     goto :goto_2
 .end method
@@ -2107,7 +2128,7 @@
     .param p1, "statement"    # Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
 
     .prologue
-    .line 1024
+    .line 1026
     iget-boolean v0, p0, Landroid/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
     if-eqz v0, :cond_0
@@ -2116,7 +2137,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1025
+    .line 1027
     new-instance v0, Landroid/database/sqlite/SQLiteException;
 
     const-string v1, "Cannot execute this statement because it might modify the database but the connection is read-only."
@@ -2125,7 +2146,7 @@
 
     throw v0
 
-    .line 1028
+    .line 1030
     :cond_0
     return-void
 .end method
@@ -2135,7 +2156,7 @@
     .param p0, "sql"    # Ljava/lang/String;
 
     .prologue
-    .line 1206
+    .line 1208
     sget-object v0, Landroid/database/sqlite/SQLiteConnection;->TRIM_SQL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -2179,7 +2200,7 @@
     .end annotation
 
     .prologue
-    .line 1112
+    .line 1114
     .local p1, "dbStatsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/database/sqlite/SQLiteDebug$DbStats;>;"
     move-object/from16 v0, p0
 
@@ -2189,15 +2210,15 @@
 
     move-result v3
 
-    .line 1113
+    .line 1115
     .local v3, "lookaside":I
     const-wide/16 v4, 0x0
 
-    .line 1114
+    .line 1116
     .local v4, "pageCount":J
     const-wide/16 v6, 0x0
 
-    .line 1116
+    .line 1118
     .local v6, "pageSize":J
     :try_start_0
     const-string v2, "PRAGMA page_count;"
@@ -2212,7 +2233,7 @@
 
     move-result-wide v4
 
-    .line 1117
+    .line 1119
     const-string v2, "PRAGMA page_size;"
 
     const/4 v8, 0x0
@@ -2230,7 +2251,7 @@
     :goto_0
     move-object/from16 v2, p0
 
-    .line 1121
+    .line 1123
     invoke-direct/range {v2 .. v7}, Landroid/database/sqlite/SQLiteConnection;->getMainDbStatsUnsafe(IJJ)Landroid/database/sqlite/SQLiteDebug$DbStats;
 
     move-result-object v2
@@ -2239,14 +2260,14 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1126
+    .line 1128
     new-instance v11, Landroid/database/CursorWindow;
 
     const-string v2, "collectDbStats"
 
     invoke-direct {v11, v2}, Landroid/database/CursorWindow;-><init>(Ljava/lang/String;)V
 
-    .line 1128
+    .line 1130
     .local v11, "window":Landroid/database/CursorWindow;
     :try_start_1
     const-string v9, "PRAGMA database_list;"
@@ -2265,7 +2286,7 @@
 
     invoke-virtual/range {v8 .. v15}, Landroid/database/sqlite/SQLiteConnection;->executeForCursorWindow(Ljava/lang/String;[Ljava/lang/Object;Landroid/database/CursorWindow;IIZLandroid/os/CancellationSignal;)I
 
-    .line 1129
+    .line 1131
     const/16 v22, 0x1
 
     .local v22, "i":I
@@ -2278,7 +2299,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1130
+    .line 1132
     const/4 v2, 0x1
 
     move/from16 v0, v22
@@ -2287,7 +2308,7 @@
 
     move-result-object v23
 
-    .line 1131
+    .line 1133
     .local v23, "name":Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -2300,14 +2321,14 @@
 
     move-result-object v24
 
-    .line 1132
+    .line 1134
     .local v24, "path":Ljava/lang/String;
     const-wide/16 v4, 0x0
 
-    .line 1133
+    .line 1135
     const-wide/16 v6, 0x0
 
-    .line 1135
+    .line 1137
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2345,7 +2366,7 @@
 
     move-result-wide v4
 
-    .line 1136
+    .line 1138
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2385,7 +2406,7 @@
 
     move-result-wide v6
 
-    .line 1140
+    .line 1142
     :goto_2
     :try_start_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2408,7 +2429,7 @@
 
     move-result-object v13
 
-    .line 1141
+    .line 1143
     .local v13, "label":Ljava/lang/String;
     invoke-virtual/range {v24 .. v24}, Ljava/lang/String;->isEmpty()Z
 
@@ -2416,7 +2437,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1142
+    .line 1144
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2441,7 +2462,7 @@
 
     move-result-object v13
 
-    .line 1144
+    .line 1146
     :cond_0
     new-instance v12, Landroid/database/sqlite/SQLiteDebug$DbStats;
 
@@ -2466,28 +2487,28 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1129
+    .line 1131
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_1
 
-    .line 1149
+    .line 1151
     .end local v13    # "label":Ljava/lang/String;
     .end local v23    # "name":Ljava/lang/String;
     .end local v24    # "path":Ljava/lang/String;
     :cond_1
     invoke-virtual {v11}, Landroid/database/CursorWindow;->close()V
 
-    .line 1151
+    .line 1153
     .end local v22    # "i":I
     :goto_3
     return-void
 
-    .line 1146
+    .line 1148
     :catch_0
     move-exception v2
 
-    .line 1149
+    .line 1151
     invoke-virtual {v11}, Landroid/database/CursorWindow;->close()V
 
     goto :goto_3
@@ -2499,7 +2520,7 @@
 
     throw v2
 
-    .line 1137
+    .line 1139
     .restart local v22    # "i":I
     .restart local v23    # "name":Ljava/lang/String;
     .restart local v24    # "path":Ljava/lang/String;
@@ -2508,7 +2529,7 @@
 
     goto :goto_2
 
-    .line 1118
+    .line 1120
     .end local v11    # "window":Landroid/database/CursorWindow;
     .end local v22    # "i":I
     .end local v23    # "name":Ljava/lang/String;
@@ -2535,7 +2556,7 @@
     .local p1, "dbStatsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/database/sqlite/SQLiteDebug$DbStats;>;"
     const-wide/16 v2, 0x0
 
-    .line 1160
+    .line 1162
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -2548,7 +2569,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1161
+    .line 1163
     return-void
 .end method
 
@@ -2556,7 +2577,7 @@
     .locals 1
 
     .prologue
-    .line 1102
+    .line 1104
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->describeCurrentOperation()Ljava/lang/String;
@@ -2572,10 +2593,10 @@
     .param p2, "verbose"    # Z
 
     .prologue
-    .line 1055
+    .line 1057
     invoke-virtual {p0, p1, p2}, Landroid/database/sqlite/SQLiteConnection;->dumpUnsafe(Landroid/util/Printer;Z)V
 
-    .line 1056
+    .line 1058
     return-void
 .end method
 
@@ -2585,7 +2606,7 @@
     .param p2, "verbose"    # Z
 
     .prologue
-    .line 1073
+    .line 1075
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2614,10 +2635,10 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1074
+    .line 1076
     if-eqz p2, :cond_0
 
-    .line 1075
+    .line 1077
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2644,7 +2665,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1077
+    .line 1079
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2668,7 +2689,7 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1078
+    .line 1080
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2691,20 +2712,20 @@
 
     invoke-interface {p1, v0}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 1080
+    .line 1082
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->dump(Landroid/util/Printer;Z)V
 
-    .line 1082
+    .line 1084
     if-eqz p2, :cond_1
 
-    .line 1083
+    .line 1085
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->dump(Landroid/util/Printer;)V
 
-    .line 1085
+    .line 1087
     :cond_1
     return-void
 .end method
@@ -2716,10 +2737,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 542
+    .line 544
     if-nez p1, :cond_0
 
-    .line 543
+    .line 545
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "sql must not be null."
@@ -2728,7 +2749,7 @@
 
     throw v3
 
-    .line 546
+    .line 548
     :cond_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -2738,7 +2759,7 @@
 
     move-result v0
 
-    .line 548
+    .line 550
     .local v0, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -2748,23 +2769,23 @@
 
     move-result-object v2
 
-    .line 550
+    .line 552
     .local v2, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 551
+    .line 553
     invoke-direct {p0, v2, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 552
+    .line 554
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 553
+    .line 555
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 555
+    .line 557
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -2774,28 +2795,28 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 557
+    .line 559
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 560
+    .line 562
     :try_start_4
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 566
+    .line 568
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
-    .line 568
+    .line 570
     return-void
 
-    .line 557
+    .line 559
     :catchall_0
     move-exception v3
 
@@ -2806,7 +2827,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 560
+    .line 562
     :catchall_1
     move-exception v3
 
@@ -2818,24 +2839,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 562
+    .line 564
     .end local v2    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 563
+    .line 565
     .local v1, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 564
+    .line 566
     throw v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 566
+    .line 568
     .end local v1    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v3
@@ -2854,10 +2875,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 673
+    .line 675
     if-nez p1, :cond_0
 
-    .line 674
+    .line 676
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "sql must not be null."
@@ -2866,7 +2887,7 @@
 
     throw v4
 
-    .line 677
+    .line 679
     :cond_0
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -2876,7 +2897,7 @@
 
     move-result v0
 
-    .line 680
+    .line 682
     .local v0, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -2886,23 +2907,23 @@
 
     move-result-object v3
 
-    .line 682
+    .line 684
     .local v3, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 683
+    .line 685
     invoke-direct {p0, v3, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 684
+    .line 686
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 685
+    .line 687
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 687
+    .line 689
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -2912,7 +2933,7 @@
 
     move-result v2
 
-    .line 689
+    .line 691
     .local v2, "fd":I
     if-ltz v2, :cond_1
 
@@ -2922,34 +2943,34 @@
 
     move-result-object v4
 
-    .line 691
+    .line 693
     :goto_0
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 694
+    .line 696
     :try_start_4
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 700
+    .line 702
     iget-object v5, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v5, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
     return-object v4
 
-    .line 689
+    .line 691
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 691
+    .line 693
     .end local v2    # "fd":I
     :catchall_0
     move-exception v4
@@ -2961,7 +2982,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 694
+    .line 696
     :catchall_1
     move-exception v4
 
@@ -2973,24 +2994,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 696
+    .line 698
     .end local v3    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 697
+    .line 699
     .local v1, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v4, v0, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 698
+    .line 700
     throw v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 700
+    .line 702
     .end local v1    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v4
@@ -3009,10 +3030,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 719
+    .line 721
     if-nez p1, :cond_0
 
-    .line 720
+    .line 722
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "sql must not be null."
@@ -3021,11 +3042,11 @@
 
     throw v4
 
-    .line 723
+    .line 725
     :cond_0
     const/4 v0, 0x0
 
-    .line 724
+    .line 726
     .local v0, "changedRows":I
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -3035,7 +3056,7 @@
 
     move-result v1
 
-    .line 727
+    .line 729
     .local v1, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -3045,23 +3066,23 @@
 
     move-result-object v3
 
-    .line 729
+    .line 731
     .local v3, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 730
+    .line 732
     invoke-direct {p0, v3, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 731
+    .line 733
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 732
+    .line 734
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 734
+    .line 736
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3073,20 +3094,20 @@
 
     move-result v0
 
-    .line 738
+    .line 740
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 741
+    .line 743
     :try_start_4
     invoke-direct {p0, v3}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 747
+    .line 749
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v4, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperationDeferLog(I)Z
@@ -3095,7 +3116,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 748
+    .line 750
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3121,7 +3142,7 @@
     :cond_1
     return v0
 
-    .line 738
+    .line 740
     :catchall_0
     move-exception v4
 
@@ -3132,7 +3153,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 741
+    .line 743
     :catchall_1
     move-exception v4
 
@@ -3144,24 +3165,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 743
+    .line 745
     .end local v3    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v2
 
-    .line 744
+    .line 746
     .local v2, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v4, v1, v2}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 745
+    .line 747
     throw v2
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 747
+    .line 749
     .end local v2    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v4
@@ -3174,7 +3195,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 748
+    .line 750
     iget-object v5, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -3212,10 +3233,10 @@
     .param p7, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 823
+    .line 825
     if-nez p1, :cond_0
 
-    .line 824
+    .line 826
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "sql must not be null."
@@ -3224,11 +3245,11 @@
 
     throw v4
 
-    .line 826
+    .line 828
     :cond_0
     if-nez p3, :cond_1
 
-    .line 827
+    .line 829
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "window must not be null."
@@ -3237,22 +3258,22 @@
 
     throw v4
 
-    .line 830
+    .line 832
     :cond_1
     invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->acquireReference()V
 
-    .line 832
+    .line 834
     const/4 v13, -0x1
 
-    .line 833
+    .line 835
     .local v13, "actualPos":I
     const/4 v15, -0x1
 
-    .line 834
+    .line 836
     .local v15, "countedRows":I
     const/16 v17, -0x1
 
-    .line 835
+    .line 837
     .local v17, "filledRows":I
     :try_start_0
     move-object/from16 v0, p0
@@ -3271,7 +3292,7 @@
 
     move-result v14
 
-    .line 838
+    .line 840
     .local v14, "cookie":I
     :try_start_1
     invoke-direct/range {p0 .. p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -3281,7 +3302,7 @@
 
     move-result-object v20
 
-    .line 840
+    .line 842
     .local v20, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_2
     move-object/from16 v0, p0
@@ -3290,7 +3311,7 @@
 
     invoke-direct {v0, v1}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 841
+    .line 843
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
@@ -3299,14 +3320,14 @@
 
     invoke-direct {v0, v1, v2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 842
+    .line 844
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
     invoke-direct {v0, v1}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 843
+    .line 845
     move-object/from16 v0, p0
 
     move-object/from16 v1, p7
@@ -3315,7 +3336,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 845
+    .line 847
     :try_start_3
     move-object/from16 v0, p0
 
@@ -3339,7 +3360,7 @@
 
     move-result-wide v18
 
-    .line 848
+    .line 850
     .local v18, "result":J
     const/16 v4, 0x20
 
@@ -3347,24 +3368,24 @@
 
     long-to-int v13, v4
 
-    .line 849
+    .line 851
     move-wide/from16 v0, v18
 
     long-to-int v15, v0
 
-    .line 850
+    .line 852
     invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->getNumRows()I
 
     move-result v17
 
-    .line 851
+    .line 853
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v13}, Landroid/database/CursorWindow;->setStartPosition(I)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 854
+    .line 856
     :try_start_4
     move-object/from16 v0, p0
 
@@ -3374,7 +3395,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 857
+    .line 859
     :try_start_5
     move-object/from16 v0, p0
 
@@ -3385,7 +3406,7 @@
     .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 863
+    .line 865
     :try_start_6
     move-object/from16 v0, p0
 
@@ -3397,7 +3418,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 864
+    .line 866
     move-object/from16 v0, p0
 
     iget-object v4, v0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
@@ -3470,13 +3491,13 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 872
+    .line 874
     :cond_2
     invoke-virtual/range {p3 .. p3}, Landroid/database/CursorWindow;->releaseReference()V
 
     return v15
 
-    .line 854
+    .line 856
     .end local v18    # "result":J
     :catchall_0
     move-exception v4
@@ -3492,7 +3513,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 857
+    .line 859
     :catchall_1
     move-exception v4
 
@@ -3508,12 +3529,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_0
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 859
+    .line 861
     .end local v20    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v16
 
-    .line 860
+    .line 862
     .local v16, "ex":Ljava/lang/RuntimeException;
     :try_start_9
     move-object/from16 v0, p0
@@ -3524,12 +3545,12 @@
 
     invoke-virtual {v4, v14, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 861
+    .line 863
     throw v16
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 863
+    .line 865
     .end local v16    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v4
@@ -3545,7 +3566,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 864
+    .line 866
     move-object/from16 v0, p0
 
     iget-object v5, v0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
@@ -3621,7 +3642,7 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 872
+    .line 874
     .end local v14    # "cookie":I
     :catchall_3
     move-exception v4
@@ -3638,10 +3659,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 768
+    .line 770
     if-nez p1, :cond_0
 
-    .line 769
+    .line 771
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "sql must not be null."
@@ -3650,7 +3671,7 @@
 
     throw v3
 
-    .line 772
+    .line 774
     :cond_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -3660,7 +3681,7 @@
 
     move-result v0
 
-    .line 775
+    .line 777
     .local v0, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -3670,23 +3691,23 @@
 
     move-result-object v2
 
-    .line 777
+    .line 779
     .local v2, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 778
+    .line 780
     invoke-direct {p0, v2, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 779
+    .line 781
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 780
+    .line 782
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 782
+    .line 784
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3698,27 +3719,27 @@
 
     move-result-wide v4
 
-    .line 785
+    .line 787
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 788
+    .line 790
     :try_start_4
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 794
+    .line 796
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
     return-wide v4
 
-    .line 785
+    .line 787
     :catchall_0
     move-exception v3
 
@@ -3729,7 +3750,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 788
+    .line 790
     :catchall_1
     move-exception v3
 
@@ -3741,24 +3762,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 790
+    .line 792
     .end local v2    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 791
+    .line 793
     .local v1, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 792
+    .line 794
     throw v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 794
+    .line 796
     .end local v1    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v3
@@ -3777,10 +3798,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 585
+    .line 587
     if-nez p1, :cond_0
 
-    .line 586
+    .line 588
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "sql must not be null."
@@ -3789,7 +3810,7 @@
 
     throw v3
 
-    .line 589
+    .line 591
     :cond_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -3799,7 +3820,7 @@
 
     move-result v0
 
-    .line 591
+    .line 593
     .local v0, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -3809,23 +3830,23 @@
 
     move-result-object v2
 
-    .line 593
+    .line 595
     .local v2, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 594
+    .line 596
     invoke-direct {p0, v2, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 595
+    .line 597
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 596
+    .line 598
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 598
+    .line 600
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3837,27 +3858,27 @@
 
     move-result-wide v4
 
-    .line 600
+    .line 602
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 603
+    .line 605
     :try_start_4
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 609
+    .line 611
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
     return-wide v4
 
-    .line 600
+    .line 602
     :catchall_0
     move-exception v3
 
@@ -3868,7 +3889,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 603
+    .line 605
     :catchall_1
     move-exception v3
 
@@ -3880,24 +3901,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 605
+    .line 607
     .end local v2    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 606
+    .line 608
     .local v1, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 607
+    .line 609
     throw v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 609
+    .line 611
     .end local v1    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v3
@@ -3916,10 +3937,10 @@
     .param p3, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 628
+    .line 630
     if-nez p1, :cond_0
 
-    .line 629
+    .line 631
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "sql must not be null."
@@ -3928,7 +3949,7 @@
 
     throw v3
 
-    .line 632
+    .line 634
     :cond_0
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -3938,7 +3959,7 @@
 
     move-result v0
 
-    .line 634
+    .line 636
     .local v0, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -3948,23 +3969,23 @@
 
     move-result-object v2
 
-    .line 636
+    .line 638
     .local v2, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :try_start_1
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->throwIfStatementForbidden(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 637
+    .line 639
     invoke-direct {p0, v2, p2}, Landroid/database/sqlite/SQLiteConnection;->bindArguments(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
 
-    .line 638
+    .line 640
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->applyBlockGuardPolicy(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
 
-    .line 639
+    .line 641
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->attachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 641
+    .line 643
     :try_start_2
     iget-wide v4, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
@@ -3976,27 +3997,27 @@
 
     move-result-object v3
 
-    .line 643
+    .line 645
     :try_start_3
     invoke-direct {p0, p3}, Landroid/database/sqlite/SQLiteConnection;->detachCancellationSignal(Landroid/os/CancellationSignal;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 646
+    .line 648
     :try_start_4
     invoke-direct {p0, v2}, Landroid/database/sqlite/SQLiteConnection;->releasePreparedStatement(Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 652
+    .line 654
     iget-object v4, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v4, v0}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
     return-object v3
 
-    .line 643
+    .line 645
     :catchall_0
     move-exception v3
 
@@ -4007,7 +4028,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 646
+    .line 648
     :catchall_1
     move-exception v3
 
@@ -4019,24 +4040,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 648
+    .line 650
     .end local v2    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 649
+    .line 651
     .local v1, "ex":Ljava/lang/RuntimeException;
     :try_start_7
     iget-object v3, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v3, v0, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 650
+    .line 652
     throw v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 652
+    .line 654
     .end local v1    # "ex":Ljava/lang/RuntimeException;
     :catchall_2
     move-exception v3
@@ -4103,7 +4124,7 @@
     .locals 1
 
     .prologue
-    .line 458
+    .line 460
     iget v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionId:I
 
     return v0
@@ -4114,7 +4135,7 @@
     .param p1, "sql"    # Ljava/lang/String;
 
     .prologue
-    .line 450
+    .line 452
     iget-object v0, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4138,7 +4159,7 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 468
     iget-boolean v0, p0, Landroid/database/sqlite/SQLiteConnection;->mIsPrimaryConnection:Z
 
     return v0
@@ -4148,12 +4169,12 @@
     .locals 2
 
     .prologue
-    .line 976
+    .line 978
     iget-wide v0, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v0, v1}, Landroid/database/sqlite/SQLiteConnection;->nativeCancel(J)V
 
-    .line 977
+    .line 979
     return-void
 .end method
 
@@ -4163,10 +4184,10 @@
     .param p2, "outStatementInfo"    # Landroid/database/sqlite/SQLiteStatementInfo;
 
     .prologue
-    .line 494
+    .line 496
     if-nez p1, :cond_0
 
-    .line 495
+    .line 497
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v6, "sql must not be null."
@@ -4175,7 +4196,7 @@
 
     throw v5
 
-    .line 498
+    .line 500
     :cond_0
     iget-object v5, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
@@ -4187,7 +4208,7 @@
 
     move-result v1
 
-    .line 500
+    .line 502
     .local v1, "cookie":I
     :try_start_0
     invoke-direct {p0, p1}, Landroid/database/sqlite/SQLiteConnection;->acquirePreparedStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
@@ -4197,22 +4218,22 @@
 
     move-result-object v4
 
-    .line 502
+    .line 504
     .local v4, "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     if-eqz p2, :cond_1
 
-    .line 503
+    .line 505
     :try_start_1
     iget v5, v4, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mNumParameters:I
 
     iput v5, p2, Landroid/database/sqlite/SQLiteStatementInfo;->numParameters:I
 
-    .line 504
+    .line 506
     iget-boolean v5, v4, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mReadOnly:Z
 
     iput-boolean v5, p2, Landroid/database/sqlite/SQLiteStatementInfo;->readOnly:Z
 
-    .line 506
+    .line 508
     iget-wide v6, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     iget-wide v8, v4, Landroid/database/sqlite/SQLiteConnection$PreparedStatement;->mStatementPtr:J
@@ -4221,18 +4242,18 @@
 
     move-result v0
 
-    .line 508
+    .line 510
     .local v0, "columnCount":I
     if-nez v0, :cond_2
 
-    .line 509
+    .line 511
     sget-object v5, Landroid/database/sqlite/SQLiteConnection;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
     iput-object v5, p2, Landroid/database/sqlite/SQLiteStatementInfo;->columnNames:[Ljava/lang/String;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 519
+    .line 521
     .end local v0    # "columnCount":I
     :cond_1
     :try_start_2
@@ -4241,15 +4262,15 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 525
+    .line 527
     iget-object v5, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v5, v1}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->endOperation(I)V
 
-    .line 527
+    .line 529
     return-void
 
-    .line 511
+    .line 513
     .restart local v0    # "columnCount":I
     :cond_2
     :try_start_3
@@ -4257,14 +4278,14 @@
 
     iput-object v5, p2, Landroid/database/sqlite/SQLiteStatementInfo;->columnNames:[Ljava/lang/String;
 
-    .line 512
+    .line 514
     const/4 v3, 0x0
 
     .local v3, "i":I
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 513
+    .line 515
     iget-object v5, p2, Landroid/database/sqlite/SQLiteStatementInfo;->columnNames:[Ljava/lang/String;
 
     iget-wide v6, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
@@ -4279,12 +4300,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 512
+    .line 514
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 519
+    .line 521
     .end local v0    # "columnCount":I
     .end local v3    # "i":I
     :catchall_0
@@ -4298,24 +4319,24 @@
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 521
+    .line 523
     .end local v4    # "statement":Landroid/database/sqlite/SQLiteConnection$PreparedStatement;
     :catch_0
     move-exception v2
 
-    .line 522
+    .line 524
     .local v2, "ex":Ljava/lang/RuntimeException;
     :try_start_5
     iget-object v5, p0, Landroid/database/sqlite/SQLiteConnection;->mRecentOperations:Landroid/database/sqlite/SQLiteConnection$OperationLog;
 
     invoke-virtual {v5, v1, v2}, Landroid/database/sqlite/SQLiteConnection$OperationLog;->failOperation(ILjava/lang/Exception;)V
 
-    .line 523
+    .line 525
     throw v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 525
+    .line 527
     .end local v2    # "ex":Ljava/lang/RuntimeException;
     :catchall_1
     move-exception v5
@@ -4336,17 +4357,17 @@
 
     const/4 v7, 0x0
 
-    .line 400
+    .line 402
     iput-boolean v7, p0, Landroid/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
-    .line 403
+    .line 405
     iget-object v8, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 404
+    .line 406
     .local v2, "functionCount":I
     const/4 v3, 0x0
 
@@ -4354,7 +4375,7 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 405
+    .line 407
     iget-object v8, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->customFunctions:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4363,7 +4384,7 @@
 
     check-cast v1, Landroid/database/sqlite/SQLiteCustomFunction;
 
-    .line 406
+    .line 408
     .local v1, "function":Landroid/database/sqlite/SQLiteCustomFunction;
     iget-object v8, p0, Landroid/database/sqlite/SQLiteConnection;->mConfiguration:Landroid/database/sqlite/SQLiteDatabaseConfiguration;
 
@@ -4375,18 +4396,18 @@
 
     if-nez v8, :cond_0
 
-    .line 407
+    .line 409
     iget-wide v8, p0, Landroid/database/sqlite/SQLiteConnection;->mConnectionPtr:J
 
     invoke-static {v8, v9, v1}, Landroid/database/sqlite/SQLiteConnection;->nativeRegisterCustomFunction(JLandroid/database/sqlite/SQLiteCustomFunction;)V
 
-    .line 404
+    .line 406
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 412
+    .line 414
     .end local v1    # "function":Landroid/database/sqlite/SQLiteCustomFunction;
     :cond_1
     iget-boolean v8, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->foreignKeyConstraintsEnabled:Z
@@ -4399,7 +4420,7 @@
 
     move v0, v6
 
-    .line 414
+    .line 416
     .local v0, "foreignKeyModeChanged":Z
     :goto_1
     iget v8, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->openFlags:I
@@ -4418,7 +4439,7 @@
 
     move v5, v6
 
-    .line 416
+    .line 418
     .local v5, "walModeChanged":Z
     :goto_2
     iget-object v8, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->locale:Ljava/util/Locale;
@@ -4435,41 +4456,41 @@
 
     move v4, v6
 
-    .line 419
+    .line 421
     .local v4, "localeChanged":Z
     :goto_3
     iget-object v6, p0, Landroid/database/sqlite/SQLiteConnection;->mConfiguration:Landroid/database/sqlite/SQLiteDatabaseConfiguration;
 
     invoke-virtual {v6, p1}, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->updateParametersFrom(Landroid/database/sqlite/SQLiteDatabaseConfiguration;)V
 
-    .line 422
+    .line 424
     iget-object v6, p0, Landroid/database/sqlite/SQLiteConnection;->mPreparedStatementCache:Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;
 
     iget v7, p1, Landroid/database/sqlite/SQLiteDatabaseConfiguration;->maxSqlCacheSize:I
 
     invoke-virtual {v6, v7}, Landroid/database/sqlite/SQLiteConnection$PreparedStatementCache;->resize(I)V
 
-    .line 425
+    .line 427
     if-eqz v0, :cond_2
 
-    .line 426
+    .line 428
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteConnection;->setForeignKeyModeFromConfiguration()V
 
-    .line 430
+    .line 432
     :cond_2
     if-eqz v5, :cond_3
 
-    .line 431
+    .line 433
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteConnection;->setWalModeFromConfiguration()V
 
-    .line 435
+    .line 437
     :cond_3
     if-eqz v4, :cond_4
 
-    .line 436
+    .line 438
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteConnection;->setLocaleFromConfiguration()V
 
-    .line 438
+    .line 440
     :cond_4
     return-void
 
@@ -4479,21 +4500,21 @@
     :cond_5
     move v0, v7
 
-    .line 412
+    .line 414
     goto :goto_1
 
     .restart local v0    # "foreignKeyModeChanged":Z
     :cond_6
     move v5, v7
 
-    .line 414
+    .line 416
     goto :goto_2
 
     .restart local v5    # "walModeChanged":Z
     :cond_7
     move v4, v7
 
-    .line 416
+    .line 418
     goto :goto_3
 .end method
 
@@ -4502,10 +4523,10 @@
     .param p1, "readOnly"    # Z
 
     .prologue
-    .line 444
+    .line 446
     iput-boolean p1, p0, Landroid/database/sqlite/SQLiteConnection;->mOnlyAllowReadOnlyOperations:Z
 
-    .line 445
+    .line 447
     return-void
 .end method
 
@@ -4513,7 +4534,7 @@
     .locals 2
 
     .prologue
-    .line 1178
+    .line 1180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

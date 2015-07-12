@@ -532,7 +532,7 @@
 .end method
 
 .method final internalAddCall(Landroid/telecom/ParcelableCall;)V
-    .locals 6
+    .locals 4
     .param p1, "parcelableCall"    # Landroid/telecom/ParcelableCall;
 
     .prologue
@@ -541,19 +541,13 @@
 
     invoke-virtual {p1}, Landroid/telecom/ParcelableCall;->getId()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v3, p0, Landroid/telecom/Phone;->mInCallAdapter:Landroid/telecom/InCallAdapter;
+    iget-object v2, p0, Landroid/telecom/Phone;->mInCallAdapter:Landroid/telecom/InCallAdapter;
 
-    iget-boolean v4, p1, Landroid/telecom/ParcelableCall;->mIsActiveSub:Z
+    iget-boolean v3, p1, Landroid/telecom/ParcelableCall;->mIsActiveSub:Z
 
-    invoke-virtual {p1}, Landroid/telecom/ParcelableCall;->getState()I
-
-    move-result v5
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v5}, Landroid/telecom/Call;-><init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;ZI)V
+    invoke-direct {v0, p0, v1, v2, v3}, Landroid/telecom/Call;-><init>(Landroid/telecom/Phone;Ljava/lang/String;Landroid/telecom/InCallAdapter;Z)V
 
     .line 116
     .local v0, "call":Landroid/telecom/Call;

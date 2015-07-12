@@ -958,7 +958,7 @@
     invoke-virtual/range {v24 .. v25}, Landroid/widget/DayPickerView;->setCalendarTextColor(Landroid/content/res/ColorStateList;)V
 
     .line 203
-    const v24, 0x1040680
+    const v24, 0x10406e9
 
     move-object/from16 v0, v21
 
@@ -975,7 +975,7 @@
     iput-object v0, v1, Landroid/widget/DatePickerCalendarDelegate;->mDayPickerDescription:Ljava/lang/String;
 
     .line 204
-    const v24, 0x1040682
+    const v24, 0x10406eb
 
     move-object/from16 v0, v21
 
@@ -992,7 +992,7 @@
     iput-object v0, v1, Landroid/widget/DatePickerCalendarDelegate;->mSelectDay:Ljava/lang/String;
 
     .line 205
-    const v24, 0x1040681
+    const v24, 0x10406ea
 
     move-object/from16 v0, v21
 
@@ -1009,7 +1009,7 @@
     iput-object v0, v1, Landroid/widget/DatePickerCalendarDelegate;->mYearPickerDescription:Ljava/lang/String;
 
     .line 206
-    const v24, 0x1040683
+    const v24, 0x10406ec
 
     move-object/from16 v0, v21
 

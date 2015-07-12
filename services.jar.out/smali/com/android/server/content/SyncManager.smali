@@ -4444,7 +4444,7 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 3321
+    .line 3322
     :try_start_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager;->mContext:Landroid/content/Context;
 
@@ -4462,15 +4462,15 @@
 
     move-result-object v1
 
-    .line 3324
+    .line 3325
     :goto_0
     return-object v1
 
-    .line 3322
+    .line 3323
     :catch_0
     move-exception v0
 
-    .line 3324
+    .line 3325
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     iget-object v1, p0, Lcom/android/server/content/SyncManager;->mContext:Landroid/content/Context;
 
@@ -4788,7 +4788,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 3214
+    .line 3215
     const-string v1, "expedited"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4797,12 +4797,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 3253
+    .line 3254
     :cond_0
     :goto_0
     return v0
 
-    .line 3217
+    .line 3218
     :cond_1
     const-string v1, "ignore_settings"
 
@@ -4812,7 +4812,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3220
+    .line 3221
     const-string v1, "ignore_backoff"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4821,7 +4821,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3223
+    .line 3224
     const-string v1, "do_not_retry"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4830,7 +4830,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3226
+    .line 3227
     const-string v1, "force"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4839,7 +4839,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3229
+    .line 3230
     const-string v1, "upload"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4848,7 +4848,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3232
+    .line 3233
     const-string v1, "deletions_override"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4857,7 +4857,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3235
+    .line 3236
     const-string v1, "discard_deletions"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4866,7 +4866,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3238
+    .line 3239
     const-string v1, "expected_upload"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4875,7 +4875,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3241
+    .line 3242
     const-string v1, "expected_download"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4884,7 +4884,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3244
+    .line 3245
     const-string v1, "sync_priority"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4893,7 +4893,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3247
+    .line 3248
     const-string v1, "allow_metered"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4902,7 +4902,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3250
+    .line 3251
     const-string v1, "initialize"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4911,7 +4911,7 @@
 
     if-nez v1, :cond_0
 
-    .line 3253
+    .line 3254
     const/4 v0, 0x0
 
     goto :goto_0
@@ -4922,7 +4922,7 @@
     .param p1, "activeSyncContext"    # Lcom/android/server/content/SyncManager$ActiveSyncContext;
 
     .prologue
-    .line 3171
+    .line 3172
     iget-object v2, p0, Lcom/android/server/content/SyncManager;->mActiveSyncContexts:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -4943,14 +4943,14 @@
 
     check-cast v1, Lcom/android/server/content/SyncManager$ActiveSyncContext;
 
-    .line 3172
+    .line 3173
     .local v1, "sync":Lcom/android/server/content/SyncManager$ActiveSyncContext;
     if-ne v1, p1, :cond_0
 
-    .line 3173
+    .line 3174
     const/4 v2, 0x1
 
-    .line 3176
+    .line 3177
     .end local v1    # "sync":Lcom/android/server/content/SyncManager$ActiveSyncContext;
     :goto_0
     return v2
@@ -5614,15 +5614,15 @@
 
     const/4 v5, 0x0
 
-    .line 3186
+    .line 3187
     if-ne p0, p1, :cond_1
 
-    .line 3206
+    .line 3207
     :cond_0
     :goto_0
     return v4
 
-    .line 3190
+    .line 3191
     :cond_1
     if-eqz p2, :cond_2
 
@@ -5638,10 +5638,10 @@
 
     move v4, v5
 
-    .line 3191
+    .line 3192
     goto :goto_0
 
-    .line 3193
+    .line 3194
     :cond_2
     invoke-virtual {p0}, Landroid/os/Bundle;->size()I
 
@@ -5655,7 +5655,7 @@
 
     move-object v0, p0
 
-    .line 3194
+    .line 3195
     .local v0, "bigger":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {p0}, Landroid/os/Bundle;->size()I
@@ -5670,7 +5670,7 @@
 
     move-object v3, p1
 
-    .line 3195
+    .line 3196
     .local v3, "smaller":Landroid/os/Bundle;
     :goto_2
     invoke-virtual {v0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -5695,7 +5695,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3196
+    .line 3197
     .local v2, "key":Ljava/lang/String;
     if-nez p2, :cond_4
 
@@ -5705,7 +5705,7 @@
 
     if-nez v6, :cond_3
 
-    .line 3199
+    .line 3200
     :cond_4
     invoke-virtual {v3, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -5715,7 +5715,7 @@
 
     move v4, v5
 
-    .line 3200
+    .line 3201
     goto :goto_0
 
     .end local v0    # "bigger":Landroid/os/Bundle;
@@ -5725,17 +5725,17 @@
     :cond_5
     move-object v0, p1
 
-    .line 3193
+    .line 3194
     goto :goto_1
 
     .restart local v0    # "bigger":Landroid/os/Bundle;
     :cond_6
     move-object v3, p0
 
-    .line 3194
+    .line 3195
     goto :goto_2
 
-    .line 3202
+    .line 3203
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "key":Ljava/lang/String;
     .restart local v3    # "smaller":Landroid/os/Bundle;
@@ -5756,7 +5756,7 @@
 
     move v4, v5
 
-    .line 3203
+    .line 3204
     goto :goto_0
 .end method
 

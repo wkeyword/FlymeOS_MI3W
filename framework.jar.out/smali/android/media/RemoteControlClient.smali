@@ -917,7 +917,7 @@
     .line 1231
     const-string v0, "RemoteControlClient"
 
-    const-string v2, "mSetBrowsedPlayerListener.onSetBrowsedPlayer"
+    const-string/jumbo v2, "mSetBrowsedPlayerListener.onSetBrowsedPlayer"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -971,7 +971,7 @@
     .line 1221
     const-string v0, "RemoteControlClient"
 
-    const-string v2, "mSetPlayItemListener.onSetPlayItem"
+    const-string/jumbo v2, "mSetPlayItemListener.onSetPlayItem"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 

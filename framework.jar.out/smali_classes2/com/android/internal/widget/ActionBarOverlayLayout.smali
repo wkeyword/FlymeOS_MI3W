@@ -2522,7 +2522,7 @@
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mContent:Landroid/view/View;
 
     .line 573
-    const v0, 0x1020378
+    const v0, 0x1020379
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2533,7 +2533,7 @@
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mActionBarTop:Lcom/android/internal/widget/ActionBarContainer;
 
     .line 575
-    const v0, 0x1020379
+    const v0, 0x102037a
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2546,7 +2546,7 @@
     iput-object v0, p0, Lcom/android/internal/widget/ActionBarOverlayLayout;->mDecorToolbar:Lcom/android/internal/widget/DecorToolbar;
 
     .line 576
-    const v0, 0x102037b
+    const v0, 0x102037c
 
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/ActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 
@@ -2980,7 +2980,7 @@
 
     move-result-object v3
 
-    const v4, 0x1120008
+    const v4, 0x1120007
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3024,7 +3024,7 @@
     invoke-interface {v3, v2}, Lcom/android/internal/widget/DecorToolbar;->setSplitWhenNarrow(Z)V
 
     .line 711
-    const v3, 0x102037a
+    const v3, 0x102037b
 
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/ActionBarOverlayLayout;->findViewById(I)Landroid/view/View;
 

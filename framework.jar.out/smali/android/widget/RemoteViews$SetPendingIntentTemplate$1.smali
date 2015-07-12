@@ -141,7 +141,6 @@
     if-eqz v1, :cond_1
 
     .line 488
-    # invokes: Landroid/widget/RemoteViews;->getSourceBounds(Landroid/view/View;)Landroid/graphics/Rect;
     invoke-static {p2}, Landroid/widget/RemoteViews;->access$200(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v4

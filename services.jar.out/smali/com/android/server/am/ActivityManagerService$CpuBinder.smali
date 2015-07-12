@@ -24,13 +24,13 @@
     .param p1, "activityManagerService"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 2224
+    .line 2292
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 2225
+    .line 2293
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 2226
+    .line 2294
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 2230
+    .line 2298
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     const-string v1, "android.permission.DUMP"
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2232
+    .line 2300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,11 +105,11 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2243
+    .line 2311
     :goto_0
     return-void
 
-    .line 2238
+    .line 2306
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -117,7 +117,7 @@
 
     monitor-enter v1
 
-    .line 2239
+    .line 2307
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2240
+    .line 2308
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcessCpuTracker:Lcom/android/internal/os/ProcessCpuTracker;
@@ -144,7 +144,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2242
+    .line 2310
     monitor-exit v1
 
     goto :goto_0

@@ -9,6 +9,9 @@ import /init.usb.rc
 import /init.${ro.hardware}.rc
 import /init.${ro.zygote}.rc
 import /init.trace.rc
+# Include CM's extra init file
+import /init.cm.rc
+
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -257,6 +260,7 @@ on post-fs-data
     # create basic filesystem structure
     mkdir /data/misc 01771 system misc
     mkdir /data/misc/adb 02750 system shell
+    mkdir /data/misc/audit 02750 audit system
     mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
     mkdir /data/misc/bluetooth 0770 system system
     mkdir /data/misc/keystore 0700 keystore keystore
@@ -320,6 +324,9 @@ on post-fs-data
 
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /data
+    restorecon /data/data
+    restorecon /data/user
+    restorecon /data/user/0
 
     # If there is no fs-post-data action in the init.<device>.rc file, you
     # must uncomment this line, otherwise encrypted filesystems
@@ -418,8 +425,6 @@ on boot
     # Define default initial receive window size in segments.
     setprop net.tcp.default_init_rwnd 60
 
-    start sysinit
-
     class_start core
 
 on nonencrypted
@@ -500,6 +505,10 @@ service console /system/bin/sh
     group shell log
     seclabel u:r:shell:s0
 
+service auditd /system/bin/auditd -k
+    seclabel u:r:logd:s0
+    class main
+
 on property:ro.debuggable=1
     start console
 
@@ -553,7 +562,7 @@ service ril-daemon /system/bin/rild
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw
+    group radio cache inet misc audio sdcard_rw qcom_diag log
 
 service surfaceflinger /system/bin/surfaceflinger
     class core
@@ -565,10 +574,6 @@ service drm /system/bin/drmserver
     class main
     user drm
     group drm system inet drmrpc
-
-service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
-    disabled
-    oneshot
 
 service media /system/bin/mediaserver
     class main
@@ -601,10 +606,15 @@ service installd /system/bin/installd
     class main
     socket installd stream 600 system system
 
-service flash_recovery /system/bin/install-recovery.sh
+service flash_recovery /system/etc/install-cm-recovery.sh
     class main
     seclabel u:r:install_recovery:s0
     oneshot
+    disabled
+
+# update recovery if enabled
+on property:persist.sys.recovery_update=true
+    start flash_recovery
 
 service racoon /system/bin/racoon
     class main

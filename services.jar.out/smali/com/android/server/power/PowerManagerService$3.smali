@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2304
+    .line 2325
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/power/PowerManagerService$3;->val$shutdown:Z
@@ -52,20 +52,20 @@
     .locals 3
 
     .prologue
-    .line 2307
+    .line 2328
     monitor-enter p0
 
-    .line 2308
+    .line 2329
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/power/PowerManagerService$3;->val$shutdown:Z
 
     if-eqz v0, :cond_0
 
-    .line 2309
+    .line 2330
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$100(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$700(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -73,19 +73,19 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->shutdown(Landroid/content/Context;Z)V
 
-    .line 2313
+    .line 2334
     :goto_0
     monitor-exit p0
 
-    .line 2314
+    .line 2335
     return-void
 
-    .line 2311
+    .line 2332
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$100(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$700(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
 
     goto :goto_0
 
-    .line 2313
+    .line 2334
     :catchall_0
     move-exception v0
 

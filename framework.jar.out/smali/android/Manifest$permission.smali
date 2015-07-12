@@ -173,6 +173,8 @@
 
 .field public static final CHANGE_NETWORK_STATE:Ljava/lang/String; = "android.permission.CHANGE_NETWORK_STATE"
 
+.field public static final CHANGE_PHONE_BLACKLIST:Ljava/lang/String; = "android.permission.CHANGE_PHONE_BLACKLIST"
+
 .field public static final CHANGE_WIFI_MULTICAST_STATE:Ljava/lang/String; = "android.permission.CHANGE_WIFI_MULTICAST_STATE"
 
 .field public static final CHANGE_WIFI_STATE:Ljava/lang/String; = "android.permission.CHANGE_WIFI_STATE"
@@ -249,6 +251,8 @@
 .field public static final GLOBAL_SEARCH_CONTROL:Ljava/lang/String; = "android.permission.GLOBAL_SEARCH_CONTROL"
 
 .field public static final GRANT_REVOKE_PERMISSIONS:Ljava/lang/String; = "android.permission.GRANT_REVOKE_PERMISSIONS"
+
+.field public static final HARDWARE_ABSTRACTION_ACCESS:Ljava/lang/String; = "android.permission.HARDWARE_ABSTRACTION_ACCESS"
 
 .field public static final HARDWARE_TEST:Ljava/lang/String; = "android.permission.HARDWARE_TEST"
 
@@ -376,6 +380,8 @@
 
 .field public static final READ_NETWORK_USAGE_HISTORY:Ljava/lang/String; = "android.permission.READ_NETWORK_USAGE_HISTORY"
 
+.field public static final READ_PHONE_BLACKLIST:Ljava/lang/String; = "android.permission.READ_PHONE_BLACKLIST"
+
 .field public static final READ_PHONE_STATE:Ljava/lang/String; = "android.permission.READ_PHONE_STATE"
 
 .field public static final READ_PRECISE_PHONE_STATE:Ljava/lang/String; = "android.permission.READ_PRECISE_PHONE_STATE"
@@ -463,6 +469,8 @@
 .field public static final SET_INPUT_CALIBRATION:Ljava/lang/String; = "android.permission.SET_INPUT_CALIBRATION"
 
 .field public static final SET_KEYBOARD_LAYOUT:Ljava/lang/String; = "android.permission.SET_KEYBOARD_LAYOUT"
+
+.field public static final SET_KEYGUARD_WALLPAPER:Ljava/lang/String; = "android.permission.SET_KEYGUARD_WALLPAPER"
 
 .field public static final SET_ORIENTATION:Ljava/lang/String; = "android.permission.SET_ORIENTATION"
 

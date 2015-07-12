@@ -59,7 +59,6 @@
     .line 1195
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$DropDownItemClickListener;->this$0:Landroid/widget/AutoCompleteTextView;
 
-    # invokes: Landroid/widget/AutoCompleteTextView;->performCompletion(Landroid/view/View;IJ)V
     invoke-static {v0, p2, p3, p4, p5}, Landroid/widget/AutoCompleteTextView;->access$500(Landroid/widget/AutoCompleteTextView;Landroid/view/View;IJ)V
 
     .line 1196

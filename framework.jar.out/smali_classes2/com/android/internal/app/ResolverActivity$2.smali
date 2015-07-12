@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 275
+    .line 276
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +41,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 278
+    .line 279
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$2;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 279
+    .line 280
     return-void
 .end method

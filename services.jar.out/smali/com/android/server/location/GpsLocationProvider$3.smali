@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 441
+    .line 430
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$3;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Lcom/android/server/location/GpsMeasurementsProvider;-><init>()V
@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 444
+    .line 433
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_is_measurement_supported()Z
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$100()Z
 
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 449
+    .line 438
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$3;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_start_measurement_collection()Z
@@ -65,12 +65,12 @@
     .locals 1
 
     .prologue
-    .line 454
+    .line 443
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$3;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # invokes: Lcom/android/server/location/GpsLocationProvider;->native_stop_measurement_collection()Z
     invoke-static {v0}, Lcom/android/server/location/GpsLocationProvider;->access$300(Lcom/android/server/location/GpsLocationProvider;)Z
 
-    .line 455
+    .line 444
     return-void
 .end method

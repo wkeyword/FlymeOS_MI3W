@@ -153,14 +153,14 @@
 
     .prologue
     .line 473
-    invoke-static {}, Landroid/net/TrafficStats;->getMobileTxPackets()J
+    invoke-static {}, Landroid/net/TrafficStats;->getMobileTcpTxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$TxRxSum;->txPkts:J
 
     .line 474
-    invoke-static {}, Landroid/net/TrafficStats;->getMobileRxPackets()J
+    invoke-static {}, Landroid/net/TrafficStats;->getMobileTcpRxPackets()J
 
     move-result-wide v0
 

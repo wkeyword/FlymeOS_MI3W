@@ -46,7 +46,6 @@
     .line 2036
     iget-object v10, p0, Landroid/widget/NumberPicker$InputTextFilter;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v10}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v10
@@ -135,7 +134,6 @@
     :cond_1
     iget-object v10, p0, Landroid/widget/NumberPicker$InputTextFilter;->this$0:Landroid/widget/NumberPicker;
 
-    # invokes: Landroid/widget/NumberPicker;->getSelectedPos(Ljava/lang/String;)I
     invoke-static {v10, v6}, Landroid/widget/NumberPicker;->access$1000(Landroid/widget/NumberPicker;Ljava/lang/String;)I
 
     move-result v8
@@ -144,7 +142,6 @@
     .local v8, "val":I
     iget-object v10, p0, Landroid/widget/NumberPicker$InputTextFilter;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMaxValue:I
     invoke-static {v10}, Landroid/widget/NumberPicker;->access$1100(Landroid/widget/NumberPicker;)I
 
     move-result v10
@@ -157,7 +154,6 @@
 
     iget-object v11, p0, Landroid/widget/NumberPicker$InputTextFilter;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mMaxValue:I
     invoke-static {v11}, Landroid/widget/NumberPicker;->access$1100(Landroid/widget/NumberPicker;)I
 
     move-result v11
@@ -272,7 +268,6 @@
     .local v7, "str":Ljava/lang/String;
     iget-object v10, p0, Landroid/widget/NumberPicker$InputTextFilter;->this$0:Landroid/widget/NumberPicker;
 
-    # getter for: Landroid/widget/NumberPicker;->mDisplayedValues:[Ljava/lang/String;
     invoke-static {v10}, Landroid/widget/NumberPicker;->access$900(Landroid/widget/NumberPicker;)[Ljava/lang/String;
 
     move-result-object v2
@@ -314,7 +309,6 @@
 
     move-result v12
 
-    # invokes: Landroid/widget/NumberPicker;->postSetSelectionCommand(II)V
     invoke-static {v10, v11, v12}, Landroid/widget/NumberPicker;->access$1200(Landroid/widget/NumberPicker;II)V
 
     .line 2074
@@ -350,7 +344,6 @@
 
     .prologue
     .line 2030
-    # getter for: Landroid/widget/NumberPicker;->DIGIT_CHARACTERS:[C
     invoke-static {}, Landroid/widget/NumberPicker;->access$800()[C
 
     move-result-object v0

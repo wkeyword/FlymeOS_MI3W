@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 97
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 99
+    .line 94
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .param p2, "isVoip"    # Z
 
     .prologue
-    .line 112
+    .line 107
     return-void
 .end method
 
@@ -54,7 +54,17 @@
     .param p2, "callCapabilities"    # I
 
     .prologue
-    .line 109
+    .line 103
+    return-void
+.end method
+
+.method public onCallPropertiesChanged(Landroid/telecom/Connection;I)V
+    .locals 0
+    .param p1, "c"    # Landroid/telecom/Connection;
+    .param p2, "callProperties"    # I
+
+    .prologue
+    .line 104
     return-void
 .end method
 
@@ -64,7 +74,7 @@
     .param p2, "substate"    # I
 
     .prologue
-    .line 118
+    .line 113
     return-void
 .end method
 
@@ -75,7 +85,7 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 102
+    .line 97
     return-void
 .end method
 
@@ -85,7 +95,7 @@
     .param p2, "conference"    # Landroid/telecom/Conference;
 
     .prologue
-    .line 116
+    .line 111
     return-void
 .end method
 
@@ -104,7 +114,7 @@
     .end annotation
 
     .prologue
-    .line 121
+    .line 116
     .local p2, "participants":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/ConferenceParticipant;>;"
     return-void
 .end method
@@ -124,7 +134,7 @@
     .end annotation
 
     .prologue
-    .line 115
+    .line 110
     .local p2, "conferenceables":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/IConferenceable;>;"
     return-void
 .end method
@@ -134,7 +144,7 @@
     .param p1, "c"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 108
+    .line 102
     return-void
 .end method
 
@@ -144,7 +154,7 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 104
+    .line 99
     return-void
 .end method
 
@@ -154,7 +164,7 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 100
+    .line 95
     return-void
 .end method
 
@@ -164,7 +174,7 @@
     .param p2, "pHandle"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 117
+    .line 112
     return-void
 .end method
 
@@ -174,7 +184,7 @@
     .param p2, "remaining"    # Ljava/lang/String;
 
     .prologue
-    .line 106
+    .line 100
     return-void
 .end method
 
@@ -184,17 +194,7 @@
     .param p2, "ringback"    # Z
 
     .prologue
-    .line 107
-    return-void
-.end method
-
-.method public onSsNotificationData(II)V
-    .locals 0
-    .param p1, "type"    # I
-    .param p2, "code"    # I
-
-    .prologue
-    .line 105
+    .line 101
     return-void
 .end method
 
@@ -204,7 +204,7 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 98
+    .line 93
     return-void
 .end method
 
@@ -214,7 +214,7 @@
     .param p2, "statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 113
+    .line 108
     return-void
 .end method
 
@@ -224,7 +224,7 @@
     .param p2, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 111
+    .line 106
     return-void
 .end method
 
@@ -234,6 +234,6 @@
     .param p2, "videoState"    # I
 
     .prologue
-    .line 103
+    .line 98
     return-void
 .end method

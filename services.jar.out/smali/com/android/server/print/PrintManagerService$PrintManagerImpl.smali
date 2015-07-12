@@ -729,7 +729,7 @@
 
     invoke-direct {v2, v9}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x1080435
+    const v3, 0x1080437
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -739,7 +739,7 @@
 
     iget-object v3, v0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->mContext:Landroid/content/Context;
 
-    const v5, 0x104066e
+    const v5, 0x10406d7
 
     const/4 v6, 0x1
 
@@ -761,7 +761,7 @@
 
     iget-object v3, v0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->mContext:Landroid/content/Context;
 
-    const v5, 0x104066f
+    const v5, 0x10406d8
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

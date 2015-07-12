@@ -106,8 +106,6 @@
 
 .field static final TRANSACTION_remoteControlDisplayWantsPlaybackPositionSync:I = 0x2f
 
-.field static final TRANSACTION_removeMediaPlayerAndUpdateRemoteController:I = 0x48
-
 .field static final TRANSACTION_requestAudioFocus:I = 0x27
 
 .field static final TRANSACTION_setBluetoothA2dpDeviceConnectionState:I = 0x38
@@ -260,7 +258,7 @@
     .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 796
+    .line 787
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -2795,30 +2793,6 @@
 
     goto/16 :goto_0
 
-    .line 788
-    .end local v1    # "_arg0":Ljava/lang/String;
-    :sswitch_48
-    const-string v0, "android.media.IAudioService"
-
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 790
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 791
-    .restart local v1    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v1}, Landroid/media/IAudioService$Stub;->removeMediaPlayerAndUpdateRemoteController(Ljava/lang/String;)V
-
-    .line 792
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 793
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
-
     .line 41
     :sswitch_data_0
     .sparse-switch
@@ -2893,7 +2867,6 @@
         0x45 -> :sswitch_45
         0x46 -> :sswitch_46
         0x47 -> :sswitch_47
-        0x48 -> :sswitch_48
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

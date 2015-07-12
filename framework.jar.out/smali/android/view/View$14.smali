@@ -29,7 +29,7 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 19569
+    .line 19561
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +42,7 @@
     .param p1, "object"    # Landroid/view/View;
 
     .prologue
-    .line 19577
+    .line 19569
     invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
 
     move-result v0
@@ -59,7 +59,7 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 19569
+    .line 19561
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -76,10 +76,10 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 19572
+    .line 19564
     invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
 
-    .line 19573
+    .line 19565
     return-void
 .end method
 
@@ -89,7 +89,7 @@
     .param p2, "x1"    # F
 
     .prologue
-    .line 19569
+    .line 19561
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "x0":Ljava/lang/Object;

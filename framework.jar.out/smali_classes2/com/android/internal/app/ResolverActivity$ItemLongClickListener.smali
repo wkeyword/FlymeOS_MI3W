@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 998
+    .line 1014
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$ItemLongClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +55,7 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v1, 0x1
 
-    .line 1002
+    .line 1018
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ItemLongClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     # getter for: Lcom/android/internal/app/ResolverActivity;->mListView:Landroid/widget/ListView;
@@ -69,17 +69,17 @@
 
     sub-int/2addr p3, v2
 
-    .line 1003
+    .line 1019
     if-gez p3, :cond_0
 
-    .line 1005
+    .line 1021
     const/4 v1, 0x0
 
-    .line 1009
+    .line 1025
     :goto_0
     return v1
 
-    .line 1007
+    .line 1023
     :cond_0
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ItemLongClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    .line 1008
+    .line 1024
     .local v0, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v2, p0, Lcom/android/internal/app/ResolverActivity$ItemLongClickListener;->this$0:Lcom/android/internal/app/ResolverActivity;
 

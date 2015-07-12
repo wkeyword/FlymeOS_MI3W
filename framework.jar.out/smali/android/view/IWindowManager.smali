@@ -215,6 +215,14 @@
     .end annotation
 .end method
 
+.method public abstract hasPermanentMenuKey()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract inKeyguardRestrictedInputMode()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -271,7 +279,7 @@
     .end annotation
 .end method
 
-.method public abstract keyguardGoingAway(ZZ)V
+.method public abstract keyguardGoingAway(ZZZ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -280,6 +288,14 @@
 .end method
 
 .method public abstract lockNow(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract needsNavigationBar()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

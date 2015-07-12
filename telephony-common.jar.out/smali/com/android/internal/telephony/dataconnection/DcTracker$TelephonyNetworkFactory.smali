@@ -43,26 +43,26 @@
     .param p6, "phone"    # Lcom/android/internal/telephony/PhoneBase;
 
     .prologue
-    .line 422
+    .line 420
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
-    .line 423
+    .line 421
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/net/NetworkFactory;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkCapabilities;)V
 
-    .line 419
+    .line 417
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
-    .line 424
+    .line 422
     iput-object p6, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
-    .line 425
+    .line 423
     iput-object p5, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 426
+    .line 424
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 540
+    .line 536
     iget-object v1, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/16 v2, 0xc
@@ -80,7 +80,7 @@
 
     move-result v0
 
-    .line 542
+    .line 538
     .local v0, "flag":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 543
+    .line 539
     return v0
 .end method
 
@@ -111,14 +111,14 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 535
+    .line 531
     iget-object v1, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v1}, Landroid/net/NetworkCapabilities;->getCapabilities()[I
 
     move-result-object v0
 
-    .line 536
+    .line 532
     .local v0, "types":[I
     array-length v1, v0
 
@@ -139,12 +139,12 @@
     .locals 4
 
     .prologue
-    .line 443
+    .line 441
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v0
 
-    .line 445
+    .line 443
     .local v0, "subController":Lcom/android/internal/telephony/SubscriptionController;
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -158,7 +158,7 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/internal/telephony/SubscriptionController;->registerForOnDemandDdsLockNotification(JLcom/android/internal/telephony/SubscriptionController$OnDemandDdsLockNotifier;)V
 
-    .line 452
+    .line 450
     return-void
 .end method
 
@@ -178,7 +178,7 @@
     .end annotation
 
     .prologue
-    .line 556
+    .line 552
     .local p1, "list":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/net/NetworkRequest;>;"
     iget v2, p2, Landroid/net/NetworkRequest;->requestId:I
 
@@ -188,11 +188,11 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 557
+    .line 553
     .local v1, "nr":Landroid/net/NetworkRequest;
     if-eqz v1, :cond_0
 
-    .line 558
+    .line 554
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,12 +213,12 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 559
+    .line 555
     iget v2, p2, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {p1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 560
+    .line 556
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->apnContextForNetworkRequest(Landroid/net/NetworkRequest;)Lcom/android/internal/telephony/dataconnection/ApnContext;
@@ -226,11 +226,11 @@
 
     move-result-object v0
 
-    .line 561
+    .line 557
     .local v0, "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v0, :cond_0
 
-    .line 562
+    .line 558
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,10 +251,10 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 563
+    .line 559
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/ApnContext;->decRefCount()V
 
-    .line 566
+    .line 562
     .end local v0    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     :cond_0
     return-void
@@ -265,39 +265,39 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 569
+    .line 565
     const-string v2, "Release the request from dds queue, if found"
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 570
+    .line 566
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     invoke-direct {p0, v2, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->removeRequestFromList(Landroid/util/SparseArray;Landroid/net/NetworkRequest;)V
 
-    .line 572
+    .line 568
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->isNetworkRequestForInternet(Landroid/net/NetworkRequest;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 573
+    .line 569
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v1
 
-    .line 574
+    .line 570
     .local v1, "subController":Lcom/android/internal/telephony/SubscriptionController;
     invoke-virtual {v1, p1}, Lcom/android/internal/telephony/SubscriptionController;->stopOnDemandDataSubscriptionRequest(Landroid/net/NetworkRequest;)V
 
-    .line 583
+    .line 579
     .end local v1    # "subController":Lcom/android/internal/telephony/SubscriptionController;
     :cond_0
     :goto_0
     return-void
 
-    .line 577
+    .line 573
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -306,11 +306,11 @@
 
     move-result-object v0
 
-    .line 578
+    .line 574
     .local v0, "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v0, :cond_0
 
-    .line 579
+    .line 575
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,7 +331,7 @@
 
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 580
+    .line 576
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/ApnContext;->decRefCount()V
 
     goto :goto_0
@@ -342,19 +342,19 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 547
+    .line 543
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->isNetworkRequestForInternet(Landroid/net/NetworkRequest;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 549
+    .line 545
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v0
 
-    .line 550
+    .line 546
     .local v0, "subController":Lcom/android/internal/telephony/SubscriptionController;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -376,10 +376,10 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 551
+    .line 547
     invoke-virtual {v0, p1}, Lcom/android/internal/telephony/SubscriptionController;->startOnDemandDataSubscriptionRequest(Landroid/net/NetworkRequest;)V
 
-    .line 553
+    .line 549
     .end local v0    # "subController":Lcom/android/internal/telephony/SubscriptionController;
     :cond_0
     return-void
@@ -392,7 +392,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 606
+    .line 602
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -419,7 +419,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
+    .line 603
     return-void
 .end method
 
@@ -429,7 +429,7 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 478
+    .line 474
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -450,12 +450,12 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 479
+    .line 475
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v1
 
-    .line 480
+    .line 476
     .local v1, "subController":Lcom/android/internal/telephony/SubscriptionController;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -477,12 +477,12 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 482
+    .line 478
     invoke-virtual {v1}, Lcom/android/internal/telephony/SubscriptionController;->getDefaultDataSubId()J
 
     move-result-wide v2
 
-    .line 483
+    .line 479
     .local v2, "currentDds":J
     iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -490,13 +490,13 @@
 
     move-result-wide v6
 
-    .line 484
+    .line 480
     .local v6, "subId":J
     invoke-virtual {v1, p1}, Lcom/android/internal/telephony/SubscriptionController;->getSubIdFromNetworkRequest(Landroid/net/NetworkRequest;)J
 
     move-result-wide v4
 
-    .line 486
+    .line 482
     .local v4, "requestedSpecifier":J
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -518,7 +518,7 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 487
+    .line 483
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -539,7 +539,7 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 488
+    .line 484
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -560,7 +560,7 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 489
+    .line 485
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -587,48 +587,48 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 491
+    .line 487
     const-wide/16 v8, 0x0
 
     cmp-long v8, v6, v8
 
     if-gez v8, :cond_1
 
-    .line 492
+    .line 488
     const-string v8, "Can\'t handle any network request now, subId not ready."
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 532
+    .line 528
     :cond_0
     :goto_0
     return-void
 
-    .line 499
+    .line 495
     :cond_1
     cmp-long v8, v4, v6
 
     if-eqz v8, :cond_2
 
-    .line 500
+    .line 496
     const-string v8, "requestedSpecifier is not same as mysubId. Bail out."
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 504
+    .line 500
     :cond_2
     cmp-long v8, v2, v4
 
     if-eqz v8, :cond_3
 
-    .line 505
+    .line 501
     const-string v8, "This request would result in DDS switch"
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 506
+    .line 502
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,19 +649,19 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 510
+    .line 506
     iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     iget v9, p1, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {v8, v9, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 511
+    .line 507
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->requestOnDemandDataSubscriptionLock(Landroid/net/NetworkRequest;)V
 
     goto :goto_0
 
-    .line 515
+    .line 511
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->isNetworkRequestForInternet(Landroid/net/NetworkRequest;)Z
 
@@ -669,7 +669,7 @@
 
     if-eqz v8, :cond_4
 
-    .line 516
+    .line 512
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +690,7 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 517
+    .line 513
     iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->apnContextForNetworkRequest(Landroid/net/NetworkRequest;)Lcom/android/internal/telephony/dataconnection/ApnContext;
@@ -698,11 +698,11 @@
 
     move-result-object v0
 
-    .line 518
+    .line 514
     .local v0, "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v0, :cond_0
 
-    .line 519
+    .line 515
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -723,12 +723,12 @@
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 520
+    .line 516
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/ApnContext;->incRefCount()V
 
     goto :goto_0
 
-    .line 523
+    .line 519
     .end local v0    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     :cond_4
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->isValidRequest(Landroid/net/NetworkRequest;)Z
@@ -737,19 +737,19 @@
 
     if-eqz v8, :cond_5
 
-    .line 525
+    .line 521
     iget-object v8, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     iget v9, p1, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {v8, v9, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 526
+    .line 522
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->requestOnDemandDataSubscriptionLock(Landroid/net/NetworkRequest;)V
 
     goto/16 :goto_0
 
-    .line 528
+    .line 524
     :cond_5
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -779,7 +779,7 @@
     .param p1, "n"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 429
+    .line 427
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -792,7 +792,7 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 430
+    .line 428
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -801,7 +801,7 @@
 
     check-cast v2, Landroid/net/NetworkRequest;
 
-    .line 431
+    .line 429
     .local v2, "nr":Landroid/net/NetworkRequest;
     invoke-virtual {v2, p1}, Landroid/net/NetworkRequest;->equals(Ljava/lang/Object;)Z
 
@@ -809,7 +809,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 432
+    .line 430
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +830,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 433
+    .line 431
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->apnContextForNetworkRequest(Landroid/net/NetworkRequest;)Lcom/android/internal/telephony/dataconnection/ApnContext;
@@ -838,11 +838,11 @@
 
     move-result-object v0
 
-    .line 434
+    .line 432
     .local v0, "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v0, :cond_0
 
-    .line 435
+    .line 433
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -863,17 +863,17 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 436
+    .line 434
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/ApnContext;->incRefCount()V
 
-    .line 429
+    .line 427
     .end local v0    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 440
+    .line 438
     .end local v2    # "nr":Landroid/net/NetworkRequest;
     :cond_1
     return-void
@@ -883,17 +883,17 @@
     .locals 5
 
     .prologue
-    .line 592
+    .line 588
     const-string v3, "releaseAllNetworkRequests"
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 593
+    .line 589
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v2
 
-    .line 594
+    .line 590
     .local v2, "subController":Lcom/android/internal/telephony/SubscriptionController;
     const/4 v0, 0x0
 
@@ -907,7 +907,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 595
+    .line 591
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -916,11 +916,11 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 596
+    .line 592
     .local v1, "nr":Landroid/net/NetworkRequest;
     if-eqz v1, :cond_0
 
-    .line 597
+    .line 593
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -941,23 +941,23 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 598
+    .line 594
     invoke-virtual {v2, v1}, Lcom/android/internal/telephony/SubscriptionController;->stopOnDemandDataSubscriptionRequest(Landroid/net/NetworkRequest;)V
 
-    .line 599
+    .line 595
     iget-object v3, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mDdsRequests:Landroid/util/SparseArray;
 
     iget v4, v1, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {v3, v4}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 594
+    .line 590
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 602
+    .line 598
     .end local v1    # "nr":Landroid/net/NetworkRequest;
     :cond_1
     return-void
@@ -968,7 +968,7 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 587
+    .line 583
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -989,10 +989,10 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 588
+    .line 584
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->removeRequestIfFound(Landroid/net/NetworkRequest;)V
 
-    .line 589
+    .line 585
     return-void
 .end method
 
@@ -1003,7 +1003,7 @@
     .prologue
     const/16 v3, 0xc
 
-    .line 455
+    .line 453
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1024,7 +1024,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 457
+    .line 455
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1047,25 +1047,7 @@
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->setNetworkSpecifier(Ljava/lang/String;)V
 
-    .line 458
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-lez v0, :cond_0
-
-    invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Lcom/android/internal/telephony/SubscriptionController;->getSubState(J)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
+    .line 456
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
 
     move-result-object v0
@@ -1078,7 +1060,7 @@
 
     if-nez v0, :cond_0
 
-    .line 461
+    .line 457
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1099,29 +1081,29 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 463
+    .line 459
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v0, v3}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 469
+    .line 465
     :goto_0
     const/16 v0, 0x32
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->setScoreFilter(I)V
 
-    .line 470
+    .line 466
     invoke-direct {p0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->registerOnDemandDdsCallback()V
 
-    .line 472
+    .line 468
     const-string v0, "Ready to handle network requests"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 473
+    .line 469
     return-void
 
-    .line 465
+    .line 461
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1143,7 +1125,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 466
+    .line 462
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$TelephonyNetworkFactory;->mNetworkCapabilities:Landroid/net/NetworkCapabilities;
 
     invoke-virtual {v0, v3}, Landroid/net/NetworkCapabilities;->removeCapability(I)Landroid/net/NetworkCapabilities;

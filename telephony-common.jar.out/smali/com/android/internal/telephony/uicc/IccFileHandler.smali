@@ -134,48 +134,48 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 469
+    .line 454
     const/4 v0, 0x0
 
-    .line 470
+    .line 455
     .local v0, "flag":Z
     iget-object v2, p2, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 471
+    .line 456
     .local v2, "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     iget-object v3, p2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v3, :cond_1
 
-    .line 472
+    .line 457
     iget-object v3, p2, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     invoke-direct {p0, p1, v4, v3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->sendResult(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 473
+    .line 458
     const/4 v0, 0x1
 
-    .line 481
+    .line 466
     :cond_0
     :goto_0
     return v0
 
-    .line 475
+    .line 460
     :cond_1
     invoke-virtual {v2}, Lcom/android/internal/telephony/uicc/IccIoResult;->getException()Lcom/android/internal/telephony/uicc/IccException;
 
     move-result-object v1
 
-    .line 476
+    .line 461
     .local v1, "iccException":Lcom/android/internal/telephony/uicc/IccException;
     if-eqz v1, :cond_0
 
-    .line 477
+    .line 462
     invoke-direct {p0, p1, v4, v1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->sendResult(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)V
 
-    .line 478
+    .line 463
     const/4 v0, 0x1
 
     goto :goto_0
@@ -188,18 +188,18 @@
     .param p3, "ex"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 458
+    .line 443
     if-nez p1, :cond_0
 
-    .line 465
+    .line 450
     :goto_0
     return-void
 
-    .line 462
+    .line 447
     :cond_0
     invoke-static {p1, p2, p3}, Landroid/os/AsyncResult;->forMessage(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)Landroid/os/AsyncResult;
 
-    .line 464
+    .line 449
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
@@ -220,40 +220,40 @@
     .param p1, "efid"    # I
 
     .prologue
-    .line 691
+    .line 717
     sparse-switch p1, :sswitch_data_0
 
-    .line 711
+    .line 737
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 700
+    .line 726
     :sswitch_0
     const-string v0, "3F007F10"
 
     goto :goto_0
 
-    .line 704
+    .line 730
     :sswitch_1
     const-string v0, "3F00"
 
     goto :goto_0
 
-    .line 707
+    .line 733
     :sswitch_2
     const-string v0, "3F007F105F3A"
 
     goto :goto_0
 
-    .line 709
+    .line 735
     :sswitch_3
     const-string v0, "3F007F105F50"
 
     goto :goto_0
 
-    .line 691
+    .line 717
     nop
 
     :sswitch_data_0
@@ -340,18 +340,18 @@
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 32
+    .locals 33
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 490
+    .line 475
     const/16 v30, 0x0
 
-    .line 498
+    .line 483
     .local v30, "response":Landroid/os/Message;
     const/4 v6, 0x0
 
-    .line 501
+    .line 486
     .local v6, "path":Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p1
@@ -360,12 +360,12 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 678
+    .line 704
     :cond_0
     :goto_0
     return-void
 
-    .line 503
+    .line 488
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -375,7 +375,7 @@
 
     check-cast v25, Landroid/os/AsyncResult;
 
-    .line 504
+    .line 489
     .local v25, "ar":Landroid/os/AsyncResult;
     move-object/from16 v0, v25
 
@@ -385,7 +385,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
 
-    .line 505
+    .line 490
     .local v28, "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
     move-object/from16 v0, v25
 
@@ -395,7 +395,7 @@
 
     check-cast v31, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 506
+    .line 491
     .local v31, "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     move-object/from16 v0, v28
 
@@ -403,7 +403,7 @@
 
     move-object/from16 v30, v0
 
-    .line 508
+    .line 493
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -420,33 +420,35 @@
 
     if-nez v3, :cond_0
 
-    .line 512
+    .line 497
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
 
     move-object/from16 v26, v0
 
-    .line 514
+    .line 499
     .local v26, "data":[B
-    const/4 v3, 0x4
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->isUiccTlvData([B)Z
 
-    const/4 v4, 0x6
+    move-result v3
 
-    aget-byte v4, v26, v4
+    if-eqz v3, :cond_2
 
-    if-ne v3, v4, :cond_1
+    .line 501
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->parse([B)Lcom/android/internal/telephony/uicc/UiccTlvData;
 
-    const/4 v3, 0x1
+    move-result-object v32
 
-    const/16 v4, 0xd
+    .line 503
+    .local v32, "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    invoke-virtual/range {v32 .. v32}, Lcom/android/internal/telephony/uicc/UiccTlvData;->isIncomplete()Z
 
-    aget-byte v4, v26, v4
+    move-result v3
 
-    if-eq v3, v4, :cond_2
+    if-eqz v3, :cond_1
 
-    .line 516
-    :cond_1
+    .line 504
     new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
 
     invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
@@ -455,19 +457,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 671
+    .line 697
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v26    # "data":[B
     .end local v28    # "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
     .end local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
+    .end local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
     :catch_0
     move-exception v27
 
-    .line 672
+    .line 698
     .local v27, "exc":Ljava/lang/Exception;
-    if-eqz v30, :cond_11
+    if-eqz v30, :cond_16
 
-    .line 673
+    .line 699
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -480,13 +483,14 @@
 
     goto :goto_0
 
-    .line 519
+    .line 507
     .end local v27    # "exc":Ljava/lang/Exception;
     .restart local v25    # "ar":Landroid/os/AsyncResult;
     .restart local v26    # "data":[B
     .restart local v28    # "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
     .restart local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
-    :cond_2
+    .restart local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    :cond_1
     const/4 v3, 0x3
 
     :try_start_1
@@ -494,8 +498,77 @@
 
     move-object/from16 v29, v0
 
-    .line 520
+    .line 508
     .local v29, "recordSize":[I
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v32
+
+    iget v4, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mRecordSize:I
+
+    aput v4, v29, v3
+
+    .line 509
+    const/4 v3, 0x1
+
+    move-object/from16 v0, v32
+
+    iget v4, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mFileSize:I
+
+    aput v4, v29, v3
+
+    .line 510
+    const/4 v3, 0x2
+
+    move-object/from16 v0, v32
+
+    iget v4, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mNumRecords:I
+
+    aput v4, v29, v3
+
+    .line 525
+    .end local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    :goto_1
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v30
+
+    move-object/from16 v2, v29
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->sendResult(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 512
+    .end local v29    # "recordSize":[I
+    :cond_2
+    const/4 v3, 0x4
+
+    const/4 v4, 0x6
+
+    aget-byte v4, v26, v4
+
+    if-ne v3, v4, :cond_3
+
+    const/4 v3, 0x1
+
+    const/16 v4, 0xd
+
+    aget-byte v4, v26, v4
+
+    if-ne v3, v4, :cond_3
+
+    .line 515
+    const/4 v3, 0x3
+
+    new-array v0, v3, [I
+
+    move-object/from16 v29, v0
+
+    .line 516
+    .restart local v29    # "recordSize":[I
     const/4 v3, 0x0
 
     const/16 v4, 0xe
@@ -506,7 +579,7 @@
 
     aput v4, v29, v3
 
-    .line 521
+    .line 517
     const/4 v3, 0x1
 
     const/4 v4, 0x2
@@ -527,7 +600,7 @@
 
     aput v4, v29, v3
 
-    .line 523
+    .line 519
     const/4 v3, 0x2
 
     const/4 v4, 0x1
@@ -542,24 +615,21 @@
 
     aput v4, v29, v3
 
-    .line 525
-    const/4 v3, 0x0
+    goto :goto_1
 
-    move-object/from16 v0, p0
+    .line 522
+    .end local v29    # "recordSize":[I
+    :cond_3
+    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
 
-    move-object/from16 v1, v30
+    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
 
-    move-object/from16 v2, v29
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->sendResult(Landroid/os/Message;Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    goto/16 :goto_0
+    throw v3
 
     .line 530
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v26    # "data":[B
     .end local v28    # "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
-    .end local v29    # "recordSize":[I
     .end local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     :pswitch_1
     move-object/from16 v0, p1
@@ -629,30 +699,24 @@
     iget-object v6, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mPath:Ljava/lang/String;
 
     .line 542
-    const/4 v3, 0x4
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->isUiccTlvData([B)Z
 
-    const/4 v4, 0x6
+    move-result v3
 
-    aget-byte v4, v26, v4
+    if-eqz v3, :cond_7
 
-    if-eq v3, v4, :cond_3
+    .line 544
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->parse([B)Lcom/android/internal/telephony/uicc/UiccTlvData;
 
-    .line 543
-    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
-
-    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
-
-    throw v3
+    move-result-object v32
 
     .line 546
-    :cond_3
-    const/4 v3, 0x1
+    .restart local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    invoke-virtual/range {v32 .. v32}, Lcom/android/internal/telephony/uicc/UiccTlvData;->isIncomplete()Z
 
-    const/16 v4, 0xd
+    move-result v3
 
-    aget-byte v4, v26, v4
-
-    if-eq v3, v4, :cond_4
+    if-eqz v3, :cond_4
 
     .line 547
     new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
@@ -663,53 +727,39 @@
 
     .line 550
     :cond_4
-    const/16 v3, 0xe
+    move-object/from16 v0, v32
 
-    aget-byte v3, v26, v3
-
-    and-int/lit16 v3, v3, 0xff
+    iget v3, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mRecordSize:I
 
     move-object/from16 v0, v28
 
     iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordSize:I
 
-    .line 552
-    const/4 v3, 0x2
+    .line 551
+    move-object/from16 v0, v32
 
-    aget-byte v3, v26, v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int/lit8 v3, v3, 0x8
-
-    const/4 v4, 0x3
-
-    aget-byte v4, v26, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    add-int v13, v3, v4
-
-    .line 555
-    .local v13, "size":I
-    move-object/from16 v0, v28
-
-    iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordSize:I
-
-    div-int v3, v13, v3
+    iget v3, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mNumRecords:I
 
     move-object/from16 v0, v28
 
     iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountRecords:I
 
-    .line 557
+    .line 552
+    move-object/from16 v0, v32
+
+    iget v13, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mFileSize:I
+
+    .line 570
+    .end local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    .local v13, "size":I
+    :goto_2
     move-object/from16 v0, v28
 
     iget-boolean v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mLoadAll:Z
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_a
 
-    .line 558
+    .line 571
     new-instance v3, Ljava/util/ArrayList;
 
     move-object/from16 v0, v28
@@ -722,12 +772,12 @@
 
     iput-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
 
-    .line 563
+    .line 576
     :cond_5
-    :goto_1
+    :goto_3
     if-nez v6, :cond_6
 
-    .line 564
+    .line 577
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mEfid:I
@@ -738,7 +788,7 @@
 
     move-result-object v6
 
-    .line 566
+    .line 579
     :cond_6
     move-object/from16 v0, p0
 
@@ -783,16 +833,94 @@
 
     goto/16 :goto_0
 
-    .line 559
-    .restart local v13    # "size":I
+    .line 554
     :cond_7
+    const/4 v3, 0x4
+
+    const/4 v4, 0x6
+
+    aget-byte v4, v26, v4
+
+    if-ne v3, v4, :cond_9
+
+    .line 556
+    const/4 v3, 0x1
+
+    const/16 v4, 0xd
+
+    aget-byte v4, v26, v4
+
+    if-eq v3, v4, :cond_8
+
+    .line 557
+    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
+
+    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
+
+    throw v3
+
+    .line 560
+    :cond_8
+    const/16 v3, 0xe
+
+    aget-byte v3, v26, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    move-object/from16 v0, v28
+
+    iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordSize:I
+
+    .line 562
+    const/4 v3, 0x2
+
+    aget-byte v3, v26, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    const/4 v4, 0x3
+
+    aget-byte v4, v26, v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    add-int v13, v3, v4
+
+    .line 565
+    .restart local v13    # "size":I
+    move-object/from16 v0, v28
+
+    iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordSize:I
+
+    div-int v3, v13, v3
+
+    move-object/from16 v0, v28
+
+    iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountRecords:I
+
+    goto :goto_2
+
+    .line 567
+    .end local v13    # "size":I
+    :cond_9
+    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
+
+    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
+
+    throw v3
+
+    .line 572
+    .restart local v13    # "size":I
+    :cond_a
     move-object/from16 v0, v28
 
     iget-boolean v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mLoadPart:Z
 
     if-eqz v3, :cond_5
 
-    .line 560
+    .line 573
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountRecords:I
@@ -802,9 +930,9 @@
     # invokes: Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->initLCResults(I)V
     invoke-static {v0, v3}, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->access$000(Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;I)V
 
-    goto :goto_1
+    goto :goto_3
 
-    .line 573
+    .line 586
     .end local v13    # "size":I
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v26    # "data":[B
@@ -819,7 +947,7 @@
 
     check-cast v25, Landroid/os/AsyncResult;
 
-    .line 574
+    .line 587
     .restart local v25    # "ar":Landroid/os/AsyncResult;
     move-object/from16 v0, v25
 
@@ -831,7 +959,7 @@
 
     move-object/from16 v30, v0
 
-    .line 575
+    .line 588
     move-object/from16 v0, v25
 
     iget-object v0, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -840,7 +968,7 @@
 
     check-cast v31, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 577
+    .line 590
     .restart local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     move-object/from16 v0, p1
 
@@ -858,71 +986,57 @@
 
     if-nez v3, :cond_0
 
-    .line 581
+    .line 594
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
 
     move-object/from16 v26, v0
 
-    .line 583
+    .line 596
     .restart local v26    # "data":[B
     move-object/from16 v0, p1
 
     iget v9, v0, Landroid/os/Message;->arg1:I
 
-    .line 585
+    .line 598
     .local v9, "fileid":I
-    const/4 v3, 0x4
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->isUiccTlvData([B)Z
 
-    const/4 v4, 0x6
+    move-result v3
 
-    aget-byte v4, v26, v4
+    if-eqz v3, :cond_c
 
-    if-eq v3, v4, :cond_8
+    .line 601
+    invoke-static/range {v26 .. v26}, Lcom/android/internal/telephony/uicc/UiccTlvData;->parse([B)Lcom/android/internal/telephony/uicc/UiccTlvData;
 
-    .line 586
+    move-result-object v32
+
+    .line 603
+    .restart local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
+    move-object/from16 v0, v32
+
+    iget v3, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mFileSize:I
+
+    if-gez v3, :cond_b
+
+    .line 604
     new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
 
     invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
 
     throw v3
 
-    .line 589
-    :cond_8
-    const/16 v3, 0xd
+    .line 607
+    :cond_b
+    move-object/from16 v0, v32
 
-    aget-byte v3, v26, v3
+    iget v13, v0, Lcom/android/internal/telephony/uicc/UiccTlvData;->mFileSize:I
 
-    if-eqz v3, :cond_9
-
-    .line 590
-    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
-
-    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
-
-    throw v3
-
-    .line 593
-    :cond_9
-    const/4 v3, 0x2
-
-    aget-byte v3, v26, v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int/lit8 v3, v3, 0x8
-
-    const/4 v4, 0x3
-
-    aget-byte v4, v26, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    add-int v13, v3, v4
-
-    .line 596
+    .line 622
+    .end local v32    # "tlvData":Lcom/android/internal/telephony/uicc/UiccTlvData;
     .restart local v13    # "size":I
+    :goto_4
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -965,9 +1079,63 @@
 
     goto/16 :goto_0
 
-    .line 605
-    .end local v9    # "fileid":I
+    .line 610
     .end local v13    # "size":I
+    :cond_c
+    const/4 v3, 0x4
+
+    const/4 v4, 0x6
+
+    aget-byte v4, v26, v4
+
+    if-ne v3, v4, :cond_e
+
+    .line 612
+    const/16 v3, 0xd
+
+    aget-byte v3, v26, v3
+
+    if-eqz v3, :cond_d
+
+    .line 613
+    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
+
+    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
+
+    throw v3
+
+    .line 616
+    :cond_d
+    const/4 v3, 0x2
+
+    aget-byte v3, v26, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    const/4 v4, 0x3
+
+    aget-byte v4, v26, v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    add-int v13, v3, v4
+
+    .restart local v13    # "size":I
+    goto :goto_4
+
+    .line 619
+    .end local v13    # "size":I
+    :cond_e
+    new-instance v3, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;
+
+    invoke-direct {v3}, Lcom/android/internal/telephony/uicc/IccFileTypeMismatch;-><init>()V
+
+    throw v3
+
+    .line 631
+    .end local v9    # "fileid":I
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v26    # "data":[B
     .end local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
@@ -980,7 +1148,7 @@
 
     check-cast v25, Landroid/os/AsyncResult;
 
-    .line 606
+    .line 632
     .restart local v25    # "ar":Landroid/os/AsyncResult;
     move-object/from16 v0, v25
 
@@ -990,7 +1158,7 @@
 
     check-cast v28, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
 
-    .line 607
+    .line 633
     .restart local v28    # "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
     move-object/from16 v0, v25
 
@@ -1000,7 +1168,7 @@
 
     check-cast v31, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 608
+    .line 634
     .restart local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     move-object/from16 v0, v28
 
@@ -1008,12 +1176,12 @@
 
     move-object/from16 v30, v0
 
-    .line 609
+    .line 635
     move-object/from16 v0, v28
 
     iget-object v6, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mPath:Ljava/lang/String;
 
-    .line 611
+    .line 637
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -1030,14 +1198,14 @@
 
     if-nez v3, :cond_0
 
-    .line 615
+    .line 641
     move-object/from16 v0, v28
 
     iget-boolean v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mLoadAll:Z
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_11
 
-    .line 616
+    .line 642
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
@@ -1048,7 +1216,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 618
+    .line 644
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNum:I
@@ -1059,7 +1227,7 @@
 
     iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNum:I
 
-    .line 620
+    .line 646
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNum:I
@@ -1068,9 +1236,9 @@
 
     iget v4, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountRecords:I
 
-    if-le v3, v4, :cond_a
+    if-le v3, v4, :cond_f
 
-    .line 621
+    .line 647
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
@@ -1085,11 +1253,11 @@
 
     goto/16 :goto_0
 
-    .line 623
-    :cond_a
-    if-nez v6, :cond_b
+    .line 649
+    :cond_f
+    if-nez v6, :cond_10
 
-    .line 624
+    .line 650
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mEfid:I
@@ -1100,8 +1268,8 @@
 
     move-result-object v6
 
-    .line 627
-    :cond_b
+    .line 653
+    :cond_10
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -1154,15 +1322,15 @@
 
     goto/16 :goto_0
 
-    .line 633
-    :cond_c
+    .line 659
+    :cond_11
     move-object/from16 v0, v28
 
     iget-boolean v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mLoadPart:Z
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_15
 
-    .line 634
+    .line 660
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
@@ -1179,7 +1347,7 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 635
+    .line 661
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCount:I
@@ -1190,7 +1358,7 @@
 
     iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCount:I
 
-    .line 636
+    .line 662
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCount:I
@@ -1199,9 +1367,9 @@
 
     iget v4, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountLoadrecords:I
 
-    if-ge v3, v4, :cond_f
+    if-ge v3, v4, :cond_14
 
-    .line 637
+    .line 663
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNums:Ljava/util/ArrayList;
@@ -1224,7 +1392,7 @@
 
     iput v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNum:I
 
-    .line 638
+    .line 664
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mRecordNum:I
@@ -1233,12 +1401,12 @@
 
     iget v4, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mCountRecords:I
 
-    if-gt v3, v4, :cond_e
+    if-gt v3, v4, :cond_13
 
-    .line 639
-    if-nez v6, :cond_d
+    .line 665
+    if-nez v6, :cond_12
 
-    .line 640
+    .line 666
     move-object/from16 v0, v28
 
     iget v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->mEfid:I
@@ -1249,8 +1417,8 @@
 
     move-result-object v6
 
-    .line 642
-    :cond_d
+    .line 668
+    :cond_12
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -1303,8 +1471,8 @@
 
     goto/16 :goto_0
 
-    .line 646
-    :cond_e
+    .line 672
+    :cond_13
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
@@ -1319,8 +1487,8 @@
 
     goto/16 :goto_0
 
-    .line 649
-    :cond_f
+    .line 675
+    :cond_14
     move-object/from16 v0, v28
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;->results:Ljava/util/ArrayList;
@@ -1335,8 +1503,8 @@
 
     goto/16 :goto_0
 
-    .line 653
-    :cond_10
+    .line 679
+    :cond_15
     move-object/from16 v0, v31
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
@@ -1351,7 +1519,7 @@
 
     goto/16 :goto_0
 
-    .line 660
+    .line 686
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v28    # "lc":Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
     .end local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
@@ -1364,7 +1532,7 @@
 
     check-cast v25, Landroid/os/AsyncResult;
 
-    .line 661
+    .line 687
     .restart local v25    # "ar":Landroid/os/AsyncResult;
     move-object/from16 v0, v25
 
@@ -1376,7 +1544,7 @@
 
     move-object/from16 v30, v0
 
-    .line 662
+    .line 688
     move-object/from16 v0, v25
 
     iget-object v0, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -1385,7 +1553,7 @@
 
     check-cast v31, Lcom/android/internal/telephony/uicc/IccIoResult;
 
-    .line 664
+    .line 690
     .restart local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     move-object/from16 v0, p1
 
@@ -1403,7 +1571,7 @@
 
     if-nez v3, :cond_0
 
-    .line 668
+    .line 694
     move-object/from16 v0, v31
 
     iget-object v3, v0, Lcom/android/internal/telephony/uicc/IccIoResult;->payload:[B
@@ -1420,11 +1588,11 @@
 
     goto/16 :goto_0
 
-    .line 675
+    .line 701
     .end local v25    # "ar":Landroid/os/AsyncResult;
     .end local v31    # "result":Lcom/android/internal/telephony/uicc/IccIoResult;
     .restart local v27    # "exc":Ljava/lang/Exception;
-    :cond_11
+    :cond_16
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1451,7 +1619,7 @@
 
     goto/16 :goto_0
 
-    .line 501
+    .line 486
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_2
@@ -1521,7 +1689,7 @@
     .param p5, "onLoaded"    # Landroid/os/Message;
 
     .prologue
-    .line 390
+    .line 375
     const/16 v1, 0xa
 
     const/4 v2, 0x0
@@ -1532,7 +1700,7 @@
 
     move-result-object v11
 
-    .line 393
+    .line 378
     .local v11, "response":Landroid/os/Message;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1602,7 +1770,7 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->logd(Ljava/lang/String;)V
 
-    .line 403
+    .line 388
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v2, 0xb0
@@ -1629,7 +1797,7 @@
 
     invoke-interface/range {v1 .. v11}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 405
+    .line 390
     return-void
 .end method
 
@@ -1761,67 +1929,8 @@
     return-void
 .end method
 
-.method public loadEFLinearFixedPart(ILjava/lang/String;Ljava/util/ArrayList;Landroid/os/Message;)V
-    .locals 11
-    .param p1, "fileid"    # I
-    .param p2, "path"    # Ljava/lang/String;
-    .param p4, "onLoaded"    # Landroid/os/Message;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;",
-            "Landroid/os/Message;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .local p3, "recordNums":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
-    const/4 v7, 0x0
-
-    const/4 v4, 0x0
-
-    .line 335
-    const/4 v0, 0x6
-
-    new-instance v1, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
-
-    invoke-direct {v1, p1, p3, p2, p4}, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;-><init>(ILjava/util/ArrayList;Ljava/lang/String;Landroid/os/Message;)V
-
-    invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v10
-
-    .line 338
-    .local v10, "response":Landroid/os/Message;
-    iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
-
-    const/16 v1, 0xc0
-
-    const/16 v6, 0xf
-
-    iget-object v9, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mAid:Ljava/lang/String;
-
-    move v2, p1
-
-    move-object v3, p2
-
-    move v5, v4
-
-    move-object v8, v7
-
-    invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
-
-    .line 340
-    return-void
-.end method
-
 .method public loadEFLinearFixedPart(ILjava/util/ArrayList;Landroid/os/Message;)V
-    .locals 1
+    .locals 11
     .param p1, "fileid"    # I
     .param p3, "onLoaded"    # Landroid/os/Message;
     .annotation system Ldalvik/annotation/Signature;
@@ -1837,15 +1946,49 @@
     .end annotation
 
     .prologue
-    .line 320
     .local p2, "recordNums":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    const/4 v7, 0x0
+
+    const/4 v4, 0x0
+
+    .line 320
+    const/4 v0, 0x6
+
+    new-instance v1, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;
+
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->getEFPath(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->loadEFLinearFixedPart(ILjava/lang/String;Ljava/util/ArrayList;Landroid/os/Message;)V
+    invoke-direct {v1, p1, p2, v2, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadLinearFixedContext;-><init>(ILjava/util/ArrayList;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 321
+    invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v10
+
+    .line 323
+    .local v10, "response":Landroid/os/Message;
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
+
+    const/16 v1, 0xc0
+
+    invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/IccFileHandler;->getEFPath(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/16 v6, 0xf
+
+    iget-object v9, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mAid:Ljava/lang/String;
+
+    move v2, p1
+
+    move v5, v4
+
+    move-object v8, v7
+
+    invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
+
+    .line 325
     return-void
 .end method
 
@@ -1860,14 +2003,14 @@
 
     const/4 v4, 0x0
 
-    .line 371
+    .line 356
     const/4 v0, 0x5
 
     invoke-virtual {p0, v0, p1, v4, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v10
 
-    .line 374
+    .line 359
     .local v10, "response":Landroid/os/Message;
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -1889,7 +2032,7 @@
 
     invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 376
+    .line 361
     return-void
 .end method
 
@@ -1903,14 +2046,14 @@
 
     const/4 v4, 0x0
 
-    .line 353
+    .line 338
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0, p1, v4, p2}, Lcom/android/internal/telephony/uicc/IccFileHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v10
 
-    .line 356
+    .line 341
     .local v10, "response":Landroid/os/Message;
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -1920,19 +2063,19 @@
 
     move-result-object v3
 
-    const/16 v6, 0xf
-
     iget-object v9, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mAid:Ljava/lang/String;
 
     move v2, p1
 
     move v5, v4
 
+    move v6, v4
+
     move-object v8, v7
 
     invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 358
+    .line 343
     return-void
 .end method
 
@@ -1951,7 +2094,7 @@
     .param p5, "onComplete"    # Landroid/os/Message;
 
     .prologue
-    .line 435
+    .line 420
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v1, 0xdc
@@ -1980,7 +2123,7 @@
 
     invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 438
+    .line 423
     return-void
 .end method
 
@@ -1994,7 +2137,7 @@
     .param p6, "onComplete"    # Landroid/os/Message;
 
     .prologue
-    .line 419
+    .line 404
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v1, 0xdc
@@ -2021,7 +2164,7 @@
 
     invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 422
+    .line 407
     return-void
 .end method
 
@@ -2034,7 +2177,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 446
+    .line 431
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
     const/16 v1, 0xd6
@@ -2061,6 +2204,6 @@
 
     invoke-interface/range {v0 .. v10}, Lcom/android/internal/telephony/CommandsInterface;->iccIOForApp(IILjava/lang/String;IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 449
+    .line 434
     return-void
 .end method

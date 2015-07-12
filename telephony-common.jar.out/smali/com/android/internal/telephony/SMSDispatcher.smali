@@ -258,7 +258,7 @@
 
     move-result-object v0
 
-    const v3, 0x1120047
+    const v3, 0x112004b
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1592,7 +1592,7 @@
     if-eqz p1, :cond_1
 
     .line 937
-    const v4, 0x10404d2
+    const v4, 0x1040542
 
     .line 942
     .local v4, "detailsId":I
@@ -1617,7 +1617,7 @@
 
     .line 944
     .local v12, "r":Landroid/content/res/Resources;
-    const v14, 0x10404d0
+    const v14, 0x1040540
 
     const/4 v15, 0x2
 
@@ -1673,7 +1673,7 @@
     .local v8, "layout":Landroid/view/View;
     new-instance v9, Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
 
-    const v14, 0x1020391
+    const v14, 0x1020392
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1689,7 +1689,7 @@
 
     .line 955
     .local v9, "listener":Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;
-    const v14, 0x102038b
+    const v14, 0x102038c
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1702,7 +1702,7 @@
     invoke-virtual {v11, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 958
-    const v14, 0x102038c
+    const v14, 0x102038d
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1712,7 +1712,7 @@
 
     .line 960
     .local v5, "detailsLayout":Landroid/view/ViewGroup;
-    const v14, 0x102038e
+    const v14, 0x102038f
 
     invoke-virtual {v5, v14}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1725,7 +1725,7 @@
     invoke-virtual {v6, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 964
-    const v14, 0x102038f
+    const v14, 0x1020390
 
     invoke-virtual {v8, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1750,7 +1750,7 @@
 
     move-result-object v14
 
-    const v15, 0x10404d3
+    const v15, 0x1040543
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1760,7 +1760,7 @@
 
     move-result-object v14
 
-    const v15, 0x10404d4
+    const v15, 0x1040544
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1825,7 +1825,7 @@
     .end local v12    # "r":Landroid/content/res/Resources;
     .end local v13    # "rememberChoice":Landroid/widget/CheckBox;
     :cond_1
-    const v4, 0x10404d1
+    const v4, 0x1040541
 
     .restart local v4    # "detailsId":I
     goto/16 :goto_1
@@ -2070,7 +2070,7 @@
 
     .line 908
     .local v4, "r":Landroid/content/res/Resources;
-    const v5, 0x10404cd
+    const v5, 0x104053d
 
     const/4 v6, 0x1
 
@@ -2104,7 +2104,7 @@
 
     invoke-direct {v5, v6}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v6, 0x10404cc
+    const v6, 0x104053c
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -2120,7 +2120,7 @@
 
     move-result-object v5
 
-    const v6, 0x10404ce
+    const v6, 0x104053e
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2130,7 +2130,7 @@
 
     move-result-object v5
 
-    const v6, 0x10404cf
+    const v6, 0x104053f
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

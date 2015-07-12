@@ -30,11 +30,13 @@
 
 .field static final TRANSACTION_play:I = 0x1
 
-.field static final TRANSACTION_playAsync:I = 0x4
+.field static final TRANSACTION_playAsync:I = 0x5
+
+.field static final TRANSACTION_setVolume:I = 0x4
 
 .field static final TRANSACTION_stop:I = 0x2
 
-.field static final TRANSACTION_stopAsync:I = 0x5
+.field static final TRANSACTION_stopAsync:I = 0x6
 
 
 # direct methods
@@ -130,7 +132,7 @@
     .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 128
+    .line 139
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v6
@@ -277,18 +279,46 @@
     .end local v0    # "_arg0":Landroid/os/IBinder;
     .end local v4    # "_result":Z
     :sswitch_4
+    const-string v5, "android.media.IRingtonePlayer"
+
+    invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 94
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 96
+    .restart local v0    # "_arg0":Landroid/os/IBinder;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    .line 97
+    .local v1, "_arg1":F
+    invoke-virtual {p0, v0, v1}, Landroid/media/IRingtonePlayer$Stub;->setVolume(Landroid/os/IBinder;F)V
+
+    .line 98
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_0
+
+    .line 103
+    .end local v0    # "_arg0":Landroid/os/IBinder;
+    .end local v1    # "_arg1":F
+    :sswitch_5
     const-string v7, "android.media.IRingtonePlayer"
 
     invoke-virtual {p2, v7}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 94
+    .line 105
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 95
+    .line 106
     sget-object v7, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -297,7 +327,7 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 101
+    .line 112
     .local v0, "_arg0":Landroid/net/Uri;
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -306,7 +336,7 @@
 
     if-eqz v7, :cond_4
 
-    .line 102
+    .line 113
     sget-object v7, Landroid/os/UserHandle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v7, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -315,7 +345,7 @@
 
     check-cast v1, Landroid/os/UserHandle;
 
-    .line 108
+    .line 119
     .local v1, "_arg1":Landroid/os/UserHandle;
     :goto_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -326,7 +356,7 @@
 
     move v2, v6
 
-    .line 110
+    .line 121
     .local v2, "_arg2":Z
     :goto_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -335,7 +365,7 @@
 
     if-eqz v5, :cond_6
 
-    .line 111
+    .line 122
     sget-object v5, Landroid/media/AudioAttributes;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v5, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -344,17 +374,17 @@
 
     check-cast v3, Landroid/media/AudioAttributes;
 
-    .line 116
+    .line 127
     .local v3, "_arg3":Landroid/media/AudioAttributes;
     :goto_6
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/media/IRingtonePlayer$Stub;->playAsync(Landroid/net/Uri;Landroid/os/UserHandle;ZLandroid/media/AudioAttributes;)V
 
-    .line 117
+    .line 128
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 98
+    .line 109
     .end local v0    # "_arg0":Landroid/net/Uri;
     .end local v1    # "_arg1":Landroid/os/UserHandle;
     .end local v2    # "_arg2":Z
@@ -365,7 +395,7 @@
     .restart local v0    # "_arg0":Landroid/net/Uri;
     goto :goto_3
 
-    .line 105
+    .line 116
     :cond_4
     const/4 v1, 0x0
 
@@ -375,10 +405,10 @@
     :cond_5
     move v2, v5
 
-    .line 108
+    .line 119
     goto :goto_5
 
-    .line 114
+    .line 125
     .restart local v2    # "_arg2":Z
     :cond_6
     const/4 v3, 0x0
@@ -386,20 +416,20 @@
     .restart local v3    # "_arg3":Landroid/media/AudioAttributes;
     goto :goto_6
 
-    .line 122
+    .line 133
     .end local v0    # "_arg0":Landroid/net/Uri;
     .end local v1    # "_arg1":Landroid/os/UserHandle;
     .end local v2    # "_arg2":Z
     .end local v3    # "_arg3":Landroid/media/AudioAttributes;
-    :sswitch_5
+    :sswitch_6
     const-string v5, "android.media.IRingtonePlayer"
 
     invoke-virtual {p2, v5}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
+    .line 134
     invoke-virtual {p0}, Landroid/media/IRingtonePlayer$Stub;->stopAsync()V
 
-    .line 124
+    .line 135
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
@@ -412,6 +442,7 @@
         0x3 -> :sswitch_3
         0x4 -> :sswitch_4
         0x5 -> :sswitch_5
+        0x6 -> :sswitch_6
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

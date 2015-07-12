@@ -65,7 +65,6 @@
     .line 657
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mPadding:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$400(Landroid/widget/SimpleMonthView;)I
 
     move-result v4
@@ -74,7 +73,6 @@
     .local v4, "offsetX":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mMonthHeaderSize:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$500(Landroid/widget/SimpleMonthView;)I
 
     move-result v5
@@ -83,7 +81,6 @@
     .local v5, "offsetY":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mRowHeight:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$600(Landroid/widget/SimpleMonthView;)I
 
     move-result v0
@@ -92,14 +89,12 @@
     .local v0, "cellHeight":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mWidth:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$700(Landroid/widget/SimpleMonthView;)I
 
     move-result v9
 
     iget-object v10, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mPadding:I
     invoke-static {v10}, Landroid/widget/SimpleMonthView;->access$400(Landroid/widget/SimpleMonthView;)I
 
     move-result v10
@@ -110,7 +105,6 @@
 
     iget-object v10, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mNumDays:I
     invoke-static {v10}, Landroid/widget/SimpleMonthView;->access$800(Landroid/widget/SimpleMonthView;)I
 
     move-result v10
@@ -123,7 +117,6 @@
 
     iget-object v10, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # invokes: Landroid/widget/SimpleMonthView;->findDayOffset()I
     invoke-static {v10}, Landroid/widget/SimpleMonthView;->access$900(Landroid/widget/SimpleMonthView;)I
 
     move-result v10
@@ -134,7 +127,6 @@
     .local v3, "index":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mNumDays:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$800(Landroid/widget/SimpleMonthView;)I
 
     move-result v9
@@ -145,7 +137,6 @@
     .local v6, "row":I
     iget-object v9, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mNumDays:I
     invoke-static {v9}, Landroid/widget/SimpleMonthView;->access$800(Landroid/widget/SimpleMonthView;)I
 
     move-result v9
@@ -186,14 +177,12 @@
 
     iget-object v2, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mYear:I
     invoke-static {v2}, Landroid/widget/SimpleMonthView;->access$1000(Landroid/widget/SimpleMonthView;)I
 
     move-result v2
 
     iget-object v3, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mMonth:I
     invoke-static {v3}, Landroid/widget/SimpleMonthView;->access$1100(Landroid/widget/SimpleMonthView;)I
 
     move-result v3
@@ -217,7 +206,6 @@
     .local v0, "date":Ljava/lang/CharSequence;
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mSelectedDay:I
     invoke-static {v1}, Landroid/widget/SimpleMonthView;->access$200(Landroid/widget/SimpleMonthView;)I
 
     move-result v1
@@ -231,7 +219,7 @@
 
     move-result-object v1
 
-    const v2, 0x1040684
+    const v2, 0x10406ed
 
     const/4 v3, 0x1
 
@@ -295,7 +283,6 @@
     .line 605
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # invokes: Landroid/widget/SimpleMonthView;->getDayFromLocation(FF)I
     invoke-static {v1, p1, p2}, Landroid/widget/SimpleMonthView;->access$000(Landroid/widget/SimpleMonthView;FF)I
 
     move-result v0
@@ -337,7 +324,6 @@
     :goto_0
     iget-object v1, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mNumCells:I
     invoke-static {v1}, Landroid/widget/SimpleMonthView;->access$100(Landroid/widget/SimpleMonthView;)I
 
     move-result v1
@@ -381,7 +367,6 @@
     :pswitch_0
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # invokes: Landroid/widget/SimpleMonthView;->onDayClick(I)V
     invoke-static {v0, p1}, Landroid/widget/SimpleMonthView;->access$300(Landroid/widget/SimpleMonthView;I)V
 
     .line 644
@@ -444,7 +429,6 @@
     .line 632
     iget-object v0, p0, Landroid/widget/SimpleMonthView$MonthViewTouchHelper;->this$0:Landroid/widget/SimpleMonthView;
 
-    # getter for: Landroid/widget/SimpleMonthView;->mSelectedDay:I
     invoke-static {v0}, Landroid/widget/SimpleMonthView;->access$200(Landroid/widget/SimpleMonthView;)I
 
     move-result v0

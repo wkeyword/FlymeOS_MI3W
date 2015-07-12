@@ -24,6 +24,9 @@
     <string name="VideoView_error_text_invalid_progressive_playback">這部影片的格式無效，無法以串流傳送至這部裝置。</string>
     <string name="selectTextMode">選取文字</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="China_Mobile">中國移動</string>
+    <string name="China_Unicom">中國聯通</string>
+    <string name="China_Telecom">中國電信</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>
@@ -1568,7 +1571,4 @@
 裝置充電時，省電模式會自動關閉。"</string>
     <string name="downtime_condition_summary">直到停機時間於 %1$s 結束</string>
     <string name="zen_mode_forever">無限期</string>
-    <string name="China_Mobile">中國移動</string>
-    <string name="China_Unicom">中國聯通</string>
-    <string name="China_Telecom">中國電信</string>
 </resources>

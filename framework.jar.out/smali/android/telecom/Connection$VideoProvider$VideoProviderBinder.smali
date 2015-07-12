@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 248
+    .line 243
     iput-object p1, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     invoke-direct {p0}, Lcom/android/internal/telecom/IVideoProvider$Stub;-><init>()V
@@ -37,7 +37,7 @@
     .param p2, "x1"    # Landroid/telecom/Connection$1;
 
     .prologue
-    .line 248
+    .line 243
     invoke-direct {p0, p1}, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;-><init>(Landroid/telecom/Connection$VideoProvider;)V
 
     return-void
@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 290
+    .line 285
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 291
+    .line 286
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .locals 2
 
     .prologue
-    .line 286
+    .line 281
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 287
+    .line 282
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .param p1, "requestProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 276
+    .line 271
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 278
+    .line 273
     return-void
 .end method
 
@@ -123,7 +123,7 @@
     .param p1, "responseProfile"    # Landroid/telecom/VideoProfile;
 
     .prologue
-    .line 281
+    .line 276
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -139,7 +139,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 283
+    .line 278
     return-void
 .end method
 
@@ -148,7 +148,7 @@
     .param p1, "cameraId"    # Ljava/lang/String;
 
     .prologue
-    .line 255
+    .line 250
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -164,7 +164,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 256
+    .line 251
     return-void
 .end method
 
@@ -173,7 +173,7 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 267
+    .line 262
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 269
+    .line 264
     return-void
 .end method
 
@@ -200,7 +200,7 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 263
+    .line 258
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -216,7 +216,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 264
+    .line 259
     return-void
 .end method
 
@@ -225,7 +225,7 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 294
+    .line 289
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -241,7 +241,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 295
+    .line 290
     return-void
 .end method
 
@@ -250,7 +250,7 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 259
+    .line 254
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -266,7 +266,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 260
+    .line 255
     return-void
 .end method
 
@@ -275,7 +275,7 @@
     .param p1, "videoCallbackBinder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 250
+    .line 245
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -291,7 +291,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 252
+    .line 247
     return-void
 .end method
 
@@ -300,7 +300,7 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 272
+    .line 267
     iget-object v0, p0, Landroid/telecom/Connection$VideoProvider$VideoProviderBinder;->this$0:Landroid/telecom/Connection$VideoProvider;
 
     # getter for: Landroid/telecom/Connection$VideoProvider;->mMessageHandler:Landroid/telecom/Connection$VideoProvider$VideoProviderHandler;
@@ -320,6 +320,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 273
+    .line 268
     return-void
 .end method

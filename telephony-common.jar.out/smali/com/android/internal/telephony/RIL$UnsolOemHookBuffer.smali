@@ -29,18 +29,18 @@
     .param p3, "data"    # [B
 
     .prologue
-    .line 3416
+    .line 3509
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3417
+    .line 3510
     iput p2, p0, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->mRilInstance:I
 
-    .line 3418
+    .line 3511
     iput-object p3, p0, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->mData:[B
 
-    .line 3419
+    .line 3512
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 3422
+    .line 3515
     iget v0, p0, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->mRilInstance:I
 
     return v0
@@ -60,7 +60,7 @@
     .locals 1
 
     .prologue
-    .line 3426
+    .line 3519
     iget-object v0, p0, Lcom/android/internal/telephony/RIL$UnsolOemHookBuffer;->mData:[B
 
     return-object v0

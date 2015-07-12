@@ -4583,7 +4583,6 @@
         <item name="pointerIconSpotHover">@drawable/pointer_spot_hover_icon</item>
         <item name="pointerIconSpotTouch">@drawable/pointer_spot_touch_icon</item>
         <item name="pointerIconSpotAnchor">@drawable/pointer_spot_anchor_icon</item>
-        <item name="pointerIconStylusHover">@drawable/pointer_stylus_hover_icon</item>
     </style>
     <style name="wifi_item">
         <item name="gravity">start</item>

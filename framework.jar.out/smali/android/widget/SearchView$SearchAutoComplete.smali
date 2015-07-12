@@ -278,7 +278,6 @@
 
     const/4 v3, 0x0
 
-    # invokes: Landroid/widget/SearchView;->setImeVisibility(Z)V
     invoke-static {v2, v3}, Landroid/widget/SearchView;->access$2100(Landroid/widget/SearchView;Z)V
 
     goto :goto_0

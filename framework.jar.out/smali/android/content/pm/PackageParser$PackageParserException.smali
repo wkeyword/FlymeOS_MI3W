@@ -25,13 +25,13 @@
     .param p2, "detailMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 5013
+    .line 5022
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 5014
+    .line 5023
     iput p1, p0, Landroid/content/pm/PackageParser$PackageParserException;->error:I
 
-    .line 5015
+    .line 5024
     return-void
 .end method
 
@@ -42,12 +42,12 @@
     .param p3, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 5018
+    .line 5027
     invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 5019
+    .line 5028
     iput p1, p0, Landroid/content/pm/PackageParser$PackageParserException;->error:I
 
-    .line 5020
+    .line 5029
     return-void
 .end method

@@ -433,7 +433,7 @@
 
     .line 154
     .local v0, "sb":Ljava/lang/StringBuffer;
-    const-string v2, "mRegistered="
+    const-string/jumbo v2, "mRegistered="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 

@@ -76,7 +76,7 @@
 
     if-eqz p1, :cond_2
 
-    const v1, 0x104068d
+    const v1, 0x10406f6
 
     :goto_0
     invoke-virtual {v2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -98,7 +98,7 @@
     .line 54
     iget-object v1, p0, Lcom/android/server/am/LockTaskNotify;->mContext:Landroid/content/Context;
 
-    const v2, 0x104068c
+    const v2, 0x10406f5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -138,7 +138,7 @@
     .line 51
     .end local v0    # "text":Ljava/lang/String;
     :cond_2
-    const v1, 0x104068b
+    const v1, 0x10406f4
 
     goto :goto_0
 .end method
@@ -149,14 +149,14 @@
 
     .prologue
     .line 64
-    const v0, 0x1040694
+    const v0, 0x10406fd
 
     .line 65
     .local v0, "showString":I
     if-eqz p1, :cond_0
 
     .line 66
-    const v0, 0x1040693
+    const v0, 0x10406fc
 
     .line 68
     :cond_0

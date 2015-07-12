@@ -311,6 +311,9 @@
 .method public abstract invokeOemRilRequestStrings([Ljava/lang/String;Landroid/os/Message;)V
 .end method
 
+.method public abstract needsOldRilFeature(Ljava/lang/String;)Z
+.end method
+
 .method public abstract nvReadItem(ILandroid/os/Message;)V
 .end method
 
@@ -596,6 +599,9 @@
 .method public abstract setOnCatProactiveCmd(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
+.method public abstract setOnCatSendSmsResult(Landroid/os/Handler;ILjava/lang/Object;)V
+.end method
+
 .method public abstract setOnCatSessionEnd(Landroid/os/Handler;ILjava/lang/Object;)V
 .end method
 
@@ -720,6 +726,9 @@
 .end method
 
 .method public abstract unSetOnCatProactiveCmd(Landroid/os/Handler;)V
+.end method
+
+.method public abstract unSetOnCatSendSmsResult(Landroid/os/Handler;)V
 .end method
 
 .method public abstract unSetOnCatSessionEnd(Landroid/os/Handler;)V

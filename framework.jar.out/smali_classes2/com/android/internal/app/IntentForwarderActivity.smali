@@ -174,7 +174,7 @@
     if-eqz v18, :cond_0
 
     .line 65
-    const v17, 0x1040545
+    const v17, 0x10405b3
 
     .line 66
     .local v17, "userMessageId":I
@@ -207,7 +207,7 @@
     if-eqz v18, :cond_1
 
     .line 68
-    const v17, 0x1040546
+    const v17, 0x10405b4
 
     .line 69
     .restart local v17    # "userMessageId":I

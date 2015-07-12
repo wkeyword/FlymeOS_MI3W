@@ -44,6 +44,7 @@
         Landroid/provider/ContactsContract$Profile;,
         Landroid/provider/ContactsContract$Contacts;,
         Landroid/provider/ContactsContract$ContactCounts;,
+        Landroid/provider/ContactsContract$InternalContactCounts;,
         Landroid/provider/ContactsContract$ContactNameColumns;,
         Landroid/provider/ContactsContract$DisplayNameSources;,
         Landroid/provider/ContactsContract$PhoneticNameStyle;,
@@ -110,7 +111,7 @@
     .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8346
+    .line 8385
     return-void
 .end method
 
@@ -119,7 +120,7 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 2155
+    .line 2169
     const-wide v0, 0x7fffffff80000000L
 
     cmp-long v0, p0, v0

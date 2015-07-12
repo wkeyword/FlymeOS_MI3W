@@ -1,11 +1,11 @@
 .class Lcom/android/internal/policy/impl/GlobalActions$9;
-.super Landroid/content/BroadcastReceiver;
+.super Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
 .source "GlobalActions.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/internal/policy/impl/GlobalActions;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/internal/policy/impl/GlobalActions;->getLockdownAction()Lcom/android/internal/policy/impl/GlobalActions$Action;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,52 +19,89 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;)V
+.method constructor <init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
     .locals 0
+    .param p2, "x0"    # I
+    .param p3, "x1"    # I
 
     .prologue
-    .line 1046
+    .line 590
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$9;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
+.method public onPress()V
+    .locals 3
 
     .prologue
-    .line 1049
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 594
+    new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/android/internal/policy/impl/GlobalActions$9;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
-    const-string v1, "android.media.RINGER_MODE_CHANGED"
+    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/internal/policy/impl/GlobalActions;->access$200(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v0
+    invoke-direct {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    if-eqz v0, :cond_0
+    const/4 v2, -0x1
 
-    .line 1050
-    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$9;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
+    invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->requireCredentialEntry(I)V
 
-    # getter for: Lcom/android/internal/policy/impl/GlobalActions;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1100(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/os/Handler;
+    .line 596
+    :try_start_0
+    invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-interface {v1, v2}, Landroid/view/IWindowManager;->lockNow(Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1052
-    :cond_0
+    .line 600
+    :goto_0
     return-void
+
+    .line 597
+    :catch_0
+    move-exception v0
+
+    .line 598
+    .local v0, "e":Landroid/os/RemoteException;
+    const-string v1, "GlobalActions"
+
+    const-string v2, "Error while trying to lock device."
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+.end method
+
+.method public showBeforeProvisioning()Z
+    .locals 1
+
+    .prologue
+    .line 609
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public showDuringKeyguard()Z
+    .locals 1
+
+    .prologue
+    .line 604
+    const/4 v0, 0x1
+
+    return v0
 .end method

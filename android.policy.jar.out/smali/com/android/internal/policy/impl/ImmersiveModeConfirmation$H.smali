@@ -17,8 +17,6 @@
 # static fields
 .field private static final HIDE:I = 0x2
 
-.field private static final PANIC:I = 0x3
-
 .field private static final SHOW:I = 0x1
 
 
@@ -31,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 327
+    .line 297
     iput-object p1, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$H;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -45,7 +43,7 @@
     .param p2, "x1"    # Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$1;
 
     .prologue
-    .line 327
+    .line 297
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$H;-><init>(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;)V
 
     return-void
@@ -58,16 +56,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 334
+    .line 303
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 345
+    .line 311
     :goto_0
     return-void
 
-    .line 336
+    .line 305
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$H;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
@@ -76,7 +74,7 @@
 
     goto :goto_0
 
-    .line 339
+    .line 308
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$H;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
 
@@ -85,20 +83,10 @@
 
     goto :goto_0
 
-    .line 342
-    :pswitch_2
-    iget-object v0, p0, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation$H;->this$0:Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;
-
-    # invokes: Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->handlePanic()V
-    invoke-static {v0}, Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;->access$1000(Lcom/android/internal/policy/impl/ImmersiveModeConfirmation;)V
-
-    goto :goto_0
-
-    .line 334
+    .line 303
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
-        :pswitch_2
     .end packed-switch
 .end method

@@ -27,23 +27,23 @@
     .locals 1
 
     .prologue
-    .line 168
+    .line 171
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$PriorityClass;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
+    .line 172
     iget v0, p1, Lcom/android/server/AlarmManagerService;->mCurrentSeq:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/AlarmManagerService$PriorityClass;->seq:I
 
-    .line 170
+    .line 173
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/AlarmManagerService$PriorityClass;->priority:I
 
-    .line 171
+    .line 174
     return-void
 .end method

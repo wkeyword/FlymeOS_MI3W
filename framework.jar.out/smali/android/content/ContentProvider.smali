@@ -169,24 +169,24 @@
     .param p3, "testing"    # Z
 
     .prologue
-    .line 1697
+    .line 1691
     invoke-static {}, Landroid/os/AsyncTask;->init()V
 
-    .line 1699
+    .line 1693
     iput-boolean p3, p0, Landroid/content/ContentProvider;->mNoPerms:Z
 
-    .line 1705
+    .line 1699
     iget-object v0, p0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_2
 
-    .line 1706
+    .line 1700
     iput-object p1, p0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
 
-    .line 1707
+    .line 1701
     if-eqz p1, :cond_0
 
-    .line 1708
+    .line 1702
     iget-object v1, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     const-string v0, "appops"
@@ -199,7 +199,7 @@
 
     iput-object v0, v1, Landroid/content/ContentProvider$Transport;->mAppOpsManager:Landroid/app/AppOpsManager;
 
-    .line 1711
+    .line 1705
     :cond_0
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -207,30 +207,30 @@
 
     iput v0, p0, Landroid/content/ContentProvider;->mMyUid:I
 
-    .line 1712
+    .line 1706
     if-eqz p2, :cond_1
 
-    .line 1713
+    .line 1707
     iget-object v0, p2, Landroid/content/pm/ProviderInfo;->readPermission:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/ContentProvider;->setReadPermission(Ljava/lang/String;)V
 
-    .line 1714
+    .line 1708
     iget-object v0, p2, Landroid/content/pm/ProviderInfo;->writePermission:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/ContentProvider;->setWritePermission(Ljava/lang/String;)V
 
-    .line 1715
+    .line 1709
     iget-object v0, p2, Landroid/content/pm/ProviderInfo;->pathPermissions:[Landroid/content/pm/PathPermission;
 
     invoke-virtual {p0, v0}, Landroid/content/ContentProvider;->setPathPermissions([Landroid/content/pm/PathPermission;)V
 
-    .line 1716
+    .line 1710
     iget-boolean v0, p2, Landroid/content/pm/ProviderInfo;->exported:Z
 
     iput-boolean v0, p0, Landroid/content/ContentProvider;->mExported:Z
 
-    .line 1717
+    .line 1711
     iget v0, p2, Landroid/content/pm/ProviderInfo;->flags:I
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -244,20 +244,20 @@
     :goto_0
     iput-boolean v0, p0, Landroid/content/ContentProvider;->mSingleUser:Z
 
-    .line 1718
+    .line 1712
     iget-object v0, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/ContentProvider;->setAuthorities(Ljava/lang/String;)V
 
-    .line 1720
+    .line 1714
     :cond_1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->onCreate()Z
 
-    .line 1722
+    .line 1716
     :cond_2
     return-void
 
-    .line 1717
+    .line 1711
     :cond_3
     const/4 v0, 0x0
 
@@ -298,16 +298,16 @@
     .param p0, "auth"    # Ljava/lang/String;
 
     .prologue
-    .line 1870
+    .line 1864
     if-nez p0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 1872
+    .line 1866
     :goto_0
     return-object v1
 
-    .line 1871
+    .line 1865
     :cond_0
     const/16 v1, 0x40
 
@@ -315,7 +315,7 @@
 
     move-result v0
 
-    .line 1872
+    .line 1866
     .local v0, "end":I
     add-int/lit8 v1, v0, 0x1
 
@@ -331,22 +331,22 @@
     .param p0, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1877
+    .line 1871
     if-nez p0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 1880
+    .line 1874
     :goto_0
     return-object v1
 
-    .line 1878
+    .line 1872
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 1879
+    .line 1873
     .local v0, "builder":Landroid/net/Uri$Builder;
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 1880
+    .line 1874
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
@@ -371,7 +371,7 @@
     .param p0, "auth"    # Ljava/lang/String;
 
     .prologue
-    .line 1849
+    .line 1843
     const/4 v0, -0x2
 
     invoke-static {p0, v0}, Landroid/content/ContentProvider;->getUserIdFromAuthority(Ljava/lang/String;I)I
@@ -387,16 +387,16 @@
     .param p1, "defaultUserId"    # I
 
     .prologue
-    .line 1835
+    .line 1829
     if-nez p0, :cond_1
 
-    .line 1843
+    .line 1837
     .end local p1    # "defaultUserId":I
     :cond_0
     :goto_0
     return p1
 
-    .line 1836
+    .line 1830
     .restart local p1    # "defaultUserId":I
     :cond_1
     const/16 v3, 0x40
@@ -405,20 +405,20 @@
 
     move-result v1
 
-    .line 1837
+    .line 1831
     .local v1, "end":I
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_0
 
-    .line 1838
+    .line 1832
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1840
+    .line 1834
     .local v2, "userIdString":Ljava/lang/String;
     :try_start_0
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -429,11 +429,11 @@
 
     goto :goto_0
 
-    .line 1841
+    .line 1835
     :catch_0
     move-exception v0
 
-    .line 1842
+    .line 1836
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v3, "ContentProvider"
 
@@ -441,7 +441,7 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1843
+    .line 1837
     const/16 p1, -0x2710
 
     goto :goto_0
@@ -452,7 +452,7 @@
     .param p0, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1860
+    .line 1854
     const/4 v0, -0x2
 
     invoke-static {p0, v0}, Landroid/content/ContentProvider;->getUserIdFromUri(Landroid/net/Uri;I)I
@@ -468,10 +468,10 @@
     .param p1, "defaultUserId"    # I
 
     .prologue
-    .line 1854
+    .line 1848
     if-nez p0, :cond_0
 
-    .line 1855
+    .line 1849
     .end local p1    # "defaultUserId":I
     :goto_0
     return p1
@@ -495,18 +495,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1891
+    .line 1885
     if-nez p0, :cond_1
 
     const/4 p0, 0x0
 
-    .line 1901
+    .line 1895
     .end local p0    # "uri":Landroid/net/Uri;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 1892
+    .line 1886
     .restart local p0    # "uri":Landroid/net/Uri;
     :cond_1
     const/4 v1, -0x2
@@ -525,19 +525,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 1894
+    .line 1888
     invoke-static {p0}, Landroid/content/ContentProvider;->uriHasUserId(Landroid/net/Uri;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1896
+    .line 1890
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 1897
+    .line 1891
     .local v0, "builder":Landroid/net/Uri$Builder;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -573,7 +573,7 @@
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->encodedAuthority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 1898
+    .line 1892
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -586,7 +586,7 @@
     .param p1, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 641
+    .line 635
     iget-object v1, p0, Landroid/content/ContentProvider;->mCallingPackage:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -595,13 +595,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 642
+    .line 636
     .local v0, "original":Ljava/lang/String;
     iget-object v1, p0, Landroid/content/ContentProvider;->mCallingPackage:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, p1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 643
+    .line 637
     return-object v0
 .end method
 
@@ -612,10 +612,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1885
+    .line 1879
     if-nez p0, :cond_1
 
-    .line 1886
+    .line 1880
     :cond_0
     :goto_0
     return v0
@@ -648,18 +648,18 @@
     .prologue
     const/4 v3, -0x2
 
-    .line 1815
+    .line 1809
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1816
+    .line 1810
     .local v0, "auth":Ljava/lang/String;
     invoke-static {v0, v3}, Landroid/content/ContentProvider;->getUserIdFromAuthority(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 1817
+    .line 1811
     .local v2, "userId":I
     if-eq v2, v3, :cond_0
 
@@ -671,7 +671,7 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1818
+    .line 1812
     new-instance v3, Ljava/lang/SecurityException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -712,7 +712,7 @@
 
     throw v3
 
-    .line 1821
+    .line 1815
     :cond_0
     invoke-static {v0}, Landroid/content/ContentProvider;->getAuthorityWithoutUserId(Ljava/lang/String;)Ljava/lang/String;
 
@@ -724,7 +724,7 @@
 
     if-nez v3, :cond_2
 
-    .line 1822
+    .line 1816
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,13 +755,13 @@
 
     move-result-object v1
 
-    .line 1824
+    .line 1818
     .local v1, "message":Ljava/lang/String;
     iget-object v3, p0, Landroid/content/ContentProvider;->mAuthority:Ljava/lang/String;
 
     if-eqz v3, :cond_1
 
-    .line 1825
+    .line 1819
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -780,7 +780,7 @@
 
     move-result-object v1
 
-    .line 1829
+    .line 1823
     :goto_0
     new-instance v3, Ljava/lang/SecurityException;
 
@@ -788,7 +788,7 @@
 
     throw v3
 
-    .line 1827
+    .line 1821
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -810,7 +810,7 @@
 
     goto :goto_0
 
-    .line 1831
+    .line 1825
     .end local v1    # "message":Ljava/lang/String;
     :cond_2
     return-void
@@ -838,17 +838,17 @@
     .end annotation
 
     .prologue
-    .line 1743
+    .line 1737
     .local p1, "operations":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentProviderOperation;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 1744
+    .line 1738
     .local v1, "numOperations":I
     new-array v2, v1, [Landroid/content/ContentProviderResult;
 
-    .line 1745
+    .line 1739
     .local v2, "results":[Landroid/content/ContentProviderResult;
     const/4 v0, 0x0
 
@@ -856,7 +856,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 1746
+    .line 1740
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -869,12 +869,12 @@
 
     aput-object v3, v2, v0
 
-    .line 1745
+    .line 1739
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1748
+    .line 1742
     :cond_0
     return-object v2
 .end method
@@ -885,12 +885,12 @@
     .param p2, "info"    # Landroid/content/pm/ProviderInfo;
 
     .prologue
-    .line 1689
+    .line 1683
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;Z)V
 
-    .line 1690
+    .line 1684
     return-void
 .end method
 
@@ -900,12 +900,12 @@
     .param p2, "info"    # Landroid/content/pm/ProviderInfo;
 
     .prologue
-    .line 1678
+    .line 1672
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;Z)V
 
-    .line 1679
+    .line 1673
     return-void
 .end method
 
@@ -915,10 +915,10 @@
     .param p2, "values"    # [Landroid/content/ContentValues;
 
     .prologue
-    .line 1106
+    .line 1100
     array-length v1, p2
 
-    .line 1107
+    .line 1101
     .local v1, "numValues":I
     const/4 v0, 0x0
 
@@ -926,17 +926,17 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 1108
+    .line 1102
     aget-object v2, p2, v0
 
     invoke-virtual {p0, p1, v2}, Landroid/content/ContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 1107
+    .line 1101
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1110
+    .line 1104
     :cond_0
     return v1
 .end method
@@ -948,7 +948,7 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1770
+    .line 1764
     const/4 v0, 0x0
 
     return-object v0
@@ -959,7 +959,7 @@
     .param p1, "url"    # Landroid/net/Uri;
 
     .prologue
-    .line 1038
+    .line 1032
     const/4 v0, 0x0
 
     return-object v0
@@ -972,7 +972,7 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 497
+    .line 491
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
@@ -1017,12 +1017,12 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1810
+    .line 1804
     const-string/jumbo v0, "nothing to dump"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1811
+    .line 1805
     return-void
 .end method
 
@@ -1036,28 +1036,28 @@
     .end annotation
 
     .prologue
-    .line 505
+    .line 499
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    .line 506
+    .line 500
     .local v5, "context":Landroid/content/Context;
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v12
 
-    .line 507
+    .line 501
     .local v12, "pid":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v15
 
-    .line 508
+    .line 502
     .local v15, "uid":I
     const/4 v9, 0x0
 
-    .line 510
+    .line 504
     .local v9, "missingPerm":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1071,11 +1071,11 @@
 
     if-eqz v16, :cond_1
 
-    .line 554
+    .line 548
     :cond_0
     return-void
 
-    .line 514
+    .line 508
     :cond_1
     move-object/from16 v0, p0
 
@@ -1093,48 +1093,48 @@
 
     if-eqz v16, :cond_6
 
-    .line 515
+    .line 509
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getReadPermission()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 516
+    .line 510
     .local v4, "componentPerm":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 517
+    .line 511
     invoke-virtual {v5, v4, v12, v15}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v16
 
     if-eqz v16, :cond_0
 
-    .line 520
+    .line 514
     move-object v9, v4
 
-    .line 526
+    .line 520
     :cond_2
     if-nez v4, :cond_4
 
     const/4 v2, 0x1
 
-    .line 528
+    .line 522
     .local v2, "allowDefaultRead":Z
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getPathPermissions()[Landroid/content/pm/PathPermission;
 
     move-result-object v14
 
-    .line 529
+    .line 523
     .local v14, "pps":[Landroid/content/pm/PathPermission;
     if-eqz v14, :cond_5
 
-    .line 530
+    .line 524
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 531
+    .line 525
     .local v10, "path":Ljava/lang/String;
     move-object v3, v14
 
@@ -1150,13 +1150,13 @@
 
     aget-object v13, v3, v7
 
-    .line 532
+    .line 526
     .local v13, "pp":Landroid/content/pm/PathPermission;
     invoke-virtual {v13}, Landroid/content/pm/PathPermission;->getReadPermission()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 533
+    .line 527
     .local v11, "pathPerm":Ljava/lang/String;
     if-eqz v11, :cond_3
 
@@ -1166,26 +1166,26 @@
 
     if-eqz v16, :cond_3
 
-    .line 534
+    .line 528
     invoke-virtual {v5, v11, v12, v15}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v16
 
     if-eqz v16, :cond_0
 
-    .line 539
+    .line 533
     const/4 v2, 0x0
 
-    .line 540
+    .line 534
     move-object v9, v11
 
-    .line 531
+    .line 525
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 526
+    .line 520
     .end local v2    # "allowDefaultRead":Z
     .end local v3    # "arr$":[Landroid/content/pm/PathPermission;
     .end local v7    # "i$":I
@@ -1199,13 +1199,13 @@
 
     goto :goto_0
 
-    .line 548
+    .line 542
     .restart local v2    # "allowDefaultRead":Z
     .restart local v14    # "pps":[Landroid/content/pm/PathPermission;
     :cond_5
     if-nez v2, :cond_0
 
-    .line 552
+    .line 546
     .end local v2    # "allowDefaultRead":Z
     .end local v4    # "componentPerm":Ljava/lang/String;
     .end local v14    # "pps":[Landroid/content/pm/PathPermission;
@@ -1222,7 +1222,7 @@
 
     if-eqz v16, :cond_0
 
-    .line 557
+    .line 551
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/content/ContentProvider;->mExported:Z
@@ -1257,7 +1257,7 @@
 
     move-result-object v6
 
-    .line 560
+    .line 554
     .local v6, "failReason":Ljava/lang/String;
     :goto_2
     new-instance v16, Ljava/lang/SecurityException;
@@ -1336,7 +1336,7 @@
 
     throw v16
 
-    .line 557
+    .line 551
     .end local v6    # "failReason":Ljava/lang/String;
     :cond_7
     const-string v6, " requires the provider be exported, or grantUriPermission()"
@@ -1354,28 +1354,28 @@
     .end annotation
 
     .prologue
-    .line 567
+    .line 561
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    .line 568
+    .line 562
     .local v5, "context":Landroid/content/Context;
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v12
 
-    .line 569
+    .line 563
     .local v12, "pid":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v15
 
-    .line 570
+    .line 564
     .local v15, "uid":I
     const/4 v9, 0x0
 
-    .line 572
+    .line 566
     .local v9, "missingPerm":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1389,11 +1389,11 @@
 
     if-eqz v16, :cond_1
 
-    .line 616
+    .line 610
     :cond_0
     return-void
 
-    .line 576
+    .line 570
     :cond_1
     move-object/from16 v0, p0
 
@@ -1411,48 +1411,48 @@
 
     if-eqz v16, :cond_6
 
-    .line 577
+    .line 571
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getWritePermission()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 578
+    .line 572
     .local v4, "componentPerm":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 579
+    .line 573
     invoke-virtual {v5, v4, v12, v15}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v16
 
     if-eqz v16, :cond_0
 
-    .line 582
+    .line 576
     move-object v9, v4
 
-    .line 588
+    .line 582
     :cond_2
     if-nez v4, :cond_4
 
     const/4 v2, 0x1
 
-    .line 590
+    .line 584
     .local v2, "allowDefaultWrite":Z
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/ContentProvider;->getPathPermissions()[Landroid/content/pm/PathPermission;
 
     move-result-object v14
 
-    .line 591
+    .line 585
     .local v14, "pps":[Landroid/content/pm/PathPermission;
     if-eqz v14, :cond_5
 
-    .line 592
+    .line 586
     invoke-virtual/range {p1 .. p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 593
+    .line 587
     .local v10, "path":Ljava/lang/String;
     move-object v3, v14
 
@@ -1468,13 +1468,13 @@
 
     aget-object v13, v3, v7
 
-    .line 594
+    .line 588
     .local v13, "pp":Landroid/content/pm/PathPermission;
     invoke-virtual {v13}, Landroid/content/pm/PathPermission;->getWritePermission()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 595
+    .line 589
     .local v11, "pathPerm":Ljava/lang/String;
     if-eqz v11, :cond_3
 
@@ -1484,26 +1484,26 @@
 
     if-eqz v16, :cond_3
 
-    .line 596
+    .line 590
     invoke-virtual {v5, v11, v12, v15}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v16
 
     if-eqz v16, :cond_0
 
-    .line 601
+    .line 595
     const/4 v2, 0x0
 
-    .line 602
+    .line 596
     move-object v9, v11
 
-    .line 593
+    .line 587
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 588
+    .line 582
     .end local v2    # "allowDefaultWrite":Z
     .end local v3    # "arr$":[Landroid/content/pm/PathPermission;
     .end local v7    # "i$":I
@@ -1517,13 +1517,13 @@
 
     goto :goto_0
 
-    .line 610
+    .line 604
     .restart local v2    # "allowDefaultWrite":Z
     .restart local v14    # "pps":[Landroid/content/pm/PathPermission;
     :cond_5
     if-nez v2, :cond_0
 
-    .line 614
+    .line 608
     .end local v2    # "allowDefaultWrite":Z
     .end local v4    # "componentPerm":Ljava/lang/String;
     .end local v14    # "pps":[Landroid/content/pm/PathPermission;
@@ -1540,7 +1540,7 @@
 
     if-eqz v16, :cond_0
 
-    .line 619
+    .line 613
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/content/ContentProvider;->mExported:Z
@@ -1575,7 +1575,7 @@
 
     move-result-object v6
 
-    .line 622
+    .line 616
     .local v6, "failReason":Ljava/lang/String;
     :goto_2
     new-instance v16, Ljava/lang/SecurityException;
@@ -1654,7 +1654,7 @@
 
     throw v16
 
-    .line 619
+    .line 613
     .end local v6    # "failReason":Ljava/lang/String;
     :cond_7
     const-string v6, " requires the provider be exported, or grantUriPermission()"
@@ -1666,7 +1666,7 @@
     .locals 1
 
     .prologue
-    .line 778
+    .line 772
     iget-object v0, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     iget-object v0, v0, Landroid/content/ContentProvider$Transport;->mAppOpsManager:Landroid/app/AppOpsManager;
@@ -1678,7 +1678,7 @@
     .locals 3
 
     .prologue
-    .line 661
+    .line 655
     iget-object v1, p0, Landroid/content/ContentProvider;->mCallingPackage:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -1687,11 +1687,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 662
+    .line 656
     .local v0, "pkg":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 663
+    .line 657
     iget-object v1, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     iget-object v1, v1, Landroid/content/ContentProvider$Transport;->mAppOpsManager:Landroid/app/AppOpsManager;
@@ -1702,7 +1702,7 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
 
-    .line 665
+    .line 659
     :cond_0
     return-object v0
 .end method
@@ -1711,7 +1711,7 @@
     .locals 1
 
     .prologue
-    .line 633
+    .line 627
     iget-object v0, p0, Landroid/content/ContentProvider;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -1721,7 +1721,7 @@
     .locals 1
 
     .prologue
-    .line 1669
+    .line 1663
     iget-object v0, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     return-object v0
@@ -1731,7 +1731,7 @@
     .locals 1
 
     .prologue
-    .line 765
+    .line 759
     iget-object v0, p0, Landroid/content/ContentProvider;->mPathPermissions:[Landroid/content/pm/PathPermission;
 
     return-object v0
@@ -1741,7 +1741,7 @@
     .locals 1
 
     .prologue
-    .line 721
+    .line 715
     iget-object v0, p0, Landroid/content/ContentProvider;->mReadPermission:Ljava/lang/String;
 
     return-object v0
@@ -1753,7 +1753,7 @@
     .param p2, "mimeTypeFilter"    # Ljava/lang/String;
 
     .prologue
-    .line 1468
+    .line 1462
     const/4 v0, 0x0
 
     return-object v0
@@ -1766,7 +1766,7 @@
     .locals 1
 
     .prologue
-    .line 743
+    .line 737
     iget-object v0, p0, Landroid/content/ContentProvider;->mWritePermission:Ljava/lang/String;
 
     return-object v0
@@ -1779,7 +1779,7 @@
     .locals 1
 
     .prologue
-    .line 1659
+    .line 1653
     const/4 v0, 0x0
 
     return v0
@@ -1790,34 +1790,34 @@
     .param p1, "authority"    # Ljava/lang/String;
 
     .prologue
-    .line 689
+    .line 683
     iget-object v2, p0, Landroid/content/ContentProvider;->mAuthority:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    .line 690
+    .line 684
     iget-object v2, p0, Landroid/content/ContentProvider;->mAuthority:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 698
+    .line 692
     :goto_0
     return v2
 
-    .line 692
+    .line 686
     :cond_0
     iget-object v2, p0, Landroid/content/ContentProvider;->mAuthorities:[Ljava/lang/String;
 
     if-eqz v2, :cond_2
 
-    .line 693
+    .line 687
     iget-object v2, p0, Landroid/content/ContentProvider;->mAuthorities:[Ljava/lang/String;
 
     array-length v1, v2
 
-    .line 694
+    .line 688
     .local v1, "length":I
     const/4 v0, 0x0
 
@@ -1825,7 +1825,7 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 695
+    .line 689
     iget-object v2, p0, Landroid/content/ContentProvider;->mAuthorities:[Ljava/lang/String;
 
     aget-object v2, v2, v0
@@ -1840,13 +1840,13 @@
 
     goto :goto_0
 
-    .line 694
+    .line 688
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 698
+    .line 692
     .end local v0    # "i":I
     .end local v1    # "length":I
     :cond_2
@@ -1860,7 +1860,7 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 819
+    .line 813
     return-void
 .end method
 
@@ -1871,7 +1871,7 @@
     .locals 0
 
     .prologue
-    .line 830
+    .line 824
     return-void
 .end method
 
@@ -1880,7 +1880,7 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 833
+    .line 827
     return-void
 .end method
 
@@ -1895,12 +1895,12 @@
     .end annotation
 
     .prologue
-    .line 1340
+    .line 1334
     invoke-virtual {p0, p1, p2}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
 
-    .line 1341
+    .line 1335
     .local v1, "fd":Landroid/os/ParcelFileDescriptor;
     if-eqz v1, :cond_0
 
@@ -1933,7 +1933,7 @@
     .end annotation
 
     .prologue
-    .line 1403
+    .line 1397
     invoke-virtual {p0, p1, p2}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v0
@@ -1952,7 +1952,7 @@
     .end annotation
 
     .prologue
-    .line 1214
+    .line 1208
     new-instance v0, Ljava/io/FileNotFoundException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1990,7 +1990,7 @@
     .end annotation
 
     .prologue
-    .line 1284
+    .line 1278
     invoke-virtual {p0, p1, p2}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
@@ -2015,7 +2015,7 @@
 
     const/4 v3, 0x0
 
-    .line 1422
+    .line 1416
     new-array v2, v11, [Ljava/lang/String;
 
     const-string v0, "_data"
@@ -2034,7 +2034,7 @@
 
     move-result-object v6
 
-    .line 1423
+    .line 1417
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -2042,22 +2042,22 @@
 
     move-result v7
 
-    .line 1424
+    .line 1418
     .local v7, "count":I
     :cond_0
     if-eq v7, v11, :cond_3
 
-    .line 1427
+    .line 1421
     if-eqz v6, :cond_1
 
-    .line 1428
+    .line 1422
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1430
+    .line 1424
     :cond_1
     if-nez v7, :cond_2
 
-    .line 1431
+    .line 1425
     new-instance v0, Ljava/io/FileNotFoundException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2082,7 +2082,7 @@
 
     throw v0
 
-    .line 1433
+    .line 1427
     :cond_2
     new-instance v0, Ljava/io/FileNotFoundException;
 
@@ -2108,18 +2108,18 @@
 
     throw v0
 
-    .line 1436
+    .line 1430
     :cond_3
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 1437
+    .line 1431
     const-string v0, "_data"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 1438
+    .line 1432
     .local v8, "i":I
     if-ltz v8, :cond_4
 
@@ -2127,15 +2127,15 @@
 
     move-result-object v10
 
-    .line 1439
+    .line 1433
     .local v10, "path":Ljava/lang/String;
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 1440
+    .line 1434
     if-nez v10, :cond_5
 
-    .line 1441
+    .line 1435
     new-instance v0, Ljava/io/FileNotFoundException;
 
     const-string v1, "Column _data not found."
@@ -2148,17 +2148,17 @@
     :cond_4
     move-object v10, v3
 
-    .line 1438
+    .line 1432
     goto :goto_0
 
-    .line 1444
+    .line 1438
     .restart local v10    # "path":Ljava/lang/String;
     :cond_5
     invoke-static {p2}, Landroid/os/ParcelFileDescriptor;->parseMode(Ljava/lang/String;)I
 
     move-result v9
 
-    .line 1445
+    .line 1439
     .local v9, "modeBits":I
     new-instance v0, Ljava/io/File;
 
@@ -2198,7 +2198,7 @@
     .end annotation
 
     .prologue
-    .line 1632
+    .line 1626
     .local p4, "args":Ljava/lang/Object;, "TT;"
     .local p5, "func":Landroid/content/ContentProvider$PipeDataWriter;, "Landroid/content/ContentProvider$PipeDataWriter<TT;>;"
     :try_start_0
@@ -2206,7 +2206,7 @@
 
     move-result-object v3
 
-    .line 1634
+    .line 1628
     .local v3, "fds":[Landroid/os/ParcelFileDescriptor;
     new-instance v0, Landroid/content/ContentProvider$1;
 
@@ -2224,7 +2224,7 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/content/ContentProvider$1;-><init>(Landroid/content/ContentProvider;Landroid/content/ContentProvider$PipeDataWriter;[Landroid/os/ParcelFileDescriptor;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;)V
 
-    .line 1646
+    .line 1640
     .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;>;"
     sget-object v2, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -2234,7 +2234,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1648
+    .line 1642
     const/4 v1, 0x0
 
     aget-object v1, v3, v1
@@ -2243,13 +2243,13 @@
 
     return-object v1
 
-    .line 1649
+    .line 1643
     .end local v0    # "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;>;"
     .end local v3    # "fds":[Landroid/os/ParcelFileDescriptor;
     :catch_0
     move-exception v8
 
-    .line 1650
+    .line 1644
     .local v8, "e":Ljava/io/IOException;
     new-instance v1, Ljava/io/FileNotFoundException;
 
@@ -2272,7 +2272,7 @@
     .end annotation
 
     .prologue
-    .line 1518
+    .line 1512
     const-string v1, "*/*"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2281,24 +2281,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 1520
+    .line 1514
     const-string/jumbo v1, "r"
 
     invoke-virtual {p0, p1, v1}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v1
 
-    .line 1526
+    .line 1520
     :goto_0
     return-object v1
 
-    .line 1522
+    .line 1516
     :cond_0
     invoke-virtual {p0, p1}, Landroid/content/ContentProvider;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1523
+    .line 1517
     .local v0, "baseType":Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -2308,7 +2308,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1526
+    .line 1520
     const-string/jumbo v1, "r"
 
     invoke-virtual {p0, p1, v1}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
@@ -2317,7 +2317,7 @@
 
     goto :goto_0
 
-    .line 1528
+    .line 1522
     :cond_1
     new-instance v1, Ljava/io/FileNotFoundException;
 
@@ -2367,7 +2367,7 @@
     .end annotation
 
     .prologue
-    .line 1586
+    .line 1580
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/ContentProvider;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v0
@@ -2388,7 +2388,7 @@
     .param p6, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 984
+    .line 978
     invoke-virtual/range {p0 .. p5}, Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -2402,7 +2402,7 @@
     .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 1073
+    .line 1067
     invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -2430,7 +2430,7 @@
     .param p6, "cancellationSignal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 852
+    .line 846
     if-eqz p3, :cond_0
 
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
@@ -2439,11 +2439,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 853
+    .line 847
     :cond_0
     const-string p3, "\'A\' = \'B\'"
 
-    .line 857
+    .line 851
     :goto_0
     invoke-virtual/range {p0 .. p6}, Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
@@ -2451,7 +2451,7 @@
 
     return-object v0
 
-    .line 855
+    .line 849
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2486,22 +2486,22 @@
     .param p2, "writeOp"    # I
 
     .prologue
-    .line 770
+    .line 764
     iget-boolean v0, p0, Landroid/content/ContentProvider;->mNoPerms:Z
 
     if-nez v0, :cond_0
 
-    .line 771
+    .line 765
     iget-object v0, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     iput p1, v0, Landroid/content/ContentProvider$Transport;->mReadOp:I
 
-    .line 772
+    .line 766
     iget-object v0, p0, Landroid/content/ContentProvider;->mTransport:Landroid/content/ContentProvider$Transport;
 
     iput p2, v0, Landroid/content/ContentProvider$Transport;->mWriteOp:I
 
-    .line 774
+    .line 768
     :cond_0
     return-void
 .end method
@@ -2513,10 +2513,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 676
+    .line 670
     if-eqz p1, :cond_0
 
-    .line 677
+    .line 671
     const/16 v0, 0x3b
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
@@ -2527,22 +2527,22 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 678
+    .line 672
     iput-object p1, p0, Landroid/content/ContentProvider;->mAuthority:Ljava/lang/String;
 
-    .line 679
+    .line 673
     iput-object v2, p0, Landroid/content/ContentProvider;->mAuthorities:[Ljava/lang/String;
 
-    .line 685
+    .line 679
     :cond_0
     :goto_0
     return-void
 
-    .line 681
+    .line 675
     :cond_1
     iput-object v2, p0, Landroid/content/ContentProvider;->mAuthority:Ljava/lang/String;
 
-    .line 682
+    .line 676
     const-string v0, ";"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -2559,10 +2559,10 @@
     .param p1, "permissions"    # [Landroid/content/pm/PathPermission;
 
     .prologue
-    .line 754
+    .line 748
     iput-object p1, p0, Landroid/content/ContentProvider;->mPathPermissions:[Landroid/content/pm/PathPermission;
 
-    .line 755
+    .line 749
     return-void
 .end method
 
@@ -2571,10 +2571,10 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 710
+    .line 704
     iput-object p1, p0, Landroid/content/ContentProvider;->mReadPermission:Ljava/lang/String;
 
-    .line 711
+    .line 705
     return-void
 .end method
 
@@ -2583,10 +2583,10 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 732
+    .line 726
     iput-object p1, p0, Landroid/content/ContentProvider;->mWritePermission:Ljava/lang/String;
 
-    .line 733
+    .line 727
     return-void
 .end method
 
@@ -2594,14 +2594,14 @@
     .locals 2
 
     .prologue
-    .line 1796
+    .line 1790
     const-string v0, "ContentProvider"
 
     const-string v1, "implement ContentProvider shutdown() to make sure all database connections are gracefully shutdown"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1798
+    .line 1792
     return-void
 .end method
 
@@ -2610,7 +2610,7 @@
     .param p1, "url"    # Landroid/net/Uri;
 
     .prologue
-    .line 1056
+    .line 1050
     return-object p1
 .end method
 

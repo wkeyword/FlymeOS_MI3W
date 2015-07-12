@@ -76,7 +76,7 @@
 
     .line 57
     .local v4, "resolver":Landroid/content/ContentResolver;
-    const v7, 0x1040036
+    const v7, 0x10400ae
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -84,7 +84,7 @@
 
     .line 59
     .local v0, "defaultServer":Ljava/lang/String;
-    const v7, 0x10e0068
+    const v7, 0x10e006b
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getInteger(I)I
 

@@ -1,5 +1,5 @@
 .class Lcom/android/server/location/GpsLocationProvider$11;
-.super Landroid/location/IGpsGeofenceHardware$Stub;
+.super Landroid/database/ContentObserver;
 .source "GpsLocationProvider.java"
 
 
@@ -19,93 +19,77 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/location/GpsLocationProvider;)V
+.method constructor <init>(Lcom/android/server/location/GpsLocationProvider;Landroid/os/Handler;)V
     .locals 0
+    .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1347
+    .line 2017
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$11;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
-    invoke-direct {p0}, Landroid/location/IGpsGeofenceHardware$Stub;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public addCircularHardwareGeofence(IDDDIIII)Z
-    .locals 2
-    .param p1, "geofenceId"    # I
-    .param p2, "latitude"    # D
-    .param p4, "longitude"    # D
-    .param p6, "radius"    # D
-    .param p8, "lastTransition"    # I
-    .param p9, "monitorTransitions"    # I
-    .param p10, "notificationResponsiveness"    # I
-    .param p11, "unknownTimer"    # I
+.method public onChange(Z)V
+    .locals 3
+    .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1355
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_add_geofence(IDDDIIII)Z
-    invoke-static/range {p1 .. p11}, Lcom/android/server/location/GpsLocationProvider;->access$3000(IDDDIIII)Z
+    .line 2020
+    iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$11;->this$0:Lcom/android/server/location/GpsLocationProvider;
+
+    iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$11;->this$0:Lcom/android/server/location/GpsLocationProvider;
+
+    # invokes: Lcom/android/server/location/GpsLocationProvider;->getDefaultApn()Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/server/location/GpsLocationProvider;->access$4400(Lcom/android/server/location/GpsLocationProvider;)Ljava/lang/String;
+
+    move-result-object v1
+
+    # setter for: Lcom/android/server/location/GpsLocationProvider;->mDefaultApn:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/server/location/GpsLocationProvider;->access$4302(Lcom/android/server/location/GpsLocationProvider;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 2021
+    # getter for: Lcom/android/server/location/GpsLocationProvider;->DEBUG:Z
+    invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$700()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public isHardwareGeofenceSupported()Z
-    .locals 1
+    const-string v0, "GpsLocationProvider"
 
-    .prologue
-    .line 1349
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_is_geofence_supported()Z
-    invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$2900()Z
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return v0
-.end method
+    const-string v2, "Observer mDefaultApn="
 
-.method public pauseHardwareGeofence(I)Z
-    .locals 1
-    .param p1, "geofenceId"    # I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .prologue
-    .line 1364
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_pause_geofence(I)Z
-    invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$3200(I)Z
+    move-result-object v1
 
-    move-result v0
+    iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider$11;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
-    return v0
-.end method
+    # getter for: Lcom/android/server/location/GpsLocationProvider;->mDefaultApn:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/server/location/GpsLocationProvider;->access$4300(Lcom/android/server/location/GpsLocationProvider;)Ljava/lang/String;
 
-.method public removeHardwareGeofence(I)Z
-    .locals 1
-    .param p1, "geofenceId"    # I
+    move-result-object v2
 
-    .prologue
-    .line 1360
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_remove_geofence(I)Z
-    invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->access$3100(I)Z
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v1
 
-    return v0
-.end method
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public resumeHardwareGeofence(II)Z
-    .locals 1
-    .param p1, "geofenceId"    # I
-    .param p2, "monitorTransition"    # I
+    move-result-object v1
 
-    .prologue
-    .line 1368
-    # invokes: Lcom/android/server/location/GpsLocationProvider;->native_resume_geofence(II)Z
-    invoke-static {p1, p2}, Lcom/android/server/location/GpsLocationProvider;->access$3300(II)Z
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v0
-
-    return v0
+    .line 2022
+    :cond_0
+    return-void
 .end method
